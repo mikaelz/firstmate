@@ -1,0 +1,375 @@
+=== fixture: plain primary checkout ===
+primary git-dir=.git common=.git
+registered claude arm: [ -z "${GROK_AGENT:-}${GROK_HOOK_EVENT:-}" ] || { printf '%s\n' '{}'; exit 0; }; exec "$CLAUDE_PROJECT_DIR"/bin/fm-arm-pretool-check.sh --claude
+registered claude cd: [ -z "${GROK_AGENT:-}${GROK_HOOK_EVENT:-}" ] || { printf '%s\n' '{}'; exit 0; }; exec "$CLAUDE_PROJECT_DIR"/bin/fm-cd-pretool-check.sh --claude
+registered claude sub: "$CLAUDE_PROJECT_DIR"/bin/fm-subagent-pretool-check.sh --claude
+registered cursor arm: "${CURSOR_PROJECT_DIR:-$PWD}"/bin/fm-arm-pretool-check.sh --cursor
+registered cursor cd: "${CURSOR_PROJECT_DIR:-$PWD}"/bin/fm-cd-pretool-check.sh --cursor
+=== no-flag allow ===
+-- arm no-flag allow printf
+  exit=0
+  stdout=
+  stderr=
+PASS arm no-flag allow printf
+-- cd no-flag allow printf
+  exit=0
+  stdout=
+  stderr=
+PASS cd no-flag allow printf
+-- subagent no-flag allow Read
+  exit=0
+  stdout=
+  stderr=
+PASS subagent no-flag allow Read
+=== no-flag deny ===
+-- arm no-flag deny background watcher
+  exit=2
+  stdout={"decision":"deny","reason":"[watcher-background] a protected watcher command cannot run in an asynchronous shell list or through nohup/disown"}\n
+  stderr={"hookSpecificOutput":{"hookEventName":"PreToolUse","permissionDecision":"deny"},"systemMessage":"[watcher-background] a protected watcher command cannot run in an asynchronous shell list or through nohup/disown"}\n
+PASS arm no-flag deny background watcher
+-- arm no-flag deny via claude stdin
+  exit=2
+  stdout={"decision":"deny","reason":"[watcher-background] a protected watcher command cannot run in an asynchronous shell list or through nohup/disown"}\n
+  stderr={"hookSpecificOutput":{"hookEventName":"PreToolUse","permissionDecision":"deny"},"systemMessage":"[watcher-background] a protected watcher command cannot run in an asynchronous shell list or through nohup/disown"}\n
+PASS arm no-flag deny via claude stdin
+-- arm no-flag deny via grok stdin
+  exit=2
+  stdout={"decision":"deny","reason":"[watcher-background] a protected watcher command cannot run in an asynchronous shell list or through nohup/disown"}\n
+  stderr={"hookSpecificOutput":{"hookEventName":"PreToolUse","permissionDecision":"deny"},"systemMessage":"[watcher-background] a protected watcher command cannot run in an asynchronous shell list or through nohup/disown"}\n
+PASS arm no-flag deny via grok stdin
+-- cd no-flag deny persistent cd
+  exit=2
+  stdout={"decision":"deny","reason":"[persistent-cd] a persistent top-level directory change in the primary firstmate checkout is blocked; it would move the shell out of the home so a later firstmate-owned command runs inside a project clone. Reach the target without moving the shell - use git -C <dir> or an absolute path on the command itself - or scope the cd to a subshell like (cd <dir> && ...)."}\n
+  stderr={"hookSpecificOutput":{"hookEventName":"PreToolUse","permissionDecision":"deny"},"systemMessage":"[persistent-cd] a persistent top-level directory change in the primary firstmate checkout is blocked; it would move the shell out of the home so a later firstmate-owned command runs inside a project clone. Reach the target without moving the shell - use git -C <dir> or an absolute path on the command itself - or scope the cd to a subshell like (cd <dir> && ...)."}\n
+PASS cd no-flag deny persistent cd
+-- subagent no-flag deny Task
+  exit=2
+  stdout={"decision":"deny","reason":"[subagent-dispatch] the firstmate primary dispatches through the fleet, not the harness's own delegation tools: work started that way has no durable fleet record, leaves every firstmate guard inert, and dies with this session. Instead, first classify the work under the AGENTS.md intake contract, then use bin/fm-brief.sh followed by bin/fm-spawn.sh for dispatched work (blocked tool: Task, delegation-shaped on \"task\"). Launch the session with FM_ALLOW_SUBAGENT=1 for a deliberate exception."}\n
+  stderr={"hookSpecificOutput":{"hookEventName":"PreToolUse","permissionDecision":"deny"},"systemMessage":"[subagent-dispatch] the firstmate primary dispatches through the fleet, not the harness's own delegation tools: work started that way has no durable fleet record, leaves every firstmate guard inert, and dies with this session. Instead, first classify the work under the AGENTS.md intake contract, then use bin/fm-brief.sh followed by bin/fm-spawn.sh for dispatched work (blocked tool: Task, delegation-shaped on \"task\"). Launch the session with FM_ALLOW_SUBAGENT=1 for a deliberate exception."}\n
+PASS subagent no-flag deny Task
+=== claude allow ===
+-- arm --claude allow
+  exit=0
+  stdout={}\n
+  stderr=
+PASS arm --claude allow
+-- cd --claude allow
+  exit=0
+  stdout={}\n
+  stderr=
+PASS cd --claude allow
+-- subagent --claude allow
+  exit=0
+  stdout={}\n
+  stderr=
+PASS subagent --claude allow
+=== claude deny ===
+-- arm --claude deny
+  exit=0
+  stdout={"hookSpecificOutput":{"hookEventName":"PreToolUse","permissionDecision":"deny","permissionDecisionReason":"[watcher-background] a protected watcher command cannot run in an asynchronous shell list or through nohup/disown"},"systemMessage":"[watcher-background] a protected watcher command cannot run in an asynchronous shell list or through nohup/disown"}\n
+  stderr=
+PASS arm --claude deny
+-- cd --claude deny
+  exit=0
+  stdout={"hookSpecificOutput":{"hookEventName":"PreToolUse","permissionDecision":"deny","permissionDecisionReason":"[persistent-cd] a persistent top-level directory change in the primary firstmate checkout is blocked; it would move the shell out of the home so a later firstmate-owned command runs inside a project clone. Reach the target without moving the shell - use git -C <dir> or an absolute path on the command itself - or scope the cd to a subshell like (cd <dir> && ...)."},"systemMessage":"[persistent-cd] a persistent top-level directory change in the primary firstmate checkout is blocked; it would move the shell out of the home so a later firstmate-owned command runs inside a project clone. Reach the target without moving the shell - use git -C <dir> or an absolute path on the command itself - or scope the cd to a subshell like (cd <dir> && ...)."}\n
+  stderr=
+PASS cd --claude deny
+-- subagent --claude deny
+  exit=0
+  stdout={"hookSpecificOutput":{"hookEventName":"PreToolUse","permissionDecision":"deny","permissionDecisionReason":"[subagent-dispatch] the firstmate primary dispatches through the fleet, not the harness's own delegation tools: work started that way has no durable fleet record, leaves every firstmate guard inert, and dies with this session. Instead, first classify the work under the AGENTS.md intake contract, then use bin/fm-brief.sh followed by bin/fm-spawn.sh for dispatched work (blocked tool: Task, delegation-shaped on \"task\"). Launch the session with FM_ALLOW_SUBAGENT=1 for a deliberate exception."},"systemMessage":"[subagent-dispatch] the firstmate primary dispatches through the fleet, not the harness's own delegation tools: work started that way has no durable fleet record, leaves every firstmate guard inert, and dies with this session. Instead, first classify the work under the AGENTS.md intake contract, then use bin/fm-brief.sh followed by bin/fm-spawn.sh for dispatched work (blocked tool: Task, delegation-shaped on \"task\"). Launch the session with FM_ALLOW_SUBAGENT=1 for a deliberate exception."}\n
+  stderr=
+PASS subagent --claude deny
+=== cursor allow and deny ===
+-- arm --cursor allow
+  exit=0
+  stdout={"permission":"allow"}\n
+  stderr=
+PASS arm --cursor allow
+-- cd --cursor allow
+  exit=0
+  stdout={"permission":"allow"}\n
+  stderr=
+PASS cd --cursor allow
+-- arm --cursor deny
+  exit=0
+  stdout={"permission":"deny","user_message":"[watcher-background] a protected watcher command cannot run in an asynchronous shell list or through nohup/disown","agent_message":"[watcher-background] a protected watcher command cannot run in an asynchronous shell list or through nohup/disown"}\n
+  stderr=
+PASS arm --cursor deny
+-- cd --cursor deny
+  exit=0
+  stdout={"permission":"deny","user_message":"[persistent-cd] a persistent top-level directory change in the primary firstmate checkout is blocked; it would move the shell out of the home so a later firstmate-owned command runs inside a project clone. Reach the target without moving the shell - use git -C <dir> or an absolute path on the command itself - or scope the cd to a subshell like (cd <dir> && ...).","agent_message":"[persistent-cd] a persistent top-level directory change in the primary firstmate checkout is blocked; it would move the shell out of the home so a later firstmate-owned command runs inside a project clone. Reach the target without moving the shell - use git -C <dir> or an absolute path on the command itself - or scope the cd to a subshell like (cd <dir> && ...)."}\n
+  stderr=
+PASS cd --cursor deny
+=== cursor payload stand-down ===
+-- claude duplicate stands down on cursor payload
+  exit=0
+  stdout={}\n
+  stderr=
+PASS claude duplicate stands down on cursor payload
+-- no-flag cursor payload stands down
+  exit=0
+  stdout=
+  stderr=
+PASS no-flag cursor payload stands down
+-- cursor registration still denies cursor payload
+  exit=0
+  stdout={"permission":"deny","user_message":"[watcher-background] a protected watcher command cannot run in an asynchronous shell list or through nohup/disown","agent_message":"[watcher-background] a protected watcher command cannot run in an asynchronous shell list or through nohup/disown"}\n
+  stderr=
+PASS cursor registration still denies cursor payload
+-- cd claude duplicate stands down on cursor payload
+  exit=0
+  stdout={}\n
+  stderr=
+PASS cd claude duplicate stands down on cursor payload
+-- cd cursor registration still denies cursor payload
+  exit=0
+  stdout={"permission":"deny","user_message":"[persistent-cd] a persistent top-level directory change in the primary firstmate checkout is blocked; it would move the shell out of the home so a later firstmate-owned command runs inside a project clone. Reach the target without moving the shell - use git -C <dir> or an absolute path on the command itself - or scope the cd to a subshell like (cd <dir> && ...).","agent_message":"[persistent-cd] a persistent top-level directory change in the primary firstmate checkout is blocked; it would move the shell out of the home so a later firstmate-owned command runs inside a project clone. Reach the target without moving the shell - use git -C <dir> or an absolute path on the command itself - or scope the cd to a subshell like (cd <dir> && ...)."}\n
+  stderr=
+PASS cd cursor registration still denies cursor payload
+=== registered hook commands ===
+-- registered claude arm allow
+  exit=0
+  stdout={}\n
+  stderr=
+PASS registered claude arm allow
+-- registered claude arm deny
+  exit=0
+  stdout={"hookSpecificOutput":{"hookEventName":"PreToolUse","permissionDecision":"deny","permissionDecisionReason":"[watcher-background] a protected watcher command cannot run in an asynchronous shell list or through nohup/disown"},"systemMessage":"[watcher-background] a protected watcher command cannot run in an asynchronous shell list or through nohup/disown"}\n
+  stderr=
+PASS registered claude arm deny
+-- registered claude cd deny
+  exit=0
+  stdout={"hookSpecificOutput":{"hookEventName":"PreToolUse","permissionDecision":"deny","permissionDecisionReason":"[persistent-cd] a persistent top-level directory change in the primary firstmate checkout is blocked; it would move the shell out of the home so a later firstmate-owned command runs inside a project clone. Reach the target without moving the shell - use git -C <dir> or an absolute path on the command itself - or scope the cd to a subshell like (cd <dir> && ...)."},"systemMessage":"[persistent-cd] a persistent top-level directory change in the primary firstmate checkout is blocked; it would move the shell out of the home so a later firstmate-owned command runs inside a project clone. Reach the target without moving the shell - use git -C <dir> or an absolute path on the command itself - or scope the cd to a subshell like (cd <dir> && ...)."}\n
+  stderr=
+PASS registered claude cd deny
+-- registered claude subagent deny
+  exit=0
+  stdout={"hookSpecificOutput":{"hookEventName":"PreToolUse","permissionDecision":"deny","permissionDecisionReason":"[subagent-dispatch] the firstmate primary dispatches through the fleet, not the harness's own delegation tools: work started that way has no durable fleet record, leaves every firstmate guard inert, and dies with this session. Instead, first classify the work under the AGENTS.md intake contract, then use bin/fm-brief.sh followed by bin/fm-spawn.sh for dispatched work (blocked tool: Task, delegation-shaped on \"task\"). Launch the session with FM_ALLOW_SUBAGENT=1 for a deliberate exception."},"systemMessage":"[subagent-dispatch] the firstmate primary dispatches through the fleet, not the harness's own delegation tools: work started that way has no durable fleet record, leaves every firstmate guard inert, and dies with this session. Instead, first classify the work under the AGENTS.md intake contract, then use bin/fm-brief.sh followed by bin/fm-spawn.sh for dispatched work (blocked tool: Task, delegation-shaped on \"task\"). Launch the session with FM_ALLOW_SUBAGENT=1 for a deliberate exception."}\n
+  stderr=
+PASS registered claude subagent deny
+-- registered cursor arm allow
+  exit=0
+  stdout={"permission":"allow"}\n
+  stderr=
+PASS registered cursor arm allow
+-- registered cursor arm deny
+  exit=0
+  stdout={"permission":"deny","user_message":"[watcher-background] a protected watcher command cannot run in an asynchronous shell list or through nohup/disown","agent_message":"[watcher-background] a protected watcher command cannot run in an asynchronous shell list or through nohup/disown"}\n
+  stderr=
+PASS registered cursor arm deny
+-- registered cursor cd deny
+  exit=0
+  stdout={"permission":"deny","user_message":"[persistent-cd] a persistent top-level directory change in the primary firstmate checkout is blocked; it would move the shell out of the home so a later firstmate-owned command runs inside a project clone. Reach the target without moving the shell - use git -C <dir> or an absolute path on the command itself - or scope the cd to a subshell like (cd <dir> && ...).","agent_message":"[persistent-cd] a persistent top-level directory change in the primary firstmate checkout is blocked; it would move the shell out of the home so a later firstmate-owned command runs inside a project clone. Reach the target without moving the shell - use git -C <dir> or an absolute path on the command itself - or scope the cd to a subshell like (cd <dir> && ...)."}\n
+  stderr=
+PASS registered cursor cd deny
+=== grok env stand-down on registered pretool command ===
+-- grok env stand-down prints {} and does not deny
+  exit=0
+  stdout={}\n
+  stderr=
+PASS grok env stand-down prints {} and does not deny
+=== fail-open never denies and stays JSON ===
+-- arm empty stdin no-flag
+  exit=0
+  stdout=
+  stderr=
+PASS arm empty stdin no-flag
+-- arm empty stdin --claude
+  exit=0
+  stdout={}\n
+  stderr=
+PASS arm empty stdin --claude
+-- arm empty stdin --cursor
+  exit=0
+  stdout={"permission":"allow"}\n
+  stderr=
+PASS arm empty stdin --cursor
+-- cd empty stdin no-flag
+  exit=0
+  stdout=
+  stderr=
+PASS cd empty stdin no-flag
+-- cd empty stdin --claude
+  exit=0
+  stdout={}\n
+  stderr=
+PASS cd empty stdin --claude
+-- cd empty stdin --cursor
+  exit=0
+  stdout={"permission":"allow"}\n
+  stderr=
+PASS cd empty stdin --cursor
+-- subagent empty stdin no-flag
+  exit=0
+  stdout=
+  stderr=
+PASS subagent empty stdin no-flag
+-- subagent empty stdin --claude
+  exit=0
+  stdout={}\n
+  stderr=
+PASS subagent empty stdin --claude
+-- arm bad json no-flag
+  exit=0
+  stdout=
+  stderr=
+PASS arm bad json no-flag
+-- arm bad json --claude
+  exit=0
+  stdout={}\n
+  stderr=
+PASS arm bad json --claude
+-- arm bad json --cursor
+  exit=0
+  stdout={"permission":"allow"}\n
+  stderr=
+PASS arm bad json --cursor
+-- cd bad json --claude
+  exit=0
+  stdout={}\n
+  stderr=
+PASS cd bad json --claude
+-- cd bad json --cursor
+  exit=0
+  stdout={"permission":"allow"}\n
+  stderr=
+PASS cd bad json --cursor
+-- subagent bad json --claude
+  exit=0
+  stdout={}\n
+  stderr=
+PASS subagent bad json --claude
+-- arm missing jq no-flag
+  exit=0
+  stdout=
+  stderr=
+PASS arm missing jq no-flag
+-- arm missing jq --claude
+  exit=0
+  stdout={}\n
+  stderr=
+PASS arm missing jq --claude
+-- arm missing jq --cursor
+  exit=0
+  stdout={"permission":"allow"}\n
+  stderr=
+PASS arm missing jq --cursor
+-- cd missing jq --claude
+  exit=0
+  stdout={}\n
+  stderr=
+PASS cd missing jq --claude
+-- cd missing jq --cursor
+  exit=0
+  stdout={"permission":"allow"}\n
+  stderr=
+PASS cd missing jq --cursor
+-- subagent missing jq --claude
+  exit=0
+  stdout={}\n
+  stderr=
+PASS subagent missing jq --claude
+-- subagent missing jq no-flag would-deny
+  exit=0
+  stdout=
+  stderr=
+PASS subagent missing jq no-flag would-deny
+-- arm missing node no-flag
+  exit=0
+  stdout=
+  stderr=
+PASS arm missing node no-flag
+-- arm missing node --claude
+  exit=0
+  stdout={}\n
+  stderr=
+PASS arm missing node --claude
+-- arm missing node --cursor
+  exit=0
+  stdout={"permission":"allow"}\n
+  stderr=
+PASS arm missing node --cursor
+-- cd missing node --claude
+  exit=0
+  stdout={}\n
+  stderr=
+PASS cd missing node --claude
+-- cd missing node --cursor
+  exit=0
+  stdout={"permission":"allow"}\n
+  stderr=
+PASS cd missing node --cursor
+-- cd missing node no-flag
+  exit=0
+  stdout=
+  stderr=
+PASS cd missing node no-flag
+-- arm missing policy no-flag
+  exit=0
+  stdout=
+  stderr=
+PASS arm missing policy no-flag
+-- arm missing policy --claude
+  exit=0
+  stdout={}\n
+  stderr=
+PASS arm missing policy --claude
+-- arm missing policy --cursor
+  exit=0
+  stdout={"permission":"allow"}\n
+  stderr=
+PASS arm missing policy --cursor
+-- cd missing policy --claude
+  exit=0
+  stdout={}\n
+  stderr=
+PASS cd missing policy --claude
+-- cd missing policy --cursor
+  exit=0
+  stdout={"permission":"allow"}\n
+  stderr=
+PASS cd missing policy --cursor
+-- cd missing policy no-flag
+  exit=0
+  stdout=
+  stderr=
+PASS cd missing policy no-flag
+-- arm bad policy --claude
+  exit=0
+  stdout={}\n
+  stderr=
+PASS arm bad policy --claude
+-- arm bad policy --cursor
+  exit=0
+  stdout={"permission":"allow"}\n
+  stderr=
+PASS arm bad policy --cursor
+-- arm bad policy no-flag
+  exit=0
+  stdout=
+  stderr=
+PASS arm bad policy no-flag
+-- cd bad policy --claude
+  exit=0
+  stdout={}\n
+  stderr=
+PASS cd bad policy --claude
+-- cd bad policy --cursor
+  exit=0
+  stdout={"permission":"allow"}\n
+  stderr=
+PASS cd bad policy --cursor
+=== adversarial reason quoting ===
+-- subagent quote newline --claude
+  exit=0
+  stdout={"hookSpecificOutput":{"hookEventName":"PreToolUse","permissionDecision":"deny","permissionDecisionReason":"[subagent-dispatch] the firstmate primary dispatches through the fleet, not the harness's own delegation tools: work started that way has no durable fleet record, leaves every firstmate guard inert, and dies with this session. Instead, first classify the work under the AGENTS.md intake contract, then use bin/fm-brief.sh followed by bin/fm-spawn.sh for dispatched work (blocked tool: Task\"x Y, delegation-shaped on \"task\"). Launch the session with FM_ALLOW_SUBAGENT=1 for a deliberate exception."},"systemMessage":"[subagent-dispatch] the firstmate primary dispatches through the fleet, not the harness's own delegation tools: work started that way has no durable fleet record, leaves every firstmate guard inert, and dies with this session. Instead, first classify the work under the AGENTS.md intake contract, then use bin/fm-brief.sh followed by bin/fm-spawn.sh for dispatched work (blocked tool: Task\"x Y, delegation-shaped on \"task\"). Launch the session with FM_ALLOW_SUBAGENT=1 for a deliberate exception."}\n
+  stderr=
+PASS subagent quote newline --claude
+-- subagent quote newline no-flag
+  exit=2
+  stdout={"decision":"deny","reason":"[subagent-dispatch] the firstmate primary dispatches through the fleet, not the harness's own delegation tools: work started that way has no durable fleet record, leaves every firstmate guard inert, and dies with this session. Instead, first classify the work under the AGENTS.md intake contract, then use bin/fm-brief.sh followed by bin/fm-spawn.sh for dispatched work (blocked tool: Task\"x Y, delegation-shaped on \"task\"). Launch the session with FM_ALLOW_SUBAGENT=1 for a deliberate exception."}\n
+  stderr={"hookSpecificOutput":{"hookEventName":"PreToolUse","permissionDecision":"deny"},"systemMessage":"[subagent-dispatch] the firstmate primary dispatches through the fleet, not the harness's own delegation tools: work started that way has no durable fleet record, leaves every firstmate guard inert, and dies with this session. Instead, first classify the work under the AGENTS.md intake contract, then use bin/fm-brief.sh followed by bin/fm-spawn.sh for dispatched work (blocked tool: Task\"x Y, delegation-shaped on \"task\"). Launch the session with FM_ALLOW_SUBAGENT=1 for a deliberate exception."}\n
+PASS subagent quote newline no-flag
+PASS subagent quote newline decodes inside JSON string
+=== summary pass=72 fail=0 ===
+SUMMARY pass=72 fail=0
