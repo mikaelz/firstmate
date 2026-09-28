@@ -1,0 +1,33 @@
+FM_TEST_BEGIN 2026-09-28T11:17:45Z tests/fm-cursor-pretool-sdk-live-e2e.test.sh family=live-harness-optin expected_gate_skip=live-capability
+harness: @cursor/sdk 1.0.32
+11:17:49.658 INFO  LocalCursorRulesService load completed meta={durationMs: 47, ruleCount: 1}
+11:17:49.687 INFO  AgentSkillsCursorRulesService load completed meta={durationMs: 74, ruleCount: 100, skillCount: 100, servedFromCache: false}
+{"type":"tool_call","agent_id":"agent-88071445-cff0-423b-9e3b-5d88403ced14","run_id":"run-0953d965-37a7-42d9-93ed-5483c49fb617","call_id":"call-9631a0fd-c550-40ae-a8ca-7dd24bca8454-0\nfc_c78d9440-12e9-987d-b834-832213375f25_0","name":"read","status":"running","args":{"path":"/tmp/fm-cursor-pretool-sdk.x0OLCe/fixture.txt"}}
+{"type":"tool_call","agent_id":"agent-88071445-cff0-423b-9e3b-5d88403ced14","run_id":"run-0953d965-37a7-42d9-93ed-5483c49fb617","call_id":"call-9631a0fd-c550-40ae-a8ca-7dd24bca8454-1\nfc_c78d9440-12e9-987d-b834-832213375f25_1","name":"shell","status":"running","args":{"command":"printf CURSOR_SHELL_PROBE","timeout":30000}}
+{"type":"tool_call","agent_id":"agent-88071445-cff0-423b-9e3b-5d88403ced14","run_id":"run-0953d965-37a7-42d9-93ed-5483c49fb617","call_id":"call-9631a0fd-c550-40ae-a8ca-7dd24bca8454-2\nfc_c78d9440-12e9-987d-b834-832213375f25_2","name":"edit","status":"running","args":{"path":"/tmp/fm-cursor-pretool-sdk.x0OLCe/output.txt"}}
+{"type":"tool_call","agent_id":"agent-88071445-cff0-423b-9e3b-5d88403ced14","run_id":"run-0953d965-37a7-42d9-93ed-5483c49fb617","call_id":"call-9631a0fd-c550-40ae-a8ca-7dd24bca8454-2\nfc_c78d9440-12e9-987d-b834-832213375f25_2","name":"edit","status":"running","args":{"path":"/tmp/fm-cursor-pretool-sdk.x0OLCe/output.txt"}}
+shell-parser: tree-sitter natives are unavailable in this artifact; shell command analysis degrades to parsingFailed
+{"type":"tool_call","agent_id":"agent-88071445-cff0-423b-9e3b-5d88403ced14","run_id":"run-0953d965-37a7-42d9-93ed-5483c49fb617","call_id":"call-9631a0fd-c550-40ae-a8ca-7dd24bca8454-0\nfc_c78d9440-12e9-987d-b834-832213375f25_0","name":"read","status":"completed","args":{"path":"/tmp/fm-cursor-pretool-sdk.x0OLCe/fixture.txt"},"result":{"status":"success","value":{"content":"CURSOR_READ_PROBE\n","totalLines":2,"fileSize":18}}}
+{"type":"tool_call","agent_id":"agent-88071445-cff0-423b-9e3b-5d88403ced14","run_id":"run-0953d965-37a7-42d9-93ed-5483c49fb617","call_id":"call-9631a0fd-c550-40ae-a8ca-7dd24bca8454-2\nfc_c78d9440-12e9-987d-b834-832213375f25_2","name":"edit","status":"completed","args":{"path":"/tmp/fm-cursor-pretool-sdk.x0OLCe/output.txt"},"result":{"status":"success","value":{"linesAdded":1,"linesRemoved":0,"diffString":"--- /dev/null\n+++ b//tmp/fm-cursor-pretool-sdk.x0OLCe/output.txt\n@@ -1,0 +1 @@\n+CURSOR_EDIT_PROBE"}}}
+{"type":"tool_call","agent_id":"agent-88071445-cff0-423b-9e3b-5d88403ced14","run_id":"run-0953d965-37a7-42d9-93ed-5483c49fb617","call_id":"call-9631a0fd-c550-40ae-a8ca-7dd24bca8454-1\nfc_c78d9440-12e9-987d-b834-832213375f25_1","name":"shell","status":"completed","args":{"command":"printf CURSOR_SHELL_PROBE","timeout":30000},"result":{"status":"success","value":{"exitCode":0,"signal":"","stdout":"CURSOR_SHELL_PROBE","stderr":"","executionTime":602}}}
+**Read** `fixture.txt`: succeeded. Contents were `CURSOR_READ_PROBE`.
+
+**Shell** `printf CURSOR_SHELL_PROBE`: succeeded (exit code 0). Output was `CURSOR_SHELL_PROBE`.
+
+**Write** `output.txt`: succeeded. File contains `CURSOR_EDIT_PROBE`.
+PASS Cursor SDK: Read, Shell and Edit completed through every registered hook
+{"type":"tool_call","agent_id":"agent-88071445-cff0-423b-9e3b-5d88403ced14","run_id":"run-a59bcf00-c16b-4d85-b48c-2592caa30ad9","call_id":"call-211f54be-b5fd-4aad-b82f-3571124d820b-3\nfc_841f265d-2f18-926b-8793-f44bbc22c2e0_0","name":"shell","status":"running","args":{"command":"bin/fm-watch-arm.sh &","timeout":30000}}
+{"type":"tool_call","agent_id":"agent-88071445-cff0-423b-9e3b-5d88403ced14","run_id":"run-a59bcf00-c16b-4d85-b48c-2592caa30ad9","call_id":"call-211f54be-b5fd-4aad-b82f-3571124d820b-4\nfc_841f265d-2f18-926b-8793-f44bbc22c2e0_1","name":"shell","status":"running","args":{"command":"cd projects/example && touch /tmp/fm-cursor-pretool-sdk.x0OLCe/denied-cd","timeout":30000}}
+**1. `bin/fm-watch-arm.sh &`**
+Rejected: [watcher-background] a protected watcher command cannot run in an asynchronous shell list or through nohup/disown
+
+**2. `cd projects/example && touch /tmp/fm-cursor-pretool-sdk.x0OLCe/denied-cd`**
+Rejected: [persistent-cd] a persistent top-level directory change in the primary firstmate checkout is blocked; it would move the shell out of the home so a later firstmate-owned command runs inside a project clone. Reach the target without moving the shell - use git -C <dir> or an absolute path on the command itself - or scope the cd to a subshell like (cd <dir> && ...).
+PASS Cursor SDK: watcher and directory-change denials retain reasons and prevent side effects
+ok - Cursor SDK permission hooks allow ordinary tools and preserve denials
+FM_TEST_END 2026-09-28T11:18:03Z tests/fm-cursor-pretool-sdk-live-e2e.test.sh exit=0 duration_ms=18102 gate_skip=false
+FM_TEST_SUMMARY total=1 failed=0 skipped_gate=0 duration_ms=18147
+FM_TEST_SUMMARY_FAMILY family=live-harness-optin count=1 duration_ms=18102 failed=0
+FM_TEST_SLOWEST rank=1 script=tests/fm-cursor-pretool-sdk-live-e2e.test.sh duration_ms=18102
+
+exit=0
