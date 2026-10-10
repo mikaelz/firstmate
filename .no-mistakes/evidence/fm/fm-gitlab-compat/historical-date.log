@@ -1,0 +1,68 @@
+Seeded persisted row: # Backlog
+
+## In flight
+## Queued
+## Done
+- [x] historical - Historical completion (done 2026-10-10)
+
+true
+{
+  "ok": true,
+  "action": "done",
+  "dry_run": true,
+  "already": true,
+  "pruned": 0,
+  "task": {
+    "id": "historical",
+    "title": "Historical completion https://gitlab.example.test/group/sub/project/-/merge_requests/7",
+    "state": "done",
+    "kind": null,
+    "repo": null,
+    "priority": null,
+    "created": null,
+    "closed": "2025-01-02",
+    "deps": [],
+    "hold": null,
+    "links": [
+      {
+        "kind": "pr",
+        "url": "https://gitlab.example.test/group/sub/project/-/merge_requests/7"
+      }
+    ],
+    "body": null,
+    "blocked": false,
+    "blocked_by": [],
+    "held": false
+  }
+}
+true
+{
+  "ok": true,
+  "action": "done",
+  "dry_run": true,
+  "already": true,
+  "pruned": 0,
+  "task": {
+    "id": "historical",
+    "title": "Historical completion https://gitlab.example.test/group/sub/project/-/merge_requests/7",
+    "state": "done",
+    "kind": null,
+    "repo": null,
+    "priority": null,
+    "created": null,
+    "closed": "2025-01-02",
+    "deps": [],
+    "hold": null,
+    "links": [
+      {
+        "kind": "pr",
+        "url": "https://gitlab.example.test/group/sub/project/-/merge_requests/7"
+      }
+    ],
+    "body": null,
+    "blocked": false,
+    "blocked_by": [],
+    "held": false
+  }
+}
+Historical close date preserved across repeated persisted-record backfill; exactly one canonical link.

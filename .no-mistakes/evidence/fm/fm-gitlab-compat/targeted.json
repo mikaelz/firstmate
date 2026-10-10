@@ -2,58 +2,58 @@
   "families": [
     {
       "count": 1,
-      "duration_ms": 32200,
+      "duration_ms": 34064,
       "failed": 0,
       "name": "backend-dispatch"
     },
     {
       "count": 4,
-      "duration_ms": 1056311,
+      "duration_ms": 759312,
       "failed": 0,
       "name": "pr-forge"
     },
     {
       "count": 1,
-      "duration_ms": 74272,
+      "duration_ms": 73285,
       "failed": 0,
       "name": "pure-contract-unit"
     },
     {
       "count": 2,
-      "duration_ms": 359792,
+      "duration_ms": 359524,
       "failed": 0,
       "name": "session-bootstrap"
     },
     {
       "count": 2,
-      "duration_ms": 210380,
+      "duration_ms": 212901,
       "failed": 0,
       "name": "snapshot-bearings"
     },
     {
       "count": 1,
-      "duration_ms": 424386,
+      "duration_ms": 425624,
       "failed": 0,
       "name": "standalone"
     },
     {
       "count": 1,
-      "duration_ms": 2780,
+      "duration_ms": 2774,
       "failed": 0,
       "name": "unclassified"
     },
     {
       "count": 1,
-      "duration_ms": 62370,
+      "duration_ms": 40089,
       "failed": 0,
       "name": "watcher-wake-lock"
     }
   ],
-  "finished_at": "2026-10-10T08:13:32Z",
-  "run_id": "fm-test-run-1791618271223-1949335",
+  "finished_at": "2026-10-10T09:02:02Z",
+  "run_id": "fm-test-run-1791621359299-3501895",
   "scripts": [
     {
-      "duration_ms": 4879,
+      "duration_ms": 4802,
       "exit": 0,
       "expected_gate_skip": "none",
       "family": "pr-forge",
@@ -62,7 +62,7 @@
       "path": "tests/fm-review-diff.test.sh"
     },
     {
-      "duration_ms": 74272,
+      "duration_ms": 73285,
       "exit": 0,
       "expected_gate_skip": "none",
       "family": "pure-contract-unit",
@@ -71,7 +71,7 @@
       "path": "tests/fm-crew-state.test.sh"
     },
     {
-      "duration_ms": 287120,
+      "duration_ms": 265786,
       "exit": 0,
       "expected_gate_skip": "none",
       "family": "pr-forge",
@@ -80,7 +80,7 @@
       "path": "tests/fm-pr-merge.test.sh"
     },
     {
-      "duration_ms": 62370,
+      "duration_ms": 40089,
       "exit": 0,
       "expected_gate_skip": "none",
       "family": "watcher-wake-lock",
@@ -89,7 +89,7 @@
       "path": "tests/fm-inactive-reconcile.test.sh"
     },
     {
-      "duration_ms": 347910,
+      "duration_ms": 212167,
       "exit": 0,
       "expected_gate_skip": "none",
       "family": "pr-forge",
@@ -98,7 +98,7 @@
       "path": "tests/fm-teardown.test.sh"
     },
     {
-      "duration_ms": 416402,
+      "duration_ms": 276557,
       "exit": 0,
       "expected_gate_skip": "none",
       "family": "pr-forge",
@@ -107,7 +107,7 @@
       "path": "tests/fm-pr-check-security.test.sh"
     },
     {
-      "duration_ms": 54522,
+      "duration_ms": 54681,
       "exit": 0,
       "expected_gate_skip": "none",
       "family": "session-bootstrap",
@@ -116,7 +116,7 @@
       "path": "tests/fm-bootstrap.test.sh"
     },
     {
-      "duration_ms": 305270,
+      "duration_ms": 304843,
       "exit": 0,
       "expected_gate_skip": "none",
       "family": "session-bootstrap",
@@ -125,7 +125,7 @@
       "path": "tests/fm-backlog-atomicity.test.sh"
     },
     {
-      "duration_ms": 424386,
+      "duration_ms": 425624,
       "exit": 0,
       "expected_gate_skip": "none",
       "family": "standalone",
@@ -134,7 +134,7 @@
       "path": "tests/fm-public-followup.test.sh"
     },
     {
-      "duration_ms": 32200,
+      "duration_ms": 34064,
       "exit": 0,
       "expected_gate_skip": "none",
       "family": "backend-dispatch",
@@ -143,7 +143,7 @@
       "path": "tests/fm-teardown-endpoint-safety.test.sh"
     },
     {
-      "duration_ms": 2780,
+      "duration_ms": 2774,
       "exit": 0,
       "expected_gate_skip": "none",
       "family": "unclassified",
@@ -152,7 +152,7 @@
       "path": "tests/fm-tasks-axi.test.sh"
     },
     {
-      "duration_ms": 23588,
+      "duration_ms": 25249,
       "exit": 0,
       "expected_gate_skip": "optional-binary",
       "family": "snapshot-bearings",
@@ -161,7 +161,7 @@
       "path": "tests/fm-fleet-snapshot-view.test.sh"
     },
     {
-      "duration_ms": 186792,
+      "duration_ms": 187652,
       "exit": 0,
       "expected_gate_skip": "optional-binary",
       "family": "snapshot-bearings",
@@ -171,9 +171,9 @@
     }
   ],
   "selection": "scripts;jobs=4",
-  "started_at": "2026-10-10T07:44:31Z",
+  "started_at": "2026-10-10T08:35:59Z",
   "summary": {
-    "duration_ms": 1741598,
+    "duration_ms": 1563302,
     "failed": 0,
     "skipped_gate": 0,
     "total": 13

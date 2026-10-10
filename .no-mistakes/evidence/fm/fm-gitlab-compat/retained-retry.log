@@ -76,10 +76,10 @@ Positive retention preview: {
     "held": true
   }
 }
-Real retained write refusal: error: "EACCES: permission denied, open '/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/retain.hoMnAC/home/data/backlog.md.lock'"
+Real retained write refusal: error: "EACCES: permission denied, open '/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/retain.ERPcrU/home/data/backlog.md.lock'"
 Persisted retained retry intent:
 id=retained
-data=/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/retain.hoMnAC/home/data
+data=/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/retain.ERPcrU/home/data
 spawn_gen=retained-gen
 cleanup_incomplete=1
 mode=retain

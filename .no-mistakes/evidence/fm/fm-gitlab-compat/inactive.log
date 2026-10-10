@@ -1,6 +1,6 @@
-done [key=child-outcome-ready-done-4728401f] [at=1791618300]: child ready done: PR https://gitlab.example.test/group/sub/project/-/merge_requests/7 checks green pr=https://gitlab.example.test/group/sub/project/-/merge_requests/7 mode=no-mistakes
-done [key=child-outcome-metadata-done-a6b09de2] [at=1791618301]: child metadata done: PR https://gitlab.example.test/group/sub/project/-/merge_requests/7 checks green pr=https://gitlab.example.test/group/sub/project/-/merge_requests/8 mode=no-mistakes
-done [key=child-outcome-incidental-done-3d58a2a9] [at=1791618301]: child incidental done: report mentions https://gitlab.example.test/group/sub/project/-/merge_requests/7 in documentation mode=no-mistakes
-done [key=child-outcome-scout-done-825a6515] [at=1791618301]: child scout done: PR https://gitlab.example.test/group/sub/project/-/merge_requests/7 checks green mode=no-mistakes
-done [key=child-outcome-malformed-done-c022c051] [at=1791618302]: child malformed done: PR https://gitlab.example.test/group/sub/project/-/merge_requests/0 checks green mode=no-mistakes
+done [key=child-outcome-ready-done-4728401f] [at=1791621471]: child ready done: PR https://gitlab.example.test/group/sub/project/-/merge_requests/7 checks green pr=https://gitlab.example.test/group/sub/project/-/merge_requests/7 mode=no-mistakes
+done [key=child-outcome-metadata-done-a6b09de2] [at=1791621471]: child metadata done: PR https://gitlab.example.test/group/sub/project/-/merge_requests/7 checks green pr=https://gitlab.example.test/group/sub/project/-/merge_requests/8 mode=no-mistakes
+done [key=child-outcome-incidental-done-3d58a2a9] [at=1791621471]: child incidental done: report mentions https://gitlab.example.test/group/sub/project/-/merge_requests/7 in documentation mode=no-mistakes
+done [key=child-outcome-scout-done-825a6515] [at=1791621472]: child scout done: PR https://gitlab.example.test/group/sub/project/-/merge_requests/7 checks green mode=no-mistakes
+done [key=child-outcome-malformed-done-c022c051] [at=1791621472]: child malformed done: PR https://gitlab.example.test/group/sub/project/-/merge_requests/0 checks green mode=no-mistakes
 Exact canonical parent delivery, metadata precedence, exclusion and once-only receipts verified.

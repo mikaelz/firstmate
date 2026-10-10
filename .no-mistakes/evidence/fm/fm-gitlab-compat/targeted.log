@@ -1,6 +1,6 @@
-FM_TEST_BEGIN 2026-10-10T07:44:31Z tests/fm-crew-state.test.sh family=pure-contract-unit expected_gate_skip=none
-FM_TEST_BEGIN 2026-10-10T07:44:31Z tests/fm-pr-merge.test.sh family=pr-forge expected_gate_skip=none
-FM_TEST_BEGIN 2026-10-10T07:44:31Z tests/fm-review-diff.test.sh family=pr-forge expected_gate_skip=none
+FM_TEST_BEGIN 2026-10-10T08:35:59Z tests/fm-crew-state.test.sh family=pure-contract-unit expected_gate_skip=none
+FM_TEST_BEGIN 2026-10-10T08:35:59Z tests/fm-pr-merge.test.sh family=pr-forge expected_gate_skip=none
+FM_TEST_BEGIN 2026-10-10T08:35:59Z tests/fm-review-diff.test.sh family=pr-forge expected_gate_skip=none
 ok - GitLab review verifies live head and target, preserves private refs and warns on unavailable proof
 ok - fm-review-diff falls back to recorded pr_head when pull head cannot be fetched
 ok - fm-review-diff fetches refs/pull/<n>/head when pr_head= is absent
@@ -14,10 +14,10 @@ ok - fm-review-diff refuses a corrupt recorded ship branch instead of reviewing 
 ●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 0s ago).
 ●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
 ●  This is a supervision warning only; the guarded operation WILL still run.
-●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.pi/extensions/fm-primary-turnend-guard.ts -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.pi/extensions/fm-primary-turnend-guard.ts -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
 ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ok - fm-review-diff compares a task against its recorded base branch
-FM_TEST_END 2026-10-10T07:44:36Z tests/fm-review-diff.test.sh exit=0 duration_ms=4879 gate_skip=false
+FM_TEST_END 2026-10-10T08:36:04Z tests/fm-review-diff.test.sh exit=0 duration_ms=4802 gate_skip=false
 ok - captured AXI replacement status replays through crew-state
 ok - captured AXI parked status replays through crew-state
 ok - captured AXI failed status replays through crew-state
@@ -302,7 +302,7 @@ ok - inventory-error run selection reports unknown with candidate ids
 ok - selected-error run selection reports unknown with candidate ids
 ok - legacy conflicting run records report unknown
 all fm-crew-state tests passed
-FM_TEST_END 2026-10-10T07:45:45Z tests/fm-crew-state.test.sh exit=0 duration_ms=74272 gate_skip=false
+FM_TEST_END 2026-10-10T08:37:12Z tests/fm-crew-state.test.sh exit=0 duration_ms=73285 gate_skip=false
 ok - fm-pr-merge reports exact queue retry flags after a zero-exit false success
 ok - fm-pr-merge omits merge-queue retry guidance for a closed GitHub PR
 ok - fm-pr-merge aggregates agreeing merge-queue rules
@@ -410,8 +410,8 @@ ok - fm-pr-merge --allow-missing is single use, attended-only, and GitHub-only l
 ok - fm-pr-merge enforces required producer identity and named waivers
 ok - fm-pr-merge matches an app-bound required commit status by name
 ok - fm-pr-merge reports known missing checks and all independent read errors
-FM_TEST_END 2026-10-10T07:49:18Z tests/fm-pr-merge.test.sh exit=0 duration_ms=287120 gate_skip=false
-FM_TEST_BEGIN 2026-10-10T07:49:18Z tests/fm-inactive-reconcile.test.sh family=watcher-wake-lock expected_gate_skip=none
+FM_TEST_END 2026-10-10T08:40:25Z tests/fm-pr-merge.test.sh exit=0 duration_ms=265786 gate_skip=false
+FM_TEST_BEGIN 2026-10-10T08:40:25Z tests/fm-inactive-reconcile.test.sh family=watcher-wake-lock expected_gate_skip=none
 actionable: inactive terminal outcome awaiting captain presentation: child=child state=done pr=https://example.test/owner/repo/pull/1
 ok - main direct terminal presentation has a durable receipt
 actionable: inactive terminal outcome awaiting captain presentation: child=child state=done pr=https://example.test/owner/repo/pull/1
@@ -460,9 +460,9 @@ ok - reconciliation makes zero forge or PR API calls
 actionable: inactive terminal outcome awaiting captain presentation: child=child state=done pr=https://example.test/owner/repo/pull/1
 ok - reconciliation state reads set no-forge mode
 all inactive reconciliation tests passed
-FM_TEST_END 2026-10-10T07:50:21Z tests/fm-inactive-reconcile.test.sh exit=0 duration_ms=62370 gate_skip=false
-FM_TEST_BEGIN 2026-10-10T07:50:21Z tests/fm-pr-check-security.test.sh family=pr-forge expected_gate_skip=none
-FM_TEST_BEGIN 2026-10-10T07:50:21Z tests/fm-teardown.test.sh family=pr-forge expected_gate_skip=none
+FM_TEST_END 2026-10-10T08:41:05Z tests/fm-inactive-reconcile.test.sh exit=0 duration_ms=40089 gate_skip=false
+FM_TEST_BEGIN 2026-10-10T08:41:05Z tests/fm-pr-check-security.test.sh family=pr-forge expected_gate_skip=none
+FM_TEST_BEGIN 2026-10-10T08:41:05Z tests/fm-teardown.test.sh family=pr-forge expected_gate_skip=none
 ok - a missing teardown startup source refuses before cleanup
 ok - an unreadable teardown startup source refuses before cleanup
 ok - a missing adapter sibling refuses before cleanup
@@ -478,16 +478,16 @@ ok - local-only worktree with HEAD on a fork remote is torn down and the home su
 ●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 2s ago).
 ●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
 ●  This is a supervision warning only; the guarded operation WILL still run.
-●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.pi/extensions/fm-primary-turnend-guard.ts -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.pi/extensions/fm-primary-turnend-guard.ts -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
 ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ok - teardown closes its own backlog item before reporting success
 ok - teardown closes a landed Gerrit task with its change URL as a note and a GitHub task with --pr
 ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ●  WATCHER DOWN - SUPERVISION IS OFF
-●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 1s ago).
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 0s ago).
 ●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
 ●  This is a supervision warning only; the guarded operation WILL still run.
-●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.pi/extensions/fm-primary-turnend-guard.ts -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.pi/extensions/fm-primary-turnend-guard.ts -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
 ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ok - teardown honors config/backlog-backend=manual and still finishes cleanly
 ok - local-only worktree with truly unpushed work is refused (safety preserved)
@@ -529,17 +529,23 @@ ok - squash-merged stale local still refuses when the forge is unreachable
 ●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 0s ago).
 ●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
 ●  This is a supervision warning only; the guarded operation WILL still run.
-●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.pi/extensions/fm-primary-turnend-guard.ts -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.pi/extensions/fm-primary-turnend-guard.ts -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
 ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-WARNING: watcher still down (same stale episode; last beat: 2s ago, grace 300s) - full banner already printed this episode.
+fm-contributions: data directory unavailable
+contributions: observation not armed; coverage is unconfirmed
+WARNING: watcher still down (same stale episode; last beat: 1s ago, grace 300s) - full banner already printed this episode.
+fm-contributions: data directory unavailable
+contributions: observation not armed; coverage is unconfirmed
 ok - fm-pr-check does not refresh PR head after HEAD moves
 ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ●  WATCHER DOWN - SUPERVISION IS OFF
 ●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 0s ago).
 ●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
 ●  This is a supervision warning only; the guarded operation WILL still run.
-●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.pi/extensions/fm-primary-turnend-guard.ts -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.pi/extensions/fm-primary-turnend-guard.ts -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
 ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+fm-contributions: data directory unavailable
+contributions: observation not armed; coverage is unconfirmed
 ok - fm-pr-check records the remote PR head when the local worktree lags
 ok - worktree whose content already landed in the default branch is torn down (content fallback)
 ok - the content-landed fallback checks a task's recorded base branch, not the default branch
@@ -555,10 +561,10 @@ ok - gh lookup error with content not in default refuses (fail-safe)
 ok - a record predating spawn_gen refuses teardown until --legacy-record is passed
 ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ●  WATCHER DOWN - SUPERVISION IS OFF
-●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 3s ago).
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 1s ago).
 ●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
 ●  This is a supervision warning only; the guarded operation WILL still run.
-●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.pi/extensions/fm-primary-turnend-guard.ts -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.pi/extensions/fm-primary-turnend-guard.ts -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
 ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ok - a windowless leftover with no spawn_gen and no worktree tears down without --legacy-record
 ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -566,19 +572,19 @@ ok - a windowless leftover with no spawn_gen and no worktree tears down without 
 ●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 2s ago).
 ●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
 ●  This is a supervision warning only; the guarded operation WILL still run.
-●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.pi/extensions/fm-primary-turnend-guard.ts -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.pi/extensions/fm-primary-turnend-guard.ts -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
 ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ok - a windowless leftover with no spawn_gen also tears down when --legacy-record is passed
 ok - a windowless leftover still refuses while its worktree holds unlanded work
 ok - a windowless record with a spawn_gen, a non-tmux backend or endpoint identity, no backlog validation, or ambiguous, foreign, or malformed identity still refuses
-WARNING: watcher still down (same stale episode; last beat: 6s ago, grace 300s) - full banner already printed this episode.
+WARNING: watcher still down (same stale episode; last beat: 3s ago, grace 300s) - full banner already printed this episode.
 ok - a windowless leftover retries its retained legacy stamp without --legacy-record
 ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ●  WATCHER DOWN - SUPERVISION IS OFF
-●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 2s ago).
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 1s ago).
 ●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
 ●  This is a supervision warning only; the guarded operation WILL still run.
-●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.pi/extensions/fm-primary-turnend-guard.ts -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.pi/extensions/fm-primary-turnend-guard.ts -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
 ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ok - a landed legacy record with a dead endpoint tears down and logs its accepted incarnation
 ok - --legacy-record never relaxes the unlanded-work refusal
@@ -631,7 +637,7 @@ ok - a process spawned during grace is reaped on a later pass
 ok - persistent leaked processes refuse teardown after bounded retries
 ok - a process exiting during identity lookup does not block teardown
 ok - the run abort and the leaked-process reap both complete before the destructive worktree return
-FM_TEST_END 2026-10-10T07:56:09Z tests/fm-teardown.test.sh exit=0 duration_ms=347910 gate_skip=false
+FM_TEST_END 2026-10-10T08:44:37Z tests/fm-teardown.test.sh exit=0 duration_ms=212167 gate_skip=false
 ok - GitLab state-only reads, strict fork target proof and exact private head fetch
 ok - raw-byte parser accepts canonical URLs and rejects the complete adversarial matrix
 ok - GitLab merge requests are followed on any instance and never wake falsely
@@ -678,9 +684,9 @@ ok - bootstrap does not rewrite unauthenticated checks or emit retired migration
 ok - watcher signals promptly stop custom checks and clean private state
 ok - returned custom check descendants are drained on installed and fallback timeout paths
 ok - teardown removes safe poll artifacts and refuses directory-shaped check files without traversal
-FM_TEST_END 2026-10-10T07:57:17Z tests/fm-pr-check-security.test.sh exit=0 duration_ms=416402 gate_skip=false
-FM_TEST_BEGIN 2026-10-10T07:57:17Z tests/fm-backlog-atomicity.test.sh family=session-bootstrap expected_gate_skip=none
-FM_TEST_BEGIN 2026-10-10T07:57:17Z tests/fm-bootstrap.test.sh family=session-bootstrap expected_gate_skip=none
+FM_TEST_END 2026-10-10T08:45:42Z tests/fm-pr-check-security.test.sh exit=0 duration_ms=276557 gate_skip=false
+FM_TEST_BEGIN 2026-10-10T08:45:42Z tests/fm-backlog-atomicity.test.sh family=session-bootstrap expected_gate_skip=none
+FM_TEST_BEGIN 2026-10-10T08:45:42Z tests/fm-bootstrap.test.sh family=session-bootstrap expected_gate_skip=none
 fatal: not a git repository (or any parent up to mount point /)
 Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
 fatal: not a git repository (or any parent up to mount point /)
@@ -1245,7 +1251,7 @@ Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
 fatal: not a git repository (or any parent up to mount point /)
 Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
 ok - bootstrap gates resolver fields and additive harnesses on the typed key
-FM_TEST_END 2026-10-10T07:58:12Z tests/fm-bootstrap.test.sh exit=0 duration_ms=54522 gate_skip=false
+FM_TEST_END 2026-10-10T08:46:36Z tests/fm-bootstrap.test.sh exit=0 duration_ms=54681 gate_skip=false
 ok - completion preview failures preserve records; actual writes, crash retries and held retention remain recoverable
 ok - backend resolution preserves unreadable configuration errors for every caller
 ok - backend resolution preserves environment, project, user, and default precedence
@@ -1348,8 +1354,8 @@ ok - environment-selected adapters bypass the legacy markdown file override
 ok - a manual-backlog home dispatches and completes without a hard failure
 ok - a secondmate home keeps its own books paired through dispatch and completion
 ok - dispatching a persistent secondmate needs no backlog item
-FM_TEST_END 2026-10-10T08:02:22Z tests/fm-backlog-atomicity.test.sh exit=0 duration_ms=305270 gate_skip=false
-FM_TEST_BEGIN 2026-10-10T08:02:22Z tests/fm-public-followup.test.sh family=standalone expected_gate_skip=none
+FM_TEST_END 2026-10-10T08:50:47Z tests/fm-backlog-atomicity.test.sh exit=0 duration_ms=304843 gate_skip=false
+FM_TEST_BEGIN 2026-10-10T08:50:47Z tests/fm-public-followup.test.sh family=standalone expected_gate_skip=none
 ok - the suite's seeding never reaches a backlog named by ambient TASKS_AXI_FILE/BACKEND
 ok - outcome text is collapsed to one line, bounded by codepoint, and never corrupts characters
 ok - restart end-to-end: typed result reconciles from disk and delivers one reply to the original thread
@@ -1365,181 +1371,11 @@ ok - a child home reports typed results but can never become the outward-post ow
 ok - typed delivery refuses to post when its cleanup registration is missing
 ok - marked secondmate teardown resolves its parent and fails closed when unavailable
 ok - local seeding publishes durable parent state before its identity marker
-Note: switching to '0788e8eb32d0f81b21c0c7b5bb22443b01ef6199'.
-
-You are in 'detached HEAD' state. You can look around, make experimental
-changes and commit them, and you can discard any commits you make in this
-state without impacting any branches by switching back to a branch.
-
-If you want to create a new branch to retain commits you create, you may
-do so (now or later) by using -c with the switch command. Example:
-
-  git switch -c <new-branch-name>
-
-Or undo this operation with:
-
-  git switch -
-
-Turn off this advice by setting config variable advice.detachedHead to false
-
 ok - a lost launch-time parent binding is recovered from the durable local record
-Note: switching to '0788e8eb32d0f81b21c0c7b5bb22443b01ef6199'.
-
-You are in 'detached HEAD' state. You can look around, make experimental
-changes and commit them, and you can discard any commits you make in this
-state without impacting any branches by switching back to a branch.
-
-If you want to create a new branch to retain commits you create, you may
-do so (now or later) by using -c with the switch command. Example:
-
-  git switch -c <new-branch-name>
-
-Or undo this operation with:
-
-  git switch -
-
-Turn off this advice by setting config variable advice.detachedHead to false
-
 ok - a durable local parent record does not bypass a genuinely missing parent-side registration
-Note: switching to '0788e8eb32d0f81b21c0c7b5bb22443b01ef6199'.
-
-You are in 'detached HEAD' state. You can look around, make experimental
-changes and commit them, and you can discard any commits you make in this
-state without impacting any branches by switching back to a branch.
-
-If you want to create a new branch to retain commits you create, you may
-do so (now or later) by using -c with the switch command. Example:
-
-  git switch -c <new-branch-name>
-
-Or undo this operation with:
-
-  git switch -
-
-Turn off this advice by setting config variable advice.detachedHead to false
-
 ok - unknown durable parent fields remain forward-compatible
-Note: switching to '0788e8eb32d0f81b21c0c7b5bb22443b01ef6199'.
-
-You are in 'detached HEAD' state. You can look around, make experimental
-changes and commit them, and you can discard any commits you make in this
-state without impacting any branches by switching back to a branch.
-
-If you want to create a new branch to retain commits you create, you may
-do so (now or later) by using -c with the switch command. Example:
-
-  git switch -c <new-branch-name>
-
-Or undo this operation with:
-
-  git switch -
-
-Turn off this advice by setting config variable advice.detachedHead to false
-
 ok - conflicting live and durable parent bindings fail closed
-Note: switching to '0788e8eb32d0f81b21c0c7b5bb22443b01ef6199'.
-
-You are in 'detached HEAD' state. You can look around, make experimental
-changes and commit them, and you can discard any commits you make in this
-state without impacting any branches by switching back to a branch.
-
-If you want to create a new branch to retain commits you create, you may
-do so (now or later) by using -c with the switch command. Example:
-
-  git switch -c <new-branch-name>
-
-Or undo this operation with:
-
-  git switch -
-
-Turn off this advice by setting config variable advice.detachedHead to false
-
-Note: switching to '0788e8eb32d0f81b21c0c7b5bb22443b01ef6199'.
-
-You are in 'detached HEAD' state. You can look around, make experimental
-changes and commit them, and you can discard any commits you make in this
-state without impacting any branches by switching back to a branch.
-
-If you want to create a new branch to retain commits you create, you may
-do so (now or later) by using -c with the switch command. Example:
-
-  git switch -c <new-branch-name>
-
-Or undo this operation with:
-
-  git switch -
-
-Turn off this advice by setting config variable advice.detachedHead to false
-
-Note: switching to '0788e8eb32d0f81b21c0c7b5bb22443b01ef6199'.
-
-You are in 'detached HEAD' state. You can look around, make experimental
-changes and commit them, and you can discard any commits you make in this
-state without impacting any branches by switching back to a branch.
-
-If you want to create a new branch to retain commits you create, you may
-do so (now or later) by using -c with the switch command. Example:
-
-  git switch -c <new-branch-name>
-
-Or undo this operation with:
-
-  git switch -
-
-Turn off this advice by setting config variable advice.detachedHead to false
-
-Note: switching to '0788e8eb32d0f81b21c0c7b5bb22443b01ef6199'.
-
-You are in 'detached HEAD' state. You can look around, make experimental
-changes and commit them, and you can discard any commits you make in this
-state without impacting any branches by switching back to a branch.
-
-If you want to create a new branch to retain commits you create, you may
-do so (now or later) by using -c with the switch command. Example:
-
-  git switch -c <new-branch-name>
-
-Or undo this operation with:
-
-  git switch -
-
-Turn off this advice by setting config variable advice.detachedHead to false
-
-Note: switching to '0788e8eb32d0f81b21c0c7b5bb22443b01ef6199'.
-
-You are in 'detached HEAD' state. You can look around, make experimental
-changes and commit them, and you can discard any commits you make in this
-state without impacting any branches by switching back to a branch.
-
-If you want to create a new branch to retain commits you create, you may
-do so (now or later) by using -c with the switch command. Example:
-
-  git switch -c <new-branch-name>
-
-Or undo this operation with:
-
-  git switch -
-
-Turn off this advice by setting config variable advice.detachedHead to false
-
 ok - unsafe durable parent records fail closed before cleanup
-Note: switching to '0788e8eb32d0f81b21c0c7b5bb22443b01ef6199'.
-
-You are in 'detached HEAD' state. You can look around, make experimental
-changes and commit them, and you can discard any commits you make in this
-state without impacting any branches by switching back to a branch.
-
-If you want to create a new branch to retain commits you create, you may
-do so (now or later) by using -c with the switch command. Example:
-
-  git switch -c <new-branch-name>
-
-Or undo this operation with:
-
-  git switch -
-
-Turn off this advice by setting config variable advice.detachedHead to false
-
 ok - a NUL-bearing durable parent record fails closed before cleanup
 ok - relay-disabled unmarked teardown runs no public-followup work
 ok - a marked child proceeds without tasks-axi when its parent relay is disabled
@@ -1554,41 +1390,7 @@ ok - a relay-exhausted follow-up binding is escalated rather than retried into t
 ok - the relay poll stays inert without a token, silent with no commitments, and surfaces a new result once
 ok - startup surfaces unresolved public commitments only in a relay home that owes one
 ok - typed public-followup records carry only public-safe summaries and deliverables
-Note: switching to '0788e8eb32d0f81b21c0c7b5bb22443b01ef6199'.
-
-You are in 'detached HEAD' state. You can look around, make experimental
-changes and commit them, and you can discard any commits you make in this
-state without impacting any branches by switching back to a branch.
-
-If you want to create a new branch to retain commits you create, you may
-do so (now or later) by using -c with the switch command. Example:
-
-  git switch -c <new-branch-name>
-
-Or undo this operation with:
-
-  git switch -
-
-Turn off this advice by setting config variable advice.detachedHead to false
-
 ok - dropped-baton regression: delivery retains the loop and pending prints open-loop
-Note: switching to '0788e8eb32d0f81b21c0c7b5bb22443b01ef6199'.
-
-You are in 'detached HEAD' state. You can look around, make experimental
-changes and commit them, and you can discard any commits you make in this
-state without impacting any branches by switching back to a branch.
-
-If you want to create a new branch to retain commits you create, you may
-do so (now or later) by using -c with the switch command. Example:
-
-  git switch -c <new-branch-name>
-
-Or undo this operation with:
-
-  git switch -
-
-Turn off this advice by setting config variable advice.detachedHead to false
-
 ok - CONTROL: the identical teardown REFUSES the moment a commitment is registered
 ok - rechain posts the shipped follow-on into the same thread
 ok - rechain resumes the same obligation after an interrupted bind
@@ -1645,8 +1447,8 @@ ok - a rejection wake survives a poll that could not write its line
 ok - a rejection wake survives a poll that could not read its line
 ok - a wake that cannot be dropped repeats the same refusal
 ok - a refusal whose event was retained repeats its wake instead of a new one
-FM_TEST_END 2026-10-10T08:09:27Z tests/fm-public-followup.test.sh exit=0 duration_ms=424386 gate_skip=false
-FM_TEST_BEGIN 2026-10-10T08:09:27Z tests/fm-teardown-endpoint-safety.test.sh family=backend-dispatch expected_gate_skip=none
+FM_TEST_END 2026-10-10T08:57:52Z tests/fm-public-followup.test.sh exit=0 duration_ms=425624 gate_skip=false
+FM_TEST_BEGIN 2026-10-10T08:57:52Z tests/fm-teardown-endpoint-safety.test.sh family=backend-dispatch expected_gate_skip=none
 ok - fm-teardown: missing, empty, malformed, ambiguous, and task-mismatched endpoints refuse before every mutation or runtime call
 ok - fm-teardown: a concurrent lifecycle action refuses before mutation
 ok - fm-teardown: non-pool cleanup ignores unrelated task publication locks
@@ -1674,8 +1476,8 @@ ok - Treehouse project locking anchors at the local root for main-home, local-se
 ok - fm-teardown: a remote-seeded secondmate home returns its own uncontested pool slot
 ok - fm-teardown: slot ownership across a remote-seeded home and its local child still refuses
 ok - Treehouse project locking still serializes two homes across the remote-seeded boundary
-FM_TEST_END 2026-10-10T08:09:59Z tests/fm-teardown-endpoint-safety.test.sh exit=0 duration_ms=32200 gate_skip=false
-FM_TEST_BEGIN 2026-10-10T08:09:59Z tests/fm-tasks-axi.test.sh family=unclassified expected_gate_skip=none
+FM_TEST_END 2026-10-10T08:58:26Z tests/fm-teardown-endpoint-safety.test.sh exit=0 duration_ms=34064 gate_skip=false
+FM_TEST_BEGIN 2026-10-10T08:58:26Z tests/fm-tasks-axi.test.sh family=unclassified expected_gate_skip=none
 ok - completion probes require the exact done/update preview capabilities without guessing a release floor
 ok - bootstrap reports a regular code-root backlog and stays silent for a link into the home or no copy
 ok - bootstrap reports a code-root backlog linked elsewhere and a forked archive
@@ -1686,8 +1488,8 @@ ok - fm-tasks-axi.sh pins the home's backlog over an ambient TASKS_AXI_FILE and 
 ok - fm-tasks-axi.sh refuses caller --file, a symlinked home backlog, and an unresolvable home
 ok - fm-tasks-axi.sh refuses add --start while plain add and start <id> pass through
 ok - fm-tasks-axi.sh keeps the single-home layout addressing its own code-root backlog
-FM_TEST_END 2026-10-10T08:10:02Z tests/fm-tasks-axi.test.sh exit=0 duration_ms=2780 gate_skip=false
-FM_TEST_BEGIN 2026-10-10T08:10:02Z tests/fm-fleet-snapshot-view.test.sh family=snapshot-bearings expected_gate_skip=optional-binary
+FM_TEST_END 2026-10-10T08:58:29Z tests/fm-tasks-axi.test.sh exit=0 duration_ms=2774 gate_skip=false
+FM_TEST_BEGIN 2026-10-10T08:58:29Z tests/fm-fleet-snapshot-view.test.sh family=snapshot-bearings expected_gate_skip=optional-binary
 ok - empty fleet snapshot and view use explicit absence markers
 ok - fixture snapshot covers task rows, backlog rows, pointers, stable ordering, and emission-time event age
 ok - home-summary excludes kind=secondmate from unowned_current and terminal_in_flight
@@ -1708,8 +1510,8 @@ ok - snapshot review delivery uses latest ready event, excludes scouts, and pref
 ok - snapshot parses tasks-axi rows and respects operational overrides
 ok - fleet view renders the snapshot without secondmate peek guidance
 ok - fleet view renders secondmate agent liveness
-FM_TEST_END 2026-10-10T08:10:25Z tests/fm-fleet-snapshot-view.test.sh exit=0 duration_ms=23588 gate_skip=false
-FM_TEST_BEGIN 2026-10-10T08:10:25Z tests/fm-bearings-snapshot.test.sh family=snapshot-bearings expected_gate_skip=optional-binary
+FM_TEST_END 2026-10-10T08:58:54Z tests/fm-fleet-snapshot-view.test.sh exit=0 duration_ms=25249 gate_skip=false
+FM_TEST_BEGIN 2026-10-10T08:58:54Z tests/fm-bearings-snapshot.test.sh family=snapshot-bearings expected_gate_skip=optional-binary
 ok - task teardown during metadata capture is omitted without aborting the snapshot
 ok - current state and decision hints share one captured status observation
 ok - reused live state is discarded when task generation changes
@@ -1770,27 +1572,27 @@ ok - revealed deferred holds display their deferral reason while live calls stay
 ok - live PR enrichment caps repositories with counted expansion
 ok - per-repository open-PR caps are disclosed with an expansion knob
 ok - projection and TOON rendering failures exit nonzero with diagnostics
-FM_TEST_END 2026-10-10T08:13:32Z tests/fm-bearings-snapshot.test.sh exit=0 duration_ms=186792 gate_skip=false
-FM_TEST_SUMMARY total=13 failed=0 skipped_gate=0 duration_ms=1741598
-FM_TEST_SUMMARY_FAMILY family=backend-dispatch count=1 duration_ms=32200 failed=0
-FM_TEST_SUMMARY_FAMILY family=pr-forge count=4 duration_ms=1056311 failed=0
-FM_TEST_SUMMARY_FAMILY family=pure-contract-unit count=1 duration_ms=74272 failed=0
-FM_TEST_SUMMARY_FAMILY family=session-bootstrap count=2 duration_ms=359792 failed=0
-FM_TEST_SUMMARY_FAMILY family=snapshot-bearings count=2 duration_ms=210380 failed=0
-FM_TEST_SUMMARY_FAMILY family=standalone count=1 duration_ms=424386 failed=0
-FM_TEST_SUMMARY_FAMILY family=unclassified count=1 duration_ms=2780 failed=0
-FM_TEST_SUMMARY_FAMILY family=watcher-wake-lock count=1 duration_ms=62370 failed=0
-FM_TEST_SLOWEST rank=1 script=tests/fm-public-followup.test.sh duration_ms=424386
-FM_TEST_SLOWEST rank=2 script=tests/fm-pr-check-security.test.sh duration_ms=416402
-FM_TEST_SLOWEST rank=3 script=tests/fm-teardown.test.sh duration_ms=347910
-FM_TEST_SLOWEST rank=4 script=tests/fm-backlog-atomicity.test.sh duration_ms=305270
-FM_TEST_SLOWEST rank=5 script=tests/fm-pr-merge.test.sh duration_ms=287120
-FM_TEST_SLOWEST rank=6 script=tests/fm-bearings-snapshot.test.sh duration_ms=186792
-FM_TEST_SLOWEST rank=7 script=tests/fm-crew-state.test.sh duration_ms=74272
-FM_TEST_SLOWEST rank=8 script=tests/fm-inactive-reconcile.test.sh duration_ms=62370
-FM_TEST_SLOWEST rank=9 script=tests/fm-bootstrap.test.sh duration_ms=54522
-FM_TEST_SLOWEST rank=10 script=tests/fm-teardown-endpoint-safety.test.sh duration_ms=32200
-FM_TEST_SLOWEST rank=11 script=tests/fm-fleet-snapshot-view.test.sh duration_ms=23588
-FM_TEST_SLOWEST rank=12 script=tests/fm-review-diff.test.sh duration_ms=4879
-FM_TEST_SLOWEST rank=13 script=tests/fm-tasks-axi.test.sh duration_ms=2780
-fm-test-run: wrote timing artifact: /home/mike/.no-mistakes/evidence/01M4JBM95D48A03T591CXFSNHX/targeted.json
+FM_TEST_END 2026-10-10T09:02:02Z tests/fm-bearings-snapshot.test.sh exit=0 duration_ms=187652 gate_skip=false
+FM_TEST_SUMMARY total=13 failed=0 skipped_gate=0 duration_ms=1563302
+FM_TEST_SUMMARY_FAMILY family=backend-dispatch count=1 duration_ms=34064 failed=0
+FM_TEST_SUMMARY_FAMILY family=pr-forge count=4 duration_ms=759312 failed=0
+FM_TEST_SUMMARY_FAMILY family=pure-contract-unit count=1 duration_ms=73285 failed=0
+FM_TEST_SUMMARY_FAMILY family=session-bootstrap count=2 duration_ms=359524 failed=0
+FM_TEST_SUMMARY_FAMILY family=snapshot-bearings count=2 duration_ms=212901 failed=0
+FM_TEST_SUMMARY_FAMILY family=standalone count=1 duration_ms=425624 failed=0
+FM_TEST_SUMMARY_FAMILY family=unclassified count=1 duration_ms=2774 failed=0
+FM_TEST_SUMMARY_FAMILY family=watcher-wake-lock count=1 duration_ms=40089 failed=0
+FM_TEST_SLOWEST rank=1 script=tests/fm-public-followup.test.sh duration_ms=425624
+FM_TEST_SLOWEST rank=2 script=tests/fm-backlog-atomicity.test.sh duration_ms=304843
+FM_TEST_SLOWEST rank=3 script=tests/fm-pr-check-security.test.sh duration_ms=276557
+FM_TEST_SLOWEST rank=4 script=tests/fm-pr-merge.test.sh duration_ms=265786
+FM_TEST_SLOWEST rank=5 script=tests/fm-teardown.test.sh duration_ms=212167
+FM_TEST_SLOWEST rank=6 script=tests/fm-bearings-snapshot.test.sh duration_ms=187652
+FM_TEST_SLOWEST rank=7 script=tests/fm-crew-state.test.sh duration_ms=73285
+FM_TEST_SLOWEST rank=8 script=tests/fm-bootstrap.test.sh duration_ms=54681
+FM_TEST_SLOWEST rank=9 script=tests/fm-inactive-reconcile.test.sh duration_ms=40089
+FM_TEST_SLOWEST rank=10 script=tests/fm-teardown-endpoint-safety.test.sh duration_ms=34064
+FM_TEST_SLOWEST rank=11 script=tests/fm-fleet-snapshot-view.test.sh duration_ms=25249
+FM_TEST_SLOWEST rank=12 script=tests/fm-review-diff.test.sh duration_ms=4802
+FM_TEST_SLOWEST rank=13 script=tests/fm-tasks-axi.test.sh duration_ms=2774
+fm-test-run: wrote timing artifact: /home/mike/.no-mistakes/evidence/01M4JF4DDZJ053B70DEBQKMMF2/targeted.json

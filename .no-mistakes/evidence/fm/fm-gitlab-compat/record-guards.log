@@ -20,10 +20,10 @@ task:
 help[2]:
   - Run `tasks-axi done guards --pr <url>` when it ships
   - Run `tasks-axi block guards --by <other>` to record a dependency
-Hardlink refused: pending-close record must have exactly one link at /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/guards.MI2xYC/home/state/guards.backlog-close
+Hardlink refused: pending-close record must have exactly one link at /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/guards.dW1CNh/home/state/guards.backlog-close
 Malformed artifact refused: error: "Task pr link must be a canonical pull request URL: https://github.com/<owner>/<repo>/pull/<n> (GitHub), https://<host>/<owner>/<repo>/pulls/<n> (Forgejo), or https://<host>/<group[/subgroup...]>/<project>/-/merge_requests/<n> (GitLab)"
-Foreign root refused: foreign data directory in pending-close record /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/guards.MI2xYC/home/state/guards.backlog-close
-Symlink refused: pending-close record resolves outside its authorized directory at /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/guards.MI2xYC/home/state/guards.backlog-close
+Foreign root refused: foreign data directory in pending-close record /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/guards.dW1CNh/home/state/guards.backlog-close
+Symlink refused: pending-close record resolves outside its authorized directory at /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/guards.dW1CNh/home/state/guards.backlog-close
 {
   "ok": true,
   "action": "done",

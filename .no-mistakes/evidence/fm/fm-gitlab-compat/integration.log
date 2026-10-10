@@ -1,5 +1,5 @@
 PASS: real done/update previews preserve row, body, dates and archives
-error: "EACCES: permission denied, open '/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/fm-compatible-integration.JvRmOi/home/data/backlog.md.lock'"
+error: "EACCES: permission denied, open '/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/fm-compatible-integration.vtRnth/home/data/backlog.md.lock'"
 PASS: positive preview, real filesystem write refusal, surviving retry record
 PASS: real successful close and idempotent replay
 PASS: absent-metadata backfill retains original close date and one exact link
@@ -37,7 +37,7 @@ PASS: absent-metadata backfill retains original close date and one exact link
   }
 }
 PASS: real held retention records delivery without closing unresolved captain call
-Actual retirement error: pending-close record could not be removed at /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/fm-compatible-integration.JvRmOi/home/state/retirement-test.backlog-close
+Actual retirement error: pending-close record could not be removed at /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/fm-compatible-integration.vtRnth/home/state/retirement-test.backlog-close
 {
   "ok": true,
   "action": "done",

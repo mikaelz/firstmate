@@ -112,8 +112,8 @@ task:
   links: none
   body: ""
 help[2]:
-  - Run `tasks-axi done gerrit --pr <url> --file=/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/addressing.JLnl8g/home/relocated/backlog.md` when it ships
-  - Run `tasks-axi block gerrit --by <other> --file=/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/addressing.JLnl8g/home/relocated/backlog.md` to record a dependency
+  - Run `tasks-axi done gerrit --pr <url> --file=/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/addressing.BnfaSy/home/relocated/backlog.md` when it ships
+  - Run `tasks-axi block gerrit --by <other> --file=/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/addressing.BnfaSy/home/relocated/backlog.md` to record a dependency
 task:
   id: gerrit
   title: Preserved Gerrit completion

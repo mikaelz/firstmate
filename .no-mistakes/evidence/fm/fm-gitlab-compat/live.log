@@ -41,8 +41,8 @@ task:
   links: none
   body: ""
 help[2]:
-  - Run `tasks-axi done private-completion --pr <url> --file=/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/data/backlog.md` when it ships
-  - Run `tasks-axi block private-completion --by <other> --file=/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/data/backlog.md` to record a dependency
+  - Run `tasks-axi done private-completion --pr <url> --file=/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/live/home/data/backlog.md` when it ships
+  - Run `tasks-axi block private-completion --by <other> --file=/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/live/home/data/backlog.md` to record a dependency
 Completion replay refusal: tasks-axi done requires --dry-run support; install the published preview-capable release before completion
 Retention preview refusal: tasks-axi update requires --dry-run support; install the published preview-capable release before completion
 task:

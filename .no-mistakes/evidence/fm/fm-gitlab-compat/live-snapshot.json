@@ -1,18 +1,18 @@
 {
   "schema": "fm-fleet-snapshot.v1",
-  "generated": "2026-10-10T07:45:27Z",
-  "fm_home": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home",
+  "generated": "2026-10-10T08:38:12Z",
+  "fm_home": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/live/home",
   "roots": {
-    "fm_root": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX",
-    "state": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/state",
-    "data": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/data",
-    "config": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/config",
-    "projects": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/projects"
+    "fm_root": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2",
+    "state": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/live/home/state",
+    "data": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/live/home/data",
+    "config": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/live/home/config",
+    "projects": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/live/home/projects"
   },
   "backlog": {
-    "records": [],
-    "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/data/backlog.md",
-    "present": true
+    "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/live/home/data/backlog.md",
+    "present": true,
+    "records": []
   },
   "tasks": [
     {
@@ -28,11 +28,11 @@
       "remote": null,
       "paths": {
         "meta": {
-          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/state/incidental.meta",
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/live/home/state/incidental.meta",
           "present": true
         },
         "status_log": {
-          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/state/incidental.status",
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/live/home/state/incidental.status",
           "present": true,
           "kind": "event_history",
           "last_event": {
@@ -51,7 +51,7 @@
           "present": false
         },
         "report": {
-          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/data/incidental/report.md",
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/live/home/data/incidental/report.md",
           "present": false
         }
       },
@@ -61,7 +61,7 @@
         "source": "none",
         "detail": "worktree gone (torn down?)",
         "raw": "state: unknown · source: none · worktree gone (torn down?)",
-        "observed_at": "2026-10-10T07:45:27Z",
+        "observed_at": "2026-10-10T08:38:12Z",
         "freshness": "fresh"
       },
       "endpoint": {
@@ -69,7 +69,7 @@
         "exists": null,
         "agent_alive": "not_checked",
         "status": "unknown",
-        "observed_at": "2026-10-10T07:45:27Z",
+        "observed_at": "2026-10-10T08:38:12Z",
         "freshness": "fresh"
       },
       "pr": {
@@ -104,11 +104,11 @@
       "remote": null,
       "paths": {
         "meta": {
-          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/state/latest.meta",
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/live/home/state/latest.meta",
           "present": true
         },
         "status_log": {
-          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/state/latest.status",
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/live/home/state/latest.status",
           "present": true,
           "kind": "event_history",
           "last_event": {
@@ -127,7 +127,7 @@
           "present": false
         },
         "report": {
-          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/data/latest/report.md",
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/live/home/data/latest/report.md",
           "present": false
         }
       },
@@ -137,7 +137,7 @@
         "source": "none",
         "detail": "worktree gone (torn down?)",
         "raw": "state: unknown · source: none · worktree gone (torn down?)",
-        "observed_at": "2026-10-10T07:45:27Z",
+        "observed_at": "2026-10-10T08:38:12Z",
         "freshness": "fresh"
       },
       "endpoint": {
@@ -145,7 +145,7 @@
         "exists": null,
         "agent_alive": "not_checked",
         "status": "unknown",
-        "observed_at": "2026-10-10T07:45:27Z",
+        "observed_at": "2026-10-10T08:38:12Z",
         "freshness": "fresh"
       },
       "pr": {
@@ -180,11 +180,11 @@
       "remote": null,
       "paths": {
         "meta": {
-          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/state/meta.meta",
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/live/home/state/meta.meta",
           "present": true
         },
         "status_log": {
-          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/state/meta.status",
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/live/home/state/meta.status",
           "present": true,
           "kind": "event_history",
           "last_event": {
@@ -203,7 +203,7 @@
           "present": false
         },
         "report": {
-          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/data/meta/report.md",
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/live/home/data/meta/report.md",
           "present": false
         }
       },
@@ -213,7 +213,7 @@
         "source": "none",
         "detail": "worktree gone (torn down?)",
         "raw": "state: unknown · source: none · worktree gone (torn down?)",
-        "observed_at": "2026-10-10T07:45:27Z",
+        "observed_at": "2026-10-10T08:38:12Z",
         "freshness": "fresh"
       },
       "endpoint": {
@@ -221,7 +221,7 @@
         "exists": null,
         "agent_alive": "not_checked",
         "status": "unknown",
-        "observed_at": "2026-10-10T07:45:27Z",
+        "observed_at": "2026-10-10T08:38:12Z",
         "freshness": "fresh"
       },
       "pr": {
@@ -256,11 +256,11 @@
       "remote": null,
       "paths": {
         "meta": {
-          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/state/scout.meta",
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/live/home/state/scout.meta",
           "present": true
         },
         "status_log": {
-          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/state/scout.status",
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/live/home/state/scout.status",
           "present": true,
           "kind": "event_history",
           "last_event": {
@@ -279,7 +279,7 @@
           "present": false
         },
         "report": {
-          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/data/scout/report.md",
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/live/home/data/scout/report.md",
           "present": false
         }
       },
@@ -289,7 +289,7 @@
         "source": "none",
         "detail": "worktree gone (torn down?)",
         "raw": "state: unknown · source: none · worktree gone (torn down?)",
-        "observed_at": "2026-10-10T07:45:27Z",
+        "observed_at": "2026-10-10T08:38:12Z",
         "freshness": "fresh"
       },
       "endpoint": {
@@ -297,7 +297,7 @@
         "exists": null,
         "agent_alive": "not_checked",
         "status": "unknown",
-        "observed_at": "2026-10-10T07:45:27Z",
+        "observed_at": "2026-10-10T08:38:12Z",
         "freshness": "fresh"
       },
       "pr": {
@@ -353,10 +353,10 @@
       "complete": true,
       "reason": null,
       "provenance": "registered-table",
-      "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/data/secondmates.md",
+      "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JF4DDZJ053B70DEBQKMMF2/.test-phase-tmp/live/home/data/secondmates.md",
       "freshness": {
         "status": "fresh",
-        "observed_at": "2026-10-10T07:45:27Z"
+        "observed_at": "2026-10-10T08:38:12Z"
       },
       "records": [],
       "input_truncated": false,
