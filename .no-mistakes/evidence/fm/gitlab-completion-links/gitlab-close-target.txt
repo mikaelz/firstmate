@@ -1,0 +1,12 @@
+=== TARGET 45cc626: real fm-teardown.sh, real tasks-axi, GitLab MR pr=
+--- tasks-axi on PATH: /home/mike/.local/bin/tasks-axi (0.2.6)
+--- before: state=in_flight  pr=https://gitlab.com/group/sub/project/-/merge_requests/719
+--- fm-teardown.sh task-x1 exit=0
+/tmp/fm-teardown-tests.2Bh4F4/live/project: already current
+teardown task-x1 complete (window firstmate:fm-task-x1, worktree /tmp/fm-teardown-tests.2Bh4F4/live/wt)
+Backlog: task-x1 is closed in /tmp/fm-teardown-tests.2Bh4F4/live/data/backlog.md. Run bin/fm-tasks-axi.sh ready for dependency-cleared candidates, check date gates, and dispatch only work whose blockers are gone and date is due.
+--- after: state=done
+  state: done
+  links: none
+  body: "GitLab merge request https://gitlab.com/group/sub/project/-/merge_requests/719"
+--- pending close record: absent

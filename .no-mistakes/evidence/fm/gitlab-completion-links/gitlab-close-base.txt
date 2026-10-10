@@ -1,0 +1,23 @@
+=== BASE fb75c1f: real fm-teardown.sh, real tasks-axi, GitLab MR pr=
+ok - a missing teardown startup source refuses before cleanup
+ok - an unreadable teardown startup source refuses before cleanup
+ok - a missing adapter sibling refuses before cleanup
+ok - a forced descendant with a missing adapter sibling refuses before cleanup
+ok - a forced secondmate with a missing own adapter sibling refuses before child cleanup
+ok - present required sources still reach the ordinary teardown refusal
+ok - local-only worktree with HEAD on a fork remote is torn down and the home summary is refreshed
+ok - teardown closes its own backlog item before reporting success
+ok - teardown closes a landed Gerrit task with its change URL as a note and a GitHub task with --pr
+ok - teardown honors config/backlog-backend=manual and still finishes cleanly
+ok - local-only worktree with truly unpushed work is refused (safety preserved)
+ok - local-only worktree with work merged into local main is torn down (no regression)
+ok - no-mistakes worktree with HEAD on origin is torn down (no regression)
+--- tasks-axi on PATH: /home/mike/.local/bin/tasks-axi (0.2.6)
+--- before: state=in_flight  pr=https://gitlab.com/group/sub/project/-/merge_requests/719
+--- fm-teardown.sh task-x1 exit=1
+error: task-x1's endpoint and local copy are cleaned up, but its backlog item could not be closed atomically (error: "Task pr link must be a canonical pull request URL: https://github.com/<owner>/<repo>/pull/<n> (GitHub) or https://<host>/<owner>/<repo>/pulls/<n> (Forgejo)"); the pending close is recorded and the next session start retries it
+--- after: state=in_flight
+  state: in_flight
+  links: none
+  body: ""
+--- pending close record: PRESENT

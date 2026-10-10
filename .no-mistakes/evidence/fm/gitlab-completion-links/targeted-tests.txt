@@ -1,0 +1,6 @@
+ok - session start replays recorded Gerrit and GitLab closes with their URLs as notes
+ok - an answer before cleanup replay notes the retained Gerrit change
+ok - an answer before cleanup replay notes the retained GitLab merge request
+ok - cleanup keeps a captain-held Gerrit change task open and records its change URL
+ok - cleanup keeps a captain-held GitLab merge request task open and records its change URL
+ok - teardown closes landed Gerrit and GitLab tasks with their URLs as notes and a GitHub task with --pr
