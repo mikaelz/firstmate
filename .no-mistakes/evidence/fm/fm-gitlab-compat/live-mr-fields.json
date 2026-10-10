@@ -1,0 +1,14 @@
+{
+  "iid": 1,
+  "web_url": "https://gitlab.com/KarotKris/gitlab-merge-watch-fixture/-/merge_requests/1",
+  "state": "merged",
+  "sha": "33762fcf6777c8d993220d25fb541e56c48081b9",
+  "diff_refs": {
+    "base_sha": "e032731713133c8a4bca85a5dc3d132e04ddcebc",
+    "head_sha": "33762fcf6777c8d993220d25fb541e56c48081b9",
+    "start_sha": "e032731713133c8a4bca85a5dc3d132e04ddcebc"
+  },
+  "target_branch": "main",
+  "target_project_id": 84652972,
+  "source_project_id": 84652972
+}

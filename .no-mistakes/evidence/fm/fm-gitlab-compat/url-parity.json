@@ -1,0 +1,168 @@
+{
+  "absolute_consumer": "/home/mike/github/kunchenguid/firstmate/data/fm-gitlab-compat/dependency/node_modules/.bin/tasks-axi",
+  "preview_did_not_mutate_backlog": true,
+  "receipts": [
+    {
+      "url": "https://gitlab.com/group/project/-/merge_requests/7",
+      "firstmate_accepts": true,
+      "consumer_accepts": true,
+      "consumer_response": "{\n  \"ok\": true,\n  \"action\": \"update\",\n  \"dry_run\": true,\n  \"changed\": [\n    \"links\"\n  ],\n  \"task\": {\n    \"id\": \"parity-test\",\n    \"title\": \"private URL validation https://gitlab.com/group/project/-/merge_requests/7\",\n    \"state\": \"queued\",\n    \"kind\": null,\n    \"repo\": null,\n    \"priority\": null,\n    \"created\": \"2026-10-10\",\n    \"closed\": null,\n    \"deps\": [],\n    \"hold\": null,\n    \"links\": [\n      {\n        \"kind\": \"pr\",\n        \"url\": \"https://gitlab.com/group/project/-/merge_requests/7\"\n      }\n    ],\n    \"body\": null,\n    \"blocked\": false,\n    \"blocked_by\": [],\n    \"held\": false\n  }\n}\n"
+    },
+    {
+      "url": "https://gitlab.example.test/group/sub/project/-/merge_requests/780",
+      "firstmate_accepts": true,
+      "consumer_accepts": true,
+      "consumer_response": "{\n  \"ok\": true,\n  \"action\": \"update\",\n  \"dry_run\": true,\n  \"changed\": [\n    \"links\"\n  ],\n  \"task\": {\n    \"id\": \"parity-test\",\n    \"title\": \"private URL validation https://gitlab.example.test/group/sub/project/-/merge_requests/780\",\n    \"state\": \"queued\",\n    \"kind\": null,\n    \"repo\": null,\n    \"priority\": null,\n    \"created\": \"2026-10-10\",\n    \"closed\": null,\n    \"deps\": [],\n    \"hold\": null,\n    \"links\": [\n      {\n        \"kind\": \"pr\",\n        \"url\": \"https://gitlab.example.test/group/sub/project/-/merge_requests/780\"\n      }\n    ],\n    \"body\": null,\n    \"blocked\": false,\n    \"blocked_by\": [],\n    \"held\": false\n  }\n}\n"
+    },
+    {
+      "url": "https://github.com/o/r/pull/7",
+      "firstmate_accepts": true,
+      "consumer_accepts": true,
+      "consumer_response": "{\n  \"ok\": true,\n  \"action\": \"update\",\n  \"dry_run\": true,\n  \"changed\": [\n    \"links\"\n  ],\n  \"task\": {\n    \"id\": \"parity-test\",\n    \"title\": \"private URL validation https://github.com/o/r/pull/7\",\n    \"state\": \"queued\",\n    \"kind\": null,\n    \"repo\": null,\n    \"priority\": null,\n    \"created\": \"2026-10-10\",\n    \"closed\": null,\n    \"deps\": [],\n    \"hold\": null,\n    \"links\": [\n      {\n        \"kind\": \"pr\",\n        \"url\": \"https://github.com/o/r/pull/7\"\n      }\n    ],\n    \"body\": null,\n    \"blocked\": false,\n    \"blocked_by\": [],\n    \"held\": false\n  }\n}\n"
+    },
+    {
+      "url": "https://forgejo.example.test/o/r/pulls/7",
+      "firstmate_accepts": true,
+      "consumer_accepts": true,
+      "consumer_response": "{\n  \"ok\": true,\n  \"action\": \"update\",\n  \"dry_run\": true,\n  \"changed\": [\n    \"links\"\n  ],\n  \"task\": {\n    \"id\": \"parity-test\",\n    \"title\": \"private URL validation https://forgejo.example.test/o/r/pulls/7\",\n    \"state\": \"queued\",\n    \"kind\": null,\n    \"repo\": null,\n    \"priority\": null,\n    \"created\": \"2026-10-10\",\n    \"closed\": null,\n    \"deps\": [],\n    \"hold\": null,\n    \"links\": [\n      {\n        \"kind\": \"pr\",\n        \"url\": \"https://forgejo.example.test/o/r/pulls/7\"\n      }\n    ],\n    \"body\": null,\n    \"blocked\": false,\n    \"blocked_by\": [],\n    \"held\": false\n  }\n}\n"
+    },
+    {
+      "url": "https://gitlab.example.test/group/sub/project/-/merge_requests/0",
+      "firstmate_accepts": false,
+      "consumer_accepts": false,
+      "consumer_response": "error: \"--pr must be a canonical pull request URL: https://github.com/<owner>/<repo>/pull/<n> (GitHub), https://<host>/<owner>/<repo>/pulls/<n> (Forgejo), or https://<host>/<group[/subgroup...]>/<project>/-/merge_requests/<n> (GitLab)\"\ncode: VALIDATION_ERROR\n"
+    },
+    {
+      "url": "https://gitlab.example.test/group/sub/project/-/merge_requests/0780",
+      "firstmate_accepts": false,
+      "consumer_accepts": false,
+      "consumer_response": "error: \"--pr must be a canonical pull request URL: https://github.com/<owner>/<repo>/pull/<n> (GitHub), https://<host>/<owner>/<repo>/pulls/<n> (Forgejo), or https://<host>/<group[/subgroup...]>/<project>/-/merge_requests/<n> (GitLab)\"\ncode: VALIDATION_ERROR\n"
+    },
+    {
+      "url": "https://gitlab.example.test/group/sub/project/-/merge_requests/780junk",
+      "firstmate_accepts": false,
+      "consumer_accepts": false,
+      "consumer_response": "error: \"--pr must be a canonical pull request URL: https://github.com/<owner>/<repo>/pull/<n> (GitHub), https://<host>/<owner>/<repo>/pulls/<n> (Forgejo), or https://<host>/<group[/subgroup...]>/<project>/-/merge_requests/<n> (GitLab)\"\ncode: VALIDATION_ERROR\n"
+    },
+    {
+      "url": "https://gitlab.example.test/group/sub/project/-/merge_requests/780/",
+      "firstmate_accepts": false,
+      "consumer_accepts": false,
+      "consumer_response": "error: \"--pr must be a canonical pull request URL: https://github.com/<owner>/<repo>/pull/<n> (GitHub), https://<host>/<owner>/<repo>/pulls/<n> (Forgejo), or https://<host>/<group[/subgroup...]>/<project>/-/merge_requests/<n> (GitLab)\"\ncode: VALIDATION_ERROR\n"
+    },
+    {
+      "url": "https://gitlab.example.test/group/sub/project/-/merge_requests/780?x=1",
+      "firstmate_accepts": false,
+      "consumer_accepts": false,
+      "consumer_response": "error: \"--pr must be a canonical pull request URL: https://github.com/<owner>/<repo>/pull/<n> (GitHub), https://<host>/<owner>/<repo>/pulls/<n> (Forgejo), or https://<host>/<group[/subgroup...]>/<project>/-/merge_requests/<n> (GitLab)\"\ncode: VALIDATION_ERROR\n"
+    },
+    {
+      "url": "https://gitlab.example.test/group/sub/project/-/merge_requests/780#x",
+      "firstmate_accepts": false,
+      "consumer_accepts": false,
+      "consumer_response": "error: \"--pr must be a canonical pull request URL: https://github.com/<owner>/<repo>/pull/<n> (GitHub), https://<host>/<owner>/<repo>/pulls/<n> (Forgejo), or https://<host>/<group[/subgroup...]>/<project>/-/merge_requests/<n> (GitLab)\"\ncode: VALIDATION_ERROR\n"
+    },
+    {
+      "url": "https://gitlab.example.test/group/sub/project/-/merge_requests/780\n",
+      "firstmate_accepts": false,
+      "consumer_accepts": false,
+      "consumer_response": "error: \"--pr must be a single line\"\ncode: VALIDATION_ERROR\nhelp[1]: Pass --pr=... without line breaks\n"
+    },
+    {
+      "url": "https://gitlab.example.test/group/sub/project/-/merge_requests/780\u0001",
+      "firstmate_accepts": false,
+      "consumer_accepts": false,
+      "consumer_response": "error: \"--pr must be a canonical pull request URL: https://github.com/<owner>/<repo>/pull/<n> (GitHub), https://<host>/<owner>/<repo>/pulls/<n> (Forgejo), or https://<host>/<group[/subgroup...]>/<project>/-/merge_requests/<n> (GitLab)\"\ncode: VALIDATION_ERROR\n"
+    },
+    {
+      "url": " https://gitlab.example.test/group/sub/project/-/merge_requests/780",
+      "firstmate_accepts": false,
+      "consumer_accepts": false,
+      "consumer_response": "error: \"--pr must be a canonical pull request URL: https://github.com/<owner>/<repo>/pull/<n> (GitHub), https://<host>/<owner>/<repo>/pulls/<n> (Forgejo), or https://<host>/<group[/subgroup...]>/<project>/-/merge_requests/<n> (GitLab)\"\ncode: VALIDATION_ERROR\n"
+    },
+    {
+      "url": "http://gitlab.com/o/r/-/merge_requests/7",
+      "firstmate_accepts": false,
+      "consumer_accepts": false,
+      "consumer_response": "error: \"--pr must be a canonical pull request URL: https://github.com/<owner>/<repo>/pull/<n> (GitHub), https://<host>/<owner>/<repo>/pulls/<n> (Forgejo), or https://<host>/<group[/subgroup...]>/<project>/-/merge_requests/<n> (GitLab)\"\ncode: VALIDATION_ERROR\n"
+    },
+    {
+      "url": "https://Gitlab.com/o/r/-/merge_requests/7",
+      "firstmate_accepts": false,
+      "consumer_accepts": false,
+      "consumer_response": "error: \"--pr must be a canonical pull request URL: https://github.com/<owner>/<repo>/pull/<n> (GitHub), https://<host>/<owner>/<repo>/pulls/<n> (Forgejo), or https://<host>/<group[/subgroup...]>/<project>/-/merge_requests/<n> (GitLab)\"\ncode: VALIDATION_ERROR\n"
+    },
+    {
+      "url": "https://user@gitlab.com/o/r/-/merge_requests/7",
+      "firstmate_accepts": false,
+      "consumer_accepts": false,
+      "consumer_response": "error: \"--pr must be a canonical pull request URL: https://github.com/<owner>/<repo>/pull/<n> (GitHub), https://<host>/<owner>/<repo>/pulls/<n> (Forgejo), or https://<host>/<group[/subgroup...]>/<project>/-/merge_requests/<n> (GitLab)\"\ncode: VALIDATION_ERROR\n"
+    },
+    {
+      "url": "https://gitlab.com:443/o/r/-/merge_requests/7",
+      "firstmate_accepts": false,
+      "consumer_accepts": false,
+      "consumer_response": "error: \"--pr must be a canonical pull request URL: https://github.com/<owner>/<repo>/pull/<n> (GitHub), https://<host>/<owner>/<repo>/pulls/<n> (Forgejo), or https://<host>/<group[/subgroup...]>/<project>/-/merge_requests/<n> (GitLab)\"\ncode: VALIDATION_ERROR\n"
+    },
+    {
+      "url": "https://gitlab.com/o%2Fr/r/-/merge_requests/7",
+      "firstmate_accepts": false,
+      "consumer_accepts": false,
+      "consumer_response": "error: \"--pr must be a canonical pull request URL: https://github.com/<owner>/<repo>/pull/<n> (GitHub), https://<host>/<owner>/<repo>/pulls/<n> (Forgejo), or https://<host>/<group[/subgroup...]>/<project>/-/merge_requests/<n> (GitLab)\"\ncode: VALIDATION_ERROR\n"
+    },
+    {
+      "url": "https://gitlab.com/o/../r/-/merge_requests/7",
+      "firstmate_accepts": false,
+      "consumer_accepts": false,
+      "consumer_response": "error: \"--pr must be a canonical pull request URL: https://github.com/<owner>/<repo>/pull/<n> (GitHub), https://<host>/<owner>/<repo>/pulls/<n> (Forgejo), or https://<host>/<group[/subgroup...]>/<project>/-/merge_requests/<n> (GitLab)\"\ncode: VALIDATION_ERROR\n"
+    },
+    {
+      "url": "https://gitlab.com/o//r/-/merge_requests/7",
+      "firstmate_accepts": false,
+      "consumer_accepts": false,
+      "consumer_response": "error: \"--pr must be a canonical pull request URL: https://github.com/<owner>/<repo>/pull/<n> (GitHub), https://<host>/<owner>/<repo>/pulls/<n> (Forgejo), or https://<host>/<group[/subgroup...]>/<project>/-/merge_requests/<n> (GitLab)\"\ncode: VALIDATION_ERROR\n"
+    },
+    {
+      "url": "https://gitlab.com/o/-/r/-/merge_requests/7",
+      "firstmate_accepts": false,
+      "consumer_accepts": false,
+      "consumer_response": "error: \"--pr must be a canonical pull request URL: https://github.com/<owner>/<repo>/pull/<n> (GitHub), https://<host>/<owner>/<repo>/pulls/<n> (Forgejo), or https://<host>/<group[/subgroup...]>/<project>/-/merge_requests/<n> (GitLab)\"\ncode: VALIDATION_ERROR\n"
+    },
+    {
+      "url": "https://gitlab.com/o/-repo/-/merge_requests/7",
+      "firstmate_accepts": false,
+      "consumer_accepts": false,
+      "consumer_response": "error: \"--pr must be a canonical pull request URL: https://github.com/<owner>/<repo>/pull/<n> (GitHub), https://<host>/<owner>/<repo>/pulls/<n> (Forgejo), or https://<host>/<group[/subgroup...]>/<project>/-/merge_requests/<n> (GitLab)\"\ncode: VALIDATION_ERROR\n"
+    },
+    {
+      "url": "https://gitlab.com/o/r.git/-/merge_requests/7",
+      "firstmate_accepts": false,
+      "consumer_accepts": false,
+      "consumer_response": "error: \"--pr must be a canonical pull request URL: https://github.com/<owner>/<repo>/pull/<n> (GitHub), https://<host>/<owner>/<repo>/pulls/<n> (Forgejo), or https://<host>/<group[/subgroup...]>/<project>/-/merge_requests/<n> (GitLab)\"\ncode: VALIDATION_ERROR\n"
+    },
+    {
+      "url": "https://github.com/o/r/-/merge_requests/7",
+      "firstmate_accepts": false,
+      "consumer_accepts": false,
+      "consumer_response": "error: \"--pr must be a canonical pull request URL: https://github.com/<owner>/<repo>/pull/<n> (GitHub), https://<host>/<owner>/<repo>/pulls/<n> (Forgejo), or https://<host>/<group[/subgroup...]>/<project>/-/merge_requests/<n> (GitLab)\"\ncode: VALIDATION_ERROR\n"
+    },
+    {
+      "url": "https://github.com/o/r/pulls/7",
+      "firstmate_accepts": false,
+      "consumer_accepts": false,
+      "consumer_response": "error: \"--pr must be a canonical pull request URL: https://github.com/<owner>/<repo>/pull/<n> (GitHub), https://<host>/<owner>/<repo>/pulls/<n> (Forgejo), or https://<host>/<group[/subgroup...]>/<project>/-/merge_requests/<n> (GitLab)\"\ncode: VALIDATION_ERROR\n"
+    },
+    {
+      "url": "https://forgejo.example.test/o/r/pull/7",
+      "firstmate_accepts": false,
+      "consumer_accepts": false,
+      "consumer_response": "error: \"--pr must be a canonical pull request URL: https://github.com/<owner>/<repo>/pull/<n> (GitHub), https://<host>/<owner>/<repo>/pulls/<n> (Forgejo), or https://<host>/<group[/subgroup...]>/<project>/-/merge_requests/<n> (GitLab)\"\ncode: VALIDATION_ERROR\n"
+    },
+    {
+      "url": "https://gitlab.com/o/r/-/issues/7",
+      "firstmate_accepts": false,
+      "consumer_accepts": false,
+      "consumer_response": "error: \"--pr must be a canonical pull request URL: https://github.com/<owner>/<repo>/pull/<n> (GitHub), https://<host>/<owner>/<repo>/pulls/<n> (Forgejo), or https://<host>/<group[/subgroup...]>/<project>/-/merge_requests/<n> (GitLab)\"\ncode: VALIDATION_ERROR\n"
+    }
+  ]
+}

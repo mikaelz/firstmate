@@ -1,0 +1,136 @@
+ok: added older -> Queued
+task:
+  id: older
+  title: Old completion to archive
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-10-10
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start older` to move it to in flight
+  - Run `tasks-axi block older --by <other>` to record a dependency
+ok: done older -> Done
+help[1]:
+  - Run `tasks-axi ready` to dispatch work unblocked by this
+ok: added addressed -> In flight
+task:
+  id: addressed
+  title: Relocated close
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-10-10
+  closed: "-"
+  deps: none
+  links: none
+  body: Archive candidate
+help[2]:
+  - Run `tasks-axi done addressed --pr <url>` when it ships
+  - Run `tasks-axi block addressed --by <other>` to record a dependency
+{
+  "ok": true,
+  "action": "done",
+  "dry_run": true,
+  "pruned": 0,
+  "task": {
+    "id": "addressed",
+    "title": "Relocated close https://gitlab.example.test/nested/group/project/-/merge_requests/123",
+    "state": "done",
+    "kind": null,
+    "repo": null,
+    "priority": null,
+    "created": "2026-10-10",
+    "closed": "2026-10-10",
+    "deps": [],
+    "hold": null,
+    "links": [
+      {
+        "kind": "pr",
+        "url": "https://gitlab.example.test/nested/group/project/-/merge_requests/123"
+      }
+    ],
+    "body": "Archive candidate",
+    "blocked": false,
+    "blocked_by": [],
+    "held": false
+  }
+}
+task:
+  id: addressed
+  title: "Relocated close https://gitlab.example.test/nested/group/project/-/merge_request\n... (truncated, 85 chars total - use --full to see complete text)"
+  state: done
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: "-"
+  closed: 2026-10-10
+  deps: none
+  links: "pr:https://gitlab.example.test/nested/group/project/-/merge_requests/123"
+  body: Archive candidate
+Relocated addressed preview and archive close succeeded from unrelated caller; default backlog untouched.
+ok: added gerrit -> In flight
+task:
+  id: gerrit
+  title: Preserved Gerrit completion
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-10-10
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi done gerrit --pr <url> --file=/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/addressing.JLnl8g/home/relocated/backlog.md` when it ships
+  - Run `tasks-axi block gerrit --by <other> --file=/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/addressing.JLnl8g/home/relocated/backlog.md` to record a dependency
+task:
+  id: gerrit
+  title: Preserved Gerrit completion
+  state: done
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: "-"
+  closed: 2026-10-10
+  deps: none
+  links: none
+  body: "Gerrit change https://review.example.com/c/project/+/7"
+Gerrit review recorded through note translation.
+Manual mode skips automatic transitions: config/backlog-backend selects manual editing

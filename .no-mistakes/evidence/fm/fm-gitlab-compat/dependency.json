@@ -1,0 +1,7 @@
+{
+  "source_artifact": "/home/mike/github/kunchenguid/firstmate/data/tasks-gitlab-compat/tasks-axi-ad17640f013adf8120175db621f804d1b4554f48.tgz",
+  "sha256": "d51affb60e0994225261fa2fa9e0ff5b680ca8adb0bcac16e419a8c3f3d0fe83",
+  "development_commit": "ad17640f013adf8120175db621f804d1b4554f48",
+  "absolute_executable": "/home/mike/github/kunchenguid/firstmate/data/fm-gitlab-compat/dependency/node_modules/.bin/tasks-axi",
+  "byte_identical_files": 34
+}

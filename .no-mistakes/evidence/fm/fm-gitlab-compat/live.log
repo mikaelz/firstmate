@@ -1,0 +1,66 @@
+State-only: state=merged merged=true head=
+Verified identity=https://gitlab.com/KarotKris/gitlab-merge-watch-fixture/-/merge_requests/1 state=merged head=33762fcf6777c8d993220d25fb541e56c48081b9 target=main
+Fetched exact source head into private ref: 33762fcf6777c8d993220d25fb541e56c48081b9
+commit 33762fcf6777c8d993220d25fb541e56c48081b9
+Author: Christopher McKay <mckay.christopher73@outlook.com>
+Date:   Mon Jul 20 22:07:18 2026 -0400
+
+    add the merged example file
+
+ merged-example.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+Wrong expected SHA refused
+Missing MR ref refused
+Foreign target repository refused
+Real review-diff selected live SHA over stale recorded head and deleted legacy base
+Snapshot: latest terminal link, metadata precedence, scout/incidental exclusion verified
+Accepted canonical URL: https://gitlab.com/KarotKris/gitlab-merge-watch-fixture/-/merge_requests/1
+Accepted canonical URL: https://gitlab.example.test/group/sub/project/-/merge_requests/7
+Accepted canonical URL: https://github.com/owner/repo/pull/7
+Accepted canonical URL: https://forgejo.example.test/owner/repo/pulls/7
+Rejected non-review URL: https://gitlab.com/group/project/-/issues/7
+Rejected non-review URL: https://gitlab.com/group/project/-/merge_requests/0
+Rejected non-review URL: https://gitlab.com/group/project/-/merge_requests/7?x=1
+ok: added private-completion -> In flight
+task:
+  id: private-completion
+  title: Private completion scenario
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-10-10
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi done private-completion --pr <url> --file=/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/data/backlog.md` when it ships
+  - Run `tasks-axi block private-completion --by <other> --file=/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/data/backlog.md` to record a dependency
+Completion replay refusal: tasks-axi done requires --dry-run support; install the published preview-capable release before completion
+Retention preview refusal: tasks-axi update requires --dry-run support; install the published preview-capable release before completion
+task:
+  id: private-completion
+  title: Private completion scenario
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-10-10
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+All live checks above completed; real consumer 0.2.6 retained row, metadata and completion record without writes

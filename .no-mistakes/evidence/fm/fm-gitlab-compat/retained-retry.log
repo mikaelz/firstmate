@@ -1,0 +1,89 @@
+ok: added retained -> In flight
+task:
+  id: retained
+  title: Decision with deliverable
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-10-10
+  closed: "-"
+  deps: none
+  links: none
+  body: Original body
+help[2]:
+  - Run `tasks-axi done retained --pr <url>` when it ships
+  - Run `tasks-axi block retained --by <other>` to record a dependency
+ok: hold retained -> held (captain)
+task:
+  id: retained
+  title: Decision with deliverable
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: Retain unresolved decision
+  hold_kind: captain
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-10-10
+  closed: "-"
+  deps: none
+  links: none
+  body: Original body
+help[2]:
+  - Run `tasks-axi unhold retained` to resume dispatch
+  - Run `tasks-axi ready --include-held` to review paused work
+Positive retention preview: {
+  "ok": true,
+  "action": "update",
+  "dry_run": true,
+  "changed": [
+    "links"
+  ],
+  "task": {
+    "id": "retained",
+    "title": "Decision with deliverable https://gitlab.example.test/group/sub/project/-/merge_requests/7",
+    "state": "in_flight",
+    "kind": null,
+    "repo": null,
+    "priority": null,
+    "created": "2026-10-10",
+    "closed": null,
+    "deps": [],
+    "hold": {
+      "reason": "Retain unresolved decision",
+      "kind": "captain",
+      "until": null
+    },
+    "links": [
+      {
+        "kind": "pr",
+        "url": "https://gitlab.example.test/group/sub/project/-/merge_requests/7"
+      }
+    ],
+    "body": "Original body",
+    "blocked": false,
+    "blocked_by": [],
+    "held": true
+  }
+}
+Real retained write refusal: error: "EACCES: permission denied, open '/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/retain.hoMnAC/home/data/backlog.md.lock'"
+Persisted retained retry intent:
+id=retained
+data=/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/retain.hoMnAC/home/data
+spawn_gen=retained-gen
+cleanup_incomplete=1
+mode=retain
+arg=--pr
+arg=https://gitlab.example.test/group/sub/project/-/merge_requests/7
+true
+Held delivery recovered once without closing captain call or duplicating link/body.

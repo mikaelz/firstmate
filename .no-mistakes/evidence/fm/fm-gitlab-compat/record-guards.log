@@ -1,0 +1,56 @@
+ok: added guards -> In flight
+task:
+  id: guards
+  title: Protected completion
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-10-10
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi done guards --pr <url>` when it ships
+  - Run `tasks-axi block guards --by <other>` to record a dependency
+Hardlink refused: pending-close record must have exactly one link at /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/guards.MI2xYC/home/state/guards.backlog-close
+Malformed artifact refused: error: "Task pr link must be a canonical pull request URL: https://github.com/<owner>/<repo>/pull/<n> (GitHub), https://<host>/<owner>/<repo>/pulls/<n> (Forgejo), or https://<host>/<group[/subgroup...]>/<project>/-/merge_requests/<n> (GitLab)"
+Foreign root refused: foreign data directory in pending-close record /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/guards.MI2xYC/home/state/guards.backlog-close
+Symlink refused: pending-close record resolves outside its authorized directory at /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/guards.MI2xYC/home/state/guards.backlog-close
+{
+  "ok": true,
+  "action": "done",
+  "dry_run": true,
+  "already": true,
+  "pruned": 0,
+  "task": {
+    "id": "guards",
+    "title": "Protected completion https://gitlab.example.test/group/sub/project/-/merge_requests/7",
+    "state": "done",
+    "kind": null,
+    "repo": null,
+    "priority": null,
+    "created": null,
+    "closed": "2026-10-10",
+    "deps": [],
+    "hold": null,
+    "links": [
+      {
+        "kind": "pr",
+        "url": "https://gitlab.example.test/group/sub/project/-/merge_requests/7"
+      }
+    ],
+    "body": null,
+    "blocked": false,
+    "blocked_by": [],
+    "held": false
+  }
+}
+Single-link retry succeeded after guard refusals; original task remained untouched until valid replay.

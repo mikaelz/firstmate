@@ -1,0 +1,383 @@
+{
+  "schema": "fm-fleet-snapshot.v1",
+  "generated": "2026-10-10T07:45:27Z",
+  "fm_home": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home",
+  "roots": {
+    "fm_root": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX",
+    "state": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/state",
+    "data": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/data",
+    "config": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/config",
+    "projects": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/projects"
+  },
+  "backlog": {
+    "records": [],
+    "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/data/backlog.md",
+    "present": true
+  },
+  "tasks": [
+    {
+      "id": "incidental",
+      "kind": "ship",
+      "harness": "codex",
+      "mode": "ship",
+      "yolo": "",
+      "branch": null,
+      "project": "alpha",
+      "spawn_gen": null,
+      "backend": "tmux",
+      "remote": null,
+      "paths": {
+        "meta": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/state/incidental.meta",
+          "present": true
+        },
+        "status_log": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/state/incidental.status",
+          "present": true,
+          "kind": "event_history",
+          "last_event": {
+            "state": "done",
+            "note": "mentioned https://gitlab.com/KarotKris/gitlab-merge-watch-fixture/-/merge_requests/1 in documentation",
+            "raw": "done: mentioned https://gitlab.com/KarotKris/gitlab-merge-watch-fixture/-/merge_requests/1 in documentation",
+            "age_seconds": null
+          }
+        },
+        "worktree": {
+          "path": null,
+          "present": false
+        },
+        "home": {
+          "path": null,
+          "present": false
+        },
+        "report": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/data/incidental/report.md",
+          "present": false
+        }
+      },
+      "secondmate_projects": [],
+      "current_state": {
+        "state": "unknown",
+        "source": "none",
+        "detail": "worktree gone (torn down?)",
+        "raw": "state: unknown · source: none · worktree gone (torn down?)",
+        "observed_at": "2026-10-10T07:45:27Z",
+        "freshness": "fresh"
+      },
+      "endpoint": {
+        "target": null,
+        "exists": null,
+        "agent_alive": "not_checked",
+        "status": "unknown",
+        "observed_at": "2026-10-10T07:45:27Z",
+        "freshness": "fresh"
+      },
+      "pr": {
+        "url": null,
+        "source": "absent",
+        "head": null
+      },
+      "hints": {
+        "pending_decision": false,
+        "blocked_event": false,
+        "open_decisions": [],
+        "scout_report_present": false,
+        "last_event_text": "done: mentioned https://gitlab.com/KarotKris/gitlab-merge-watch-fixture/-/merge_requests/1 in documentation"
+      },
+      "actions": {
+        "watch": "bin/fm-peek.sh fm-incidental",
+        "steer": "bin/fm-send.sh fm-incidental '<instruction>'",
+        "return_channel_note": null
+      },
+      "backlog": null
+    },
+    {
+      "id": "latest",
+      "kind": "ship",
+      "harness": "codex",
+      "mode": "ship",
+      "yolo": "",
+      "branch": null,
+      "project": "alpha",
+      "spawn_gen": null,
+      "backend": "tmux",
+      "remote": null,
+      "paths": {
+        "meta": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/state/latest.meta",
+          "present": true
+        },
+        "status_log": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/state/latest.status",
+          "present": true,
+          "kind": "event_history",
+          "last_event": {
+            "state": "done",
+            "note": "PR https://gitlab.example.test/group/sub/project/-/merge_requests/8 checks green",
+            "raw": "done [at=2026-07-09T12:00:00Z]: PR https://gitlab.example.test/group/sub/project/-/merge_requests/8 checks green",
+            "age_seconds": null
+          }
+        },
+        "worktree": {
+          "path": null,
+          "present": false
+        },
+        "home": {
+          "path": null,
+          "present": false
+        },
+        "report": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/data/latest/report.md",
+          "present": false
+        }
+      },
+      "secondmate_projects": [],
+      "current_state": {
+        "state": "unknown",
+        "source": "none",
+        "detail": "worktree gone (torn down?)",
+        "raw": "state: unknown · source: none · worktree gone (torn down?)",
+        "observed_at": "2026-10-10T07:45:27Z",
+        "freshness": "fresh"
+      },
+      "endpoint": {
+        "target": null,
+        "exists": null,
+        "agent_alive": "not_checked",
+        "status": "unknown",
+        "observed_at": "2026-10-10T07:45:27Z",
+        "freshness": "fresh"
+      },
+      "pr": {
+        "url": "https://gitlab.example.test/group/sub/project/-/merge_requests/8",
+        "source": "status_event",
+        "head": null
+      },
+      "hints": {
+        "pending_decision": false,
+        "blocked_event": false,
+        "open_decisions": [],
+        "scout_report_present": false,
+        "last_event_text": "done [at=2026-07-09T12:00:00Z]: PR https://gitlab.example.test/group/sub/project/-/merge_requests/8 checks green"
+      },
+      "actions": {
+        "watch": "bin/fm-peek.sh fm-latest",
+        "steer": "bin/fm-send.sh fm-latest '<instruction>'",
+        "return_channel_note": null
+      },
+      "backlog": null
+    },
+    {
+      "id": "meta",
+      "kind": "ship",
+      "harness": "codex",
+      "mode": "ship",
+      "yolo": "",
+      "branch": null,
+      "project": "alpha",
+      "spawn_gen": null,
+      "backend": "tmux",
+      "remote": null,
+      "paths": {
+        "meta": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/state/meta.meta",
+          "present": true
+        },
+        "status_log": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/state/meta.status",
+          "present": true,
+          "kind": "event_history",
+          "last_event": {
+            "state": "done",
+            "note": "PR https://gitlab.example.test/group/sub/project/-/merge_requests/8 checks green",
+            "raw": "done [at=2026-07-09T12:00:00Z]: PR https://gitlab.example.test/group/sub/project/-/merge_requests/8 checks green",
+            "age_seconds": null
+          }
+        },
+        "worktree": {
+          "path": null,
+          "present": false
+        },
+        "home": {
+          "path": null,
+          "present": false
+        },
+        "report": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/data/meta/report.md",
+          "present": false
+        }
+      },
+      "secondmate_projects": [],
+      "current_state": {
+        "state": "unknown",
+        "source": "none",
+        "detail": "worktree gone (torn down?)",
+        "raw": "state: unknown · source: none · worktree gone (torn down?)",
+        "observed_at": "2026-10-10T07:45:27Z",
+        "freshness": "fresh"
+      },
+      "endpoint": {
+        "target": null,
+        "exists": null,
+        "agent_alive": "not_checked",
+        "status": "unknown",
+        "observed_at": "2026-10-10T07:45:27Z",
+        "freshness": "fresh"
+      },
+      "pr": {
+        "url": "https://gitlab.com/KarotKris/gitlab-merge-watch-fixture/-/merge_requests/1",
+        "source": "meta",
+        "head": null
+      },
+      "hints": {
+        "pending_decision": false,
+        "blocked_event": false,
+        "open_decisions": [],
+        "scout_report_present": false,
+        "last_event_text": "done [at=2026-07-09T12:00:00Z]: PR https://gitlab.example.test/group/sub/project/-/merge_requests/8 checks green"
+      },
+      "actions": {
+        "watch": "bin/fm-peek.sh fm-meta",
+        "steer": "bin/fm-send.sh fm-meta '<instruction>'",
+        "return_channel_note": null
+      },
+      "backlog": null
+    },
+    {
+      "id": "scout",
+      "kind": "scout",
+      "harness": "codex",
+      "mode": "scout",
+      "yolo": "",
+      "branch": null,
+      "project": "alpha",
+      "spawn_gen": null,
+      "backend": "tmux",
+      "remote": null,
+      "paths": {
+        "meta": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/state/scout.meta",
+          "present": true
+        },
+        "status_log": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/state/scout.status",
+          "present": true,
+          "kind": "event_history",
+          "last_event": {
+            "state": "done",
+            "note": "PR https://gitlab.example.test/group/sub/project/-/merge_requests/8 checks green",
+            "raw": "done [at=2026-07-09T12:00:00Z]: PR https://gitlab.example.test/group/sub/project/-/merge_requests/8 checks green",
+            "age_seconds": null
+          }
+        },
+        "worktree": {
+          "path": null,
+          "present": false
+        },
+        "home": {
+          "path": null,
+          "present": false
+        },
+        "report": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/data/scout/report.md",
+          "present": false
+        }
+      },
+      "secondmate_projects": [],
+      "current_state": {
+        "state": "unknown",
+        "source": "none",
+        "detail": "worktree gone (torn down?)",
+        "raw": "state: unknown · source: none · worktree gone (torn down?)",
+        "observed_at": "2026-10-10T07:45:27Z",
+        "freshness": "fresh"
+      },
+      "endpoint": {
+        "target": null,
+        "exists": null,
+        "agent_alive": "not_checked",
+        "status": "unknown",
+        "observed_at": "2026-10-10T07:45:27Z",
+        "freshness": "fresh"
+      },
+      "pr": {
+        "url": null,
+        "source": "absent",
+        "head": null
+      },
+      "hints": {
+        "pending_decision": false,
+        "blocked_event": false,
+        "open_decisions": [],
+        "scout_report_present": false,
+        "last_event_text": "done [at=2026-07-09T12:00:00Z]: PR https://gitlab.example.test/group/sub/project/-/merge_requests/8 checks green"
+      },
+      "actions": {
+        "watch": "bin/fm-peek.sh fm-scout",
+        "steer": "bin/fm-send.sh fm-scout '<instruction>'",
+        "return_channel_note": null
+      },
+      "backlog": null
+    }
+  ],
+  "main_inventory": {
+    "valid": true,
+    "reason": null,
+    "orphan_in_flight": [],
+    "unstructured_current_count": 0
+  },
+  "contributions": {
+    "known": 1,
+    "checked": 0,
+    "counts": {
+      "captain": 0,
+      "fleet": 0,
+      "maintainer": 0,
+      "nobody": 0
+    },
+    "unmeasured": 1,
+    "complete": false,
+    "proven_clear": false,
+    "stale_verdicts": 0,
+    "missing_verdicts": 0,
+    "unreadable_records": 0,
+    "valid_until": 900,
+    "captain": [],
+    "captain_omitted": 0
+  },
+  "scout_reports": [],
+  "secondmate_current": {
+    "registry": {
+      "present": false,
+      "available": true,
+      "complete": true,
+      "reason": null,
+      "provenance": "registered-table",
+      "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/data/secondmates.md",
+      "freshness": {
+        "status": "fresh",
+        "observed_at": "2026-10-10T07:45:27Z"
+      },
+      "records": [],
+      "input_truncated": false,
+      "records_truncated": false,
+      "reasons": [],
+      "lines_in_window": 0,
+      "records_in_window": 0
+    },
+    "records": [],
+    "total_registered": 0,
+    "total": 0,
+    "shown": 0,
+    "truncated": 0
+  },
+  "secondmate_landed": {
+    "records": [],
+    "truncated": [],
+    "unreadable": [],
+    "partial": []
+  },
+  "secondmate_guidance": {
+    "note": "For kind=secondmate, bearings selects validated structured state from that registered home; parent events and bounded terminal evidence are fallback-only supplements and never current-state authority."
+  }
+}

@@ -1,0 +1,200 @@
+PASS: real done/update previews preserve row, body, dates and archives
+error: "EACCES: permission denied, open '/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/fm-compatible-integration.JvRmOi/home/data/backlog.md.lock'"
+PASS: positive preview, real filesystem write refusal, surviving retry record
+PASS: real successful close and idempotent replay
+PASS: absent-metadata backfill retains original close date and one exact link
+{
+  "ok": true,
+  "action": "update",
+  "dry_run": true,
+  "already": true,
+  "changed": [],
+  "task": {
+    "id": "held-test",
+    "title": "unresolved captain call https://gitlab.example.test/group/sub/project/-/merge_requests/7",
+    "state": "queued",
+    "kind": null,
+    "repo": null,
+    "priority": null,
+    "created": "2026-10-10",
+    "closed": null,
+    "deps": [],
+    "hold": {
+      "reason": "choose next work",
+      "kind": "captain",
+      "until": null
+    },
+    "links": [
+      {
+        "kind": "pr",
+        "url": "https://gitlab.example.test/group/sub/project/-/merge_requests/7"
+      }
+    ],
+    "body": "Deliverable of the finished work: PR https://gitlab.example.test/group/sub/project/-/merge_requests/7",
+    "blocked": false,
+    "blocked_by": [],
+    "held": true
+  }
+}
+PASS: real held retention records delivery without closing unresolved captain call
+Actual retirement error: pending-close record could not be removed at /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/fm-compatible-integration.JvRmOi/home/state/retirement-test.backlog-close
+{
+  "ok": true,
+  "action": "done",
+  "dry_run": true,
+  "already": true,
+  "pruned": 0,
+  "task": {
+    "id": "retirement-test",
+    "title": "completion before failed record retirement https://gitlab.example.test/group/sub/project/-/merge_requests/7",
+    "state": "done",
+    "kind": null,
+    "repo": null,
+    "priority": null,
+    "created": null,
+    "closed": "2026-10-10",
+    "deps": [],
+    "hold": null,
+    "links": [
+      {
+        "kind": "pr",
+        "url": "https://gitlab.example.test/group/sub/project/-/merge_requests/7"
+      }
+    ],
+    "body": null,
+    "blocked": false,
+    "blocked_by": [],
+    "held": false
+  }
+}
+PASS: completed row survives real retirement refusal; recovery retires record without duplicate link or date mutation
+PASS: stale intent retired without moving the new generation
+Interrupted-cleanup replay result: closed_incomplete (not ordinary closed success)
+
+Final persisted private backlog:
+# Backlog
+
+## In flight
+- [ ] new-generation-test - new incarnation must survive (since 2026-10-10)
+## Queued
+- [ ] held-test - unresolved captain call https://gitlab.example.test/group/sub/project/-/merge_requests/7 (since 2026-10-10) (hold: choose next work) (hold-kind: captain)
+  Deliverable of the finished work: PR https://gitlab.example.test/group/sub/project/-/merge_requests/7
+## Done
+- [x] incomplete-test - incomplete cleanup must retain retry evidence https://gitlab.example.test/group/sub/project/-/merge_requests/7 (merged 2026-10-10)
+- [x] retirement-test - completion before failed record retirement https://gitlab.example.test/group/sub/project/-/merge_requests/7 (merged 2026-10-10)
+- [x] backfill-test - already done backfill https://gitlab.example.test/group/sub/project/-/merge_requests/7 (merged 2026-10-10)
+- [x] close-test - real consumer completion https://gitlab.example.test/group/sub/project/-/merge_requests/7 (merged 2026-10-10)
+  original body
+
+Real consumer preview receipts:
+{
+  "ok": true,
+  "action": "done",
+  "dry_run": true,
+  "pruned": 0,
+  "task": {
+    "id": "close-test",
+    "title": "real consumer completion https://gitlab.example.test/group/sub/project/-/merge_requests/7",
+    "state": "done",
+    "kind": null,
+    "repo": null,
+    "priority": null,
+    "created": "2026-10-10",
+    "closed": "2026-10-10",
+    "deps": [],
+    "hold": null,
+    "links": [
+      {
+        "kind": "pr",
+        "url": "https://gitlab.example.test/group/sub/project/-/merge_requests/7"
+      }
+    ],
+    "body": "original body",
+    "blocked": false,
+    "blocked_by": [],
+    "held": false
+  }
+}
+{
+  "ok": true,
+  "action": "update",
+  "dry_run": true,
+  "changed": [
+    "body",
+    "archive",
+    "links"
+  ],
+  "task": {
+    "id": "close-test",
+    "title": "real consumer completion https://gitlab.example.test/group/sub/project/-/merge_requests/7",
+    "state": "in_flight",
+    "kind": null,
+    "repo": null,
+    "priority": null,
+    "created": "2026-10-10",
+    "closed": null,
+    "deps": [],
+    "hold": null,
+    "links": [
+      {
+        "kind": "pr",
+        "url": "https://gitlab.example.test/group/sub/project/-/merge_requests/7"
+      }
+    ],
+    "body": "replacement body",
+    "blocked": false,
+    "blocked_by": [],
+    "held": false
+  }
+}
+{
+  "ok": true,
+  "action": "done",
+  "pruned": 0,
+  "task": {
+    "id": "backfill-test",
+    "title": "already done backfill",
+    "state": "done",
+    "kind": null,
+    "repo": null,
+    "priority": null,
+    "created": "2026-10-10",
+    "closed": "2026-10-10",
+    "deps": [],
+    "hold": null,
+    "links": [],
+    "body": null,
+    "blocked": false,
+    "blocked_by": [],
+    "held": false
+  }
+}
+{
+  "ok": true,
+  "action": "done",
+  "dry_run": true,
+  "already": true,
+  "pruned": 0,
+  "task": {
+    "id": "backfill-test",
+    "title": "already done backfill https://gitlab.example.test/group/sub/project/-/merge_requests/7",
+    "state": "done",
+    "kind": null,
+    "repo": null,
+    "priority": null,
+    "created": null,
+    "closed": "2026-10-10",
+    "deps": [],
+    "hold": null,
+    "links": [
+      {
+        "kind": "pr",
+        "url": "https://gitlab.example.test/group/sub/project/-/merge_requests/7"
+      }
+    ],
+    "body": null,
+    "blocked": false,
+    "blocked_by": [],
+    "held": false
+  }
+}

@@ -1,0 +1,680 @@
+Fresh live product evidence from target 0788e8eb32d0f81b21c0c7b5bb22443b01ef6199
+
+=== live.log ===
+State-only: state=merged merged=true head=
+Verified identity=https://gitlab.com/KarotKris/gitlab-merge-watch-fixture/-/merge_requests/1 state=merged head=33762fcf6777c8d993220d25fb541e56c48081b9 target=main
+Fetched exact source head into private ref: 33762fcf6777c8d993220d25fb541e56c48081b9
+commit 33762fcf6777c8d993220d25fb541e56c48081b9
+Author: Christopher McKay <mckay.christopher73@outlook.com>
+Date:   Mon Jul 20 22:07:18 2026 -0400
+
+    add the merged example file
+
+ merged-example.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+Wrong expected SHA refused
+Missing MR ref refused
+Foreign target repository refused
+Real review-diff selected live SHA over stale recorded head and deleted legacy base
+Snapshot: latest terminal link, metadata precedence, scout/incidental exclusion verified
+Accepted canonical URL: https://gitlab.com/KarotKris/gitlab-merge-watch-fixture/-/merge_requests/1
+Accepted canonical URL: https://gitlab.example.test/group/sub/project/-/merge_requests/7
+Accepted canonical URL: https://github.com/owner/repo/pull/7
+Accepted canonical URL: https://forgejo.example.test/owner/repo/pulls/7
+Rejected non-review URL: https://gitlab.com/group/project/-/issues/7
+Rejected non-review URL: https://gitlab.com/group/project/-/merge_requests/0
+Rejected non-review URL: https://gitlab.com/group/project/-/merge_requests/7?x=1
+ok: added private-completion -> In flight
+task:
+  id: private-completion
+  title: Private completion scenario
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-10-10
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi done private-completion --pr <url> --file=/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/data/backlog.md` when it ships
+  - Run `tasks-axi block private-completion --by <other> --file=/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/live/home/data/backlog.md` to record a dependency
+Completion replay refusal: tasks-axi done requires --dry-run support; install the published preview-capable release before completion
+Retention preview refusal: tasks-axi update requires --dry-run support; install the published preview-capable release before completion
+task:
+  id: private-completion
+  title: Private completion scenario
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-10-10
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+All live checks above completed; real consumer 0.2.6 retained row, metadata and completion record without writes
+
+
+=== fork-named.log ===
+Fork MR verified: url=https://gitlab.com/gitlab-org/cli/-/merge_requests/4046 state=merged head=9e934cea60d6a73669958df211331d855c793ef2 target=main
+{
+  "iid": 4046,
+  "web_url": "https://gitlab.com/gitlab-org/cli/-/merge_requests/4046",
+  "state": "merged",
+  "sha": "9e934cea60d6a73669958df211331d855c793ef2",
+  "diff_refs": {
+    "base_sha": "679b88d982d21f3e18c0eb9e4f7bcadb11ef1791",
+    "head_sha": "9e934cea60d6a73669958df211331d855c793ef2",
+    "start_sha": "679b88d982d21f3e18c0eb9e4f7bcadb11ef1791"
+  },
+  "target_branch": "main",
+  "target_project_id": 34675721,
+  "source_project_id": 57963790
+}
+Target-repository fork source resolved exactly: 9e934cea60d6a73669958df211331d855c793ef2
+commit 9e934cea60d6a73669958df211331d855c793ef2
+Author:     GitLab Dependency Bot <tfurrer+gitlab-renovate-bot@gitlab.com>
+AuthorDate: Thu Oct 8 21:23:42 2026 +0000
+Commit:     GitLab Dependency Bot <tfurrer+gitlab-renovate-bot@gitlab.com>
+CommitDate: Thu Oct 8 21:23:42 2026 +0000
+
+    chore(deps): update module gitlab.com/gitlab-org/api/client-go/v3 to v3.17.0
+Unverified foreign target refused
+Named target verified: url=https://gitlab.com/gitlab-org/gitlab/-/merge_requests/201855 state=merged head=998b9aeff22b14cec69f64b16b1d8ddc19ff6f2d target=18-0-stable-ee
+{
+  "path_with_namespace": "gitlab-org/gitlab",
+  "default_branch": "master"
+}
+4f2dfa87bcad9ae79dacbcc64aa0487a5336dde9	refs/heads/18-0-stable-ee
+Named target exists independently of default; runtime tree-equality fallback is covered separately by focused executable regression.
+
+
+=== content-proof.log ===
+web_url=https://gitlab.com/im3sk/erp/-/merge_requests/780
+head=6c5f61e4388fb99c7ba0dbda8b1909267011daa0
+fetched_source_sha=6c5f61e4388fb99c7ba0dbda8b1909267011daa0
+target=main
+target_identity=verified
+content_tree_equal=yes
+Independent disposable copy; no endpoint cleanup or completion replay.
+
+
+=== landing-refusals.log ===
+/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/landing-refusals.jZmCtR/home
+33762fcf6777c8d993220d25fb541e56c48081b9ok: added landing-live -> In flight
+task:
+  id: landing-live
+  title: Local work must survive
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-10-10
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi done landing-live --pr <url>` when it ships
+  - Run `tasks-axi block landing-live --by <other>` to record a dependency
+
+=== real missing-endpoint teardown clean ===
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/landing-refusals.jZmCtR/home
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.pi/extensions/fm-primary-turnend-guard.ts -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+error: backlog close preview for landing-live failed (tasks-axi done requires --dry-run support; install the published preview-capable release before completion); preserving task and work before cleanup
+Preserved task row, metadata, worktree HEAD and local work after refusal.
+
+=== real missing-endpoint teardown untracked ===
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/landing-refusals.jZmCtR/home
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+REFUSED: worktree /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/landing-refusals.jZmCtR/repo has uncommitted changes.
+uncommitted changes present (untracked-only leftovers)
+untracked paths (up to 10):
+  untouched-local.txt
+Commit them (or get the captain's explicit OK to discard, then --force).
+Preserved task row, metadata, worktree HEAD and local work after refusal.
+
+=== real missing-endpoint teardown dirty ===
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/landing-refusals.jZmCtR/home
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+REFUSED: worktree /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/landing-refusals.jZmCtR/repo has uncommitted changes.
+uncommitted changes present (includes tracked edits)
+Commit them (or get the captain's explicit OK to discard, then --force).
+Preserved task row, metadata, worktree HEAD and local work after refusal.
+
+=== real missing-endpoint teardown extra ===
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/landing-refusals.jZmCtR/home
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+REFUSED: worktree /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/landing-refusals.jZmCtR/repo has work not on any remote and not landed.
+unpushed commits:
+2f1f5d2 extra unlanded commit
+Push the branch, land its PR, or get the captain's explicit OK to discard, then --force.
+Preserved task row, metadata, worktree HEAD and local work after refusal.
+
+
+=== integration.log ===
+PASS: real done/update previews preserve row, body, dates and archives
+error: "EACCES: permission denied, open '/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/fm-compatible-integration.JvRmOi/home/data/backlog.md.lock'"
+PASS: positive preview, real filesystem write refusal, surviving retry record
+PASS: real successful close and idempotent replay
+PASS: absent-metadata backfill retains original close date and one exact link
+{
+  "ok": true,
+  "action": "update",
+  "dry_run": true,
+  "already": true,
+  "changed": [],
+  "task": {
+    "id": "held-test",
+    "title": "unresolved captain call https://gitlab.example.test/group/sub/project/-/merge_requests/7",
+    "state": "queued",
+    "kind": null,
+    "repo": null,
+    "priority": null,
+    "created": "2026-10-10",
+    "closed": null,
+    "deps": [],
+    "hold": {
+      "reason": "choose next work",
+      "kind": "captain",
+      "until": null
+    },
+    "links": [
+      {
+        "kind": "pr",
+        "url": "https://gitlab.example.test/group/sub/project/-/merge_requests/7"
+      }
+    ],
+    "body": "Deliverable of the finished work: PR https://gitlab.example.test/group/sub/project/-/merge_requests/7",
+    "blocked": false,
+    "blocked_by": [],
+    "held": true
+  }
+}
+PASS: real held retention records delivery without closing unresolved captain call
+Actual retirement error: pending-close record could not be removed at /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/fm-compatible-integration.JvRmOi/home/state/retirement-test.backlog-close
+{
+  "ok": true,
+  "action": "done",
+  "dry_run": true,
+  "already": true,
+  "pruned": 0,
+  "task": {
+    "id": "retirement-test",
+    "title": "completion before failed record retirement https://gitlab.example.test/group/sub/project/-/merge_requests/7",
+    "state": "done",
+    "kind": null,
+    "repo": null,
+    "priority": null,
+    "created": null,
+    "closed": "2026-10-10",
+    "deps": [],
+    "hold": null,
+    "links": [
+      {
+        "kind": "pr",
+        "url": "https://gitlab.example.test/group/sub/project/-/merge_requests/7"
+      }
+    ],
+    "body": null,
+    "blocked": false,
+    "blocked_by": [],
+    "held": false
+  }
+}
+PASS: completed row survives real retirement refusal; recovery retires record without duplicate link or date mutation
+PASS: stale intent retired without moving the new generation
+Interrupted-cleanup replay result: closed_incomplete (not ordinary closed success)
+
+Final persisted private backlog:
+# Backlog
+
+## In flight
+- [ ] new-generation-test - new incarnation must survive (since 2026-10-10)
+## Queued
+- [ ] held-test - unresolved captain call https://gitlab.example.test/group/sub/project/-/merge_requests/7 (since 2026-10-10) (hold: choose next work) (hold-kind: captain)
+  Deliverable of the finished work: PR https://gitlab.example.test/group/sub/project/-/merge_requests/7
+## Done
+- [x] incomplete-test - incomplete cleanup must retain retry evidence https://gitlab.example.test/group/sub/project/-/merge_requests/7 (merged 2026-10-10)
+- [x] retirement-test - completion before failed record retirement https://gitlab.example.test/group/sub/project/-/merge_requests/7 (merged 2026-10-10)
+- [x] backfill-test - already done backfill https://gitlab.example.test/group/sub/project/-/merge_requests/7 (merged 2026-10-10)
+- [x] close-test - real consumer completion https://gitlab.example.test/group/sub/project/-/merge_requests/7 (merged 2026-10-10)
+  original body
+
+Real consumer preview receipts:
+{
+  "ok": true,
+  "action": "done",
+  "dry_run": true,
+  "pruned": 0,
+  "task": {
+    "id": "close-test",
+    "title": "real consumer completion https://gitlab.example.test/group/sub/project/-/merge_requests/7",
+    "state": "done",
+    "kind": null,
+    "repo": null,
+    "priority": null,
+    "created": "2026-10-10",
+    "closed": "2026-10-10",
+    "deps": [],
+    "hold": null,
+    "links": [
+      {
+        "kind": "pr",
+        "url": "https://gitlab.example.test/group/sub/project/-/merge_requests/7"
+      }
+    ],
+    "body": "original body",
+    "blocked": false,
+    "blocked_by": [],
+    "held": false
+  }
+}
+{
+  "ok": true,
+  "action": "update",
+  "dry_run": true,
+  "changed": [
+    "body",
+    "archive",
+    "links"
+  ],
+  "task": {
+    "id": "close-test",
+    "title": "real consumer completion https://gitlab.example.test/group/sub/project/-/merge_requests/7",
+    "state": "in_flight",
+    "kind": null,
+    "repo": null,
+    "priority": null,
+    "created": "2026-10-10",
+    "closed": null,
+    "deps": [],
+    "hold": null,
+    "links": [
+      {
+        "kind": "pr",
+        "url": "https://gitlab.example.test/group/sub/project/-/merge_requests/7"
+      }
+    ],
+    "body": "replacement body",
+    "blocked": false,
+    "blocked_by": [],
+    "held": false
+  }
+}
+{
+  "ok": true,
+  "action": "done",
+  "pruned": 0,
+  "task": {
+    "id": "backfill-test",
+    "title": "already done backfill",
+    "state": "done",
+    "kind": null,
+    "repo": null,
+    "priority": null,
+    "created": "2026-10-10",
+    "closed": "2026-10-10",
+    "deps": [],
+    "hold": null,
+    "links": [],
+    "body": null,
+    "blocked": false,
+    "blocked_by": [],
+    "held": false
+  }
+}
+{
+  "ok": true,
+  "action": "done",
+  "dry_run": true,
+  "already": true,
+  "pruned": 0,
+  "task": {
+    "id": "backfill-test",
+    "title": "already done backfill https://gitlab.example.test/group/sub/project/-/merge_requests/7",
+    "state": "done",
+    "kind": null,
+    "repo": null,
+    "priority": null,
+    "created": null,
+    "closed": "2026-10-10",
+    "deps": [],
+    "hold": null,
+    "links": [
+      {
+        "kind": "pr",
+        "url": "https://gitlab.example.test/group/sub/project/-/merge_requests/7"
+      }
+    ],
+    "body": null,
+    "blocked": false,
+    "blocked_by": [],
+    "held": false
+  }
+}
+
+
+=== retained-retry.log ===
+ok: added retained -> In flight
+task:
+  id: retained
+  title: Decision with deliverable
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-10-10
+  closed: "-"
+  deps: none
+  links: none
+  body: Original body
+help[2]:
+  - Run `tasks-axi done retained --pr <url>` when it ships
+  - Run `tasks-axi block retained --by <other>` to record a dependency
+ok: hold retained -> held (captain)
+task:
+  id: retained
+  title: Decision with deliverable
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: yes
+  hold_reason: Retain unresolved decision
+  hold_kind: captain
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-10-10
+  closed: "-"
+  deps: none
+  links: none
+  body: Original body
+help[2]:
+  - Run `tasks-axi unhold retained` to resume dispatch
+  - Run `tasks-axi ready --include-held` to review paused work
+Positive retention preview: {
+  "ok": true,
+  "action": "update",
+  "dry_run": true,
+  "changed": [
+    "links"
+  ],
+  "task": {
+    "id": "retained",
+    "title": "Decision with deliverable https://gitlab.example.test/group/sub/project/-/merge_requests/7",
+    "state": "in_flight",
+    "kind": null,
+    "repo": null,
+    "priority": null,
+    "created": "2026-10-10",
+    "closed": null,
+    "deps": [],
+    "hold": {
+      "reason": "Retain unresolved decision",
+      "kind": "captain",
+      "until": null
+    },
+    "links": [
+      {
+        "kind": "pr",
+        "url": "https://gitlab.example.test/group/sub/project/-/merge_requests/7"
+      }
+    ],
+    "body": "Original body",
+    "blocked": false,
+    "blocked_by": [],
+    "held": true
+  }
+}
+Real retained write refusal: error: "EACCES: permission denied, open '/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/retain.hoMnAC/home/data/backlog.md.lock'"
+Persisted retained retry intent:
+id=retained
+data=/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/retain.hoMnAC/home/data
+spawn_gen=retained-gen
+cleanup_incomplete=1
+mode=retain
+arg=--pr
+arg=https://gitlab.example.test/group/sub/project/-/merge_requests/7
+true
+Held delivery recovered once without closing captain call or duplicating link/body.
+
+
+=== record-guards.log ===
+ok: added guards -> In flight
+task:
+  id: guards
+  title: Protected completion
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-10-10
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi done guards --pr <url>` when it ships
+  - Run `tasks-axi block guards --by <other>` to record a dependency
+Hardlink refused: pending-close record must have exactly one link at /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/guards.MI2xYC/home/state/guards.backlog-close
+Malformed artifact refused: error: "Task pr link must be a canonical pull request URL: https://github.com/<owner>/<repo>/pull/<n> (GitHub), https://<host>/<owner>/<repo>/pulls/<n> (Forgejo), or https://<host>/<group[/subgroup...]>/<project>/-/merge_requests/<n> (GitLab)"
+Foreign root refused: foreign data directory in pending-close record /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/guards.MI2xYC/home/state/guards.backlog-close
+Symlink refused: pending-close record resolves outside its authorized directory at /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/guards.MI2xYC/home/state/guards.backlog-close
+{
+  "ok": true,
+  "action": "done",
+  "dry_run": true,
+  "already": true,
+  "pruned": 0,
+  "task": {
+    "id": "guards",
+    "title": "Protected completion https://gitlab.example.test/group/sub/project/-/merge_requests/7",
+    "state": "done",
+    "kind": null,
+    "repo": null,
+    "priority": null,
+    "created": null,
+    "closed": "2026-10-10",
+    "deps": [],
+    "hold": null,
+    "links": [
+      {
+        "kind": "pr",
+        "url": "https://gitlab.example.test/group/sub/project/-/merge_requests/7"
+      }
+    ],
+    "body": null,
+    "blocked": false,
+    "blocked_by": [],
+    "held": false
+  }
+}
+Single-link retry succeeded after guard refusals; original task remained untouched until valid replay.
+
+
+=== addressing.log ===
+ok: added older -> Queued
+task:
+  id: older
+  title: Old completion to archive
+  state: queued
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-10-10
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi start older` to move it to in flight
+  - Run `tasks-axi block older --by <other>` to record a dependency
+ok: done older -> Done
+help[1]:
+  - Run `tasks-axi ready` to dispatch work unblocked by this
+ok: added addressed -> In flight
+task:
+  id: addressed
+  title: Relocated close
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-10-10
+  closed: "-"
+  deps: none
+  links: none
+  body: Archive candidate
+help[2]:
+  - Run `tasks-axi done addressed --pr <url>` when it ships
+  - Run `tasks-axi block addressed --by <other>` to record a dependency
+{
+  "ok": true,
+  "action": "done",
+  "dry_run": true,
+  "pruned": 0,
+  "task": {
+    "id": "addressed",
+    "title": "Relocated close https://gitlab.example.test/nested/group/project/-/merge_requests/123",
+    "state": "done",
+    "kind": null,
+    "repo": null,
+    "priority": null,
+    "created": "2026-10-10",
+    "closed": "2026-10-10",
+    "deps": [],
+    "hold": null,
+    "links": [
+      {
+        "kind": "pr",
+        "url": "https://gitlab.example.test/nested/group/project/-/merge_requests/123"
+      }
+    ],
+    "body": "Archive candidate",
+    "blocked": false,
+    "blocked_by": [],
+    "held": false
+  }
+}
+task:
+  id: addressed
+  title: "Relocated close https://gitlab.example.test/nested/group/project/-/merge_request\n... (truncated, 85 chars total - use --full to see complete text)"
+  state: done
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: "-"
+  closed: 2026-10-10
+  deps: none
+  links: "pr:https://gitlab.example.test/nested/group/project/-/merge_requests/123"
+  body: Archive candidate
+Relocated addressed preview and archive close succeeded from unrelated caller; default backlog untouched.
+ok: added gerrit -> In flight
+task:
+  id: gerrit
+  title: Preserved Gerrit completion
+  state: in_flight
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: 2026-10-10
+  closed: "-"
+  deps: none
+  links: none
+  body: ""
+help[2]:
+  - Run `tasks-axi done gerrit --pr <url> --file=/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/addressing.JLnl8g/home/relocated/backlog.md` when it ships
+  - Run `tasks-axi block gerrit --by <other> --file=/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX/.test-phase-tmp/addressing.JLnl8g/home/relocated/backlog.md` to record a dependency
+task:
+  id: gerrit
+  title: Preserved Gerrit completion
+  state: done
+  blocked: no
+  blocked_by: none
+  held: no
+  hold_reason: "-"
+  hold_kind: "-"
+  hold_until: "-"
+  kind: task
+  repo: "-"
+  priority: "-"
+  created: "-"
+  closed: 2026-10-10
+  deps: none
+  links: none
+  body: "Gerrit change https://review.example.com/c/project/+/7"
+Gerrit review recorded through note translation.
+Manual mode skips automatic transitions: config/backlog-backend selects manual editing
+
+
+=== inactive.log ===
+done [key=child-outcome-ready-done-4728401f] [at=1791618300]: child ready done: PR https://gitlab.example.test/group/sub/project/-/merge_requests/7 checks green pr=https://gitlab.example.test/group/sub/project/-/merge_requests/7 mode=no-mistakes
+done [key=child-outcome-metadata-done-a6b09de2] [at=1791618301]: child metadata done: PR https://gitlab.example.test/group/sub/project/-/merge_requests/7 checks green pr=https://gitlab.example.test/group/sub/project/-/merge_requests/8 mode=no-mistakes
+done [key=child-outcome-incidental-done-3d58a2a9] [at=1791618301]: child incidental done: report mentions https://gitlab.example.test/group/sub/project/-/merge_requests/7 in documentation mode=no-mistakes
+done [key=child-outcome-scout-done-825a6515] [at=1791618301]: child scout done: PR https://gitlab.example.test/group/sub/project/-/merge_requests/7 checks green mode=no-mistakes
+done [key=child-outcome-malformed-done-c022c051] [at=1791618302]: child malformed done: PR https://gitlab.example.test/group/sub/project/-/merge_requests/0 checks green mode=no-mistakes
+Exact canonical parent delivery, metadata precedence, exclusion and once-only receipts verified.

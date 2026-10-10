@@ -1,0 +1,31 @@
+Fork MR verified: url=https://gitlab.com/gitlab-org/cli/-/merge_requests/4046 state=merged head=9e934cea60d6a73669958df211331d855c793ef2 target=main
+{
+  "iid": 4046,
+  "web_url": "https://gitlab.com/gitlab-org/cli/-/merge_requests/4046",
+  "state": "merged",
+  "sha": "9e934cea60d6a73669958df211331d855c793ef2",
+  "diff_refs": {
+    "base_sha": "679b88d982d21f3e18c0eb9e4f7bcadb11ef1791",
+    "head_sha": "9e934cea60d6a73669958df211331d855c793ef2",
+    "start_sha": "679b88d982d21f3e18c0eb9e4f7bcadb11ef1791"
+  },
+  "target_branch": "main",
+  "target_project_id": 34675721,
+  "source_project_id": 57963790
+}
+Target-repository fork source resolved exactly: 9e934cea60d6a73669958df211331d855c793ef2
+commit 9e934cea60d6a73669958df211331d855c793ef2
+Author:     GitLab Dependency Bot <tfurrer+gitlab-renovate-bot@gitlab.com>
+AuthorDate: Thu Oct 8 21:23:42 2026 +0000
+Commit:     GitLab Dependency Bot <tfurrer+gitlab-renovate-bot@gitlab.com>
+CommitDate: Thu Oct 8 21:23:42 2026 +0000
+
+    chore(deps): update module gitlab.com/gitlab-org/api/client-go/v3 to v3.17.0
+Unverified foreign target refused
+Named target verified: url=https://gitlab.com/gitlab-org/gitlab/-/merge_requests/201855 state=merged head=998b9aeff22b14cec69f64b16b1d8ddc19ff6f2d target=18-0-stable-ee
+{
+  "path_with_namespace": "gitlab-org/gitlab",
+  "default_branch": "master"
+}
+4f2dfa87bcad9ae79dacbcc64aa0487a5336dde9	refs/heads/18-0-stable-ee
+Named target exists independently of default; runtime tree-equality fallback is covered separately by focused executable regression.

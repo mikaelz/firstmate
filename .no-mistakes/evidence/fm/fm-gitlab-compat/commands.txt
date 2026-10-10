@@ -1,0 +1,23 @@
+Working directory: /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4JBM95D48A03T591CXFSNHX
+
+Artifact integrity: Python hashlib SHA-256 verification of /home/mike/github/kunchenguid/firstmate/data/tasks-gitlab-compat/tasks-axi-ad17640f013adf8120175db621f804d1b4554f48.tgz; compared all 34 regular tar members byte-for-byte with /home/mike/github/kunchenguid/firstmate/data/fm-gitlab-compat/dependency/node_modules/tasks-axi. Expected digest d51affb60e0994225261fa2fa9e0ff5b680ca8adb0bcac16e419a8c3f3d0fe83. Development commit ad17640f013adf8120175db621f804d1b4554f48. Absolute executable /home/mike/github/kunchenguid/firstmate/data/fm-gitlab-compat/dependency/node_modules/.bin/tasks-axi. Package unchanged; metadata 0.2.6 is not the released consumer.
+
+Full targeted owner suites:
+env -u BASH_ENV -u FM_HOME -u FM_ROOT_OVERRIDE -u FM_STATE_OVERRIDE -u FM_DATA_OVERRIDE -u FM_CONFIG_OVERRIDE -u FM_PROJECTS_OVERRIDE -u TASKS_AXI_FILE -u TASKS_AXI_BACKEND -u FM_TASKS_AXI_COMPATIBLE PATH="/home/mike/github/kunchenguid/firstmate/data/fm-gitlab-compat/dependency/node_modules/.bin:$PATH" TMPDIR=/tmp bin/fm-test-run.sh --json /home/mike/.no-mistakes/evidence/01M4JBM95D48A03T591CXFSNHX/targeted.json tests/fm-pr-check-security.test.sh tests/fm-pr-merge.test.sh tests/fm-crew-state.test.sh tests/fm-teardown.test.sh tests/fm-teardown-endpoint-safety.test.sh tests/fm-review-diff.test.sh tests/fm-backlog-atomicity.test.sh tests/fm-tasks-axi.test.sh tests/fm-bootstrap.test.sh tests/fm-public-followup.test.sh tests/fm-fleet-snapshot-view.test.sh tests/fm-bearings-snapshot.test.sh tests/fm-inactive-reconcile.test.sh
+Output: targeted.log; exit: targeted.exit. NO_MISTAKES_GATE and authenticated gate identity preserved.
+
+Independent live drivers (bash <absolute evidence script>, from this worktree):
+test-recheck-integration.sh -> integration.log / integration.exit
+retained-retry.sh -> retained-retry.log / retained-retry.exit
+record-guards.sh -> record-guards.log / record-guards.exit
+addressing.sh -> addressing.log / addressing.exit
+test-recheck-inactive.sh -> inactive.log / inactive.exit
+live-driver.sh -> live.log / live.exit; live-mr-fields.json, live-review-diff.txt, live-snapshot.json
+fork-named.sh -> fork-named.log / fork-named.exit
+content-proof.sh -> content-proof.log / content-proof.exit
+landing-refusals.sh -> landing-refusals.log / landing-refusals.exit
+python3 /home/mike/.no-mistakes/evidence/01M4G88AKN6QYNEC6BNQJR161Z/test-recheck-url-parity.py -> url-parity.json (exit 0)
+
+Driver setup corrections: record-guards.sh initially omitted fm-tasks-axi-lib.sh; sourced it and reran successfully. Addressing driver initially used unsupported done --archive-body and unsupported saved-record --keep arguments; corrected the fixture to documented markdown done_keep=1 configuration and reran all addressing checks. These were driver setup issues, not product failures.
+
+All independent drivers use disposable worktree-local homes/repositories and remove them on exit. Real write refusals use filesystem permissions, not consumer stubs. Landing checks use a marked missing-endpoint lab record and stop before destruction: no runtime server or harness is launched or killed. Read-only GitLab API/fetch operations do not mutate endpoints or replay ERP completion. Regression suites' lifecycle stubs are not claimed as live lifecycle evidence.
