@@ -1,0 +1,20 @@
+/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-fresh/refusal-home
+
+Real teardown attempt: extra-commit against actual merged public MR
+exit=1
+REFUSED: worktree /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-fresh/provider has work not on any remote and not landed.
+unpushed commits:
+Preserved: metadata bytes, status, checkout, committed HEAD, and local work.
+
+Real teardown attempt: untracked against actual merged public MR
+exit=1
+REFUSED: worktree /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-fresh/provider has uncommitted changes.
+uncommitted changes present (untracked-only leftovers)
+  untracked-proof.txt
+Preserved: metadata bytes, status, checkout, committed HEAD, and local work.
+
+Real teardown attempt: tracked-dirty against actual merged public MR
+exit=1
+REFUSED: worktree /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-fresh/provider has uncommitted changes.
+uncommitted changes present (includes tracked edits)
+Preserved: metadata bytes, status, checkout, committed HEAD, and local work.

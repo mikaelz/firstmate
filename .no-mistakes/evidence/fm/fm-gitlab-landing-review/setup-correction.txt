@@ -1,0 +1,5 @@
+Nested fixture Git discovery demonstration:
+/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD
+
+Correction: remove the manually imposed worktree TMPDIR; the test runner owns ephemeral sandbox placement and cleanup.
+Focused missing-child source case with native TMPDIR: ok - a forced descendant with a missing adapter sibling refuses before cleanup

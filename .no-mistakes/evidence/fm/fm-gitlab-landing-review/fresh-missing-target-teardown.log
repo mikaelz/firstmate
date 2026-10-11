@@ -1,0 +1,16 @@
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.m
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.pi/extensions/fm-primary-turnend-guard.ts -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REFUSED: worktree /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-fresh/treehouse-pool/.treehouse/provider-052b1c/2/provider has work not on any remote and not landed.
+unpushed commits:
+80697e16e isolated content landed in main, not the literal target
+379bd7c32 fix(lint): check type assertion in view_test.go response helpers
+f60c2f917 fix(lint): gofmt struct literal alignment in display_test.go
+8bfff5d3a docs: regenerate work-items view docs and nav entry
+b90921c2b fix(work-items view): JSON output, flag mutex, structure per Duo review
+Push the branch, land its PR, or get the captain's explicit OK to discard, then --force.

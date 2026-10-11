@@ -1,0 +1,3 @@
+Raw origin: https://gitlab.com/unrelated/project.git
+Transport-expanded origin: https://gitlab.com/gitlab-org/cli.git
+exit=1; transport rewrite cannot impersonate the raw project identity; no proof ref created.

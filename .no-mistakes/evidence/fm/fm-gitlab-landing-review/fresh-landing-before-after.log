@@ -1,0 +1,37 @@
+
+COMMAND: env -u BASH_ENV -u TMPDIR bash .test-disposable/landing-regression.sh /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-disposable/base-bin/fm-teardown.sh test_gitlab_deleted_source_target_landing
+not ok - GitLab target proof refused deleted source: ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 1s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.pi/extensions/fm-primary-turnend-guard.ts -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REFUSED: worktree /tmp/fm-teardown-tests.frAoOO/gitlab-deleted-source/wt has work not on any remote and not landed.
+unpushed commits:
+9565f62 add repair.txt
+Push the branch, land its PR, or get the captain's explicit OK to discard, then --force.
+exit=1
+
+COMMAND: env -u BASH_ENV -u TMPDIR bash .test-disposable/landing-regression.sh /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-disposable/base-bin/fm-teardown.sh test_gitlab_rebased_head_fetch_landing
+not ok - GitLab rebased head fetch refused landed work: ●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no live watcher process holds this home lock (last beat: 0s ago).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.pi/extensions/fm-primary-turnend-guard.ts -e /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+REFUSED: worktree /tmp/fm-teardown-tests.cVgr7m/gitlab-rebased-head/wt has work not on any remote and not landed.
+unpushed commits:
+3bf820c add repair.txt
+Push the branch, land its PR, or get the captain's explicit OK to discard, then --force.
+exit=1
+
+COMMAND: env -u BASH_ENV -u TMPDIR bash .test-disposable/landing-regression.sh /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/bin/fm-teardown.sh test_gitlab_deleted_source_target_landing
+ok - GitLab real squash uses verified nondefault target after rebased source and MR ref deletion
+exit=0
+
+COMMAND: env -u BASH_ENV -u TMPDIR bash .test-disposable/landing-regression.sh /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/bin/fm-teardown.sh test_gitlab_rebased_head_fetch_landing
+ok - GitLab real rebase proves equivalent local patches through an exact origin-bound MR head fetch
+exit=0
+Baseline teardown staged bytes: 0 (0=identical)

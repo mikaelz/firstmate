@@ -1,0 +1,3 @@
+Current tested head: ada302c7298299a5d4081d2da62da229d4798c0d
+Base ancestor: yes
+Deferred-only files changed versus base (expected empty):

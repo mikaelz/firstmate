@@ -1,0 +1,8 @@
+/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.m
+Actual merged MR: https://gitlab.com/gitlab-org/cli/-/merge_requests/3869 source=71a660f012a18fff320d90800c3cd474fedef83a literal target=agent-identity-scaffold
+Verified live target branch is absent from origin.
+🌳 Setting up worktree...
+🌳 Leased worktree at ~/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-fresh/treehouse-pool/.treehouse/provider-052b1c/2/provider. Run 'treehouse return ~/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-fresh/treehouse-pool/.treehouse/provider-052b1c/2/provider' to release it.
+REFUSED: worktree /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-fresh/treehouse-pool/.treehouse/provider-052b1c/2/provider has work not on any remote and not landed.
+unpushed commits:
+exit=1; main content is landed, but missing literal target correctly refuses; all task records and committed work remain intact.

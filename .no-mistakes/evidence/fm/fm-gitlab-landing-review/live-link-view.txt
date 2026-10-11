@@ -1,0 +1,31 @@
+# Fleet View
+
+Schema: fm-fleet-snapshot.v1
+Home: /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-disposable/link-home
+
+## Under Way
+| ID | Current | Kind | Repo/Project | Backend | Endpoint | Artifact | Path | Watch / return channel |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| incidental | unknown / none | ship | disposable | tmux | unknown | - | - | bin/fm-peek.sh fm-incidental |
+| latest | unknown / none | ship | disposable | tmux | unknown | https://gitlab.com/group/project/-/merge_requests/8 | - | bin/fm-peek.sh fm-latest |
+| malformed | unknown / none | ship | disposable | tmux | unknown | - | - | bin/fm-peek.sh fm-malformed |
+| meta | unknown / none | ship | disposable | tmux | unknown | https://gitlab.com/group/project/-/merge_requests/9 | - | bin/fm-peek.sh fm-meta |
+| resumed | unknown / none | ship | disposable | tmux | unknown | - | - | bin/fm-peek.sh fm-resumed |
+| scout | unknown / none | scout | disposable | tmux | unknown | - | - | bin/fm-peek.sh fm-scout |
+
+## Queued
+No queued backlog records found.
+
+## Done
+| ID | Title | Repo | Kind | Blocked By | Artifact |
+| --- | --- | --- | --- | --- | --- |
+| gl | Review | - | ship | - | https://gitlab.com/gitlab-org/cli/-/merge_requests/4055 |
+| nested | Review | - | ship | - | https://gitlab.example.test/group/sub/project/-/merge_requests/7 |
+| gh | Review | - | ship | - | https://github.com/owner/repo/pull/7 |
+| fj | Review | - | ship | - | https://forgejo.example.test/owner/repo/pulls/7 |
+| query | Review | - | ship | - | - |
+| leadingzero | Review | - | ship | - | - |
+| issue | Review | - | ship | - | - |
+
+## Secondmates
+For kind=secondmate, bearings selects validated structured state from that registered home; parent events and bounded terminal evidence are fallback-only supplements and never current-state authority.

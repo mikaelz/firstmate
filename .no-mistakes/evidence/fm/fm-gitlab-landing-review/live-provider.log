@@ -1,0 +1,11 @@
+Public provider: https://gitlab.com/gitlab-org/cli/-/merge_requests/4055
+Verified provider record: state=merged merged=true source_head=65f7619a15f3af64b39619d7a36a8cd9bae04a2b target=main url=https://gitlab.com/gitlab-org/cli/-/merge_requests/4055
+Exact provider MR ref fetched: 65f7619a15f3af64b39619d7a36a8cd9bae04a2b
+Adversarial exact-SHA mismatch: REFUSED
+Adversarial raw origin mismatch: REFUSED; no rejected-origin ref created
+
+Real review command with stale local commit and deleted recorded base:
+diff base: origin/main
+no changes vs origin/main
+Verified: live MR source selected over stale local/pr_head; literal main selected over deleted base; unrelated task ref unchanged.
+Real provider landing content: merge-tree(source_head, origin/main) equals target tree 56817e6733a5333a51c38fddce1f8722e29fb235

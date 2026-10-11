@@ -1,0 +1,823 @@
+{
+  "schema": "fm-fleet-snapshot.v1",
+  "generated": "2026-10-11T05:52:14Z",
+  "fm_home": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-disposable/link-home",
+  "roots": {
+    "fm_root": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD",
+    "state": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-disposable/link-home/state",
+    "data": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-disposable/link-home/data",
+    "config": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-disposable/link-home/config",
+    "projects": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-disposable/link-home/projects"
+  },
+  "backlog": {
+    "present": true,
+    "records": [
+      {
+        "hold_set": null,
+        "hold_until": null,
+        "hold_bucket": null,
+        "raw": "- [x] gl - Review <https://gitlab.com/gitlab-org/cli/-/merge_requests/4055> (kind: ship) (merged 2026-10-10)",
+        "current_role": "done",
+        "state": "done",
+        "priority": null,
+        "checked": true,
+        "unresolved_blocker_ids": [],
+        "requires_child_metadata": false,
+        "repo": null,
+        "links": [
+          "https://gitlab.com/gitlab-org/cli/-/merge_requests/4055"
+        ],
+        "done": null,
+        "since": null,
+        "structured": true,
+        "blocked_by_ids": [],
+        "order": 1,
+        "report_path": null,
+        "body_excerpt": null,
+        "local_note": null,
+        "reported": null,
+        "hold_kind": null,
+        "captain_actionable": false,
+        "id": "gl",
+        "merged": "2026-10-10",
+        "kind": "ship",
+        "completion": {
+          "verb": "merged",
+          "date": "2026-10-10"
+        },
+        "hold_age_days": null,
+        "pr_url": "https://gitlab.com/gitlab-org/cli/-/merge_requests/4055",
+        "blocked_reason": null,
+        "blocked_by": null,
+        "title": "Review",
+        "hold_reason": null,
+        "body_lines": []
+      },
+      {
+        "id": "nested",
+        "captain_actionable": false,
+        "merged": "2026-10-10",
+        "hold_age_days": null,
+        "completion": {
+          "date": "2026-10-10",
+          "verb": "merged"
+        },
+        "kind": "ship",
+        "order": 2,
+        "hold_kind": null,
+        "reported": null,
+        "local_note": null,
+        "body_excerpt": null,
+        "report_path": null,
+        "hold_reason": null,
+        "body_lines": [],
+        "pr_url": "https://gitlab.example.test/group/sub/project/-/merge_requests/7",
+        "title": "Review",
+        "blocked_by": null,
+        "blocked_reason": null,
+        "state": "done",
+        "current_role": "done",
+        "priority": null,
+        "raw": "- [x] nested - Review <https://gitlab.example.test/group/sub/project/-/merge_requests/7> (kind: ship) (merged 2026-10-10)",
+        "hold_bucket": null,
+        "hold_until": null,
+        "hold_set": null,
+        "repo": null,
+        "requires_child_metadata": false,
+        "done": null,
+        "since": null,
+        "structured": true,
+        "blocked_by_ids": [],
+        "links": [
+          "https://gitlab.example.test/group/sub/project/-/merge_requests/7"
+        ],
+        "checked": true,
+        "unresolved_blocker_ids": []
+      },
+      {
+        "body_lines": [],
+        "hold_reason": null,
+        "blocked_reason": null,
+        "title": "Review",
+        "blocked_by": null,
+        "pr_url": "https://github.com/owner/repo/pull/7",
+        "completion": {
+          "date": "2026-10-10",
+          "verb": "merged"
+        },
+        "kind": "ship",
+        "hold_age_days": null,
+        "merged": "2026-10-10",
+        "captain_actionable": false,
+        "id": "gh",
+        "local_note": null,
+        "body_excerpt": null,
+        "report_path": null,
+        "reported": null,
+        "hold_kind": null,
+        "order": 3,
+        "done": null,
+        "since": null,
+        "blocked_by_ids": [],
+        "structured": true,
+        "links": [
+          "https://github.com/owner/repo/pull/7"
+        ],
+        "repo": null,
+        "requires_child_metadata": false,
+        "unresolved_blocker_ids": [],
+        "checked": true,
+        "priority": null,
+        "current_role": "done",
+        "state": "done",
+        "hold_bucket": null,
+        "hold_until": null,
+        "hold_set": null,
+        "raw": "- [x] gh - Review <https://github.com/owner/repo/pull/7> (kind: ship) (merged 2026-10-10)"
+      },
+      {
+        "priority": null,
+        "current_role": "done",
+        "state": "done",
+        "hold_until": null,
+        "hold_set": null,
+        "hold_bucket": null,
+        "raw": "- [x] fj - Review <https://forgejo.example.test/owner/repo/pulls/7> (kind: ship) (merged 2026-10-10)",
+        "links": [
+          "https://forgejo.example.test/owner/repo/pulls/7"
+        ],
+        "since": null,
+        "done": null,
+        "blocked_by_ids": [],
+        "structured": true,
+        "requires_child_metadata": false,
+        "repo": null,
+        "unresolved_blocker_ids": [],
+        "checked": true,
+        "completion": {
+          "verb": "merged",
+          "date": "2026-10-10"
+        },
+        "kind": "ship",
+        "hold_age_days": null,
+        "captain_actionable": false,
+        "id": "fj",
+        "merged": "2026-10-10",
+        "report_path": null,
+        "body_excerpt": null,
+        "local_note": null,
+        "hold_kind": null,
+        "reported": null,
+        "order": 4,
+        "body_lines": [],
+        "hold_reason": null,
+        "blocked_reason": null,
+        "blocked_by": null,
+        "title": "Review",
+        "pr_url": "https://forgejo.example.test/owner/repo/pulls/7"
+      },
+      {
+        "raw": "- [x] query - Review <https://gitlab.com/group/project/-/merge_requests/7?x=1> (kind: ship) (merged 2026-10-10)",
+        "hold_set": null,
+        "hold_until": null,
+        "hold_bucket": null,
+        "state": "done",
+        "current_role": "done",
+        "priority": null,
+        "checked": true,
+        "unresolved_blocker_ids": [],
+        "requires_child_metadata": false,
+        "repo": null,
+        "links": [
+          "https://gitlab.com/group/project/-/merge_requests/7?x=1"
+        ],
+        "structured": true,
+        "done": null,
+        "since": null,
+        "blocked_by_ids": [],
+        "order": 5,
+        "hold_kind": null,
+        "reported": null,
+        "body_excerpt": null,
+        "report_path": null,
+        "local_note": null,
+        "id": "query",
+        "captain_actionable": false,
+        "merged": "2026-10-10",
+        "hold_age_days": null,
+        "kind": "ship",
+        "completion": {
+          "verb": "merged",
+          "date": "2026-10-10"
+        },
+        "pr_url": null,
+        "blocked_by": null,
+        "title": "Review",
+        "blocked_reason": null,
+        "hold_reason": null,
+        "body_lines": []
+      },
+      {
+        "hold_bucket": null,
+        "hold_set": null,
+        "hold_until": null,
+        "raw": "- [x] leadingzero - Review <https://gitlab.com/group/project/-/merge_requests/07> (kind: ship) (merged 2026-10-10)",
+        "current_role": "done",
+        "state": "done",
+        "priority": null,
+        "checked": true,
+        "unresolved_blocker_ids": [],
+        "repo": null,
+        "requires_child_metadata": false,
+        "structured": true,
+        "done": null,
+        "since": null,
+        "blocked_by_ids": [],
+        "links": [
+          "https://gitlab.com/group/project/-/merge_requests/07"
+        ],
+        "order": 6,
+        "local_note": null,
+        "body_excerpt": null,
+        "report_path": null,
+        "reported": null,
+        "hold_kind": null,
+        "captain_actionable": false,
+        "merged": "2026-10-10",
+        "id": "leadingzero",
+        "completion": {
+          "date": "2026-10-10",
+          "verb": "merged"
+        },
+        "kind": "ship",
+        "hold_age_days": null,
+        "pr_url": null,
+        "blocked_reason": null,
+        "title": "Review",
+        "blocked_by": null,
+        "hold_reason": null,
+        "body_lines": []
+      },
+      {
+        "hold_age_days": null,
+        "completion": {
+          "verb": "merged",
+          "date": "2026-10-10"
+        },
+        "kind": "ship",
+        "captain_actionable": false,
+        "id": "issue",
+        "merged": "2026-10-10",
+        "reported": null,
+        "hold_kind": null,
+        "report_path": null,
+        "body_excerpt": null,
+        "local_note": null,
+        "order": 7,
+        "body_lines": [],
+        "hold_reason": null,
+        "blocked_by": null,
+        "title": "Review",
+        "blocked_reason": null,
+        "pr_url": null,
+        "priority": null,
+        "state": "done",
+        "current_role": "done",
+        "raw": "- [x] issue - Review <https://gitlab.com/group/project/-/issues/7> (kind: ship) (merged 2026-10-10)",
+        "hold_set": null,
+        "hold_until": null,
+        "hold_bucket": null,
+        "links": [
+          "https://gitlab.com/group/project/-/issues/7"
+        ],
+        "since": null,
+        "done": null,
+        "blocked_by_ids": [],
+        "structured": true,
+        "requires_child_metadata": false,
+        "repo": null,
+        "unresolved_blocker_ids": [],
+        "checked": true
+      }
+    ],
+    "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-disposable/link-home/data/backlog.md"
+  },
+  "tasks": [
+    {
+      "id": "incidental",
+      "kind": "ship",
+      "harness": "codex",
+      "mode": "ship",
+      "yolo": "",
+      "branch": null,
+      "project": "disposable",
+      "spawn_gen": null,
+      "backend": "tmux",
+      "remote": null,
+      "paths": {
+        "meta": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-disposable/link-home/state/incidental.meta",
+          "present": true
+        },
+        "status_log": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-disposable/link-home/state/incidental.status",
+          "present": true,
+          "kind": "event_history",
+          "last_event": {
+            "state": "done",
+            "note": "mentioned https://gitlab.com/group/project/-/merge_requests/9 in documentation",
+            "raw": "done: mentioned https://gitlab.com/group/project/-/merge_requests/9 in documentation",
+            "age_seconds": null
+          }
+        },
+        "worktree": {
+          "path": null,
+          "present": false
+        },
+        "home": {
+          "path": null,
+          "present": false
+        },
+        "report": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-disposable/link-home/data/incidental/report.md",
+          "present": false
+        }
+      },
+      "secondmate_projects": [],
+      "current_state": {
+        "state": "unknown",
+        "source": "none",
+        "detail": "worktree gone (torn down?)",
+        "raw": "state: unknown · source: none · worktree gone (torn down?)",
+        "observed_at": "2026-10-11T05:52:14Z",
+        "freshness": "fresh"
+      },
+      "endpoint": {
+        "target": null,
+        "exists": null,
+        "agent_alive": "not_checked",
+        "status": "unknown",
+        "observed_at": "2026-10-11T05:52:14Z",
+        "freshness": "fresh"
+      },
+      "pr": {
+        "url": null,
+        "source": "absent",
+        "head": null
+      },
+      "hints": {
+        "pending_decision": false,
+        "blocked_event": false,
+        "open_decisions": [],
+        "scout_report_present": false,
+        "last_event_text": "done: mentioned https://gitlab.com/group/project/-/merge_requests/9 in documentation"
+      },
+      "actions": {
+        "watch": "bin/fm-peek.sh fm-incidental",
+        "steer": "bin/fm-send.sh fm-incidental '<instruction>'",
+        "return_channel_note": null
+      },
+      "backlog": null
+    },
+    {
+      "id": "latest",
+      "kind": "ship",
+      "harness": "codex",
+      "mode": "ship",
+      "yolo": "",
+      "branch": null,
+      "project": "disposable",
+      "spawn_gen": null,
+      "backend": "tmux",
+      "remote": null,
+      "paths": {
+        "meta": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-disposable/link-home/state/latest.meta",
+          "present": true
+        },
+        "status_log": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-disposable/link-home/state/latest.status",
+          "present": true,
+          "kind": "event_history",
+          "last_event": {
+            "state": "done",
+            "note": "PR https://gitlab.com/group/project/-/merge_requests/8 checks green",
+            "raw": "done: PR https://gitlab.com/group/project/-/merge_requests/8 checks green",
+            "age_seconds": null
+          }
+        },
+        "worktree": {
+          "path": null,
+          "present": false
+        },
+        "home": {
+          "path": null,
+          "present": false
+        },
+        "report": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-disposable/link-home/data/latest/report.md",
+          "present": false
+        }
+      },
+      "secondmate_projects": [],
+      "current_state": {
+        "state": "unknown",
+        "source": "none",
+        "detail": "worktree gone (torn down?)",
+        "raw": "state: unknown · source: none · worktree gone (torn down?)",
+        "observed_at": "2026-10-11T05:52:14Z",
+        "freshness": "fresh"
+      },
+      "endpoint": {
+        "target": null,
+        "exists": null,
+        "agent_alive": "not_checked",
+        "status": "unknown",
+        "observed_at": "2026-10-11T05:52:14Z",
+        "freshness": "fresh"
+      },
+      "pr": {
+        "url": "https://gitlab.com/group/project/-/merge_requests/8",
+        "source": "status_event",
+        "head": null
+      },
+      "hints": {
+        "pending_decision": false,
+        "blocked_event": false,
+        "open_decisions": [],
+        "scout_report_present": false,
+        "last_event_text": "done: PR https://gitlab.com/group/project/-/merge_requests/8 checks green"
+      },
+      "actions": {
+        "watch": "bin/fm-peek.sh fm-latest",
+        "steer": "bin/fm-send.sh fm-latest '<instruction>'",
+        "return_channel_note": null
+      },
+      "backlog": null
+    },
+    {
+      "id": "malformed",
+      "kind": "ship",
+      "harness": "codex",
+      "mode": "ship",
+      "yolo": "",
+      "branch": null,
+      "project": "disposable",
+      "spawn_gen": null,
+      "backend": "tmux",
+      "remote": null,
+      "paths": {
+        "meta": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-disposable/link-home/state/malformed.meta",
+          "present": true
+        },
+        "status_log": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-disposable/link-home/state/malformed.status",
+          "present": true,
+          "kind": "event_history",
+          "last_event": {
+            "state": "done",
+            "note": "PR https://gitlab.com/group/project/-/merge_requests/0",
+            "raw": "done: PR https://gitlab.com/group/project/-/merge_requests/0",
+            "age_seconds": null
+          }
+        },
+        "worktree": {
+          "path": null,
+          "present": false
+        },
+        "home": {
+          "path": null,
+          "present": false
+        },
+        "report": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-disposable/link-home/data/malformed/report.md",
+          "present": false
+        }
+      },
+      "secondmate_projects": [],
+      "current_state": {
+        "state": "unknown",
+        "source": "none",
+        "detail": "worktree gone (torn down?)",
+        "raw": "state: unknown · source: none · worktree gone (torn down?)",
+        "observed_at": "2026-10-11T05:52:14Z",
+        "freshness": "fresh"
+      },
+      "endpoint": {
+        "target": null,
+        "exists": null,
+        "agent_alive": "not_checked",
+        "status": "unknown",
+        "observed_at": "2026-10-11T05:52:14Z",
+        "freshness": "fresh"
+      },
+      "pr": {
+        "url": null,
+        "source": "absent",
+        "head": null
+      },
+      "hints": {
+        "pending_decision": false,
+        "blocked_event": false,
+        "open_decisions": [],
+        "scout_report_present": false,
+        "last_event_text": "done: PR https://gitlab.com/group/project/-/merge_requests/0"
+      },
+      "actions": {
+        "watch": "bin/fm-peek.sh fm-malformed",
+        "steer": "bin/fm-send.sh fm-malformed '<instruction>'",
+        "return_channel_note": null
+      },
+      "backlog": null
+    },
+    {
+      "id": "meta",
+      "kind": "ship",
+      "harness": "codex",
+      "mode": "ship",
+      "yolo": "",
+      "branch": null,
+      "project": "disposable",
+      "spawn_gen": null,
+      "backend": "tmux",
+      "remote": null,
+      "paths": {
+        "meta": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-disposable/link-home/state/meta.meta",
+          "present": true
+        },
+        "status_log": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-disposable/link-home/state/meta.status",
+          "present": true,
+          "kind": "event_history",
+          "last_event": {
+            "state": "done",
+            "note": "PR https://gitlab.com/group/project/-/merge_requests/8 checks green",
+            "raw": "done: PR https://gitlab.com/group/project/-/merge_requests/8 checks green",
+            "age_seconds": null
+          }
+        },
+        "worktree": {
+          "path": null,
+          "present": false
+        },
+        "home": {
+          "path": null,
+          "present": false
+        },
+        "report": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-disposable/link-home/data/meta/report.md",
+          "present": false
+        }
+      },
+      "secondmate_projects": [],
+      "current_state": {
+        "state": "unknown",
+        "source": "none",
+        "detail": "worktree gone (torn down?)",
+        "raw": "state: unknown · source: none · worktree gone (torn down?)",
+        "observed_at": "2026-10-11T05:52:14Z",
+        "freshness": "fresh"
+      },
+      "endpoint": {
+        "target": null,
+        "exists": null,
+        "agent_alive": "not_checked",
+        "status": "unknown",
+        "observed_at": "2026-10-11T05:52:14Z",
+        "freshness": "fresh"
+      },
+      "pr": {
+        "url": "https://gitlab.com/group/project/-/merge_requests/9",
+        "source": "meta",
+        "head": null
+      },
+      "hints": {
+        "pending_decision": false,
+        "blocked_event": false,
+        "open_decisions": [],
+        "scout_report_present": false,
+        "last_event_text": "done: PR https://gitlab.com/group/project/-/merge_requests/8 checks green"
+      },
+      "actions": {
+        "watch": "bin/fm-peek.sh fm-meta",
+        "steer": "bin/fm-send.sh fm-meta '<instruction>'",
+        "return_channel_note": null
+      },
+      "backlog": null
+    },
+    {
+      "id": "resumed",
+      "kind": "ship",
+      "harness": "codex",
+      "mode": "ship",
+      "yolo": "",
+      "branch": null,
+      "project": "disposable",
+      "spawn_gen": null,
+      "backend": "tmux",
+      "remote": null,
+      "paths": {
+        "meta": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-disposable/link-home/state/resumed.meta",
+          "present": true
+        },
+        "status_log": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-disposable/link-home/state/resumed.status",
+          "present": true,
+          "kind": "event_history",
+          "last_event": {
+            "state": "working",
+            "note": "preparing another change",
+            "raw": "working: preparing another change",
+            "age_seconds": null
+          }
+        },
+        "worktree": {
+          "path": null,
+          "present": false
+        },
+        "home": {
+          "path": null,
+          "present": false
+        },
+        "report": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-disposable/link-home/data/resumed/report.md",
+          "present": false
+        }
+      },
+      "secondmate_projects": [],
+      "current_state": {
+        "state": "unknown",
+        "source": "none",
+        "detail": "worktree gone (torn down?)",
+        "raw": "state: unknown · source: none · worktree gone (torn down?)",
+        "observed_at": "2026-10-11T05:52:14Z",
+        "freshness": "fresh"
+      },
+      "endpoint": {
+        "target": null,
+        "exists": null,
+        "agent_alive": "not_checked",
+        "status": "unknown",
+        "observed_at": "2026-10-11T05:52:14Z",
+        "freshness": "fresh"
+      },
+      "pr": {
+        "url": null,
+        "source": "absent",
+        "head": null
+      },
+      "hints": {
+        "pending_decision": false,
+        "blocked_event": false,
+        "open_decisions": [],
+        "scout_report_present": false,
+        "last_event_text": "working: preparing another change"
+      },
+      "actions": {
+        "watch": "bin/fm-peek.sh fm-resumed",
+        "steer": "bin/fm-send.sh fm-resumed '<instruction>'",
+        "return_channel_note": null
+      },
+      "backlog": null
+    },
+    {
+      "id": "scout",
+      "kind": "scout",
+      "harness": "codex",
+      "mode": "scout",
+      "yolo": "",
+      "branch": null,
+      "project": "disposable",
+      "spawn_gen": null,
+      "backend": "tmux",
+      "remote": null,
+      "paths": {
+        "meta": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-disposable/link-home/state/scout.meta",
+          "present": true
+        },
+        "status_log": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-disposable/link-home/state/scout.status",
+          "present": true,
+          "kind": "event_history",
+          "last_event": {
+            "state": "done",
+            "note": "PR https://gitlab.com/group/project/-/merge_requests/8 checks green",
+            "raw": "done: PR https://gitlab.com/group/project/-/merge_requests/8 checks green",
+            "age_seconds": null
+          }
+        },
+        "worktree": {
+          "path": null,
+          "present": false
+        },
+        "home": {
+          "path": null,
+          "present": false
+        },
+        "report": {
+          "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-disposable/link-home/data/scout/report.md",
+          "present": false
+        }
+      },
+      "secondmate_projects": [],
+      "current_state": {
+        "state": "unknown",
+        "source": "none",
+        "detail": "worktree gone (torn down?)",
+        "raw": "state: unknown · source: none · worktree gone (torn down?)",
+        "observed_at": "2026-10-11T05:52:14Z",
+        "freshness": "fresh"
+      },
+      "endpoint": {
+        "target": null,
+        "exists": null,
+        "agent_alive": "not_checked",
+        "status": "unknown",
+        "observed_at": "2026-10-11T05:52:14Z",
+        "freshness": "fresh"
+      },
+      "pr": {
+        "url": null,
+        "source": "absent",
+        "head": null
+      },
+      "hints": {
+        "pending_decision": false,
+        "blocked_event": false,
+        "open_decisions": [],
+        "scout_report_present": false,
+        "last_event_text": "done: PR https://gitlab.com/group/project/-/merge_requests/8 checks green"
+      },
+      "actions": {
+        "watch": "bin/fm-peek.sh fm-scout",
+        "steer": "bin/fm-send.sh fm-scout '<instruction>'",
+        "return_channel_note": null
+      },
+      "backlog": null
+    }
+  ],
+  "main_inventory": {
+    "valid": true,
+    "reason": null,
+    "orphan_in_flight": [],
+    "unstructured_current_count": 0
+  },
+  "contributions": {
+    "known": 4,
+    "checked": 0,
+    "counts": {
+      "captain": 0,
+      "fleet": 1,
+      "maintainer": 0,
+      "nobody": 0
+    },
+    "unmeasured": 3,
+    "complete": false,
+    "proven_clear": false,
+    "stale_verdicts": 0,
+    "missing_verdicts": 0,
+    "unreadable_records": 0,
+    "valid_until": 900,
+    "captain": [],
+    "captain_omitted": 0
+  },
+  "scout_reports": [],
+  "secondmate_current": {
+    "registry": {
+      "present": false,
+      "available": true,
+      "complete": true,
+      "reason": null,
+      "provenance": "registered-table",
+      "path": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4MQZR12Q7QC44Q6WM6MW6PD/.test-disposable/link-home/data/secondmates.md",
+      "freshness": {
+        "status": "fresh",
+        "observed_at": "2026-10-11T05:52:14Z"
+      },
+      "records": [],
+      "input_truncated": false,
+      "records_truncated": false,
+      "reasons": [],
+      "lines_in_window": 0,
+      "records_in_window": 0
+    },
+    "records": [],
+    "total_registered": 0,
+    "total": 0,
+    "shown": 0,
+    "truncated": 0
+  },
+  "secondmate_landed": {
+    "records": [],
+    "truncated": [],
+    "unreadable": [],
+    "partial": []
+  },
+  "secondmate_guidance": {
+    "note": "For kind=secondmate, bearings selects validated structured state from that registered home; parent events and bounded terminal evidence are fallback-only supplements and never current-state authority."
+  }
+}

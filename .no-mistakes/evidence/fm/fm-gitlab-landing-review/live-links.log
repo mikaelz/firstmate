@@ -1,0 +1,89 @@
+Real snapshot consumer output:
+{
+  "backlog": [
+    {
+      "id": "gl",
+      "pr_url": "https://gitlab.com/gitlab-org/cli/-/merge_requests/4055"
+    },
+    {
+      "id": "nested",
+      "pr_url": "https://gitlab.example.test/group/sub/project/-/merge_requests/7"
+    },
+    {
+      "id": "gh",
+      "pr_url": "https://github.com/owner/repo/pull/7"
+    },
+    {
+      "id": "fj",
+      "pr_url": "https://forgejo.example.test/owner/repo/pulls/7"
+    },
+    {
+      "id": "query",
+      "pr_url": null
+    },
+    {
+      "id": "leadingzero",
+      "pr_url": null
+    },
+    {
+      "id": "issue",
+      "pr_url": null
+    }
+  ],
+  "tasks": [
+    {
+      "id": "incidental",
+      "kind": "ship",
+      "pr": {
+        "url": null,
+        "source": "absent",
+        "head": null
+      }
+    },
+    {
+      "id": "latest",
+      "kind": "ship",
+      "pr": {
+        "url": "https://gitlab.com/group/project/-/merge_requests/8",
+        "source": "status_event",
+        "head": null
+      }
+    },
+    {
+      "id": "malformed",
+      "kind": "ship",
+      "pr": {
+        "url": null,
+        "source": "absent",
+        "head": null
+      }
+    },
+    {
+      "id": "meta",
+      "kind": "ship",
+      "pr": {
+        "url": "https://gitlab.com/group/project/-/merge_requests/9",
+        "source": "meta",
+        "head": null
+      }
+    },
+    {
+      "id": "resumed",
+      "kind": "ship",
+      "pr": {
+        "url": null,
+        "source": "absent",
+        "head": null
+      }
+    },
+    {
+      "id": "scout",
+      "kind": "scout",
+      "pr": {
+        "url": null,
+        "source": "absent",
+        "head": null
+      }
+    }
+  ]
+}

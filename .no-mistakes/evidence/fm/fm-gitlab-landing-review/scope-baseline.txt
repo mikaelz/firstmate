@@ -1,0 +1,3 @@
+Deferred-only files versus base:
+Base is ancestor of candidate: 0
+Installed baseline consumer: 0.2.6
