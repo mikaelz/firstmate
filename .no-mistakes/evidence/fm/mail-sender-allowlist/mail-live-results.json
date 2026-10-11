@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Read and poll allow exact addresses/domains; hostile headers stay redacted and never re-wake",
+    "result": "pass",
+    "live": true,
+    "evidence": "mail-live-transcript.txt: Read and poll allow exact addresses/domains; hostile headers stay redacted and never re-wake",
+    "reason": ""
+  },
+  {
+    "name": "Unset or blank allow list preserves all-sender read and wake behavior",
+    "result": "pass",
+    "live": true,
+    "evidence": "mail-live-transcript.txt: Unset or blank allow list preserves all-sender read and wake behavior",
+    "reason": ""
+  },
+  {
+    "name": "Malformed allow lists fail read/poll clearly before connecting or publishing wakes",
+    "result": "pass",
+    "live": true,
+    "evidence": "mail-live-transcript.txt: Malformed allow lists fail read/poll clearly before connecting or publishing wakes",
+    "reason": ""
+  },
+  {
+    "name": "80 held UIDs cannot starve UID 81; rotating retries wake allowed recovery and discard denied recovery",
+    "result": "pass",
+    "live": true,
+    "evidence": "mail-live-transcript.txt: 80 held UIDs cannot starve UID 81; rotating retries wake allowed recovery and discard denied recovery",
+    "reason": ""
+  },
+  {
+    "name": "Environment overrides .env allow list and status omits parsed allow-list reporting",
+    "result": "pass",
+    "live": true,
+    "evidence": "mail-live-transcript.txt: Environment overrides .env allow list and status omits parsed allow-list reporting",
+    "reason": ""
+  }
+]
