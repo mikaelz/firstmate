@@ -1,0 +1,5 @@
+ok - fm-control relaunch: durable task metadata survives replacement launch publication
+ok - fm-control relaunch: the PR identity block stays last with tracing off
+ok - fm-control relaunch: the PR identity block stays last with tracing on
+ok - fm-control relaunch: delivery and concurrent task metadata publication serialize
+ok - fm-control relaunch: disabling tracing clears metadata and pane context

@@ -1,0 +1,44 @@
+Before relaunch: existing merge check authenticated
+
+  Update available · 0.160.0 → 0.162.1
+  Release notes: https://github.com/openai/codex/releases/latest
+
+› 1. Update now (runs `sh -c 'curl -fsSL https://chatgpt.com/codex/install.sh | CODEX_NON_INTERACTIVE=1 sh'`)
+  2. Skip
+  3. Skip until next version
+
+  enter continue · esc skip
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QAVDP3PHVTYGYPHYZK8ZYZ/.l
+error: task labpr307313's endpoint lab:fm-labpr307313 reads 'missing', but tmux absence cannot be proven from a task record: the record does not carry the endpoint's socket identity, and a server-wide window inventory only describes the tmux server this process addresses, so a window absent from it may still be alive on another; exit will not claim an agent stopped at an address it cannot trust, nor send lifecycle input to one
+error: relaunch of labpr307313 failed while stopping the old agent and its state is 'missing', so it was not proven stopped; its original instructions were restored and the durable record was retained for recovery

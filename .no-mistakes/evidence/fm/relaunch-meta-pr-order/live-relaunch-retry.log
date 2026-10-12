@@ -1,0 +1,131 @@
+Tracing off before restart: merge check authenticated
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QAVDP3PHVTYGYPHYZK8ZYZ/.l
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QAVDP3PHVTYGYPHYZK8ZYZ/.l
+warning: /home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QAVDP3PHVTYGYPHYZK8ZYZ/.l/data/labpr307313/launch-brief.md records no ship branch; defaulting to legacy branch fm/labpr307313
+warning: /home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QAVDP3PHVTYGYPHYZK8ZYZ/.l/data/labpr307313/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+relaunched labpr307313 harness=codex from=codex model=default effort=default backend=tmux endpoint=lab:fm-labpr307313 worktree=/home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QAVDP3PHVTYGYPHYZK8ZYZ/.l/wt
+Tracing off after restart: original merge check authenticated
+window=lab:fm-labpr307313
+endpoint_task_id=labpr307313
+worktree=/home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QAVDP3PHVTYGYPHYZK8ZYZ/.l/wt
+project=/home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QAVDP3PHVTYGYPHYZK8ZYZ/.l/proj
+harness=codex
+kind=ship
+mode=no-mistakes
+yolo=off
+branch=fm/labpr307313
+tasktmp=/tmp/fm-labpr307313
+model=default
+effort=default
+spawn_gen=s1791785276.372398.13064
+control_relaunch_tx=371965.20261012T060756Z.9349
+pr=https://github.com/example/repo/pull/35
+pr_head=0123456789abcdef0123456789abcdef01234567
+x_request=request-35
+bash-5.3$ cd -- '/home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QAVDP3PHVTYGYPHYZK8ZYZ/.l/wt'
+bash-5.3$ export GOTMPDIR=/tmp/fm-labpr307313/gotmp
+bash-5.3$ export COMPACT_ADVISER_DISABLE=1
+bash-5.3$ export FM_TASK_ID=labpr307313
+bash-5.3$ . '/tmp/fm-labpr307313+339aff0497af86d17c650045da5e0c02f809a8fe472e586c6d764eced3dbdbe3/launch.s1791785276.372
+398.13064.sh'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tracing on before restart: merge check authenticated
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QAVDP3PHVTYGYPHYZK8ZYZ/.l
+fm-gate-refuse: gate agent lifecycle permitted only against lab home /home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QAVDP3PHVTYGYPHYZK8ZYZ/.l
+warning: /home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QAVDP3PHVTYGYPHYZK8ZYZ/.l/data/labpr307313/launch-brief.md records no ship branch; defaulting to legacy branch fm/labpr307313
+warning: /home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QAVDP3PHVTYGYPHYZK8ZYZ/.l/data/labpr307313/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+relaunched labpr307313 harness=codex from=codex model=default effort=default backend=tmux endpoint=lab:fm-labpr307313 worktree=/home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QAVDP3PHVTYGYPHYZK8ZYZ/.l/wt
+Tracing on after restart: original merge check authenticated
+traceparent=00-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-bbbbbbbbbbbbbbbb-01
+window=lab:fm-labpr307313
+endpoint_task_id=labpr307313
+worktree=/home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QAVDP3PHVTYGYPHYZK8ZYZ/.l/wt
+project=/home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QAVDP3PHVTYGYPHYZK8ZYZ/.l/proj
+harness=codex
+kind=ship
+mode=no-mistakes
+yolo=off
+branch=fm/labpr307313
+tasktmp=/tmp/fm-labpr307313
+model=default
+effort=default
+spawn_gen=s1791785282.374222.24115
+control_relaunch_tx=374037.20261012T060802Z.8248
+pr=https://github.com/example/repo/pull/35
+pr_head=0123456789abcdef0123456789abcdef01234567
+x_request=request-35
+bash-5.3$ cd -- '/home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QAVDP3PHVTYGYPHYZK8ZYZ/.l/wt'
+bash-5.3$ export GOTMPDIR=/tmp/fm-labpr307313/gotmp
+bash-5.3$ export COMPACT_ADVISER_DISABLE=1
+bash-5.3$ export FM_TASK_ID=labpr307313
+bash-5.3$ export TRACEPARENT=00-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-bbbbbbbbbbbbbbbb-01
+bash-5.3$ . '/tmp/fm-labpr307313+339aff0497af86d17c650045da5e0c02f809a8fe472e586c6d764eced3dbdbe3/launch.s1791785282.374
+222.24115.sh'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Adversarial illegal suffix after PR identity: correctly rejected
+Restored valid record: original merge check authenticated
