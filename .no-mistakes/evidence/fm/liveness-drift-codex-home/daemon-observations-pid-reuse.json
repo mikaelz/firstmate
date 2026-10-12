@@ -1,0 +1,54 @@
+[
+  {
+    "pid_file": ".live-validation/tmp with spaces/fm-liveness-drift.d7NW9S/codex-home/app-server-daemon/daemon.pid",
+    "pid": 2969104,
+    "CODEX_HOME": [
+      "CODEX_HOME=/home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QXY2X5WJ2QTF7GGBDPFS08/.live-validation/tmp with spaces/fm-liveness-drift.d7NW9S/codex-home"
+    ],
+    "cwd": "/home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QXY2X5WJ2QTF7GGBDPFS08/.live-validation/tmp with spaces/fm-liveness-drift.d7NW9S/wt",
+    "args": "/home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QXY2X5WJ2QTF7GGBDPFS08/.live-validation/tmp with spaces/fm-liveness-drift.d7NW9S/codex-home/packages/app-server-daemon/releases/0.162.1-x86_64-unknown-linux-musl/bin/codex app-server --listen unix:// --analytics-default-enabled --managed-daemon "
+  },
+  {
+    "pid_file": ".live-validation/tmp with spaces/fm-liveness-drift.d7NW9S/codex-home/app-server-daemon/daemon-updater.pid",
+    "pid": 2969572,
+    "CODEX_HOME": [
+      "CODEX_HOME=/home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QXY2X5WJ2QTF7GGBDPFS08/.live-validation/tmp with spaces/fm-liveness-drift.d7NW9S/codex-home"
+    ],
+    "cwd": "/home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QXY2X5WJ2QTF7GGBDPFS08/.live-validation/tmp with spaces/fm-liveness-drift.d7NW9S/wt",
+    "args": "/home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QXY2X5WJ2QTF7GGBDPFS08/.live-validation/tmp with spaces/fm-liveness-drift.d7NW9S/codex-home/packages/app-server-daemon/releases/0.162.1-x86_64-unknown-linux-musl/bin/codex app-server daemon pid-update-loop "
+  },
+  {
+    "injected_stale_updater_pid": 2968245,
+    "unrelated_command": "sleep 60"
+  },
+  {
+    "pid_file": ".live-validation/tmp with spaces/fm-liveness-drift.d7NW9S/codex-home/app-server-daemon/daemon-updater.pid",
+    "pid": 2968245,
+    "CODEX_HOME": [],
+    "cwd": "/home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QXY2X5WJ2QTF7GGBDPFS08",
+    "args": "sleep 60 "
+  },
+  {
+    "post_run_pid": 2969104,
+    "state": "absent",
+    "stopped": true
+  },
+  {
+    "post_run_pid": 2969572,
+    "state": "absent",
+    "stopped": true
+  },
+  {
+    "post_run_pid": 2968245,
+    "state": "S",
+    "stopped": false
+  },
+  {
+    "unrelated_pid": 2968245,
+    "survived_cleanup": true
+  },
+  {
+    "exit_code": 0,
+    "remaining_labs": []
+  }
+]

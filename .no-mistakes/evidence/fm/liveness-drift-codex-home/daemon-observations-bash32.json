@@ -1,0 +1,42 @@
+[
+  {
+    "pid_file": ".live-validation/tmp with spaces/fm-liveness-drift.DxVXZl/codex-home/app-server-daemon/daemon.pid",
+    "pid": 3036849,
+    "CODEX_HOME": [
+      "CODEX_HOME=/home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QXY2X5WJ2QTF7GGBDPFS08/.live-validation/tmp with spaces/fm-liveness-drift.DxVXZl/codex-home"
+    ],
+    "cwd": "/home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QXY2X5WJ2QTF7GGBDPFS08/.live-validation/tmp with spaces/fm-liveness-drift.DxVXZl/wt",
+    "args": "/home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QXY2X5WJ2QTF7GGBDPFS08/.live-validation/tmp with spaces/fm-liveness-drift.DxVXZl/codex-home/packages/app-server-daemon/releases/0.162.1-x86_64-unknown-linux-musl/bin/codex app-server --listen unix:// --analytics-default-enabled --managed-daemon "
+  },
+  {
+    "pid_file": ".live-validation/tmp with spaces/fm-liveness-drift.DxVXZl/codex-home/app-server-daemon/daemon-updater.pid",
+    "pid": 3037415,
+    "CODEX_HOME": [
+      "CODEX_HOME=/home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QXY2X5WJ2QTF7GGBDPFS08/.live-validation/tmp with spaces/fm-liveness-drift.DxVXZl/codex-home"
+    ],
+    "cwd": "/home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QXY2X5WJ2QTF7GGBDPFS08/.live-validation/tmp with spaces/fm-liveness-drift.DxVXZl/wt",
+    "args": "/home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QXY2X5WJ2QTF7GGBDPFS08/.live-validation/tmp with spaces/fm-liveness-drift.DxVXZl/codex-home/packages/app-server-daemon/releases/0.162.1-x86_64-unknown-linux-musl/bin/codex app-server daemon pid-update-loop "
+  },
+  {
+    "post_run_pid": 3036849,
+    "state": "absent",
+    "stopped": true
+  },
+  {
+    "post_run_pid": 3037415,
+    "state": "absent",
+    "stopped": true
+  },
+  {
+    "inherited_CODEX_HOME": "/home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QXY2X5WJ2QTF7GGBDPFS08/.live-validation/inherited-codex-home",
+    "contents_after": [
+      "tmp",
+      "sentinel"
+    ],
+    "sentinel_unchanged": true
+  },
+  {
+    "exit_code": 0,
+    "remaining_labs": []
+  }
+]

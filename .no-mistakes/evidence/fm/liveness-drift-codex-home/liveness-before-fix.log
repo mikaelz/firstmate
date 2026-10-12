@@ -1,0 +1,32 @@
+FM_TEST_BEGIN 2026-10-12T11:37:13Z tests/fm-harness-liveness-drift-live-e2e.test.sh family=live-harness-optin expected_gate_skip=live-capability
+# claude 2.1.296 (Claude Code): title='claude' foreground=[claude ]
+ok - harness liveness: claude 2.1.296 (Claude Code) classifies alive
+# claude 2.1.296 (Claude Code): ancestry verdicts=[comm claude]
+ok - harness detection: claude 2.1.296 (Claude Code) is identified by the ancestry walk at comm strength
+# codex codex-cli 0.162.1: title='codex' foreground=[codex ]
+ok - harness liveness: codex codex-cli 0.162.1 classifies alive
+# codex codex-cli 0.162.1: ancestry verdicts=[comm codex]
+ok - harness detection: codex codex-cli 0.162.1 is identified by the ancestry walk at comm strength
+# opencode 1.19.0: title='opencode' foreground=[opencode ]
+ok - harness liveness: opencode 1.19.0 classifies alive
+# opencode 1.19.0: ancestry verdicts=[comm opencode]
+ok - harness detection: opencode 1.19.0 is identified by the ancestry walk at comm strength
+# pi 1.1.0: title='pi' foreground=[pi ]
+ok - harness liveness: pi 1.1.0 classifies alive
+# pi 1.1.0: ancestry verdicts=[comm pi]
+ok - harness detection: pi 1.1.0 is identified by the ancestry walk at comm strength
+# skip: pi-signed is not installed on this machine, so its classification is unverified here
+# skip: grok is not installed on this machine, so its classification is unverified here
+# skip: kimi is not installed on this machine, so its classification is unverified here
+# cursor 2026.10.01-e373342: title='cursor-agent' foreground=[MainThread ]
+ok - harness liveness: cursor 2026.10.01-e373342 classifies alive
+# cursor 2026.10.01-e373342: ancestry verdicts=[comm cursor]
+ok - harness detection: cursor 2026.10.01-e373342 is identified by the ancestry walk at comm strength
+# skip: muse is not installed on this machine, so its classification is unverified here
+# unverified on this machine (not installed): pi-signed grok kimi muse
+# checked 5 installed harness(es)
+rm: cannot remove '/home/mike/.no-mistakes/worktrees/4e4f35680e79/01M4QXY2X5WJ2QTF7GGBDPFS08/.live-validation/tmp with spaces/fm-liveness-drift.QMuykd/codex-home/app-server-daemon': Directory not empty
+FM_TEST_END 2026-10-12T11:37:15Z tests/fm-harness-liveness-drift-live-e2e.test.sh exit=0 duration_ms=1965 gate_skip=false
+FM_TEST_SUMMARY total=1 failed=0 skipped_gate=0 duration_ms=2033
+FM_TEST_SUMMARY_FAMILY family=live-harness-optin count=1 duration_ms=1965 failed=0
+FM_TEST_SLOWEST rank=1 script=tests/fm-harness-liveness-drift-live-e2e.test.sh duration_ms=1965
