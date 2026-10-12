@@ -1,0 +1,303 @@
+$ FM_HOME=<matching> bin/fm-mail.sh poll {}
+fm-mail: woke for 1
+fm-mail: woke for 2
+fm-mail: woke for 3
+fm-mail: withheld 8 message(s) from senders outside FM_MAIL_SOURCE_ALLOW (not woken, left unread)
+fm-mail: held 1 message(s) whose sender could not be verified (header unfetchable); retried next poll
+exit=0
+$ FM_HOME=<matching> bin/fm-mail.sh poll {}
+fm-mail: no new mail
+exit=0
+$ FM_HOME=<matching> bin/fm-mail.sh read {}
+---
+From: Alice <USER@NEVILLEWEB.SK>
+Date: Mon, 12 Oct 2026 12:00:00 +0000
+Subj: allowed-domain
+Body: preview
+---
+From: USERNAME@GMAIL.COM
+Date: Mon, 12 Oct 2026 12:00:00 +0000
+Subj: allowed-address
+Body: preview
+---
+From: username@im3.sk
+Date: Mon, 12 Oct 2026 12:00:00 +0000
+Subj: second-address
+Body: preview
+---
+Uid: 12
+From: (unfetchable)
+Date: 
+Subj: unfetchable body - see fm-mail read
+Body: (body unavailable)
+(8 unseen message(s) from senders outside FM_MAIL_SOURCE_ALLOW withheld)
+exit=0
+$ FM_HOME=<matching> bin/fm-mail.sh poll {'FM_MAIL_SOURCE_ALLOW': '@evil.test'}
+fm-mail: no new mail
+exit=0
+$ FM_HOME=<matching> bin/fm-mail.sh status {}
+mail account: lab@example.test
+imap: localhost:39703 smtp: localhost:465
+cursor: uidvalidity=90009
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+exit=0
+Persisted queue:
+1791781750	1	check	mail:90009/1	check: mail 1 - mail from Alice <USER@NEVILLEWEB.SK> - allowed-domain
+1791781750	2	check	mail:90009/2	check: mail 2 - mail from USERNAME@GMAIL.COM - allowed-address
+1791781750	3	check	mail:90009/3	check: mail 3 - mail from username@im3.sk - second-address
+
+Cursor:
+uidvalidity=90009
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+
+Retry:
+12
+
+PASS: Configure comma-separated domain/address entries in .env; only matching single From addresses appear in notifications and read output, with redacted counts and no duplicates
+$ FM_HOME=<invalid> bin/fm-mail.sh read {'FM_MAIL_SOURCE_ALLOW': 'nevilleweb.sk'}
+fm-mail: FM_MAIL_SOURCE_ALLOW has malformed entries: 'nevilleweb.sk' (each entry must be @domain or user@domain)
+exit=1
+$ FM_HOME=<invalid> bin/fm-mail.sh poll {'FM_MAIL_SOURCE_ALLOW': 'nevilleweb.sk'}
+fm-mail: FM_MAIL_SOURCE_ALLOW has malformed entries: 'nevilleweb.sk' (each entry must be @domain or user@domain)
+exit=1
+$ FM_HOME=<invalid> bin/fm-mail.sh read {'FM_MAIL_SOURCE_ALLOW': '*@nevilleweb.sk'}
+fm-mail: FM_MAIL_SOURCE_ALLOW has malformed entries: '*@nevilleweb.sk' (each entry must be @domain or user@domain)
+exit=1
+$ FM_HOME=<invalid> bin/fm-mail.sh poll {'FM_MAIL_SOURCE_ALLOW': '*@nevilleweb.sk'}
+fm-mail: FM_MAIL_SOURCE_ALLOW has malformed entries: '*@nevilleweb.sk' (each entry must be @domain or user@domain)
+exit=1
+$ FM_HOME=<invalid> bin/fm-mail.sh read {'FM_MAIL_SOURCE_ALLOW': '@nev ille.sk'}
+fm-mail: FM_MAIL_SOURCE_ALLOW has malformed entries: '@nev ille.sk' (each entry must be @domain or user@domain)
+exit=1
+$ FM_HOME=<invalid> bin/fm-mail.sh poll {'FM_MAIL_SOURCE_ALLOW': '@nev ille.sk'}
+fm-mail: FM_MAIL_SOURCE_ALLOW has malformed entries: '@nev ille.sk' (each entry must be @domain or user@domain)
+exit=1
+$ FM_HOME=<invalid> bin/fm-mail.sh read {'FM_MAIL_SOURCE_ALLOW': 'a@b@c'}
+fm-mail: FM_MAIL_SOURCE_ALLOW has malformed entries: 'a@b@c' (each entry must be @domain or user@domain)
+exit=1
+$ FM_HOME=<invalid> bin/fm-mail.sh poll {'FM_MAIL_SOURCE_ALLOW': 'a@b@c'}
+fm-mail: FM_MAIL_SOURCE_ALLOW has malformed entries: 'a@b@c' (each entry must be @domain or user@domain)
+exit=1
+$ FM_HOME=<invalid> bin/fm-mail.sh read {'FM_MAIL_SOURCE_ALLOW': '<a@b.c>'}
+fm-mail: FM_MAIL_SOURCE_ALLOW has malformed entries: '<a@b.c>' (each entry must be @domain or user@domain)
+exit=1
+$ FM_HOME=<invalid> bin/fm-mail.sh poll {'FM_MAIL_SOURCE_ALLOW': '<a@b.c>'}
+fm-mail: FM_MAIL_SOURCE_ALLOW has malformed entries: '<a@b.c>' (each entry must be @domain or user@domain)
+exit=1
+$ FM_HOME=<invalid> bin/fm-mail.sh read {'FM_MAIL_SOURCE_ALLOW': ', ,'}
+fm-mail: FM_MAIL_SOURCE_ALLOW is set but holds no entries
+exit=1
+$ FM_HOME=<invalid> bin/fm-mail.sh poll {'FM_MAIL_SOURCE_ALLOW': ', ,'}
+fm-mail: FM_MAIL_SOURCE_ALLOW is set but holds no entries
+exit=1
+PASS: Malformed or entry-less allow lists reject read and poll before contacting IMAP or publishing notifications
+$ FM_HOME=<unset> bin/fm-mail.sh poll {}
+fm-mail: woke for 1
+fm-mail: woke for 2
+exit=0
+$ FM_HOME=<unset> bin/fm-mail.sh read {}
+---
+From: any@evil.test
+Date: Mon, 12 Oct 2026 12:00:00 +0000
+Subj: any-sender
+Body: preview
+---
+Uid: 2
+From: (unfetchable)
+Date: 
+Subj: unfetchable body - see fm-mail read
+Body: (body unavailable)
+exit=0
+$ FM_HOME=<blank> bin/fm-mail.sh poll {}
+fm-mail: woke for 1
+fm-mail: woke for 2
+exit=0
+$ FM_HOME=<blank> bin/fm-mail.sh read {}
+---
+From: any@evil.test
+Date: Mon, 12 Oct 2026 12:00:00 +0000
+Subj: any-sender
+Body: preview
+---
+Uid: 2
+From: (unfetchable)
+Date: 
+Subj: unfetchable body - see fm-mail read
+Body: (body unavailable)
+exit=0
+PASS: Unset or whitespace-only allow list preserves unrestricted mail delivery and degraded-header notifications
+$ FM_HOME=<progress-20> bin/fm-mail.sh poll {'FM_MAIL_POLL_MAX_WAKES': '20'}
+fm-mail: held 80 message(s) whose sender could not be verified (header unfetchable); retried next poll
+fm-mail: no new mail
+exit=0
+$ FM_HOME=<progress-20> bin/fm-mail.sh poll {'FM_MAIL_POLL_MAX_WAKES': '20'}
+fm-mail: woke for 81
+exit=0
+$ FM_HOME=<progress-20> bin/fm-mail.sh poll {'FM_MAIL_POLL_MAX_WAKES': '20'}
+fm-mail: no new mail
+exit=0
+$ FM_HOME=<progress-20> bin/fm-mail.sh poll {'FM_MAIL_POLL_MAX_WAKES': '20'}
+fm-mail: woke for 80
+fm-mail: withheld 1 message(s) from senders outside FM_MAIL_SOURCE_ALLOW (not woken, left unread)
+exit=0
+$ FM_HOME=<progress-20> bin/fm-mail.sh poll {'FM_MAIL_POLL_MAX_WAKES': '20'}
+fm-mail: no new mail
+exit=0
+$ FM_HOME=<progress-20> bin/fm-mail.sh poll {'FM_MAIL_POLL_MAX_WAKES': '20'}
+fm-mail: no new mail
+exit=0
+$ FM_HOME=<progress-20> bin/fm-mail.sh poll {'FM_MAIL_POLL_MAX_WAKES': '20'}
+fm-mail: no new mail
+exit=0
+$ FM_HOME=<progress-20> bin/fm-mail.sh poll {'FM_MAIL_POLL_MAX_WAKES': '20'}
+fm-mail: no new mail
+exit=0
+Recovery queue:
+1791781757	1	check	mail:90009/81	check: mail 81 - mail from later@nevilleweb.sk - later-allowed
+1791781758	2	check	mail:90009/80	check: mail 80 - mail from recovered@nevilleweb.sk - recovered-allowed
+
+Remaining retry UIDs:
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+
+$ FM_HOME=<progress-1> bin/fm-mail.sh poll {'FM_MAIL_POLL_MAX_WAKES': '1'}
+fm-mail: held 11 message(s) whose sender could not be verified (header unfetchable); retried next poll
+fm-mail: no new mail
+exit=0
+$ FM_HOME=<progress-1> bin/fm-mail.sh poll {'FM_MAIL_POLL_MAX_WAKES': '1'}
+fm-mail: woke for 12
+exit=0
+$ FM_HOME=<progress-1> bin/fm-mail.sh poll {'FM_MAIL_POLL_MAX_WAKES': '1'}
+fm-mail: no new mail
+exit=0
+$ FM_HOME=<progress-1> bin/fm-mail.sh poll {'FM_MAIL_POLL_MAX_WAKES': '1'}
+fm-mail: withheld 1 message(s) from senders outside FM_MAIL_SOURCE_ALLOW (not woken, left unread)
+fm-mail: no new mail
+exit=0
+$ FM_HOME=<progress-1> bin/fm-mail.sh poll {'FM_MAIL_POLL_MAX_WAKES': '1'}
+fm-mail: woke for 11
+exit=0
+$ FM_HOME=<progress-1> bin/fm-mail.sh poll {'FM_MAIL_POLL_MAX_WAKES': '1'}
+fm-mail: no new mail
+exit=0
+$ FM_HOME=<progress-1> bin/fm-mail.sh poll {'FM_MAIL_POLL_MAX_WAKES': '1'}
+fm-mail: no new mail
+exit=0
+$ FM_HOME=<progress-1> bin/fm-mail.sh poll {'FM_MAIL_POLL_MAX_WAKES': '1'}
+fm-mail: no new mail
+exit=0
+Recovery queue:
+1791781760	1	check	mail:90009/12	check: mail 12 - mail from later@nevilleweb.sk - later-allowed
+1791781761	2	check	mail:90009/11	check: mail 11 - mail from recovered@nevilleweb.sk - recovered-allowed
+
+Remaining retry UIDs:
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+PASS: Persistent unfetchable prefix permits later allowed mail and retries recover allowed senders once while discarding blocked senders, at caps 20 and 1
+IMAP operations use BODY.PEEK only; no STORE or Seen mutation sent.

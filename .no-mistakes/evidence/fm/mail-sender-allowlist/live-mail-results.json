@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Configure comma-separated domain/address entries in .env; only matching single From addresses appear in notifications and read output, with redacted counts and no duplicates",
+    "result": "pass",
+    "live": true,
+    "reason": "",
+    "evidence": "live-mail-transcript.txt"
+  },
+  {
+    "name": "Malformed or entry-less allow lists reject read and poll before contacting IMAP or publishing notifications",
+    "result": "pass",
+    "live": true,
+    "reason": "",
+    "evidence": "live-mail-transcript.txt"
+  },
+  {
+    "name": "Unset or whitespace-only allow list preserves unrestricted mail delivery and degraded-header notifications",
+    "result": "pass",
+    "live": true,
+    "reason": "",
+    "evidence": "live-mail-transcript.txt"
+  },
+  {
+    "name": "Persistent unfetchable prefix permits later allowed mail and retries recover allowed senders once while discarding blocked senders, at caps 20 and 1",
+    "result": "pass",
+    "live": true,
+    "reason": "",
+    "evidence": "live-mail-transcript.txt"
+  }
+]
