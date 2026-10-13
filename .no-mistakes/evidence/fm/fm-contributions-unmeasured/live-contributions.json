@@ -1,0 +1,210 @@
+[
+  {
+    "step": "before-fix-reproduction",
+    "base": "6407052f4c521e39401ce2305dfa45d201249827",
+    "exit": 1,
+    "stdout": "",
+    "stderr": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4V7KED2NMFN9WG1FW7VBW9S/.contributions-live-pm_ffrfe/before-code/bin/fm-contributions.sh: line 399: BUDGET_EXHAUSTED: unbound variable\n"
+  },
+  {
+    "step": "fresh-poll",
+    "command": [
+      "fm-contributions.sh",
+      "poll"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "",
+    "gh_api_execs": [],
+    "connections": []
+  },
+  {
+    "step": "fresh-coverage",
+    "command": [
+      "fm-bearings-snapshot.sh",
+      "--json"
+    ],
+    "exit": 0,
+    "stdout": "{\n  \"scope\": \"owned contributions per home\",\n  \"known\": 2,\n  \"checked\": 0,\n  \"counts\": {\n    \"captain\": 0,\n    \"fleet\": 0,\n    \"maintainer\": 0,\n    \"nobody\": 0\n  },\n  \"complete\": false,\n  \"proven_clear\": false,\n  \"unmeasured_homes\": 0,\n  \"unreadable_records\": 0,\n  \"unmeasured\": 2,\n  \"stale_verdicts\": 0,\n  \"missing_verdicts\": 0,\n  \"captain_omitted\": 0,\n  \"captain\": []\n}",
+    "stderr": ""
+  },
+  {
+    "step": "fresh-arm",
+    "command": [
+      "fm-contributions.sh",
+      "arm",
+      "--if-owned"
+    ],
+    "exit": 0,
+    "stdout": "registered: state/contributions.check.sh\n",
+    "stderr": ""
+  },
+  {
+    "step": "fresh-watcher",
+    "command": [
+      "fm-watch-checkpoint.sh",
+      "--seconds",
+      "4"
+    ],
+    "exit": 124,
+    "stdout": "checkpoint: no actionable wake within 4s\n",
+    "stderr": "",
+    "gh_api_execs": [],
+    "connections": []
+  },
+  {
+    "step": "diagnostic-arm",
+    "command": [
+      "fm-contributions.sh",
+      "arm",
+      "--if-owned"
+    ],
+    "exit": 0,
+    "stdout": "registered: state/contributions.check.sh\n",
+    "stderr": ""
+  },
+  {
+    "step": "real-diagnostic-watcher",
+    "command": [
+      "fm-watch-checkpoint.sh",
+      "--seconds",
+      "10"
+    ],
+    "exit": 0,
+    "stdout": "check: /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4V7KED2NMFN9WG1FW7VBW9S/.contributions-live-pm_ffrfe/real-diagnostic/state/contributions.check.sh: contributions: 1 unreadable durable record(s)\n",
+    "stderr": "",
+    "gh_api_execs": [],
+    "connections": []
+  },
+  {
+    "step": "real-diagnostic-durable-wake",
+    "wake_queue": "1791915782\t1\tcheck\t/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4V7KED2NMFN9WG1FW7VBW9S/.contributions-live-pm_ffrfe/real-diagnostic/state/contributions.check.sh\tcheck: /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4V7KED2NMFN9WG1FW7VBW9S/.contributions-live-pm_ffrfe/real-diagnostic/state/contributions.check.sh: contributions: 1 unreadable durable record(s)\n"
+  },
+  {
+    "step": "legacy-poll",
+    "command": [
+      "fm-contributions.sh",
+      "poll"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "",
+    "gh_api_execs": [],
+    "connections": []
+  },
+  {
+    "step": "legacy-coverage",
+    "command": [
+      "fm-bearings-snapshot.sh",
+      "--json"
+    ],
+    "exit": 0,
+    "stdout": "{\n  \"scope\": \"owned contributions per home\",\n  \"known\": 2,\n  \"checked\": 0,\n  \"counts\": {\n    \"captain\": 0,\n    \"fleet\": 0,\n    \"maintainer\": 0,\n    \"nobody\": 0\n  },\n  \"complete\": false,\n  \"proven_clear\": false,\n  \"unmeasured_homes\": 0,\n  \"unreadable_records\": 0,\n  \"unmeasured\": 2,\n  \"stale_verdicts\": 0,\n  \"missing_verdicts\": 0,\n  \"captain_omitted\": 0,\n  \"captain\": []\n}",
+    "stderr": ""
+  },
+  {
+    "step": "mixed-poll",
+    "command": [
+      "fm-contributions.sh",
+      "poll"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "",
+    "gh_api_execs": [
+      "145901 execve(\"/home/mike/.local/bin/gh\", [\"gh\", \"api\", \"repos/o/r/pulls/8\"], 0x55c292b3b590 /* 72 vars */) = 0"
+    ],
+    "connections": [
+      "145909 connect(3, {sa_family=AF_INET, sin_port=htons(1), sin_addr=inet_addr(\"127.0.0.1\")}, 16) = -1 EINPROGRESS (Operation now in progress)"
+    ]
+  },
+  {
+    "step": "mixed-coverage",
+    "command": [
+      "fm-bearings-snapshot.sh",
+      "--json"
+    ],
+    "exit": 0,
+    "stdout": "{\n  \"scope\": \"owned contributions per home\",\n  \"known\": 2,\n  \"checked\": 0,\n  \"counts\": {\n    \"captain\": 0,\n    \"fleet\": 1,\n    \"maintainer\": 0,\n    \"nobody\": 0\n  },\n  \"complete\": false,\n  \"proven_clear\": false,\n  \"unmeasured_homes\": 0,\n  \"unreadable_records\": 0,\n  \"unmeasured\": 1,\n  \"stale_verdicts\": 0,\n  \"missing_verdicts\": 0,\n  \"captain_omitted\": 0,\n  \"captain\": []\n}",
+    "stderr": ""
+  },
+  {
+    "step": "outage-first-poll",
+    "command": [
+      "fm-contributions.sh",
+      "poll"
+    ],
+    "exit": 0,
+    "stdout": "contributions: observation unavailable for https://github.com/o/r/pull/8\n",
+    "stderr": "",
+    "gh_api_execs": [
+      "146114 execve(\"/home/mike/.local/bin/gh\", [\"gh\", \"api\", \"repos/o/r/pulls/8\"], 0x561814b13590 /* 72 vars */) = 0"
+    ],
+    "connections": [
+      "146117 connect(3, {sa_family=AF_INET, sin_port=htons(1), sin_addr=inet_addr(\"127.0.0.1\")}, 16) = -1 EINPROGRESS (Operation now in progress)"
+    ]
+  },
+  {
+    "step": "outage-repeat-poll",
+    "command": [
+      "fm-contributions.sh",
+      "poll"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "",
+    "gh_api_execs": [
+      "146234 execve(\"/home/mike/.local/bin/gh\", [\"gh\", \"api\", \"repos/o/r/pulls/8\"], 0x55de30df7590 /* 72 vars */) = 0"
+    ],
+    "connections": [
+      "146237 connect(3, {sa_family=AF_INET, sin_port=htons(1), sin_addr=inet_addr(\"127.0.0.1\")}, 16) = -1 EINPROGRESS (Operation now in progress)",
+      "146273 connect(3, {sa_family=AF_INET, sin_port=htons(1), sin_addr=inet_addr(\"127.0.0.1\")}, 16) = -1 EINPROGRESS (Operation now in progress)"
+    ]
+  },
+  {
+    "step": "outage-coverage",
+    "command": [
+      "fm-bearings-snapshot.sh",
+      "--json"
+    ],
+    "exit": 0,
+    "stdout": "{\n  \"scope\": \"owned contributions per home\",\n  \"known\": 2,\n  \"checked\": 0,\n  \"counts\": {\n    \"captain\": 0,\n    \"fleet\": 1,\n    \"maintainer\": 0,\n    \"nobody\": 0\n  },\n  \"complete\": false,\n  \"proven_clear\": false,\n  \"unmeasured_homes\": 0,\n  \"unreadable_records\": 0,\n  \"unmeasured\": 1,\n  \"stale_verdicts\": 0,\n  \"missing_verdicts\": 0,\n  \"captain_omitted\": 0,\n  \"captain\": []\n}",
+    "stderr": ""
+  },
+  {
+    "step": "outage-arm",
+    "command": [
+      "fm-contributions.sh",
+      "arm",
+      "--if-owned"
+    ],
+    "exit": 0,
+    "stdout": "registered: state/contributions.check.sh\n",
+    "stderr": ""
+  },
+  {
+    "step": "outage-watcher",
+    "command": [
+      "fm-watch-checkpoint.sh",
+      "--seconds",
+      "10"
+    ],
+    "exit": 0,
+    "stdout": "check: /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4V7KED2NMFN9WG1FW7VBW9S/.contributions-live-pm_ffrfe/watcher-outage/state/contributions.check.sh: contributions: observation unavailable for https://github.com/o/r/pull/8\n",
+    "stderr": "",
+    "gh_api_execs": [
+      "147995 execve(\"/home/mike/.local/bin/gh\", [\"gh\", \"api\", \"repos/o/r/pulls/8\"], 0x556b0ecd4590 /* 74 vars */) = 0"
+    ],
+    "connections": [
+      "148004 connect(3, {sa_family=AF_INET, sin_port=htons(1), sin_addr=inet_addr(\"127.0.0.1\")}, 16) = -1 EINPROGRESS (Operation now in progress)"
+    ]
+  },
+  {
+    "step": "outage-durable-wake",
+    "wake_queue": "1791915787\t1\tcheck\t/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4V7KED2NMFN9WG1FW7VBW9S/.contributions-live-pm_ffrfe/watcher-outage/state/contributions.check.sh\tcheck: /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4V7KED2NMFN9WG1FW7VBW9S/.contributions-live-pm_ffrfe/watcher-outage/state/contributions.check.sh: contributions: observation unavailable for https://github.com/o/r/pull/8\n"
+  },
+  {
+    "result": "all live assertions passed",
+    "isolation": "All homes removed; real gh used with isolated config and unreachable loopback proxy. No production credentials or fleet endpoints used."
+  }
+]
