@@ -1,0 +1,58 @@
+[
+  {
+    "scenario": "idle-primary",
+    "status": 0,
+    "stdout": "{}\n",
+    "stdout_hex": "7b7d0a",
+    "stderr": ""
+  },
+  {
+    "scenario": "supervision-down",
+    "status": 2,
+    "stdout": "",
+    "stdout_hex": "",
+    "stderr": "\u25cf\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n\u25cf  TURN WOULD END BLIND - SUPERVISION IS OFF\n\u25cf  1 task(s) in flight, but no live watcher holds this home lock (last beat: never).\n\u25cf  repair missing watcher supervision according to the session-start block for this harness; do not use shell &.\n\u25cf\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n"
+  },
+  {
+    "scenario": "already-active",
+    "status": 0,
+    "stdout": "{}\n",
+    "stdout_hex": "7b7d0a",
+    "stderr": ""
+  },
+  {
+    "scenario": "empty-input",
+    "status": 0,
+    "stdout": "{}\n",
+    "stdout_hex": "7b7d0a",
+    "stderr": ""
+  },
+  {
+    "scenario": "non-firstmate",
+    "status": 0,
+    "stdout": "{}\n",
+    "stdout_hex": "7b7d0a",
+    "stderr": ""
+  },
+  {
+    "scenario": "malformed-registration",
+    "status": 0,
+    "stdout": "{}\n",
+    "stdout_hex": "7b7d0a",
+    "stderr": ""
+  },
+  {
+    "scenario": "nonexecutable-guard",
+    "status": 0,
+    "stdout": "{}\n",
+    "stdout_hex": "7b7d0a",
+    "stderr": ""
+  },
+  {
+    "scenario": "missing-jq",
+    "status": 0,
+    "stdout": "{}\n",
+    "stdout_hex": "7b7d0a",
+    "stderr": ""
+  }
+]
