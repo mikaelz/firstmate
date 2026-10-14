@@ -1,0 +1,1076 @@
+{
+  "product": "unmodified bin/fm-contributions.sh, fleet snapshot, Bearings; installed gh CLI",
+  "isolation": "Disposable FM_HOME; real gh HTTPS reads to disposable local forge dataset; no production credentials or CLI mocks",
+  "steps": [
+    {
+      "step": "Fresh unsupported and held lookalike links: silent poll, no HTTP calls, no error records or wakes",
+      "product_output": {
+        "stdout": "",
+        "stderr": "",
+        "forge_requests": [],
+        "snapshot": {
+          "known": 4,
+          "checked": 0,
+          "counts": {
+            "captain": 0,
+            "fleet": 0,
+            "maintainer": 0,
+            "nobody": 0
+          },
+          "unmeasured": 4,
+          "complete": false,
+          "proven_clear": false,
+          "stale_verdicts": 0,
+          "missing_verdicts": 0,
+          "unreadable_records": 0,
+          "valid_until": 900,
+          "captain": [],
+          "captain_omitted": 0,
+          "rows": [
+            {
+              "task": "u1",
+              "url": "https://git.example.org/group/subgroup/r/-/merge_requests/3",
+              "kind": "pr",
+              "checked_at": null,
+              "checked": false,
+              "final": false,
+              "head": null,
+              "verdict": null,
+              "reviews": [],
+              "distinct_checks": 0,
+              "missing_verdicts": 0,
+              "pending_checks": 0,
+              "failed_checks": 0,
+              "stale_verdicts": 0,
+              "signals": [],
+              "actor": "unmeasured",
+              "reason": "unsupported forge; coverage is unmeasured",
+              "tasks": [
+                "u1"
+              ]
+            },
+            {
+              "task": "u2",
+              "url": "https://github-com/o/r/pull/8",
+              "kind": "pr",
+              "checked_at": null,
+              "checked": false,
+              "final": false,
+              "head": null,
+              "verdict": null,
+              "reviews": [],
+              "distinct_checks": 0,
+              "missing_verdicts": 0,
+              "pending_checks": 0,
+              "failed_checks": 0,
+              "stale_verdicts": 0,
+              "signals": [],
+              "actor": "unmeasured",
+              "reason": "unsupported forge; coverage is unmeasured",
+              "tasks": [
+                "u2"
+              ]
+            },
+            {
+              "task": "u3",
+              "url": "https://githubXcom/o/r/issues/9",
+              "kind": "issue",
+              "checked_at": null,
+              "checked": false,
+              "final": false,
+              "head": null,
+              "verdict": null,
+              "reviews": [],
+              "distinct_checks": 0,
+              "missing_verdicts": 0,
+              "pending_checks": 0,
+              "failed_checks": 0,
+              "stale_verdicts": 0,
+              "signals": [],
+              "actor": "unmeasured",
+              "reason": "unsupported forge; coverage is unmeasured",
+              "tasks": [
+                "u3"
+              ]
+            },
+            {
+              "task": "u0",
+              "url": "https://gitlab.com/o/r/-/merge_requests/2",
+              "kind": "pr",
+              "checked_at": null,
+              "checked": false,
+              "final": false,
+              "head": null,
+              "verdict": null,
+              "reviews": [],
+              "distinct_checks": 0,
+              "missing_verdicts": 0,
+              "pending_checks": 0,
+              "failed_checks": 0,
+              "stale_verdicts": 0,
+              "signals": [],
+              "actor": "unmeasured",
+              "reason": "unsupported forge; coverage is unmeasured",
+              "tasks": [
+                "u0"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "step": "Existing Forgejo pull ownership boundary unchanged",
+      "product_output": {
+        "known": 4,
+        "checked": 0,
+        "counts": {
+          "captain": 0,
+          "fleet": 0,
+          "maintainer": 0,
+          "nobody": 0
+        },
+        "unmeasured": 4,
+        "complete": false,
+        "proven_clear": false,
+        "stale_verdicts": 0,
+        "missing_verdicts": 0,
+        "unreadable_records": 0,
+        "valid_until": 900,
+        "captain": [],
+        "captain_omitted": 0,
+        "rows": [
+          {
+            "task": "u1",
+            "url": "https://git.example.org/group/subgroup/r/-/merge_requests/3",
+            "kind": "pr",
+            "checked_at": null,
+            "checked": false,
+            "final": false,
+            "head": null,
+            "verdict": null,
+            "reviews": [],
+            "distinct_checks": 0,
+            "missing_verdicts": 0,
+            "pending_checks": 0,
+            "failed_checks": 0,
+            "stale_verdicts": 0,
+            "signals": [],
+            "actor": "unmeasured",
+            "reason": "unsupported forge; coverage is unmeasured",
+            "tasks": [
+              "u1"
+            ]
+          },
+          {
+            "task": "u2",
+            "url": "https://github-com/o/r/pull/8",
+            "kind": "pr",
+            "checked_at": null,
+            "checked": false,
+            "final": false,
+            "head": null,
+            "verdict": null,
+            "reviews": [],
+            "distinct_checks": 0,
+            "missing_verdicts": 0,
+            "pending_checks": 0,
+            "failed_checks": 0,
+            "stale_verdicts": 0,
+            "signals": [],
+            "actor": "unmeasured",
+            "reason": "unsupported forge; coverage is unmeasured",
+            "tasks": [
+              "u2"
+            ]
+          },
+          {
+            "task": "u3",
+            "url": "https://githubXcom/o/r/issues/9",
+            "kind": "issue",
+            "checked_at": null,
+            "checked": false,
+            "final": false,
+            "head": null,
+            "verdict": null,
+            "reviews": [],
+            "distinct_checks": 0,
+            "missing_verdicts": 0,
+            "pending_checks": 0,
+            "failed_checks": 0,
+            "stale_verdicts": 0,
+            "signals": [],
+            "actor": "unmeasured",
+            "reason": "unsupported forge; coverage is unmeasured",
+            "tasks": [
+              "u3"
+            ]
+          },
+          {
+            "task": "u0",
+            "url": "https://gitlab.com/o/r/-/merge_requests/2",
+            "kind": "pr",
+            "checked_at": null,
+            "checked": false,
+            "final": false,
+            "head": null,
+            "verdict": null,
+            "reviews": [],
+            "distinct_checks": 0,
+            "missing_verdicts": 0,
+            "pending_checks": 0,
+            "failed_checks": 0,
+            "stale_verdicts": 0,
+            "signals": [],
+            "actor": "unmeasured",
+            "reason": "unsupported forge; coverage is unmeasured",
+            "tasks": [
+              "u0"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "step": "Bearings end-user coverage",
+      "product_output": {
+        "scope": "owned contributions per home",
+        "known": 4,
+        "checked": 0,
+        "counts": {
+          "captain": 0,
+          "fleet": 0,
+          "maintainer": 0,
+          "nobody": 0
+        },
+        "complete": false,
+        "proven_clear": false,
+        "unmeasured_homes": 0,
+        "unreadable_records": 0,
+        "unmeasured": 4,
+        "stale_verdicts": 0,
+        "missing_verdicts": 0,
+        "captain_omitted": 0,
+        "captain": []
+      }
+    },
+    {
+      "step": "Retained unsupported ownership after backlog removal: only error cleared",
+      "product_output": {
+        "known": 4,
+        "checked": 0,
+        "counts": {
+          "captain": 0,
+          "fleet": 0,
+          "maintainer": 0,
+          "nobody": 0
+        },
+        "unmeasured": 4,
+        "complete": false,
+        "proven_clear": false,
+        "stale_verdicts": 0,
+        "missing_verdicts": 0,
+        "unreadable_records": 0,
+        "valid_until": 1789546500,
+        "captain": [],
+        "captain_omitted": 0,
+        "rows": [
+          {
+            "task": "u1",
+            "url": "https://git.example.org/group/subgroup/r/-/merge_requests/3",
+            "kind": "pr",
+            "checked_at": "2026-09-16T08:00:00Z",
+            "checked": false,
+            "final": false,
+            "head": null,
+            "verdict": null,
+            "reviews": [],
+            "distinct_checks": 0,
+            "missing_verdicts": 0,
+            "pending_checks": 0,
+            "failed_checks": 0,
+            "stale_verdicts": 0,
+            "signals": [],
+            "actor": "unmeasured",
+            "reason": "unsupported forge; coverage is unmeasured",
+            "tasks": [
+              "u1"
+            ]
+          },
+          {
+            "task": "u2",
+            "url": "https://github-com/o/r/pull/8",
+            "kind": "pr",
+            "checked_at": "2026-09-16T08:00:00Z",
+            "checked": false,
+            "final": false,
+            "head": null,
+            "verdict": null,
+            "reviews": [],
+            "distinct_checks": 0,
+            "missing_verdicts": 0,
+            "pending_checks": 0,
+            "failed_checks": 0,
+            "stale_verdicts": 0,
+            "signals": [],
+            "actor": "unmeasured",
+            "reason": "unsupported forge; coverage is unmeasured",
+            "tasks": [
+              "u2"
+            ]
+          },
+          {
+            "task": "u3",
+            "url": "https://githubXcom/o/r/issues/9",
+            "kind": "issue",
+            "checked_at": "2026-09-16T08:00:00Z",
+            "checked": false,
+            "final": false,
+            "head": null,
+            "verdict": null,
+            "reviews": [],
+            "distinct_checks": 0,
+            "missing_verdicts": 0,
+            "pending_checks": 0,
+            "failed_checks": 0,
+            "stale_verdicts": 0,
+            "signals": [],
+            "actor": "unmeasured",
+            "reason": "unsupported forge; coverage is unmeasured",
+            "tasks": [
+              "u3"
+            ]
+          },
+          {
+            "task": "u0",
+            "url": "https://gitlab.com/o/r/-/merge_requests/2",
+            "kind": "pr",
+            "checked_at": "2026-09-16T08:00:00Z",
+            "checked": false,
+            "final": false,
+            "head": null,
+            "verdict": null,
+            "reviews": [],
+            "distinct_checks": 0,
+            "missing_verdicts": 0,
+            "pending_checks": 0,
+            "failed_checks": 0,
+            "stale_verdicts": 0,
+            "signals": [],
+            "actor": "unmeasured",
+            "reason": "unsupported forge; coverage is unmeasured",
+            "tasks": [
+              "u0"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "step": "Mixed retained file: unsupported errors cleared, existing GitHub episode retried silently",
+      "product_output": {
+        "snapshot": {
+          "known": 5,
+          "checked": 0,
+          "counts": {
+            "captain": 0,
+            "fleet": 1,
+            "maintainer": 0,
+            "nobody": 0
+          },
+          "unmeasured": 4,
+          "complete": false,
+          "proven_clear": false,
+          "stale_verdicts": 0,
+          "missing_verdicts": 0,
+          "unreadable_records": 0,
+          "valid_until": 1789546500,
+          "captain": [],
+          "captain_omitted": 0,
+          "rows": [
+            {
+              "task": "delivery",
+              "url": "https://git.example.org/group/subgroup/r/-/merge_requests/3",
+              "kind": "pr",
+              "checked_at": "2026-09-16T08:00:00Z",
+              "checked": false,
+              "final": false,
+              "head": null,
+              "verdict": null,
+              "reviews": [],
+              "distinct_checks": 0,
+              "missing_verdicts": 0,
+              "pending_checks": 0,
+              "failed_checks": 0,
+              "stale_verdicts": 0,
+              "signals": [],
+              "actor": "unmeasured",
+              "reason": "unsupported forge; coverage is unmeasured",
+              "tasks": [
+                "delivery"
+              ]
+            },
+            {
+              "task": "delivery",
+              "url": "https://github-com/o/r/pull/8",
+              "kind": "pr",
+              "checked_at": "2026-09-16T08:00:00Z",
+              "checked": false,
+              "final": false,
+              "head": null,
+              "verdict": null,
+              "reviews": [],
+              "distinct_checks": 0,
+              "missing_verdicts": 0,
+              "pending_checks": 0,
+              "failed_checks": 0,
+              "stale_verdicts": 0,
+              "signals": [],
+              "actor": "unmeasured",
+              "reason": "unsupported forge; coverage is unmeasured",
+              "tasks": [
+                "delivery"
+              ]
+            },
+            {
+              "task": "delivery",
+              "url": "https://github.com/o/r/issues/9",
+              "kind": "issue",
+              "checked_at": "2026-10-14T04:12:39Z",
+              "checked": false,
+              "final": false,
+              "head": null,
+              "verdict": null,
+              "reviews": [],
+              "distinct_checks": 0,
+              "missing_verdicts": 0,
+              "pending_checks": 0,
+              "failed_checks": 0,
+              "stale_verdicts": 0,
+              "signals": [],
+              "actor": "fleet",
+              "reason": "forge observation unavailable or changed during read",
+              "tasks": [
+                "delivery"
+              ]
+            },
+            {
+              "task": "delivery",
+              "url": "https://githubXcom/o/r/issues/9",
+              "kind": "issue",
+              "checked_at": "2026-09-16T08:00:00Z",
+              "checked": false,
+              "final": false,
+              "head": null,
+              "verdict": null,
+              "reviews": [],
+              "distinct_checks": 0,
+              "missing_verdicts": 0,
+              "pending_checks": 0,
+              "failed_checks": 0,
+              "stale_verdicts": 0,
+              "signals": [],
+              "actor": "unmeasured",
+              "reason": "unsupported forge; coverage is unmeasured",
+              "tasks": [
+                "delivery"
+              ]
+            },
+            {
+              "task": "delivery",
+              "url": "https://gitlab.com/o/r/-/merge_requests/2",
+              "kind": "pr",
+              "checked_at": "2026-09-16T08:00:00Z",
+              "checked": false,
+              "final": false,
+              "head": null,
+              "verdict": null,
+              "reviews": [],
+              "distinct_checks": 0,
+              "missing_verdicts": 0,
+              "pending_checks": 0,
+              "failed_checks": 0,
+              "stale_verdicts": 0,
+              "signals": [],
+              "actor": "unmeasured",
+              "reason": "unsupported forge; coverage is unmeasured",
+              "tasks": [
+                "delivery"
+              ]
+            }
+          ]
+        },
+        "records": {
+          "schema": "fm-contributions.v1",
+          "task": "delivery",
+          "records": [
+            {
+              "url": "https://gitlab.com/o/r/-/merge_requests/2",
+              "kind": "pr",
+              "checked_at": "2026-09-16T08:00:00Z",
+              "error": null,
+              "observation": null,
+              "verdict": null,
+              "seen": [],
+              "pending": [],
+              "notified": [],
+              "provenance": "retained ownership"
+            },
+            {
+              "url": "https://git.example.org/group/subgroup/r/-/merge_requests/3",
+              "kind": "pr",
+              "checked_at": "2026-09-16T08:00:00Z",
+              "error": null,
+              "observation": null,
+              "verdict": null,
+              "seen": [],
+              "pending": [],
+              "notified": [],
+              "provenance": "retained ownership"
+            },
+            {
+              "url": "https://github-com/o/r/pull/8",
+              "kind": "pr",
+              "checked_at": "2026-09-16T08:00:00Z",
+              "error": null,
+              "observation": null,
+              "verdict": null,
+              "seen": [],
+              "pending": [],
+              "notified": [],
+              "provenance": "retained ownership"
+            },
+            {
+              "url": "https://githubXcom/o/r/issues/9",
+              "kind": "issue",
+              "checked_at": "2026-09-16T08:00:00Z",
+              "error": null,
+              "observation": null,
+              "verdict": null,
+              "seen": [],
+              "pending": [],
+              "notified": [],
+              "provenance": "retained ownership"
+            },
+            {
+              "url": "https://github.com/o/r/issues/9",
+              "kind": "issue",
+              "checked_at": "2026-10-14T04:12:39Z",
+              "error": "forge observation unavailable or changed during read",
+              "observation": null,
+              "verdict": null,
+              "seen": [],
+              "pending": [],
+              "notified": [],
+              "provenance": "retained ownership"
+            }
+          ]
+        },
+        "HTTP": [
+          {
+            "path": "/api/v3/repos/o/r/issues/9",
+            "mode": "down"
+          }
+        ]
+      }
+    },
+    {
+      "step": "Mixed file GitHub read recovers without dropping unsupported records",
+      "product_output": {
+        "snapshot": {
+          "known": 5,
+          "checked": 1,
+          "counts": {
+            "captain": 0,
+            "fleet": 0,
+            "maintainer": 1,
+            "nobody": 0
+          },
+          "unmeasured": 4,
+          "complete": false,
+          "proven_clear": false,
+          "stale_verdicts": 0,
+          "missing_verdicts": 0,
+          "unreadable_records": 0,
+          "valid_until": 1789546500,
+          "captain": [],
+          "captain_omitted": 0,
+          "rows": [
+            {
+              "task": "delivery",
+              "url": "https://git.example.org/group/subgroup/r/-/merge_requests/3",
+              "kind": "pr",
+              "checked_at": "2026-09-16T08:00:00Z",
+              "checked": false,
+              "final": false,
+              "head": null,
+              "verdict": null,
+              "reviews": [],
+              "distinct_checks": 0,
+              "missing_verdicts": 0,
+              "pending_checks": 0,
+              "failed_checks": 0,
+              "stale_verdicts": 0,
+              "signals": [],
+              "actor": "unmeasured",
+              "reason": "unsupported forge; coverage is unmeasured",
+              "tasks": [
+                "delivery"
+              ]
+            },
+            {
+              "task": "delivery",
+              "url": "https://github-com/o/r/pull/8",
+              "kind": "pr",
+              "checked_at": "2026-09-16T08:00:00Z",
+              "checked": false,
+              "final": false,
+              "head": null,
+              "verdict": null,
+              "reviews": [],
+              "distinct_checks": 0,
+              "missing_verdicts": 0,
+              "pending_checks": 0,
+              "failed_checks": 0,
+              "stale_verdicts": 0,
+              "signals": [],
+              "actor": "unmeasured",
+              "reason": "unsupported forge; coverage is unmeasured",
+              "tasks": [
+                "delivery"
+              ]
+            },
+            {
+              "task": "delivery",
+              "url": "https://github.com/o/r/issues/9",
+              "kind": "issue",
+              "checked_at": "2026-10-14T04:12:40Z",
+              "checked": true,
+              "final": false,
+              "head": null,
+              "verdict": null,
+              "reviews": [],
+              "distinct_checks": 0,
+              "missing_verdicts": 0,
+              "pending_checks": 0,
+              "failed_checks": 0,
+              "stale_verdicts": 0,
+              "signals": [],
+              "actor": "maintainer",
+              "reason": "awaiting issue triage",
+              "tasks": [
+                "delivery"
+              ]
+            },
+            {
+              "task": "delivery",
+              "url": "https://githubXcom/o/r/issues/9",
+              "kind": "issue",
+              "checked_at": "2026-09-16T08:00:00Z",
+              "checked": false,
+              "final": false,
+              "head": null,
+              "verdict": null,
+              "reviews": [],
+              "distinct_checks": 0,
+              "missing_verdicts": 0,
+              "pending_checks": 0,
+              "failed_checks": 0,
+              "stale_verdicts": 0,
+              "signals": [],
+              "actor": "unmeasured",
+              "reason": "unsupported forge; coverage is unmeasured",
+              "tasks": [
+                "delivery"
+              ]
+            },
+            {
+              "task": "delivery",
+              "url": "https://gitlab.com/o/r/-/merge_requests/2",
+              "kind": "pr",
+              "checked_at": "2026-09-16T08:00:00Z",
+              "checked": false,
+              "final": false,
+              "head": null,
+              "verdict": null,
+              "reviews": [],
+              "distinct_checks": 0,
+              "missing_verdicts": 0,
+              "pending_checks": 0,
+              "failed_checks": 0,
+              "stale_verdicts": 0,
+              "signals": [],
+              "actor": "unmeasured",
+              "reason": "unsupported forge; coverage is unmeasured",
+              "tasks": [
+                "delivery"
+              ]
+            }
+          ]
+        },
+        "records": {
+          "schema": "fm-contributions.v1",
+          "task": "delivery",
+          "records": [
+            {
+              "url": "https://gitlab.com/o/r/-/merge_requests/2",
+              "kind": "pr",
+              "checked_at": "2026-09-16T08:00:00Z",
+              "error": null,
+              "observation": null,
+              "verdict": null,
+              "seen": [],
+              "pending": [],
+              "notified": [],
+              "provenance": "retained ownership"
+            },
+            {
+              "url": "https://git.example.org/group/subgroup/r/-/merge_requests/3",
+              "kind": "pr",
+              "checked_at": "2026-09-16T08:00:00Z",
+              "error": null,
+              "observation": null,
+              "verdict": null,
+              "seen": [],
+              "pending": [],
+              "notified": [],
+              "provenance": "retained ownership"
+            },
+            {
+              "url": "https://github-com/o/r/pull/8",
+              "kind": "pr",
+              "checked_at": "2026-09-16T08:00:00Z",
+              "error": null,
+              "observation": null,
+              "verdict": null,
+              "seen": [],
+              "pending": [],
+              "notified": [],
+              "provenance": "retained ownership"
+            },
+            {
+              "url": "https://githubXcom/o/r/issues/9",
+              "kind": "issue",
+              "checked_at": "2026-09-16T08:00:00Z",
+              "error": null,
+              "observation": null,
+              "verdict": null,
+              "seen": [],
+              "pending": [],
+              "notified": [],
+              "provenance": "retained ownership"
+            },
+            {
+              "url": "https://github.com/o/r/issues/9",
+              "kind": "issue",
+              "checked_at": "2026-10-14T04:12:40Z",
+              "error": null,
+              "observation": {
+                "state": "open",
+                "head": null,
+                "ready": false,
+                "checks": [],
+                "reviews": [],
+                "events": [],
+                "absent_checks": []
+              },
+              "verdict": null,
+              "seen": [],
+              "pending": [],
+              "notified": [],
+              "provenance": "retained ownership"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "step": "GitHub failure episode starts with unavailable alert",
+      "product_output": {
+        "stdout": "contributions: observation unavailable for https://github.com/o/r/issues/9\n",
+        "records": {
+          "schema": "fm-contributions.v1",
+          "task": "delivery",
+          "records": [
+            {
+              "url": "https://github.com/o/r/issues/9",
+              "kind": "issue",
+              "checked_at": "2026-10-14T04:12:41Z",
+              "observation": null,
+              "verdict": null,
+              "seen": [],
+              "pending": [],
+              "notified": [],
+              "error": "forge observation unavailable or changed during read"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "step": "Repeated GitHub outage remains failed without repeated alert",
+      "product_output": {
+        "stdout": "",
+        "snapshot": {
+          "known": 1,
+          "checked": 0,
+          "counts": {
+            "captain": 0,
+            "fleet": 1,
+            "maintainer": 0,
+            "nobody": 0
+          },
+          "unmeasured": 0,
+          "complete": false,
+          "proven_clear": false,
+          "stale_verdicts": 0,
+          "missing_verdicts": 0,
+          "unreadable_records": 0,
+          "valid_until": 1791952061,
+          "captain": [],
+          "captain_omitted": 0,
+          "rows": [
+            {
+              "task": "delivery",
+              "url": "https://github.com/o/r/issues/9",
+              "kind": "issue",
+              "checked_at": "2026-10-14T04:12:41Z",
+              "checked": false,
+              "final": false,
+              "head": null,
+              "verdict": null,
+              "reviews": [],
+              "distinct_checks": 0,
+              "missing_verdicts": 0,
+              "pending_checks": 0,
+              "failed_checks": 0,
+              "stale_verdicts": 0,
+              "signals": [],
+              "actor": "fleet",
+              "reason": "forge observation unavailable or changed during read",
+              "tasks": [
+                "delivery"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "step": "Successful GitHub read ends episode",
+      "product_output": {
+        "known": 1,
+        "checked": 1,
+        "counts": {
+          "captain": 0,
+          "fleet": 0,
+          "maintainer": 1,
+          "nobody": 0
+        },
+        "unmeasured": 0,
+        "complete": true,
+        "proven_clear": true,
+        "stale_verdicts": 0,
+        "missing_verdicts": 0,
+        "unreadable_records": 0,
+        "valid_until": 1791952061,
+        "captain": [],
+        "captain_omitted": 0,
+        "rows": [
+          {
+            "task": "delivery",
+            "url": "https://github.com/o/r/issues/9",
+            "kind": "issue",
+            "checked_at": "2026-10-14T04:12:41Z",
+            "checked": true,
+            "final": false,
+            "head": null,
+            "verdict": null,
+            "reviews": [],
+            "distinct_checks": 0,
+            "missing_verdicts": 0,
+            "pending_checks": 0,
+            "failed_checks": 0,
+            "stale_verdicts": 0,
+            "signals": [],
+            "actor": "maintainer",
+            "reason": "awaiting issue triage",
+            "tasks": [
+              "delivery"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "step": "New GitHub outage alerts again after recovery",
+      "product_output": {
+        "stdout": "contributions: observation unavailable for https://github.com/o/r/issues/9\n",
+        "snapshot": {
+          "known": 1,
+          "checked": 0,
+          "counts": {
+            "captain": 0,
+            "fleet": 1,
+            "maintainer": 0,
+            "nobody": 0
+          },
+          "unmeasured": 0,
+          "complete": false,
+          "proven_clear": false,
+          "stale_verdicts": 0,
+          "missing_verdicts": 0,
+          "unreadable_records": 0,
+          "valid_until": 1791952062,
+          "captain": [],
+          "captain_omitted": 0,
+          "rows": [
+            {
+              "task": "delivery",
+              "url": "https://github.com/o/r/issues/9",
+              "kind": "issue",
+              "checked_at": "2026-10-14T04:12:42Z",
+              "checked": false,
+              "final": false,
+              "head": null,
+              "verdict": null,
+              "reviews": [],
+              "distinct_checks": 0,
+              "missing_verdicts": 0,
+              "pending_checks": 0,
+              "failed_checks": 0,
+              "stale_verdicts": 0,
+              "signals": [],
+              "actor": "fleet",
+              "reason": "forge observation unavailable or changed during read",
+              "tasks": [
+                "delivery"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "step": "Authenticated watcher surfaces only real unreadable-record diagnostic and maintainer signal with GitLab ownership present",
+      "product_output": {
+        "stdout": "check: /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4V7KED2NMFN9WG1FW7VBW9S/.test-validation-tmp/live-contributions-zhzzxmtu/watcher/state/contributions.check.sh: contributions: 1 unreadable durable record(s)\n",
+        "stderr": "",
+        "durable_wake_queue": "1791951164\t1\tcheck\tcontribution-b621d5d943471c9cda5373405c1a628d73e54452b09144f42b8dc4be8947b3fa\tcheck: contributions delivery b621d5d943471c9cda5373405c1a628d73e54452b09144f42b8dc4be8947b3fa\n1791951164\t2\tcheck\t/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4V7KED2NMFN9WG1FW7VBW9S/.test-validation-tmp/live-contributions-zhzzxmtu/watcher/state/contributions.check.sh\tcheck: /home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4V7KED2NMFN9WG1FW7VBW9S/.test-validation-tmp/live-contributions-zhzzxmtu/watcher/state/contributions.check.sh: contributions: 1 unreadable durable record(s)\n",
+        "pending": {
+          "schema": "fm-contributions.v1",
+          "task": "delivery",
+          "records": [
+            {
+              "url": "https://github.com/o/r/issues/9",
+              "kind": "issue",
+              "checked_at": "2026-10-14T04:12:43Z",
+              "observation": {
+                "state": "open",
+                "head": null,
+                "ready": false,
+                "checks": [],
+                "reviews": [],
+                "events": [
+                  {
+                    "token": "comment:12:2026-10-14T08:01:00Z",
+                    "type": "comment",
+                    "source": "https://github.com/o/r/issues/9#issuecomment-12",
+                    "head": null,
+                    "author": "maintainer",
+                    "body": "Please clarify the contract"
+                  }
+                ],
+                "absent_checks": []
+              },
+              "verdict": null,
+              "seen": [
+                "comment:12:2026-10-14T08:01:00Z"
+              ],
+              "pending": [
+                {
+                  "token": "comment:12:2026-10-14T08:01:00Z",
+                  "type": "comment",
+                  "source": "https://github.com/o/r/issues/9#issuecomment-12",
+                  "head": null,
+                  "author": "maintainer",
+                  "body": "Please clarify the contract"
+                }
+              ],
+              "notified": [
+                "comment:12:2026-10-14T08:01:00Z"
+              ],
+              "error": null
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "forge_requests": [
+    {
+      "path": "/api/v3/repos/o/r/issues/9",
+      "mode": "down"
+    },
+    {
+      "path": "/api/v3/repos/o/r/issues/9",
+      "mode": "healthy"
+    },
+    {
+      "path": "/api/v3/repos/o/r/issues/9/comments?per_page=100",
+      "mode": "healthy"
+    },
+    {
+      "path": "/api/v3/repos/o/r/issues/9/events?per_page=100",
+      "mode": "healthy"
+    },
+    {
+      "path": "/api/v3/repos/o/r/issues/9",
+      "mode": "down"
+    },
+    {
+      "path": "/api/v3/repos/o/r/issues/9",
+      "mode": "down"
+    },
+    {
+      "path": "/api/v3/repos/o/r/issues/9",
+      "mode": "healthy"
+    },
+    {
+      "path": "/api/v3/repos/o/r/issues/9/events?per_page=100",
+      "mode": "healthy"
+    },
+    {
+      "path": "/api/v3/repos/o/r/issues/9/comments?per_page=100",
+      "mode": "healthy"
+    },
+    {
+      "path": "/api/v3/repos/o/r/issues/9",
+      "mode": "down"
+    },
+    {
+      "path": "/api/v3/repos/o/r/issues/9",
+      "mode": "healthy"
+    },
+    {
+      "path": "/api/v3/repos/o/r/issues/9/comments?per_page=100",
+      "mode": "healthy"
+    },
+    {
+      "path": "/api/v3/repos/o/r/issues/9/events?per_page=100",
+      "mode": "healthy"
+    },
+    {
+      "path": "/api/v3/repos/o/r/issues/9",
+      "mode": "signal"
+    },
+    {
+      "path": "/api/v3/repos/o/r/issues/9/comments?per_page=100",
+      "mode": "signal"
+    },
+    {
+      "path": "/api/v3/repos/o/r/issues/9/events?per_page=100",
+      "mode": "signal"
+    }
+  ]
+}
