@@ -1,4 +1,4 @@
-FM_TEST_BEGIN 2026-10-13T17:04:39Z tests/fm-turnend-guard.test.sh family=watcher-wake-lock expected_gate_skip=none
+FM_TEST_BEGIN 2026-10-14T02:24:21Z tests/fm-turnend-guard.test.sh family=watcher-wake-lock expected_gate_skip=none
 ok - fm_supervision_unhealthy: false with no state/*.meta at all
 ok - fm_supervision_unhealthy: true with in-flight task and no beacon ever
 ok - fm_supervision_unhealthy: true with in-flight task and a beacon far outside the grace window
@@ -50,19 +50,19 @@ ok - .codex/hooks.json: Stop hook uses hook process root when payload cwd is out
 ok - .codex/hooks.json: Stop hook ignores nested git root guard scripts
 ok - .codex Stop wrapper: clean success JSON, inherited PATH, unchanged errors and continuation without logout output
 ok - .opencode primary plugin: guard path is anchored to worktree, not directory
-not ok - Pi logical-run guard test printed output: (node:3759019) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4V3E96PT48DP9YZTKTDSFW7/.test-stop-tmp/fm-turnend-guard.VXL2vT/pi-logical-run-root/.pi/extensions/fm-primary-turnend-guard.ts is not specified and it doesn't parse as CommonJS.
+not ok - Pi logical-run guard test printed output: (node:2430465) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4V3E96PT48DP9YZTKTDSFW7/.test-tmp/fm-turnend-guard.T59HVt/pi-logical-run-root/.pi/extensions/fm-primary-turnend-guard.ts is not specified and it doesn't parse as CommonJS.
 Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
 To eliminate this warning, add "type": "module" to /home/mike/package.json.
 (Use `node --trace-warnings ...` to show where the warning was created)
-FM_TEST_END 2026-10-13T17:04:44Z tests/fm-turnend-guard.test.sh exit=1 duration_ms=5769 gate_skip=false
-FM_TEST_BEGIN 2026-10-13T17:04:44Z tests/fm-codex-hook-layer-live-e2e.test.sh family=live-harness-optin expected_gate_skip=live-capability
+FM_TEST_END 2026-10-14T02:24:27Z tests/fm-turnend-guard.test.sh exit=1 duration_ms=5786 gate_skip=false
+FM_TEST_BEGIN 2026-10-14T02:24:27Z tests/fm-codex-hook-layer-live-e2e.test.sh family=live-harness-optin expected_gate_skip=live-capability
 ok - codex codex-cli 0.162.1 still publishes the hook feature flag firstmate disables
 ok - codex codex-cli 0.162.1 runs a firstmate crewmate launch with its hook layer disabled
 ok - codex codex-cli 0.162.1: Stop parser checked 12 isolated cases with clean wrapper JSON and bounded continuation
 # all fm-codex-hook-layer-live-e2e tests passed
-FM_TEST_END 2026-10-13T17:04:51Z tests/fm-codex-hook-layer-live-e2e.test.sh exit=0 duration_ms=6782 gate_skip=false
-FM_TEST_SUMMARY total=2 failed=1 skipped_gate=0 duration_ms=12632
-FM_TEST_SUMMARY_FAMILY family=live-harness-optin count=1 duration_ms=6782 failed=0
-FM_TEST_SUMMARY_FAMILY family=watcher-wake-lock count=1 duration_ms=5769 failed=1
-FM_TEST_SLOWEST rank=1 script=tests/fm-codex-hook-layer-live-e2e.test.sh duration_ms=6782
-FM_TEST_SLOWEST rank=2 script=tests/fm-turnend-guard.test.sh duration_ms=5769
+FM_TEST_END 2026-10-14T02:24:34Z tests/fm-codex-hook-layer-live-e2e.test.sh exit=0 duration_ms=6808 gate_skip=false
+FM_TEST_SUMMARY total=2 failed=1 skipped_gate=0 duration_ms=12675
+FM_TEST_SUMMARY_FAMILY family=live-harness-optin count=1 duration_ms=6808 failed=0
+FM_TEST_SUMMARY_FAMILY family=watcher-wake-lock count=1 duration_ms=5786 failed=1
+FM_TEST_SLOWEST rank=1 script=tests/fm-codex-hook-layer-live-e2e.test.sh duration_ms=6808
+FM_TEST_SLOWEST rank=2 script=tests/fm-turnend-guard.test.sh duration_ms=5786
