@@ -1,0 +1,125 @@
+{
+  "processes": [
+    {
+      "pid": 748203,
+      "parent": 748090,
+      "birth": "644434",
+      "cwd": "/tmp/fm-claude-continuation-live.Gx7ev6/project",
+      "config": "/tmp/fm-claude-continuation-live.Gx7ev6/claude",
+      "home": "/tmp/fm-claude-continuation-live.Gx7ev6/project"
+    },
+    {
+      "pid": 749020,
+      "parent": 748989,
+      "birth": "644544",
+      "cwd": "/tmp/fm-claude-continuation-live.Gx7ev6/project",
+      "config": "/tmp/fm-claude-continuation-live.Gx7ev6/claude",
+      "home": "/tmp/fm-claude-continuation-live.Gx7ev6/project"
+    },
+    {
+      "pid": 750331,
+      "parent": 750010,
+      "birth": "644714",
+      "cwd": "/tmp/fm-claude-continuation-live.Gx7ev6/project",
+      "config": "/tmp/fm-claude-continuation-live.Gx7ev6/claude",
+      "home": "/tmp/fm-claude-continuation-live.Gx7ev6/project"
+    }
+  ],
+  "registries": [
+    {
+      "pid": 748203,
+      "procStart": "644434",
+      "startedAt": 1792224832865,
+      "sessionId": "c8d8eb76-5410-4329-b18e-d066e589eaf5",
+      "kind": "interactive",
+      "cwd": "/tmp/fm-claude-continuation-live.Gx7ev6/project",
+      "pidDomain": "linux:e1e18fdf621e482fa272e0cd7ab3b744:pid:[4026531836]",
+      "parkedJobId": "ec818dc2"
+    },
+    {
+      "pid": 749020,
+      "procStart": "644544",
+      "startedAt": 1792224834058,
+      "sessionId": "ec818dc2-d8c0-4564-84b3-417222bc01ce",
+      "kind": "bg",
+      "cwd": "/tmp/fm-claude-continuation-live.Gx7ev6/project",
+      "pidDomain": "linux:e1e18fdf621e482fa272e0cd7ab3b744:pid:[4026531836]",
+      "jobId": "ec818dc2"
+    },
+    {
+      "pid": 750331,
+      "procStart": "644714",
+      "startedAt": 1792224835639,
+      "sessionId": "c2ca58e6-dd0c-47da-9343-7461e001a677",
+      "kind": "interactive",
+      "cwd": "/tmp/fm-claude-continuation-live.Gx7ev6/project",
+      "pidDomain": "linux:e1e18fdf621e482fa272e0cd7ab3b744:pid:[4026531836]"
+    }
+  ],
+  "model_ancestry": [
+    {
+      "pid": 749020,
+      "parent": 748989,
+      "birth": "644544",
+      "cwd": "/tmp/fm-claude-continuation-live.Gx7ev6/project",
+      "config": "/tmp/fm-claude-continuation-live.Gx7ev6/claude",
+      "home": "/tmp/fm-claude-continuation-live.Gx7ev6/project"
+    },
+    {
+      "pid": 748989,
+      "parent": 748064,
+      "birth": "644535",
+      "cwd": "/tmp/fm-claude-continuation-live.Gx7ev6/project",
+      "config": "/tmp/fm-claude-continuation-live.Gx7ev6/claude",
+      "home": "/tmp/fm-claude-continuation-live.Gx7ev6/project"
+    },
+    {
+      "pid": 748064,
+      "parent": 747960,
+      "birth": "644372",
+      "cwd": "/home/mike",
+      "config": "/tmp/fm-claude-continuation-live.Gx7ev6/claude",
+      "home": "/tmp/fm-claude-continuation-live.Gx7ev6/project"
+    },
+    {
+      "pid": 747960,
+      "parent": 747863,
+      "birth": "644339",
+      "cwd": "/tmp/fm-claude-continuation-live.Gx7ev6/project",
+      "config": null,
+      "home": null
+    },
+    {
+      "pid": 747863,
+      "parent": 638,
+      "birth": "644308",
+      "cwd": "/home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M54DD2SKDQZ6V63RY8F9K0Q9",
+      "config": null,
+      "home": null
+    },
+    {
+      "pid": 638,
+      "parent": 1,
+      "birth": "619",
+      "cwd": null,
+      "config": null,
+      "home": null
+    }
+  ],
+  "continued_in": [
+    {
+      "type": "continued-in",
+      "timestamp": "2026-10-17T08:13:53.507Z",
+      "sessionId": "c8d8eb76-5410-4329-b18e-d066e589eaf5",
+      "continuedInSessionId": "ec818dc2-d8c0-4564-84b3-417222bc01ce"
+    }
+  ],
+  "private_socket": "/tmp/cc-daemon-1000/1cace8f9/control.sock",
+  "daemon": {
+    "pid": 748064,
+    "procStart": "644372",
+    "jsonPath": "/tmp/fm-claude-continuation-live.Gx7ev6/claude/daemon.json",
+    "origin": "foreground",
+    "version": "2.1.302"
+  }
+}
