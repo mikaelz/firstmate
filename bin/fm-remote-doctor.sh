@@ -54,6 +54,20 @@
 # wrapper; those remain reported gaps.
 set -eu
 
+case "${1:-}" in
+  -h | --help)
+    cat <<'EOF'
+fm-remote-doctor.sh - check, and optionally repair, a remote account's second-mate readiness.
+
+Usage: bin/fm-on.sh <secondmate-id|ssh-alias> fm-remote-doctor.sh [--fix]
+  --fix  repair what is safe to repair; never installs packages or touches credentials
+Exit:  0 ready; 1 not ready (unresolved gaps are named); 2 usage error.
+Full contract: the header of bin/fm-remote-doctor.sh.
+EOF
+    exit 0
+    ;;
+esac
+
 # Resolve this script's directory with builtins only: a host missing a required
 # tool must still reach the report that names it, not die on a bare PATH.
 SCRIPT_SELF=${BASH_SOURCE[0]}

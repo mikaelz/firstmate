@@ -213,6 +213,25 @@
 # path do not pay it.
 set -eu
 
+case "${1:-}" in
+  -h | --help)
+    cat <<'EOF'
+fm-send.sh - steer a task: record the message in its steering inbox and ring its terminal.
+
+Usage: fm-send.sh <target> [--resolve-key <key>]... [--fire-and-forget <delivery-id>] <text...>
+       fm-send.sh <target> --key Enter|Escape|C-c
+  <target>               exact task id, legacy fm-<id> label, or explicit backend target
+  --resolve-key <key>    close that open decision record once the steer is recorded
+  --fire-and-forget <id> secondmate instruction with no reply expectation; 16-hex <id> dedupes retries
+Requires an explicit FM_HOME.
+Exit:  0 durably sent; 3 unconfirmed (follow the printed error, never blindly resend);
+       any other nonzero: nothing confirmed delivered, resend is appropriate.
+Full contract: the header of bin/fm-send.sh.
+EOF
+    exit 0
+    ;;
+esac
+
 FM_SEND_ORIGINAL_ARGS=("$@")
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 FM_ROOT="${FM_ROOT_OVERRIDE:-$(cd "$SCRIPT_DIR/.." && pwd)}"

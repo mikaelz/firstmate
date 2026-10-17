@@ -36,6 +36,22 @@
 # passing its full projects/dotfiles-private path.
 set -eu
 
+case "${1:-}" in
+  -h | --help)
+    cat <<'EOF'
+fm-fleet-sync.sh - refresh project clones: safe fast-forward of the default branch, prune gone branches.
+
+Usage: fm-fleet-sync.sh                          sync every clone under this home's projects/
+       fm-fleet-sync.sh <project-dir-or-name>    sync one clone
+Never forces, stashes, or discards; unsafe drift is reported as STUCK.
+Env:   FM_FLEET_PRUNE=0 skips branch pruning.
+Exit:  0 done (per-clone skips and STUCK are reported, not failures); 1 usage error.
+Full contract: the header of bin/fm-fleet-sync.sh.
+EOF
+    exit 0
+    ;;
+esac
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 FM_ROOT="${FM_ROOT_OVERRIDE:-$(cd "$SCRIPT_DIR/.." && pwd)}"
 FM_HOME="${FM_HOME:-${FM_ROOT_OVERRIDE:-$FM_ROOT}}"
@@ -68,10 +84,6 @@ usage() {
   echo "usage: fm-fleet-sync.sh [<project-dir-or-name>]" >&2
 }
 
-if [ "${1:-}" = "--help" ] || [ "${1:-}" = "-h" ]; then
-  usage
-  exit 0
-fi
 [ $# -le 1 ] || { usage; exit 1; }
 
 project_label() {

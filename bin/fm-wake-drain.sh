@@ -18,6 +18,21 @@
 # presentation-path locks (default 10); queue mutation locks remain blocking.
 set -u
 
+case "${1:-}" in
+  -h | --help)
+    cat <<'EOF'
+fm-wake-drain.sh - present queued wake records, open decisions, and unread status, then assert liveness.
+
+Usage: fm-wake-drain.sh                    present everything waiting for this actor
+       fm-wake-drain.sh --ack-through <seq> --recovery-generation <gen>
+                                           acknowledge handled rows; run the exact WAKE_ACK_REQUIRED line
+Exit:  0 presented or acknowledged; 1 error; 2 usage error.
+Full contract: the header of bin/fm-wake-drain.sh and docs/watcher-continuity.md.
+EOF
+    exit 0
+    ;;
+esac
+
 SCRIPT_DIR="$(d=${BASH_SOURCE[0]%/*}; [ "$d" != "${BASH_SOURCE[0]}" ] || d=.; cd "${d:-/}" && pwd)"
 # shellcheck source=bin/fm-wake-lib.sh
 . "$SCRIPT_DIR/fm-wake-lib.sh"

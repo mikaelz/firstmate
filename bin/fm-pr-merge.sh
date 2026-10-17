@@ -184,6 +184,23 @@
 # misreported as a failed merge.
 set -eu
 
+case "${1:-}" in
+  -h | --help)
+    cat <<'EOF'
+fm-pr-merge.sh - merge a task's PR or MR through the guarded path and record the landed outcome.
+
+Usage: fm-pr-merge.sh <task-id> <pr-url> [options] [-- <extra forge merge args>]
+  --attended-override       re-enable --auto/--admin/branch deletion on explicit captain word
+  --allow-red <check>       merge despite that failing check (attended captain waiver only)
+  --allow-missing <check>   merge despite that unreported required check (attended waiver only)
+Refuses red or pending checks, captain holds, and Gerrit changes.
+Exit:  0 merged and recorded; 1 refused or failed; 2 invalid request.
+Full contract: the header of bin/fm-pr-merge.sh.
+EOF
+    exit 0
+    ;;
+esac
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 FM_ROOT="${FM_ROOT_OVERRIDE:-$(cd "$SCRIPT_DIR/.." && pwd)}"
 FM_HOME="${FM_HOME:-${FM_ROOT_OVERRIDE:-$FM_ROOT}}"

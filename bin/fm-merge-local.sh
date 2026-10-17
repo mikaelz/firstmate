@@ -18,6 +18,20 @@
 # Usage: fm-merge-local.sh <task-id>
 set -eu
 
+case "${1:-}" in
+  -h | --help)
+    cat <<'EOF'
+fm-merge-local.sh - land an approved local-only ship task by fast-forwarding the project's default branch.
+
+Usage: fm-merge-local.sh <task-id>
+Fast-forward only: a diverged branch or a still-held captain decision is refused.
+Exit:  0 landed; 1 refused or failed; 2 invalid request.
+Full contract: the header of bin/fm-merge-local.sh.
+EOF
+    exit 0
+    ;;
+esac
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 FM_ROOT="${FM_ROOT_OVERRIDE:-$(cd "$SCRIPT_DIR/.." && pwd)}"
 FM_HOME="${FM_HOME:-${FM_ROOT_OVERRIDE:-$FM_ROOT}}"

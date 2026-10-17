@@ -136,6 +136,22 @@
 #     start, on every harness and away posture, before the drain.
 set -eu
 
+case "${1:-}" in
+  -h | --help)
+    cat <<'EOF'
+fm-branch-outcome.sh - the durable outcome store for the Pi supervision branch.
+
+Usage: fm-branch-outcome.sh append --task <id> --verdict routine|captain --summary <text> [--wake <text>] [--silent true|false]
+       fm-branch-outcome.sh unread | unprocessed | present | list [--recent <n>] | lookup --seqs <n,...>
+       fm-branch-outcome.sh mark-read --through <seq> | mark-processed --through <seq>
+       fm-branch-outcome.sh processed-init [--held-lock] | startup-replay | seed-tail
+Exit:  0 done; 1 refused or store fault; 2 usage error.
+Full contract: the header of bin/fm-branch-outcome.sh and docs/pi-supervision-branch.md.
+EOF
+    exit 0
+    ;;
+esac
+
 SCRIPT_DIR="$(d=${BASH_SOURCE[0]%/*}; [ "$d" != "${BASH_SOURCE[0]}" ] || d=.; cd "${d:-/}" && pwd)"
 # shellcheck source=bin/fm-wake-lib.sh
 . "$SCRIPT_DIR/fm-wake-lib.sh"

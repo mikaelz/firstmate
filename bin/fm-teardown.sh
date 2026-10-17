@@ -320,6 +320,22 @@
 # never blocks cleanup.
 set -eu
 
+case "${1:-}" in
+  -h | --help)
+    cat <<'EOF'
+fm-teardown.sh - clean up a finished task: return its local copy, stop its endpoint, clear its records.
+
+Usage: fm-teardown.sh <task-id> [--force] [--legacy-record]
+  --force          discard unlanded work; only when the captain explicitly said so
+  --legacy-record  accept a record that predates spawn_gen once its endpoint is proven dead
+Refuses rather than lose unlanded work, a live endpoint, or a missing scout report.
+Exit:  0 cleaned up; 1 refused or failed; 2 invalid request; 4 cleaned up but a pool slot was lost.
+Full contract: the header of bin/fm-teardown.sh.
+EOF
+    exit 0
+    ;;
+esac
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 FM_ROOT="${FM_ROOT_OVERRIDE:-$(cd "$SCRIPT_DIR/.." && pwd)}"
 FM_HOME="${FM_HOME:-${FM_ROOT_OVERRIDE:-$FM_ROOT}}"

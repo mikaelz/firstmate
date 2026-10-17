@@ -22,6 +22,20 @@
 # Usage: fm-pr-check.sh <task-id> <pr-url>
 set -eu
 
+case "${1:-}" in
+  -h | --help)
+    cat <<'EOF'
+fm-pr-check.sh - record a task's ready PR (pr= and pr_head=) and arm its merge poll.
+
+Usage: fm-pr-check.sh <task-id> <pr-url>
+  <pr-url>  full GitHub PR, GitLab MR, or Gerrit change URL; a GitHub draft is refused.
+Exit:  0 recorded and armed; 1 refused or failed; 2 invalid request.
+Full contract: the header of bin/fm-pr-check.sh.
+EOF
+    exit 0
+    ;;
+esac
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 FM_ROOT="${FM_ROOT_OVERRIDE:-$(cd "$SCRIPT_DIR/.." && pwd)}"
 FM_HOME="${FM_HOME:-${FM_ROOT_OVERRIDE:-$FM_ROOT}}"

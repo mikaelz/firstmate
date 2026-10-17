@@ -162,6 +162,21 @@
 # of state; exit 2 only on a usage error (no id).
 set -u
 
+case "${1:-}" in
+  -h | --help)
+    cat <<'EOF'
+fm-crew-state.sh - read a task's CURRENT state from authoritative sources, not the status log tail.
+
+Usage: fm-crew-state.sh <task-id>
+Output: state: <working|parked|done|blocked|paused|failed|unknown> · source: <run-step|pane|status-log|remote-endpoint|none> · <detail>
+Env:   FM_CREW_STATE_NO_FORGE=1 skips the bounded forge read for a passed run's PR.
+Read-only. Exit: 0 on any successful read; 2 usage error.
+Full contract: the header of bin/fm-crew-state.sh.
+EOF
+    exit 0
+    ;;
+esac
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 FM_ROOT="${FM_ROOT_OVERRIDE:-$(cd "$SCRIPT_DIR/.." && pwd)}"
 FM_HOME="${FM_HOME:-${FM_ROOT_OVERRIDE:-$FM_ROOT}}"

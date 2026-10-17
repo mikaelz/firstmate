@@ -41,6 +41,19 @@
 #                             fm-inbox.sh ready, from the same inspect helper.
 set -u
 
+case "${1:-}" in
+  -h | --help)
+    cat <<'EOF'
+fm-lock.sh - acquire or inspect this home's firstmate session lock.
+
+Usage: fm-lock.sh          acquire; exit 1 unless this session's ownership is verified
+       fm-lock.sh status   print the holder and its liveness; always exits 0
+Full contract: the header of bin/fm-lock.sh.
+EOF
+    exit 0
+    ;;
+esac
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 FM_ROOT="${FM_ROOT_OVERRIDE:-$(cd "$SCRIPT_DIR/.." && pwd)}"
 FM_HOME="${FM_HOME:-${FM_ROOT_OVERRIDE:-$FM_ROOT}}"

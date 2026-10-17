@@ -112,6 +112,23 @@
 # Usage: fm-project-mode.sh [--raw|--branch-prefix|--forge] <project-name>
 set -eu
 
+case "${1:-}" in
+  -h | --help)
+    cat <<'EOF'
+fm-project-mode.sh - print a project's registered delivery posture from data/projects.md.
+
+Usage: fm-project-mode.sh <project>                  print "<mode> <yolo>"
+       fm-project-mode.sh --branch-prefix <project>  print the ship-branch prefix (default fm/)
+       fm-project-mode.sh --forge <project>          print none|gerrit|forgejo|external
+       fm-project-mode.sh --raw <project>            print the registered mode unmapped
+For mechanical consumers; a task's own mode is resolved at intake, not here.
+Exit:  0 printed; 1 usage error; 3 refused registry entry.
+Full contract: the header of bin/fm-project-mode.sh.
+EOF
+    exit 0
+    ;;
+esac
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 FM_ROOT="${FM_ROOT_OVERRIDE:-$(cd "$SCRIPT_DIR/.." && pwd)}"
 FM_HOME="${FM_HOME:-${FM_ROOT_OVERRIDE:-$FM_ROOT}}"

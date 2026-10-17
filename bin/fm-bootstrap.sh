@@ -162,7 +162,30 @@
 #          meeting LAVISH_AXI_BOARD_MIN, and 2 when lavish-axi is absent, its
 #          version cannot be read, or it is below LAVISH_AXI_BOARD_MIN, printing
 #          nothing.
+#        Any other argument is a usage error (exit 2) that runs nothing.
 set -u
+
+case "${1:-}" in
+  -h | --help)
+    cat <<'EOF'
+fm-bootstrap.sh - detect missing tools and run the session-start fleet sweeps.
+
+Usage: fm-bootstrap.sh                          detect and sweep; one line per actionable problem
+       fm-bootstrap.sh install <tool>...        install captain-approved tools
+       fm-bootstrap.sh lavish-compatible        exit 0 when lavish-axi meets the board floor
+       fm-bootstrap.sh lavish-reply-compatible  exit 0 current, 1 older board-capable, 2 absent or too old
+Env:   FM_BOOTSTRAP_DETECT_ONLY=1 skips mutating sweeps; FM_BOOTSTRAP_NETWORK=all|skip|only.
+Exit:  0 done (problems print as lines); 1 error; 2 usage error.
+Full contract: the header of bin/fm-bootstrap.sh.
+EOF
+    exit 0
+    ;;
+  '' | install | lavish-compatible | lavish-reply-compatible) ;;
+  *)
+    echo "usage: fm-bootstrap.sh [install <tool>... | lavish-compatible | lavish-reply-compatible | --help]" >&2
+    exit 2
+    ;;
+esac
 
 TYPESAFE_API_KEY_PRIVATE=${TYPESAFE_API_KEY:-}
 export -n TYPESAFE_API_KEY_PRIVATE 2>/dev/null || true

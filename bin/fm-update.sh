@@ -65,6 +65,21 @@
 # Usage: fm-update.sh [--help]
 set -eu
 
+case "${1:-}" in
+  -h | --help)
+    cat <<'EOF'
+fm-update.sh - fast-forward this firstmate and every registered secondmate home to origin.
+
+Usage: fm-update.sh
+Fast-forward only; never forces, stashes, or discards, and never touches projects/.
+Ends with reread-firstmate, restart-secondmates, and nudge-secondmates action lines.
+Exit:  0 done; 1 usage error; other nonzero: an update step failed.
+Full contract: the header of bin/fm-update.sh and the /updatefirstmate skill.
+EOF
+    exit 0
+    ;;
+esac
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 FM_ROOT="${FM_ROOT_OVERRIDE:-$(cd "$SCRIPT_DIR/.." && pwd)}"
 FM_HOME="${FM_HOME:-${FM_ROOT_OVERRIDE:-$FM_ROOT}}"
@@ -79,10 +94,6 @@ SECONDMATES_MD="$FM_HOME/data/secondmates.md"
 
 usage() { echo "usage: fm-update.sh [--help]" >&2; }
 
-if [ "${1:-}" = "--help" ] || [ "${1:-}" = "-h" ]; then
-  usage
-  exit 0
-fi
 [ $# -eq 0 ] || { usage; exit 1; }
 
 # --- main firstmate repo ---------------------------------------------------

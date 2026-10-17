@@ -67,6 +67,26 @@
 # verbs never consult it.
 set -u
 
+case "${1:-}" in
+  -h | --help)
+    cat <<'EOF'
+fm-harness.sh - detect this process tree's agent harness and resolve configured worker harnesses.
+
+Usage: fm-harness.sh                    print own harness (claude, codex, pi, ..., or unknown)
+       fm-harness.sh crew               print the effective crewmate harness
+       fm-harness.sh secondmate         print the harness used to launch secondmates
+       fm-harness.sh secondmate-model|secondmate-effort
+                                        print the optional token from config/secondmate-harness
+       fm-harness.sh validate-native-effort <harness> <model> <effort>
+       fm-harness.sh ancestry [<pid>] | ancestry-descent [<pid>] [<leaf-pid>...]
+                                        print ancestry evidence only
+Exit:  0 resolved; 1 refused native effort; 2 refused supervision pin or bad pid.
+Full contract: the header of bin/fm-harness.sh.
+EOF
+    exit 0
+    ;;
+esac
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 FM_ROOT="${FM_ROOT_OVERRIDE:-$(cd "$SCRIPT_DIR/.." && pwd)}"
 FM_HOME="${FM_HOME:-${FM_ROOT_OVERRIDE:-$FM_ROOT}}"

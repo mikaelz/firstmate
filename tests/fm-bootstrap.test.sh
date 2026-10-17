@@ -1109,6 +1109,35 @@ test_crew_dispatch_active_rules_are_verbose_bootstrap_info() {
   pass "bootstrap surfaces active crew-dispatch rules only as verbose BOOTSTRAP_INFO"
 }
 
+# --help prints and exits without detecting or sweeping, and an argument
+# bootstrap does not recognize is a usage error rather than a full run: the
+# sweep would otherwise run and materialize config/startup-memory-budget.
+test_help_and_unknown_argument_run_nothing() {
+  local case_dir fakebin out err rc arg
+  case_dir="$TMP_ROOT/help-and-unknown"
+  mkdir -p "$case_dir/home"
+  fakebin=$(make_fake_toolchain "$case_dir")
+  for arg in -h --help; do
+    rc=0
+    out=$(PATH="$fakebin:$BASE_PATH" FM_HOME="$case_dir/home" FM_ROOT_OVERRIDE="$case_dir/home" \
+      "$ROOT/bin/fm-bootstrap.sh" "$arg" 2>"$case_dir/err") || rc=$?
+    [ "$rc" -eq 0 ] || fail "fm-bootstrap.sh $arg exited $rc"
+    assert_contains "$out" "Usage: fm-bootstrap.sh" "fm-bootstrap.sh $arg printed no usage"
+  done
+  for arg in --bogus status extra; do
+    rc=0
+    out=$(PATH="$fakebin:$BASE_PATH" FM_HOME="$case_dir/home" FM_ROOT_OVERRIDE="$case_dir/home" \
+      "$ROOT/bin/fm-bootstrap.sh" "$arg" 2>"$case_dir/err") || rc=$?
+    err=$(cat "$case_dir/err")
+    [ "$rc" -eq 2 ] || fail "fm-bootstrap.sh $arg exited $rc, want 2 (usage error)"
+    [ -z "$out" ] || fail "fm-bootstrap.sh $arg printed detection output: $out"
+    assert_contains "$err" "usage: fm-bootstrap.sh" "fm-bootstrap.sh $arg gave no usage on stderr"
+  done
+  [ -z "$(find "$case_dir/home" -mindepth 1 -print -quit)" ] \
+    || fail "help or a refused argument changed the home: $(find "$case_dir/home" -mindepth 1)"
+  pass "bootstrap --help and unknown arguments exit without detecting or sweeping"
+}
+
 test_crew_dispatch_validation() {
   local label body expect mode case_dir fakebin out child_env n
   n=0
@@ -1276,3 +1305,4 @@ test_network_phases_record_per_step_elapsed_times
 test_tasks_axi_verdict_handoff_is_consumed_once
 test_crew_dispatch_active_rules_are_verbose_bootstrap_info
 test_crew_dispatch_validation
+test_help_and_unknown_argument_run_nothing
