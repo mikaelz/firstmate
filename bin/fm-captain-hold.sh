@@ -213,6 +213,29 @@
 # the record; bin/fm-inactive-reconcile.sh's diagnostics name a broken binding.
 set -eu
 
+usage() {
+  cat <<'EOF'
+fm-captain-hold.sh - deterministic mechanics for tasks held for the captain.
+
+Usage: fm-captain-hold.sh hold <task-id> --reason <reason> [--title <t>] [--repo <r>] [--origin <id>] [--until YYYY-MM-DD]
+       fm-captain-hold.sh answer <task-id> --decision-file <path> [--release]
+       fm-captain-hold.sh answers | reconcile-requests | bind | unbind | binding ...
+       fm-captain-hold.sh complete <origin-id> (--none | <task-id>...) | verify <origin-id>
+       fm-captain-hold.sh open <task-id> [--identity] [--distinguish-absent] | diverged
+       fm-captain-hold.sh reconcile list | close <task-id> --evidence-file <p> | note <task-id> --note-file <p>
+Policy: .agents/skills/captain-hold-lifecycle/SKILL.md.
+Exit:  0 done; 1 failed; 2 usage error or refused (open: 0 open, 1 not, 2 unknown, 3 absent).
+Full contract: the header of bin/fm-captain-hold.sh.
+EOF
+}
+
+case "${1:-}" in
+  -h | --help)
+    usage
+    exit 0
+    ;;
+esac
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 FM_ROOT="${FM_ROOT_OVERRIDE:-$(cd "$SCRIPT_DIR/.." && pwd)}"
 FM_HOME="${FM_HOME:-${FM_ROOT_OVERRIDE:-$FM_ROOT}}"
@@ -265,14 +288,6 @@ captain_hold_cleanup() {
   fi
 }
 trap captain_hold_cleanup EXIT
-
-usage() {
-  awk '
-    NR == 1 { next }
-    /^#/ { sub(/^# ?/, ""); print; next }
-    { exit }
-  ' "$0"
-}
 
 fail() {
   printf 'fm-captain-hold: %s\n' "$*" >&2
@@ -2051,6 +2066,5 @@ case "${1:-}" in
   open) shift; command_open "$@" ;;
   diverged) shift; command_diverged "$@" ;;
   reconcile) shift; command_reconcile "$@" ;;
-  -h|--help) usage ;;
   *) usage >&2; exit 2 ;;
 esac

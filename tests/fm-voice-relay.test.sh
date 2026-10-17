@@ -418,23 +418,19 @@ assert_absent "$AWS_CALLED" \
   "no case above may reach a model: the aws stub recorded an attempt"
 pass "the model-backed subcommands refuse by name while note keeps working"
 
-# --help prints the whole header block, and finds where that block ends rather
-# than counting lines to it, so growing the header cannot silently truncate the
-# help again. The PRIVACY paragraph is the part that matters: it is the only place
-# a new operator is told which subcommands send audio or text off this host, and a
-# fixed line range had already dropped it.
+# --help is short, but keeps its PRIVACY line: it is the only place a new
+# operator is told which subcommands send audio or text off this host.
 inbox_help=$("$ROOT/bin/fm-inbox.sh" --help) || fail "fm-inbox.sh --help failed"
 assert_contains "$inbox_help" 'PRIVACY:' \
   "the help must say which subcommands send anything to a model"
 assert_contains "$inbox_help" 'make no network call at all' \
   "the help must name the subcommands that stay on this host"
-assert_contains "$inbox_help" 'FM_HOME' \
-  "the help must keep its environment section"
-assert_contains "$inbox_help" 'inbox-ask-model' \
-  "the help must name the files a home has to write"
 assert_contains "$inbox_help" 'fm-inbox.sh note' \
   "the help must still open with the usage it always had"
-pass "fm-inbox.sh --help prints its whole header, privacy paragraph included"
+assert_contains "$inbox_help" 'Full contract: the header of bin/fm-inbox.sh.' \
+  "the help must point at the header that owns the full contract"
+[ "$(printf '%s\n' "$inbox_help" | wc -l)" -le 15 ] || fail "fm-inbox.sh --help is not short"
+pass "fm-inbox.sh --help is short and keeps its privacy line"
 
 # --- the tool surface the two sides share -----------------------------------
 #

@@ -617,10 +617,19 @@ set -eu
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 usage() {
-  # The whole leading comment block, ending at the first line that is not a
-  # comment. Derived rather than a fixed line range, which silently truncated
-  # this help mid-sentence every time the header above grew.
-  sed -n '2,${/^#/!q;p;}' "$0" | sed 's/^# \{0,1\}//'
+  cat <<'EOF'
+fm-spawn.sh - spawn a direct report: a crewmate or scout in an isolated worktree, or a secondmate.
+
+Usage: fm-spawn.sh <task-id> <project-dir> --mode <no-mistakes|direct-PR|local-only> --yolo <on|off> [options]
+       fm-spawn.sh <task-id> <project-dir> --scout [options]
+       fm-spawn.sh <task-id> [<firstmate-home>] --secondmate [options]
+  --branch-prefix <p> / --base-branch <b>   ship branch prefix (default fm/) and base branch
+  --harness <name> --model <m> --effort <e> concrete dispatch profile
+  --backend <name>                          explicit runtime backend for this spawn
+Requires a filled brief at data/<task-id>/brief.md (bin/fm-brief.sh).
+Exit:  0 launched; 1 refused or failed; 2 usage error; 75 deferred by project capacity.
+Full contract: the header of bin/fm-spawn.sh.
+EOF
 }
 
 case "${1:-}" in

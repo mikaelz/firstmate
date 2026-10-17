@@ -170,11 +170,14 @@ exit 0;
 PERL
 }
 
-test_help_includes_entire_header() {
+test_help_is_short_and_points_at_header() {
   local help
   help=$("$ROOT/bin/fm-brief.sh" --help)
-  assert_contains "$help" "Refuses to overwrite an existing brief." "fm-brief.sh --help omitted its header terminator"
-  pass "fm-brief.sh: --help renders the complete header"
+  assert_contains "$help" "Usage: fm-brief.sh" "fm-brief.sh --help omitted its usage"
+  assert_contains "$help" "--herdr-lab is mandatory" "fm-brief.sh --help omitted the Herdr lab requirement"
+  assert_contains "$help" "Full contract: the header of bin/fm-brief.sh." "fm-brief.sh --help omitted its pointer to the header"
+  [ "$(printf '%s\n' "$help" | wc -l)" -le 15 ] || fail "fm-brief.sh --help is not short"
+  pass "fm-brief.sh: --help is short and points at the header"
 }
 
 # Registry with one project per delivery mode. fm-brief.sh no longer reads it -
@@ -1631,7 +1634,7 @@ test_crewmate_scaffolds_forbid_pool_administration() {
 
 test_script_parses
 test_no_heredoc_in_command_substitution
-test_help_includes_entire_header
+test_help_is_short_and_points_at_header
 test_ship_modes_generate_clean_briefs
 test_forge_selection_renders_correct_cli
 test_forge_external_renders_the_review_rail

@@ -102,11 +102,16 @@ no_rules() {
   exit 0
 }
 usage() {
-  awk '
-    NR == 1 { next }
-    /^#/ { sub(/^# ?/, ""); print; next }
-    { exit }
-  ' "$0"
+  cat <<'EOF'
+fm-dispatch-resolve.sh - resolve one dispatch profile from a task brief (opt-in, typesafe.ai).
+
+Usage: fm-dispatch-resolve.sh <brief-file> [--project <name>]
+Off unless TYPESAFE_API_KEY is set in the environment or $FM_HOME/.env;
+off prints one "dispatch-resolve: off" line on stderr and makes no network call.
+Output status: clear (with a profile: line), ambiguous, escalate, error, or off.
+Exit:  0 every outcome; 2 usage or configuration error.
+Full contract: the header of bin/fm-dispatch-resolve.sh and docs/configuration.md.
+EOF
 }
 
 BRIEF='' PROJECT='' RULES_PATH="$CONFIG/crew-dispatch.json" RULES=''

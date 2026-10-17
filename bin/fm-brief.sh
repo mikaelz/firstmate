@@ -151,11 +151,18 @@ set -eu
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 usage() {
-  awk '
-    NR == 1 { next }
-    /^#/ { sub(/^# ?/, ""); print; next }
-    { exit }
-  ' "$0"
+  cat <<'EOF'
+fm-brief.sh - scaffold a task brief or secondmate charter at data/<task-id>/brief.md.
+
+Usage: fm-brief.sh <task-id> <repo> --mode <no-mistakes|direct-PR|local-only> [--branch-prefix <p>] [--base-branch <b>] [--forge <f> [--shape squash]] [--herdr-lab]
+       fm-brief.sh <task-id> <repo> --scout [--base-branch <b>] [--herdr-lab]
+       fm-brief.sh <task-id> --secondmate {<project>...|--no-projects}
+Fill {TASK} (Captain's intent) and {FIRSTMATE_SPEC} before spawning.
+--herdr-lab is mandatory when the task drives Herdr lifecycle commands.
+Refuses to overwrite an existing brief.
+Exit:  0 written; 1 refused or usage error.
+Full contract: the header of bin/fm-brief.sh.
+EOF
 }
 
 case "${1:-}" in

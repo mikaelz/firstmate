@@ -138,8 +138,18 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 FM_ROOT="${FM_ROOT_OVERRIDE:-$(cd "$SCRIPT_DIR/.." && pwd)}"
 
 usage() {
-  # The whole leading comment block, ending at the first non-comment line.
-  sed -n '2,${/^#/!q;p;}' "$0" | sed 's/^# \{0,1\}//'
+  cat <<'EOF'
+fm-control.sh - lifecycle control for a firstmate-owned agent, addressed by exact task id.
+
+Usage: fm-control.sh <task-id> interrupt
+       fm-control.sh <task-id> exit
+       fm-control.sh <task-id> relaunch [--harness <name>] [--model <name>] [--effort <level>]
+                                        (--note <text> | --note-file <path>)
+Each verb verifies its postcondition and never tears down or discards work.
+Text for the agent to read goes through fm-send.sh, never here.
+Exit:  0 verified; 1 failed or unverified; 2 usage error.
+Full contract: the header of bin/fm-control.sh and docs/agent-control.md.
+EOF
 }
 
 case "${1:-}" in

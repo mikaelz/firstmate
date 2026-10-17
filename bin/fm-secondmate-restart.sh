@@ -72,7 +72,15 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 FM_ROOT="${FM_ROOT_OVERRIDE:-$(cd "$SCRIPT_DIR/.." && pwd)}"
 
 usage() {
-  sed -n '2,65{s/^# \{0,1\}//;p;}' "$0"
+  cat <<'EOF'
+fm-secondmate-restart.sh - restart second mates onto the current instructions, persisting open records first.
+
+Usage: fm-secondmate-restart.sh <secondmate-id>...
+Each mate is asked to persist its open records; it restarts only after its answer lands,
+otherwise it gets a re-read nudge.
+Exit:  0 every mate restarted; 3 some nudged or unreached; 1 unusable input; 2 invalid use.
+Full contract: the header of bin/fm-secondmate-restart.sh.
+EOF
 }
 
 case "${1:-}" in

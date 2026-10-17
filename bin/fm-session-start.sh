@@ -264,7 +264,16 @@ while [ "$#" -gt 0 ]; do
       shift
       ;;
     -h|--help)
-      sed -n '2,/^set -u$/p' "$SCRIPT_DIR/fm-session-start.sh" | sed 's/^# \{0,1\}//; $d'
+      cat <<'EOF'
+fm-session-start.sh - one command for the whole session start: lock, bootstrap, drain, digest.
+
+Usage: fm-session-start.sh [--reemit] [--source <source>]
+  --reemit  re-emit the digest after a /clear or compaction without re-running mutating sweeps
+  --source  native session-open source, supplied only by fm-sessionstart-run.sh
+Run once per session; a lock refusal is reported inline and leaves the session read-only.
+Exit:  0 always (a reporting command, not a gate); 2 unknown argument.
+Full contract: the header of bin/fm-session-start.sh.
+EOF
       exit 0
       ;;
     *)

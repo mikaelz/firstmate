@@ -1147,13 +1147,21 @@ case "${1:-}" in
   list)     shift; cmd_list ;;
   drain)    shift; cmd_drain "$@" ;;
   ''|-h|--help|help)
-    # The whole header block, found rather than counted: everything after the
-    # shebang up to the first line that is not a comment. A fixed line range
-    # silently truncates this help the next time the header grows, and the last
-    # thing to fall off the end is the PRIVACY paragraph, which is the one place
-    # a new operator is told which subcommands send anything off this host.
-    awk 'NR == 1 { next }
-         /^#/ { sub(/^# ?/, ""); print; next }
-         { exit }' "${BASH_SOURCE[0]}" ;;
+    # The PRIVACY line is the one place a new operator is told which
+    # subcommands send anything off this host, so the short help keeps it.
+    cat <<'EOF'
+fm-inbox.sh - the captain's out-of-band capture surface.
+
+Usage: fm-inbox.sh note [--request-id <id>] [--json] [--] <text>... | note ... -
+       fm-inbox.sh announce [--json] <id> | reply [--json] <id> <text>... | reply [--json] <id> -
+       fm-inbox.sh receipts [--after <cursor>] [--all-pending] [--all-handled] [--all-replies]
+       fm-inbox.sh ready | status | list | drain [--ack <id>...]
+       fm-inbox.sh say [<file.wav>] | ask <question>...
+PRIVACY: say and ask send audio or text to Bedrock;
+         note, announce, reply, receipts, ready, status, list and drain make no network call at all.
+Exit:  0 done; 1 failed; 3 note saved but its wake not announced (--request-id or --json).
+Full contract: the header of bin/fm-inbox.sh.
+EOF
+    ;;
   *) die "unknown subcommand: $1 (try --help)" ;;
 esac

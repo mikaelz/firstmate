@@ -66,11 +66,17 @@ DATA="${FM_DATA_OVERRIDE:-$FM_HOME/data}"
 . "$SCRIPT_DIR/fm-hold-reason-lib.sh"
 
 usage() {
-  awk '
-    NR == 1 { next }
-    /^#/ { sub(/^# ?/, ""); print; next }
-    { exit }
-  ' "$0"
+  cat <<'EOF'
+fm-tasks-axi.sh - run tasks-axi against THIS home's backlog from any working directory.
+
+Usage: fm-tasks-axi.sh [<tasks-axi command> [args...]]
+       fm-tasks-axi.sh <command> --help    tasks-axi's own help for that command
+Relative --to and --*-file values resolve against the caller's directory.
+Refuses (exit 2, nothing run): tasks-axi missing, a caller --file, add --start,
+an unresolvable data directory, or a symlinked backlog.md.
+Exit:  otherwise tasks-axi's own status.
+Full contract: the header of bin/fm-tasks-axi.sh.
+EOF
 }
 
 fail() {

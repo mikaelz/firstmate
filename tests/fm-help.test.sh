@@ -1,27 +1,24 @@
 #!/usr/bin/env bash
 # Behavior tests for the main operator-facing bin/fm-* commands' -h/--help:
 # each prints a usage to stdout, exits 0, and changes nothing in its home, and
-# the short form stays short. The script headers remain the owners of each
+# stays short. The script headers remain the owners of each
 # command's full contract; these tests pin only the help surface.
 set -u
 
+# shellcheck source=tests/lib.sh
 . "$(dirname "${BASH_SOURCE[0]}")/lib.sh"
 
 TMP_ROOT=$(fm_test_tmproot fm-help-tests)
 
-# Commands whose help is the short form. Each must fit in SHORT_HELP_MAX lines.
+# Every main command's help is the short form, bounded by SHORT_HELP_MAX lines.
 SHORT_HELP_COMMANDS=(
-  fm-bootstrap fm-send fm-crew-state fm-wake-drain fm-pr-check fm-pr-merge
-  fm-merge-local fm-teardown fm-update fm-lock fm-harness fm-project-mode
-  fm-remote-doctor fm-branch-outcome fm-fleet-sync
+  fm-session-start fm-bootstrap fm-spawn fm-send fm-control fm-brief
+  fm-crew-state fm-wake-drain fm-pr-check fm-pr-merge fm-merge-local
+  fm-teardown fm-update fm-tasks-axi fm-captain-hold fm-lock fm-harness
+  fm-project-mode fm-dispatch-resolve fm-inbox fm-startup-network
+  fm-remote-doctor fm-secondmate-restart fm-branch-outcome fm-fleet-sync
 )
 SHORT_HELP_MAX=15
-
-# Commands whose help prints their full header.
-HEADER_HELP_COMMANDS=(
-  fm-session-start fm-spawn fm-control fm-brief fm-tasks-axi fm-captain-hold
-  fm-dispatch-resolve fm-inbox fm-startup-network fm-secondmate-restart
-)
 
 # run_help <command> <flag> <case-dir>: run the help in an isolated empty home
 # and set HELP_OUT, HELP_ERR, and HELP_RC.
@@ -55,22 +52,10 @@ test_short_help() {
       [ "$lines" -le "$SHORT_HELP_MAX" ] \
         || fail "$cmd.sh $flag printed $lines lines, more than the short-help bound $SHORT_HELP_MAX"
       [ -z "$HELP_ERR" ] || fail "$cmd.sh $flag wrote to stderr: $HELP_ERR"
+      assert_contains "$HELP_OUT" "Full contract:" "$cmd.sh $flag did not point at its full contract"
     done
   done
   pass "short -h/--help prints usage, exits 0, and changes nothing for every main command"
 }
 
-test_header_help() {
-  local cmd flag dir
-  for cmd in "${HEADER_HELP_COMMANDS[@]}"; do
-    for flag in -h --help; do
-      dir="$TMP_ROOT/header-$cmd$flag"
-      run_help "$cmd" "$flag" "$dir"
-      assert_help_contract "$cmd" "$flag" "$dir"
-    done
-  done
-  pass "header -h/--help prints usage, exits 0, and changes nothing"
-}
-
 test_short_help
-test_header_help

@@ -116,6 +116,28 @@
 # silence. bin/fm-timeout-lib.sh remains the single owner of bounded execution.
 set -u
 
+usage() {
+  cat <<'EOF'
+fm-startup-network.sh - the deferred network stage of a session start.
+
+Usage: fm-startup-network.sh start --locked <0|1> --harvest-pid <pid>
+       fm-startup-network.sh run --locked <0|1>
+       fm-startup-network.sh harvest --pid <pid>
+       fm-startup-network.sh report            print the current state and report; changes nothing
+       fm-startup-network.sh wait [<seconds>]  block until the report is published (default 120)
+fm-session-start.sh calls start and harvest; run redoes the stage by hand.
+Exit:  0 done; 1 run refused or unpublished, or wait timed out; 2 unknown mode.
+Full contract: the header of bin/fm-startup-network.sh.
+EOF
+}
+
+case "${1:-}" in
+  -h | --help)
+    usage
+    exit 0
+    ;;
+esac
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 FM_ROOT="${FM_ROOT_OVERRIDE:-$(cd "$SCRIPT_DIR/.." && pwd)}"
 FM_HOME="${FM_HOME:-${FM_ROOT_OVERRIDE:-$FM_ROOT}}"
@@ -141,10 +163,6 @@ PUBLISH_LOCK="$STATE/.startup-network.lock"
 . "$SCRIPT_DIR/fm-wake-lib.sh"
 # shellcheck source=bin/fm-session-lock-lib.sh
 . "$SCRIPT_DIR/fm-session-lock-lib.sh"
-
-usage() {
-  sed -n '2,/^set -u$/p' "$SCRIPT_DIR/fm-startup-network.sh" | sed 's/^# \{0,1\}//; $d'
-}
 
 status_get() {  # <key>
   [ -f "$STATUS_FILE" ] || return 0
