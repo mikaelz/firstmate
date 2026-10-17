@@ -17,6 +17,7 @@ SHORT_HELP_COMMANDS=(
   fm-teardown fm-update fm-tasks-axi fm-captain-hold fm-lock fm-harness
   fm-project-mode fm-dispatch-resolve fm-inbox fm-startup-network
   fm-remote-doctor fm-secondmate-restart fm-branch-outcome fm-fleet-sync
+  fm-doctor
 )
 SHORT_HELP_MAX=15
 
