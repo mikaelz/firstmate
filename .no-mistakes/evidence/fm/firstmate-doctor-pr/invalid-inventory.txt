@@ -1,0 +1,36 @@
+exit=1
+{
+  "schema": "fm-doctor.v1",
+  "home": "~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/guard-home",
+  "area": null,
+  "verdict": "fail",
+  "counts": {
+    "ok": 1,
+    "warn": 0,
+    "fail": 1,
+    "info": 0,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "doctor/jq",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "jq on PATH",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Install jq; the doctor needs it to read its inventory."
+    },
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "fail",
+      "evidence": "duplicate check id tools/missing (+1 more)",
+      "detail": [
+        "duplicate check id tools/missing",
+        "prefix MISSING is mapped by more than one check"
+      ],
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json; every other check is unknown until it validates."
+    }
+  ]
+}

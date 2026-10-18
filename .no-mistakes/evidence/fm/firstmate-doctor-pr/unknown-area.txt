@@ -1,0 +1,5 @@
+$ bin/fm-doctor.sh --area nowhere
+exit=2
+fm-doctor.sh: unknown area nowhere (known: doctor, tools, backend, config, permissions, no-mistakes, auth, supervision, fleet, memory)
+
+Home unchanged: yes

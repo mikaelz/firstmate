@@ -1,0 +1,107 @@
+[
+  {
+    "scenario": "auto-no-rule",
+    "exit": 0,
+    "home_unchanged": true
+  },
+  {
+    "scenario": "auto-single-script",
+    "exit": 0,
+    "home_unchanged": true
+  },
+  {
+    "scenario": "auto-other-home",
+    "exit": 0,
+    "home_unchanged": true
+  },
+  {
+    "scenario": "auto-relative-family",
+    "exit": 0,
+    "home_unchanged": true
+  },
+  {
+    "scenario": "auto-absolute-family",
+    "exit": 0,
+    "home_unchanged": true
+  },
+  {
+    "scenario": "non-auto",
+    "exit": 0,
+    "home_unchanged": true
+  },
+  {
+    "scenario": "malformed-settings",
+    "exit": 0,
+    "home_unchanged": true
+  },
+  {
+    "scenario": "unavailable-agent",
+    "exit": 0,
+    "home_unchanged": true
+  },
+  {
+    "scenario": "replaced-tool",
+    "exit": 0,
+    "home_unchanged": true
+  },
+  {
+    "scenario": "over-budget",
+    "exit": 0,
+    "home_unchanged": true
+  },
+  {
+    "scenario": "unsupported-harness",
+    "exit": 0,
+    "home_unchanged": true
+  },
+  {
+    "scenario": "invalid-backend",
+    "exit": 1,
+    "home_unchanged": true
+  },
+  {
+    "scenario": "help",
+    "exit": 0,
+    "home_unchanged": true
+  },
+  {
+    "scenario": "unknown-option",
+    "exit": 2,
+    "home_unchanged": true
+  },
+  {
+    "scenario": "unknown-area",
+    "exit": 2,
+    "home_unchanged": true
+  },
+  {
+    "scenario": "missing-area",
+    "exit": 2,
+    "home_unchanged": true
+  },
+  {
+    "scenario": "default-toon",
+    "exit": 0,
+    "home_unchanged": true
+  },
+  {
+    "scenario": "default-json",
+    "exit": 0,
+    "home_unchanged": true
+  },
+  {
+    "scenario": "network-done",
+    "exit": 1,
+    "home_unchanged": true
+  },
+  {
+    "scenario": "network-timeout",
+    "exit": 1,
+    "home_unchanged": true
+  },
+  {
+    "scenario": "network-failed",
+    "exit": 1,
+    "home_unchanged": true
+  }
+]

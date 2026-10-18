@@ -1,0 +1,62 @@
+$ bin/fm-doctor.sh --json --area tools
+exit=0
+{
+  "schema": "fm-doctor.v1",
+  "home": "~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home",
+  "area": "tools",
+  "verdict": "warn",
+  "counts": {
+    "ok": 4,
+    "warn": 1,
+    "fail": 0,
+    "info": 0,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "29 checks valid",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json."
+    },
+    {
+      "id": "tools/missing",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Ask the captain, then run bin/fm-bootstrap.sh install <tool> (the line names the install command).",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "tools/missing-manual",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Give the captain the printed instructions URL; never pass the tool to bin/fm-bootstrap.sh install.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "tools/presentation",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Work in plain text; install or upgrade lavish-axi with captain consent before using Lavish.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "tools/provenance",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Restore the pinned build named in config/tool-provenance (a plain reinstall replaced it), or drop the pin once the upstream release carries the change.",
+      "status": "warn",
+      "evidence": "TOOL_PROVENANCE: jq resolves to /usr/bin/jq, not the pinned /unavailable/pinned-build/; a reinstall may have replaced the pinned build - restore it, or remove the pin once the upstream release carr...",
+      "detail": [
+        "TOOL_PROVENANCE: jq resolves to /usr/bin/jq, not the pinned /unavailable/pinned-build/; a reinstall may have replaced the pinned build - restore it, or remove the pin once the upstream release carries what it needs"
+      ]
+    }
+  ]
+}
+
+Home unchanged: yes

@@ -1,0 +1,49 @@
+$ bin/fm-doctor.sh 
+exit=0
+home: ~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home
+verdict: warn
+summary: "0 fail, 6 warn, 17 ok, 1 info, 9 skip"
+checks[33]{id,status,evidence}:
+  doctor/jq,ok,jq on PATH
+  doctor/inventory,ok,29 checks valid
+  doctor/bootstrap,ok,"finished, exit 0"
+  doctor/unmapped-line,ok,every bootstrap line is mapped
+  tools/missing,ok,none reported
+  tools/missing-manual,ok,none reported
+  tools/presentation,ok,none reported
+  tools/provenance,warn,"TOOL_PROVENANCE: jq resolves to /usr/bin/jq, not the pinned /unavailable/pinned-build/; a reinstall may have replaced the pinned build - restore it, or remove the pin once the upstream release carr..."
+  backend/invalid,ok,none reported
+  backend/herdr-launcher,ok,none reported
+  config/crew-dispatch,ok,none reported
+  config/startup-memory-budget,skip,printed only by the locked session-start sweep; read the session-start digest
+  config/relay,skip,printed only by the locked session-start sweep; read the session-start digest
+  permissions/claude-fm-scripts,warn,"CLAUDE_PERMISSIONS: Claude auto mode is on (~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/.claude/settings.json) but no Bash(...bin/fm-*...) allow rule..."
+  no-mistakes/agents,warn,"NO_MISTAKES_AGENTS: ~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/nm/config.yaml agent: lists definitely-absent-doctor-agent, but definitely-absent-doc..."
+  auth/github,skip,network check; run fm-doctor.sh --network
+  fleet/tangle,ok,none reported
+  fleet/backlog-reconcile,ok,none reported
+  fleet/home-summary,ok,none reported
+  fleet/secondmate-handoff,ok,none reported
+  fleet/info,ok,none reported
+  fleet/sync,skip,network check; run fm-doctor.sh --network
+  fleet/secondmate-sync,skip,network check; run fm-doctor.sh --network
+  fleet/secondmate-liveness,skip,network check; run fm-doctor.sh --network
+  fleet/secondmate-nudge,skip,network check; run fm-doctor.sh --network
+  fleet/config-reread,skip,network check; run fm-doctor.sh --network
+  supervision/network-checks,skip,network check; run fm-doctor.sh --network
+  supervision/ready,warn,can_receive=false lock.state=free wake_consumer.state=unknown
+  supervision/startup-network,info,not started - no deferred network checks have run for this home yet.
+  config/role,ok,"fm-role: user (default)"
+  config/harness,ok,claude
+  config/crew-harness,warn,bogus
+  memory/budget,warn,estimator=ceil(UTF-8 bytes / 3) conservative-local-estimate
+findings[6]{id,fix}:
+  tools/provenance,"Restore the pinned build named in config/tool-provenance (a plain reinstall replaced it), or drop the pin once the upstream release carries the change."
+  permissions/claude-fm-scripts,Give the captain the exact allow rule the line names for the home's .claude/settings.local.json; a present rule does not prove auto mode honors it.
+  no-mistakes/agents,"Install the named agent or remove it from the agent: list (ask the captain before editing their no-mistakes config); confirm with no-mistakes doctor."
+  supervision/ready,Start or resume a firstmate session for this home and keep its supervision cycle live.
+  config/crew-harness,"Set config/crew-harness to a verified adapter, or leave it absent to use this session's harness."
+  memory/budget,An absent budget is written at the next locked session start; correct a malformed config/startup-memory-budget by hand.
+help[3]: Apply each fix through its owner command; never edit captain-owned files to clear a finding,Run fm-doctor.sh --network to add the GitHub auth probe and the last network report,Run fm-doctor.sh --json for every evidence line
+
+Home unchanged: yes

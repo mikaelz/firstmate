@@ -1,0 +1,45 @@
+$ bin/fm-doctor.sh --json --area memory
+exit=0
+{
+  "schema": "fm-doctor.v1",
+  "home": "~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home",
+  "area": "memory",
+  "verdict": "warn",
+  "counts": {
+    "ok": 1,
+    "warn": 1,
+    "fail": 0,
+    "info": 0,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "29 checks valid",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json."
+    },
+    {
+      "id": "memory/budget",
+      "area": "memory",
+      "owner": "bin/fm-startup-memory-budget.sh",
+      "fix": "An absent budget is written at the next locked session start; correct a malformed config/startup-memory-budget by hand.",
+      "status": "warn",
+      "evidence": "estimator=ceil(UTF-8 bytes / 3) conservative-local-estimate",
+      "detail": [
+        "estimator=ceil(UTF-8 bytes / 3) conservative-local-estimate",
+        "role=primary",
+        "effective_budget_tokens=1",
+        "file=data/captain.md bytes=0 estimated_tokens=0 status=absent",
+        "file=data/captain-shared.md bytes=31 estimated_tokens=11 status=present",
+        "file=data/learnings.md bytes=0 estimated_tokens=0 status=absent",
+        "total_estimated_tokens=11",
+        "budget_status=over-budget"
+      ]
+    }
+  ]
+}
+
+Home unchanged: yes

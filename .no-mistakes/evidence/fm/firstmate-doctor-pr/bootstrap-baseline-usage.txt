@@ -1,0 +1,1 @@
+Exploratory check outside doctor scope: bootstrap --bogus exits 0 on both base 1aa2a21 and target 0fa9f7d. No changed behavior.

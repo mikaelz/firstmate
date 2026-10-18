@@ -1,0 +1,2174 @@
+=== auto-no-rule ===
+$ bin/fm-doctor.sh --json --area permissions
+exit=0
+{
+  "schema": "fm-doctor.v1",
+  "home": "~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home",
+  "area": "permissions",
+  "verdict": "warn",
+  "counts": {
+    "ok": 1,
+    "warn": 1,
+    "fail": 0,
+    "info": 0,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "29 checks valid",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json."
+    },
+    {
+      "id": "permissions/claude-fm-scripts",
+      "area": "permissions",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Give the captain the exact allow rule the line names for the home's .claude/settings.local.json; a present rule does not prove auto mode honors it.",
+      "status": "warn",
+      "evidence": "CLAUDE_PERMISSIONS: Claude auto mode is on (~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/.claude/settings.json) but no Bash(...bin/fm-*...) allow rule...",
+      "detail": [
+        "CLAUDE_PERMISSIONS: Claude auto mode is on (~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/.claude/settings.json) but no Bash(...bin/fm-*...) allow rule is in any Claude settings layer, so the auto-mode classifier may refuse firstmate's own scripts - add Bash(~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/bin/fm-*:*) to ~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/.claude/settings.local.json (a present rule does not prove the classifier honors it)"
+      ]
+    }
+  ]
+}
+
+Home unchanged: yes
+
+
+=== auto-single-script ===
+$ bin/fm-doctor.sh --json --area permissions
+exit=0
+{
+  "schema": "fm-doctor.v1",
+  "home": "~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home",
+  "area": "permissions",
+  "verdict": "warn",
+  "counts": {
+    "ok": 1,
+    "warn": 1,
+    "fail": 0,
+    "info": 0,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "29 checks valid",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json."
+    },
+    {
+      "id": "permissions/claude-fm-scripts",
+      "area": "permissions",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Give the captain the exact allow rule the line names for the home's .claude/settings.local.json; a present rule does not prove auto mode honors it.",
+      "status": "warn",
+      "evidence": "CLAUDE_PERMISSIONS: Claude auto mode is on (~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/.claude/settings.json) but no Bash(...bin/fm-*...) allow rule...",
+      "detail": [
+        "CLAUDE_PERMISSIONS: Claude auto mode is on (~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/.claude/settings.json) but no Bash(...bin/fm-*...) allow rule is in any Claude settings layer, so the auto-mode classifier may refuse firstmate's own scripts - add Bash(~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/bin/fm-*:*) to ~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/.claude/settings.local.json (a present rule does not prove the classifier honors it)"
+      ]
+    }
+  ]
+}
+
+Home unchanged: yes
+
+
+=== auto-other-home ===
+$ bin/fm-doctor.sh --json --area permissions
+exit=0
+{
+  "schema": "fm-doctor.v1",
+  "home": "~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home",
+  "area": "permissions",
+  "verdict": "warn",
+  "counts": {
+    "ok": 1,
+    "warn": 1,
+    "fail": 0,
+    "info": 0,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "29 checks valid",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json."
+    },
+    {
+      "id": "permissions/claude-fm-scripts",
+      "area": "permissions",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Give the captain the exact allow rule the line names for the home's .claude/settings.local.json; a present rule does not prove auto mode honors it.",
+      "status": "warn",
+      "evidence": "CLAUDE_PERMISSIONS: Claude auto mode is on (~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/.claude/settings.json) but no Bash(...bin/fm-*...) allow rule...",
+      "detail": [
+        "CLAUDE_PERMISSIONS: Claude auto mode is on (~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/.claude/settings.json) but no Bash(...bin/fm-*...) allow rule is in any Claude settings layer, so the auto-mode classifier may refuse firstmate's own scripts - add Bash(~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/bin/fm-*:*) to ~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/.claude/settings.local.json (a present rule does not prove the classifier honors it)"
+      ]
+    }
+  ]
+}
+
+Home unchanged: yes
+
+
+=== auto-relative-family ===
+$ bin/fm-doctor.sh --json --area permissions
+exit=0
+{
+  "schema": "fm-doctor.v1",
+  "home": "~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home",
+  "area": "permissions",
+  "verdict": "ok",
+  "counts": {
+    "ok": 2,
+    "warn": 0,
+    "fail": 0,
+    "info": 0,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "29 checks valid",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json."
+    },
+    {
+      "id": "permissions/claude-fm-scripts",
+      "area": "permissions",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Give the captain the exact allow rule the line names for the home's .claude/settings.local.json; a present rule does not prove auto mode honors it.",
+      "status": "ok",
+      "evidence": "none reported"
+    }
+  ]
+}
+
+Home unchanged: yes
+
+
+=== auto-absolute-family ===
+$ bin/fm-doctor.sh --json --area permissions
+exit=0
+{
+  "schema": "fm-doctor.v1",
+  "home": "~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home",
+  "area": "permissions",
+  "verdict": "ok",
+  "counts": {
+    "ok": 2,
+    "warn": 0,
+    "fail": 0,
+    "info": 0,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "29 checks valid",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json."
+    },
+    {
+      "id": "permissions/claude-fm-scripts",
+      "area": "permissions",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Give the captain the exact allow rule the line names for the home's .claude/settings.local.json; a present rule does not prove auto mode honors it.",
+      "status": "ok",
+      "evidence": "none reported"
+    }
+  ]
+}
+
+Home unchanged: yes
+
+
+=== non-auto ===
+$ bin/fm-doctor.sh --json --area permissions
+exit=0
+{
+  "schema": "fm-doctor.v1",
+  "home": "~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home",
+  "area": "permissions",
+  "verdict": "ok",
+  "counts": {
+    "ok": 2,
+    "warn": 0,
+    "fail": 0,
+    "info": 0,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "29 checks valid",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json."
+    },
+    {
+      "id": "permissions/claude-fm-scripts",
+      "area": "permissions",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Give the captain the exact allow rule the line names for the home's .claude/settings.local.json; a present rule does not prove auto mode honors it.",
+      "status": "ok",
+      "evidence": "none reported"
+    }
+  ]
+}
+
+Home unchanged: yes
+
+
+=== malformed-settings ===
+$ bin/fm-doctor.sh --json --area permissions
+exit=0
+{
+  "schema": "fm-doctor.v1",
+  "home": "~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home",
+  "area": "permissions",
+  "verdict": "warn",
+  "counts": {
+    "ok": 1,
+    "warn": 1,
+    "fail": 0,
+    "info": 0,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "29 checks valid",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json."
+    },
+    {
+      "id": "permissions/claude-fm-scripts",
+      "area": "permissions",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Give the captain the exact allow rule the line names for the home's .claude/settings.local.json; a present rule does not prove auto mode honors it.",
+      "status": "warn",
+      "evidence": "CLAUDE_PERMISSIONS: ~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/.claude/settings.json is not a valid JSON settings object, so Claude may ignore the p... (+1 more)",
+      "detail": [
+        "CLAUDE_PERMISSIONS: ~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/.claude/settings.json is not a valid JSON settings object, so Claude may ignore the permissions it holds",
+        "CLAUDE_PERMISSIONS: ~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/.claude/settings.json is not a valid JSON settings object, so Claude may ignore the permissions it holds"
+      ]
+    }
+  ]
+}
+
+Home unchanged: yes
+
+
+=== unavailable-agent ===
+$ bin/fm-doctor.sh --json --area no-mistakes
+exit=0
+{
+  "schema": "fm-doctor.v1",
+  "home": "~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home",
+  "area": "no-mistakes",
+  "verdict": "warn",
+  "counts": {
+    "ok": 1,
+    "warn": 1,
+    "fail": 0,
+    "info": 0,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "29 checks valid",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json."
+    },
+    {
+      "id": "no-mistakes/agents",
+      "area": "no-mistakes",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Install the named agent or remove it from the agent: list (ask the captain before editing their no-mistakes config); confirm with no-mistakes doctor.",
+      "status": "warn",
+      "evidence": "NO_MISTAKES_AGENTS: ~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/nm/config.yaml agent: lists definitely-absent-doctor-agent, but definitely-absent-doc...",
+      "detail": [
+        "NO_MISTAKES_AGENTS: ~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/nm/config.yaml agent: lists definitely-absent-doctor-agent, but definitely-absent-doctor-agent is not installed; no-mistakes silently skips a missing fallback agent - install it or drop it from the list (no-mistakes doctor is the authoritative view)"
+      ]
+    }
+  ]
+}
+
+Home unchanged: yes
+
+
+=== replaced-tool ===
+$ bin/fm-doctor.sh --json --area tools
+exit=0
+{
+  "schema": "fm-doctor.v1",
+  "home": "~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home",
+  "area": "tools",
+  "verdict": "warn",
+  "counts": {
+    "ok": 4,
+    "warn": 1,
+    "fail": 0,
+    "info": 0,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "29 checks valid",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json."
+    },
+    {
+      "id": "tools/missing",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Ask the captain, then run bin/fm-bootstrap.sh install <tool> (the line names the install command).",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "tools/missing-manual",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Give the captain the printed instructions URL; never pass the tool to bin/fm-bootstrap.sh install.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "tools/presentation",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Work in plain text; install or upgrade lavish-axi with captain consent before using Lavish.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "tools/provenance",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Restore the pinned build named in config/tool-provenance (a plain reinstall replaced it), or drop the pin once the upstream release carries the change.",
+      "status": "warn",
+      "evidence": "TOOL_PROVENANCE: jq resolves to /usr/bin/jq, not the pinned /unavailable/pinned-build/; a reinstall may have replaced the pinned build - restore it, or remove the pin once the upstream release carr...",
+      "detail": [
+        "TOOL_PROVENANCE: jq resolves to /usr/bin/jq, not the pinned /unavailable/pinned-build/; a reinstall may have replaced the pinned build - restore it, or remove the pin once the upstream release carries what it needs"
+      ]
+    }
+  ]
+}
+
+Home unchanged: yes
+
+
+=== over-budget ===
+$ bin/fm-doctor.sh --json --area memory
+exit=0
+{
+  "schema": "fm-doctor.v1",
+  "home": "~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home",
+  "area": "memory",
+  "verdict": "warn",
+  "counts": {
+    "ok": 1,
+    "warn": 1,
+    "fail": 0,
+    "info": 0,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "29 checks valid",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json."
+    },
+    {
+      "id": "memory/budget",
+      "area": "memory",
+      "owner": "bin/fm-startup-memory-budget.sh",
+      "fix": "An absent budget is written at the next locked session start; correct a malformed config/startup-memory-budget by hand.",
+      "status": "warn",
+      "evidence": "estimator=ceil(UTF-8 bytes / 3) conservative-local-estimate",
+      "detail": [
+        "estimator=ceil(UTF-8 bytes / 3) conservative-local-estimate",
+        "role=primary",
+        "effective_budget_tokens=1",
+        "file=data/captain.md bytes=0 estimated_tokens=0 status=absent",
+        "file=data/captain-shared.md bytes=31 estimated_tokens=11 status=present",
+        "file=data/learnings.md bytes=0 estimated_tokens=0 status=absent",
+        "total_estimated_tokens=11",
+        "budget_status=over-budget"
+      ]
+    }
+  ]
+}
+
+Home unchanged: yes
+
+
+=== unsupported-harness ===
+$ bin/fm-doctor.sh --json --area config
+exit=0
+{
+  "schema": "fm-doctor.v1",
+  "home": "~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home",
+  "area": "config",
+  "verdict": "warn",
+  "counts": {
+    "ok": 4,
+    "warn": 1,
+    "fail": 0,
+    "info": 0,
+    "skip": 2
+  },
+  "checks": [
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "29 checks valid",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json."
+    },
+    {
+      "id": "config/crew-dispatch",
+      "area": "config",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Fix the named problem in config/crew-dispatch.json; do not dispatch by profile until it validates.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "config/startup-memory-budget",
+      "area": "config",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Correct config/startup-memory-budget; the memory/budget check reads it on demand.",
+      "status": "skip",
+      "evidence": "printed only by the locked session-start sweep; read the session-start digest"
+    },
+    {
+      "id": "config/relay",
+      "area": "config",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "No action; restart the watcher only when a cadence change must apply immediately.",
+      "status": "skip",
+      "evidence": "printed only by the locked session-start sweep; read the session-start digest"
+    },
+    {
+      "id": "config/role",
+      "area": "config",
+      "owner": "bin/fm-role.sh",
+      "fix": "Correct config/firstmate-role as docs/configuration.md \"Firstmate role\" describes.",
+      "status": "ok",
+      "evidence": "fm-role: user (default)",
+      "detail": [
+        "fm-role: user (default)"
+      ]
+    },
+    {
+      "id": "config/harness",
+      "area": "config",
+      "owner": "bin/fm-harness.sh",
+      "fix": "Run the doctor from inside the firstmate session's own agent so its harness can be detected.",
+      "status": "ok",
+      "evidence": "claude",
+      "detail": [
+        "claude"
+      ]
+    },
+    {
+      "id": "config/crew-harness",
+      "area": "config",
+      "owner": "bin/fm-harness.sh",
+      "fix": "Set config/crew-harness to a verified adapter, or leave it absent to use this session's harness.",
+      "status": "warn",
+      "evidence": "bogus",
+      "detail": [
+        "bogus"
+      ]
+    }
+  ]
+}
+
+Home unchanged: yes
+
+
+=== invalid-backend ===
+$ bin/fm-doctor.sh --json --area backend
+exit=1
+{
+  "schema": "fm-doctor.v1",
+  "home": "~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home",
+  "area": "backend",
+  "verdict": "fail",
+  "counts": {
+    "ok": 2,
+    "warn": 0,
+    "fail": 1,
+    "info": 0,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "29 checks valid",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json."
+    },
+    {
+      "id": "backend/invalid",
+      "area": "backend",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Correct config/backend or FM_BACKEND to one of the listed backends before dispatching.",
+      "status": "fail",
+      "evidence": "BACKEND_INVALID: bogus (known: tmux herdr zellij orca cmux)",
+      "detail": [
+        "BACKEND_INVALID: bogus (known: tmux herdr zellij orca cmux)"
+      ]
+    },
+    {
+      "id": "backend/herdr-launcher",
+      "area": "backend",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Find the live pane with herdr pane list --workspace <workspace> and pass corrected HERDR_PANE_ID, HERDR_WORKSPACE_ID, and HERDR_TAB_ID on the spawn command line, or relaunch the primary inside herdr.",
+      "status": "ok",
+      "evidence": "none reported"
+    }
+  ]
+}
+
+Home unchanged: yes
+
+
+=== help ===
+$ bin/fm-doctor.sh --help
+exit=0
+fm-doctor.sh - check that this firstmate home is set up and working. Read-only.
+
+Usage: fm-doctor.sh [--json] [--area <name>] [--network]
+  --json         full structured output (default is TOON)
+  --area <name>  run one area from docs/doctor-checks.json
+  --network      add a fresh GitHub auth probe and the last network report
+Exit:  0 no check failed; 1 a check failed; 2 usage error.
+Full contract: the header of bin/fm-doctor.sh.
+
+Home unchanged: yes
+
+
+=== unknown-option ===
+$ bin/fm-doctor.sh --bogus
+exit=2
+fm-doctor.sh: unknown argument: --bogus
+fm-doctor.sh - check that this firstmate home is set up and working. Read-only.
+
+Usage: fm-doctor.sh [--json] [--area <name>] [--network]
+  --json         full structured output (default is TOON)
+  --area <name>  run one area from docs/doctor-checks.json
+  --network      add a fresh GitHub auth probe and the last network report
+Exit:  0 no check failed; 1 a check failed; 2 usage error.
+Full contract: the header of bin/fm-doctor.sh.
+
+Home unchanged: yes
+
+
+=== unknown-area ===
+$ bin/fm-doctor.sh --area nowhere
+exit=2
+fm-doctor.sh: unknown area nowhere (known: doctor, tools, backend, config, permissions, no-mistakes, auth, supervision, fleet, memory)
+
+Home unchanged: yes
+
+
+=== missing-area ===
+$ bin/fm-doctor.sh --area
+exit=2
+fm-doctor.sh: --area needs a name
+fm-doctor.sh - check that this firstmate home is set up and working. Read-only.
+
+Usage: fm-doctor.sh [--json] [--area <name>] [--network]
+  --json         full structured output (default is TOON)
+  --area <name>  run one area from docs/doctor-checks.json
+  --network      add a fresh GitHub auth probe and the last network report
+Exit:  0 no check failed; 1 a check failed; 2 usage error.
+Full contract: the header of bin/fm-doctor.sh.
+
+Home unchanged: yes
+
+
+=== default-toon ===
+$ bin/fm-doctor.sh 
+exit=0
+home: ~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home
+verdict: warn
+summary: "0 fail, 6 warn, 17 ok, 1 info, 9 skip"
+checks[33]{id,status,evidence}:
+  doctor/jq,ok,jq on PATH
+  doctor/inventory,ok,29 checks valid
+  doctor/bootstrap,ok,"finished, exit 0"
+  doctor/unmapped-line,ok,every bootstrap line is mapped
+  tools/missing,ok,none reported
+  tools/missing-manual,ok,none reported
+  tools/presentation,ok,none reported
+  tools/provenance,warn,"TOOL_PROVENANCE: jq resolves to /usr/bin/jq, not the pinned /unavailable/pinned-build/; a reinstall may have replaced the pinned build - restore it, or remove the pin once the upstream release carr..."
+  backend/invalid,ok,none reported
+  backend/herdr-launcher,ok,none reported
+  config/crew-dispatch,ok,none reported
+  config/startup-memory-budget,skip,printed only by the locked session-start sweep; read the session-start digest
+  config/relay,skip,printed only by the locked session-start sweep; read the session-start digest
+  permissions/claude-fm-scripts,warn,"CLAUDE_PERMISSIONS: Claude auto mode is on (~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/.claude/settings.json) but no Bash(...bin/fm-*...) allow rule..."
+  no-mistakes/agents,warn,"NO_MISTAKES_AGENTS: ~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/nm/config.yaml agent: lists definitely-absent-doctor-agent, but definitely-absent-doc..."
+  auth/github,skip,network check; run fm-doctor.sh --network
+  fleet/tangle,ok,none reported
+  fleet/backlog-reconcile,ok,none reported
+  fleet/home-summary,ok,none reported
+  fleet/secondmate-handoff,ok,none reported
+  fleet/info,ok,none reported
+  fleet/sync,skip,network check; run fm-doctor.sh --network
+  fleet/secondmate-sync,skip,network check; run fm-doctor.sh --network
+  fleet/secondmate-liveness,skip,network check; run fm-doctor.sh --network
+  fleet/secondmate-nudge,skip,network check; run fm-doctor.sh --network
+  fleet/config-reread,skip,network check; run fm-doctor.sh --network
+  supervision/network-checks,skip,network check; run fm-doctor.sh --network
+  supervision/ready,warn,can_receive=false lock.state=free wake_consumer.state=unknown
+  supervision/startup-network,info,not started - no deferred network checks have run for this home yet.
+  config/role,ok,"fm-role: user (default)"
+  config/harness,ok,claude
+  config/crew-harness,warn,bogus
+  memory/budget,warn,estimator=ceil(UTF-8 bytes / 3) conservative-local-estimate
+findings[6]{id,fix}:
+  tools/provenance,"Restore the pinned build named in config/tool-provenance (a plain reinstall replaced it), or drop the pin once the upstream release carries the change."
+  permissions/claude-fm-scripts,Give the captain the exact allow rule the line names for the home's .claude/settings.local.json; a present rule does not prove auto mode honors it.
+  no-mistakes/agents,"Install the named agent or remove it from the agent: list (ask the captain before editing their no-mistakes config); confirm with no-mistakes doctor."
+  supervision/ready,Start or resume a firstmate session for this home and keep its supervision cycle live.
+  config/crew-harness,"Set config/crew-harness to a verified adapter, or leave it absent to use this session's harness."
+  memory/budget,An absent budget is written at the next locked session start; correct a malformed config/startup-memory-budget by hand.
+help[3]: Apply each fix through its owner command; never edit captain-owned files to clear a finding,Run fm-doctor.sh --network to add the GitHub auth probe and the last network report,Run fm-doctor.sh --json for every evidence line
+
+Home unchanged: yes
+
+
+=== default-json ===
+$ bin/fm-doctor.sh --json
+exit=0
+{
+  "schema": "fm-doctor.v1",
+  "home": "~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home",
+  "area": null,
+  "verdict": "warn",
+  "counts": {
+    "ok": 17,
+    "warn": 6,
+    "fail": 0,
+    "info": 1,
+    "skip": 9
+  },
+  "checks": [
+    {
+      "id": "doctor/jq",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "jq on PATH",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Install jq; the doctor needs it to read its inventory."
+    },
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "29 checks valid",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json."
+    },
+    {
+      "id": "doctor/bootstrap",
+      "area": "doctor",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Rerun bin/fm-bootstrap.sh by hand to see why it did not finish.",
+      "detail": [],
+      "status": "ok",
+      "evidence": "finished, exit 0"
+    },
+    {
+      "id": "doctor/unmapped-line",
+      "area": "doctor",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Map the new prefix in docs/doctor-checks.json and handle it in the bootstrap-diagnostics skill.",
+      "status": "ok",
+      "evidence": "every bootstrap line is mapped"
+    },
+    {
+      "id": "tools/missing",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Ask the captain, then run bin/fm-bootstrap.sh install <tool> (the line names the install command).",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "tools/missing-manual",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Give the captain the printed instructions URL; never pass the tool to bin/fm-bootstrap.sh install.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "tools/presentation",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Work in plain text; install or upgrade lavish-axi with captain consent before using Lavish.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "tools/provenance",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Restore the pinned build named in config/tool-provenance (a plain reinstall replaced it), or drop the pin once the upstream release carries the change.",
+      "status": "warn",
+      "evidence": "TOOL_PROVENANCE: jq resolves to /usr/bin/jq, not the pinned /unavailable/pinned-build/; a reinstall may have replaced the pinned build - restore it, or remove the pin once the upstream release carr...",
+      "detail": [
+        "TOOL_PROVENANCE: jq resolves to /usr/bin/jq, not the pinned /unavailable/pinned-build/; a reinstall may have replaced the pinned build - restore it, or remove the pin once the upstream release carries what it needs"
+      ]
+    },
+    {
+      "id": "backend/invalid",
+      "area": "backend",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Correct config/backend or FM_BACKEND to one of the listed backends before dispatching.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "backend/herdr-launcher",
+      "area": "backend",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Find the live pane with herdr pane list --workspace <workspace> and pass corrected HERDR_PANE_ID, HERDR_WORKSPACE_ID, and HERDR_TAB_ID on the spawn command line, or relaunch the primary inside herdr.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "config/crew-dispatch",
+      "area": "config",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Fix the named problem in config/crew-dispatch.json; do not dispatch by profile until it validates.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "config/startup-memory-budget",
+      "area": "config",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Correct config/startup-memory-budget; the memory/budget check reads it on demand.",
+      "status": "skip",
+      "evidence": "printed only by the locked session-start sweep; read the session-start digest"
+    },
+    {
+      "id": "config/relay",
+      "area": "config",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "No action; restart the watcher only when a cadence change must apply immediately.",
+      "status": "skip",
+      "evidence": "printed only by the locked session-start sweep; read the session-start digest"
+    },
+    {
+      "id": "permissions/claude-fm-scripts",
+      "area": "permissions",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Give the captain the exact allow rule the line names for the home's .claude/settings.local.json; a present rule does not prove auto mode honors it.",
+      "status": "warn",
+      "evidence": "CLAUDE_PERMISSIONS: Claude auto mode is on (~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/.claude/settings.json) but no Bash(...bin/fm-*...) allow rule...",
+      "detail": [
+        "CLAUDE_PERMISSIONS: Claude auto mode is on (~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/.claude/settings.json) but no Bash(...bin/fm-*...) allow rule is in any Claude settings layer, so the auto-mode classifier may refuse firstmate's own scripts - add Bash(~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/bin/fm-*:*) to ~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/.claude/settings.local.json (a present rule does not prove the classifier honors it)"
+      ]
+    },
+    {
+      "id": "no-mistakes/agents",
+      "area": "no-mistakes",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Install the named agent or remove it from the agent: list (ask the captain before editing their no-mistakes config); confirm with no-mistakes doctor.",
+      "status": "warn",
+      "evidence": "NO_MISTAKES_AGENTS: ~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/nm/config.yaml agent: lists definitely-absent-doctor-agent, but definitely-absent-doc...",
+      "detail": [
+        "NO_MISTAKES_AGENTS: ~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/nm/config.yaml agent: lists definitely-absent-doctor-agent, but definitely-absent-doctor-agent is not installed; no-mistakes silently skips a missing fallback agent - install it or drop it from the list (no-mistakes doctor is the authoritative view)"
+      ]
+    },
+    {
+      "id": "auth/github",
+      "area": "auth",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Confirm the network is reachable, then ask the captain to run: ! gh auth login",
+      "status": "skip",
+      "evidence": "network check; run fm-doctor.sh --network"
+    },
+    {
+      "id": "fleet/tangle",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "The session holding the fleet lock restores the primary to its default branch as the line says.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "fleet/backlog-reconcile",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Follow the bootstrap-diagnostics skill for the named variant; never delete backlog-close records by hand.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "fleet/home-summary",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Reproduce with bin/fm-home-summary-refresh.sh (no --best-effort) and fix the reported failure.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "fleet/secondmate-handoff",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Keep the outbox; rerun bin/fm-backlog-handoff.sh --resume-pending once the route is fixed.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "fleet/info",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "No action unless the fact says an interrupted cleanup may have left an endpoint or local copy.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "fleet/sync",
+      "area": "fleet",
+      "owner": "bin/fm-fleet-sync.sh",
+      "fix": "A STUCK clone needs hands-on attention; a skip is one-off unless it names the registry entry.",
+      "status": "skip",
+      "evidence": "network check; run fm-doctor.sh --network"
+    },
+    {
+      "id": "fleet/secondmate-sync",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Inspect the reason; the second mate's instructions or inherited settings may be stale.",
+      "status": "skip",
+      "evidence": "network check; run fm-doctor.sh --network"
+    },
+    {
+      "id": "fleet/secondmate-liveness",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Investigate the reason; the second mate is not guaranteed to be running.",
+      "status": "skip",
+      "evidence": "network check; run fm-doctor.sh --network"
+    },
+    {
+      "id": "fleet/secondmate-nudge",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Keep the pending marker; fix the endpoint and rerun session start to retry the re-read nudge.",
+      "status": "skip",
+      "evidence": "network check; run fm-doctor.sh --network"
+    },
+    {
+      "id": "fleet/config-reread",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Keep the retry records; fix the named problem and rerun session start to resend the re-read instruction.",
+      "status": "skip",
+      "evidence": "network check; run fm-doctor.sh --network"
+    },
+    {
+      "id": "supervision/network-checks",
+      "area": "supervision",
+      "owner": "bin/fm-startup-network.sh",
+      "fix": "Rerun the command the line prints; the named checks are unknown, not failed.",
+      "status": "skip",
+      "evidence": "network check; run fm-doctor.sh --network"
+    },
+    {
+      "id": "supervision/ready",
+      "area": "supervision",
+      "owner": "bin/fm-inbox.sh",
+      "fix": "Start or resume a firstmate session for this home and keep its supervision cycle live.",
+      "status": "warn",
+      "evidence": "can_receive=false lock.state=free wake_consumer.state=unknown",
+      "detail": [
+        "{\"schema\":\"fm-primary-ready.v1\",\"home\":\".doctor-live/home\",\"observed_at\":\"2026-10-18T07:53:23Z\",\"lock\":{\"state\":\"free\",\"pid\":null,\"live_harness\":false},\"wake_consumer\":{\"state\":\"unknown\",\"reason\":\"supervision-model-unknown-for-home\",\"beacon_age_seconds\":null},\"posture\":{\"state\":\"present\"},\"can_receive\":false}"
+      ]
+    },
+    {
+      "id": "supervision/startup-network",
+      "area": "supervision",
+      "owner": "bin/fm-startup-network.sh",
+      "fix": "Read bin/fm-startup-network.sh report and rerun the command it names.",
+      "status": "info",
+      "evidence": "not started - no deferred network checks have run for this home yet.",
+      "detail": [
+        "not started - no deferred network checks have run for this home yet."
+      ]
+    },
+    {
+      "id": "config/role",
+      "area": "config",
+      "owner": "bin/fm-role.sh",
+      "fix": "Correct config/firstmate-role as docs/configuration.md \"Firstmate role\" describes.",
+      "status": "ok",
+      "evidence": "fm-role: user (default)",
+      "detail": [
+        "fm-role: user (default)"
+      ]
+    },
+    {
+      "id": "config/harness",
+      "area": "config",
+      "owner": "bin/fm-harness.sh",
+      "fix": "Run the doctor from inside the firstmate session's own agent so its harness can be detected.",
+      "status": "ok",
+      "evidence": "claude",
+      "detail": [
+        "claude"
+      ]
+    },
+    {
+      "id": "config/crew-harness",
+      "area": "config",
+      "owner": "bin/fm-harness.sh",
+      "fix": "Set config/crew-harness to a verified adapter, or leave it absent to use this session's harness.",
+      "status": "warn",
+      "evidence": "bogus",
+      "detail": [
+        "bogus"
+      ]
+    },
+    {
+      "id": "memory/budget",
+      "area": "memory",
+      "owner": "bin/fm-startup-memory-budget.sh",
+      "fix": "An absent budget is written at the next locked session start; correct a malformed config/startup-memory-budget by hand.",
+      "status": "warn",
+      "evidence": "estimator=ceil(UTF-8 bytes / 3) conservative-local-estimate",
+      "detail": [
+        "estimator=ceil(UTF-8 bytes / 3) conservative-local-estimate",
+        "role=primary",
+        "effective_budget_tokens=1",
+        "file=data/captain.md bytes=0 estimated_tokens=0 status=absent",
+        "file=data/captain-shared.md bytes=31 estimated_tokens=11 status=present",
+        "file=data/learnings.md bytes=0 estimated_tokens=0 status=absent",
+        "total_estimated_tokens=11",
+        "budget_status=over-budget"
+      ]
+    }
+  ]
+}
+
+Home unchanged: yes
+
+
+=== network-done ===
+$ bin/fm-doctor.sh --json --network
+exit=1
+{
+  "schema": "fm-doctor.v1",
+  "home": "~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home",
+  "area": null,
+  "verdict": "fail",
+  "counts": {
+    "ok": 25,
+    "warn": 7,
+    "fail": 1,
+    "info": 0,
+    "skip": 2
+  },
+  "checks": [
+    {
+      "id": "doctor/jq",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "jq on PATH",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Install jq; the doctor needs it to read its inventory."
+    },
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "29 checks valid",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json."
+    },
+    {
+      "id": "doctor/bootstrap-network",
+      "area": "doctor",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Rerun bin/fm-bootstrap.sh by hand to see why it did not finish.",
+      "detail": [],
+      "status": "ok",
+      "evidence": "finished, exit 0"
+    },
+    {
+      "id": "doctor/bootstrap",
+      "area": "doctor",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Rerun bin/fm-bootstrap.sh by hand to see why it did not finish.",
+      "detail": [],
+      "status": "ok",
+      "evidence": "finished, exit 0"
+    },
+    {
+      "id": "doctor/startup-network-report",
+      "area": "doctor",
+      "owner": "bin/fm-startup-network.sh",
+      "fix": "Rerun bin/fm-startup-network.sh by hand to see why it did not finish.",
+      "detail": [],
+      "status": "ok",
+      "evidence": "finished, exit 0"
+    },
+    {
+      "id": "doctor/unmapped-line",
+      "area": "doctor",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Map the new prefix in docs/doctor-checks.json and handle it in the bootstrap-diagnostics skill.",
+      "status": "ok",
+      "evidence": "every bootstrap line is mapped"
+    },
+    {
+      "id": "tools/missing",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Ask the captain, then run bin/fm-bootstrap.sh install <tool> (the line names the install command).",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "tools/missing-manual",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Give the captain the printed instructions URL; never pass the tool to bin/fm-bootstrap.sh install.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "tools/presentation",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Work in plain text; install or upgrade lavish-axi with captain consent before using Lavish.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "tools/provenance",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Restore the pinned build named in config/tool-provenance (a plain reinstall replaced it), or drop the pin once the upstream release carries the change.",
+      "status": "warn",
+      "evidence": "TOOL_PROVENANCE: jq resolves to /usr/bin/jq, not the pinned /unavailable/pinned-build/; a reinstall may have replaced the pinned build - restore it, or remove the pin once the upstream release carr...",
+      "detail": [
+        "TOOL_PROVENANCE: jq resolves to /usr/bin/jq, not the pinned /unavailable/pinned-build/; a reinstall may have replaced the pinned build - restore it, or remove the pin once the upstream release carries what it needs"
+      ]
+    },
+    {
+      "id": "backend/invalid",
+      "area": "backend",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Correct config/backend or FM_BACKEND to one of the listed backends before dispatching.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "backend/herdr-launcher",
+      "area": "backend",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Find the live pane with herdr pane list --workspace <workspace> and pass corrected HERDR_PANE_ID, HERDR_WORKSPACE_ID, and HERDR_TAB_ID on the spawn command line, or relaunch the primary inside herdr.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "config/crew-dispatch",
+      "area": "config",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Fix the named problem in config/crew-dispatch.json; do not dispatch by profile until it validates.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "config/startup-memory-budget",
+      "area": "config",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Correct config/startup-memory-budget; the memory/budget check reads it on demand.",
+      "status": "skip",
+      "evidence": "printed only by the locked session-start sweep; read the session-start digest"
+    },
+    {
+      "id": "config/relay",
+      "area": "config",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "No action; restart the watcher only when a cadence change must apply immediately.",
+      "status": "skip",
+      "evidence": "printed only by the locked session-start sweep; read the session-start digest"
+    },
+    {
+      "id": "permissions/claude-fm-scripts",
+      "area": "permissions",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Give the captain the exact allow rule the line names for the home's .claude/settings.local.json; a present rule does not prove auto mode honors it.",
+      "status": "warn",
+      "evidence": "CLAUDE_PERMISSIONS: Claude auto mode is on (~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/.claude/settings.json) but no Bash(...bin/fm-*...) allow rule...",
+      "detail": [
+        "CLAUDE_PERMISSIONS: Claude auto mode is on (~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/.claude/settings.json) but no Bash(...bin/fm-*...) allow rule is in any Claude settings layer, so the auto-mode classifier may refuse firstmate's own scripts - add Bash(~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/bin/fm-*:*) to ~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/.claude/settings.local.json (a present rule does not prove the classifier honors it)"
+      ]
+    },
+    {
+      "id": "no-mistakes/agents",
+      "area": "no-mistakes",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Install the named agent or remove it from the agent: list (ask the captain before editing their no-mistakes config); confirm with no-mistakes doctor.",
+      "status": "warn",
+      "evidence": "NO_MISTAKES_AGENTS: ~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/nm/config.yaml agent: lists definitely-absent-doctor-agent, but definitely-absent-doc...",
+      "detail": [
+        "NO_MISTAKES_AGENTS: ~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/nm/config.yaml agent: lists definitely-absent-doctor-agent, but definitely-absent-doctor-agent is not installed; no-mistakes silently skips a missing fallback agent - install it or drop it from the list (no-mistakes doctor is the authoritative view)"
+      ]
+    },
+    {
+      "id": "auth/github",
+      "area": "auth",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Confirm the network is reachable, then ask the captain to run: ! gh auth login",
+      "status": "fail",
+      "evidence": "NEEDS_GH_AUTH",
+      "detail": [
+        "NEEDS_GH_AUTH"
+      ]
+    },
+    {
+      "id": "fleet/tangle",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "The session holding the fleet lock restores the primary to its default branch as the line says.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "fleet/backlog-reconcile",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Follow the bootstrap-diagnostics skill for the named variant; never delete backlog-close records by hand.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "fleet/home-summary",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Reproduce with bin/fm-home-summary-refresh.sh (no --best-effort) and fix the reported failure.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "fleet/secondmate-handoff",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Keep the outbox; rerun bin/fm-backlog-handoff.sh --resume-pending once the route is fixed.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "fleet/info",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "No action unless the fact says an interrupted cleanup may have left an endpoint or local copy.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "fleet/sync",
+      "area": "fleet",
+      "owner": "bin/fm-fleet-sync.sh",
+      "fix": "A STUCK clone needs hands-on attention; a skip is one-off unless it names the registry entry.",
+      "status": "warn",
+      "evidence": "FLEET_SYNC: alpha: STUCK: needs attention",
+      "detail": [
+        "FLEET_SYNC: alpha: STUCK: needs attention"
+      ]
+    },
+    {
+      "id": "fleet/secondmate-sync",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Inspect the reason; the second mate's instructions or inherited settings may be stale.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "fleet/secondmate-liveness",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Investigate the reason; the second mate is not guaranteed to be running.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "fleet/secondmate-nudge",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Keep the pending marker; fix the endpoint and rerun session start to retry the re-read nudge.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "fleet/config-reread",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Keep the retry records; fix the named problem and rerun session start to resend the re-read instruction.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "supervision/network-checks",
+      "area": "supervision",
+      "owner": "bin/fm-startup-network.sh",
+      "fix": "Rerun the command the line prints; the named checks are unknown, not failed.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "supervision/ready",
+      "area": "supervision",
+      "owner": "bin/fm-inbox.sh",
+      "fix": "Start or resume a firstmate session for this home and keep its supervision cycle live.",
+      "status": "warn",
+      "evidence": "can_receive=false lock.state=free wake_consumer.state=unknown",
+      "detail": [
+        "{\"schema\":\"fm-primary-ready.v1\",\"home\":\".doctor-live/home\",\"observed_at\":\"2026-10-18T07:53:24Z\",\"lock\":{\"state\":\"free\",\"pid\":null,\"live_harness\":false},\"wake_consumer\":{\"state\":\"unknown\",\"reason\":\"supervision-model-unknown-for-home\",\"beacon_age_seconds\":null},\"posture\":{\"state\":\"present\"},\"can_receive\":false}"
+      ]
+    },
+    {
+      "id": "supervision/startup-network",
+      "area": "supervision",
+      "owner": "bin/fm-startup-network.sh",
+      "fix": "Read bin/fm-startup-network.sh report and rerun the command it names.",
+      "status": "ok",
+      "evidence": "completed off the startup path in 5s: GitHub authentication, dead-secondmate relaunch, secondmate convergence, pending handoff delivery, project clone refresh with its drift reporting, and inactive...",
+      "detail": [
+        "completed off the startup path in 5s: GitHub authentication, dead-secondmate relaunch, secondmate convergence, pending handoff delivery, project clone refresh with its drift reporting, and inactive terminal-outcome reconciliation.",
+        "FLEET_SYNC: alpha: STUCK: needs attention",
+        "These ran AFTER the sections above were composed, so re-read any record a line here names."
+      ]
+    },
+    {
+      "id": "config/role",
+      "area": "config",
+      "owner": "bin/fm-role.sh",
+      "fix": "Correct config/firstmate-role as docs/configuration.md \"Firstmate role\" describes.",
+      "status": "ok",
+      "evidence": "fm-role: user (default)",
+      "detail": [
+        "fm-role: user (default)"
+      ]
+    },
+    {
+      "id": "config/harness",
+      "area": "config",
+      "owner": "bin/fm-harness.sh",
+      "fix": "Run the doctor from inside the firstmate session's own agent so its harness can be detected.",
+      "status": "ok",
+      "evidence": "claude",
+      "detail": [
+        "claude"
+      ]
+    },
+    {
+      "id": "config/crew-harness",
+      "area": "config",
+      "owner": "bin/fm-harness.sh",
+      "fix": "Set config/crew-harness to a verified adapter, or leave it absent to use this session's harness.",
+      "status": "warn",
+      "evidence": "bogus",
+      "detail": [
+        "bogus"
+      ]
+    },
+    {
+      "id": "memory/budget",
+      "area": "memory",
+      "owner": "bin/fm-startup-memory-budget.sh",
+      "fix": "An absent budget is written at the next locked session start; correct a malformed config/startup-memory-budget by hand.",
+      "status": "warn",
+      "evidence": "estimator=ceil(UTF-8 bytes / 3) conservative-local-estimate",
+      "detail": [
+        "estimator=ceil(UTF-8 bytes / 3) conservative-local-estimate",
+        "role=primary",
+        "effective_budget_tokens=1",
+        "file=data/captain.md bytes=0 estimated_tokens=0 status=absent",
+        "file=data/captain-shared.md bytes=31 estimated_tokens=11 status=present",
+        "file=data/learnings.md bytes=0 estimated_tokens=0 status=absent",
+        "total_estimated_tokens=11",
+        "budget_status=over-budget"
+      ]
+    }
+  ]
+}
+
+Home unchanged: yes
+
+
+=== network-timeout ===
+$ bin/fm-doctor.sh --json --network
+exit=1
+{
+  "schema": "fm-doctor.v1",
+  "home": "~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home",
+  "area": null,
+  "verdict": "fail",
+  "counts": {
+    "ok": 19,
+    "warn": 9,
+    "fail": 1,
+    "info": 0,
+    "skip": 6
+  },
+  "checks": [
+    {
+      "id": "doctor/jq",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "jq on PATH",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Install jq; the doctor needs it to read its inventory."
+    },
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "29 checks valid",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json."
+    },
+    {
+      "id": "doctor/bootstrap-network",
+      "area": "doctor",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Rerun bin/fm-bootstrap.sh by hand to see why it did not finish.",
+      "detail": [],
+      "status": "ok",
+      "evidence": "finished, exit 0"
+    },
+    {
+      "id": "doctor/bootstrap",
+      "area": "doctor",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Rerun bin/fm-bootstrap.sh by hand to see why it did not finish.",
+      "detail": [],
+      "status": "ok",
+      "evidence": "finished, exit 0"
+    },
+    {
+      "id": "doctor/startup-network-report",
+      "area": "doctor",
+      "owner": "bin/fm-startup-network.sh",
+      "fix": "Rerun bin/fm-startup-network.sh by hand to see why it did not finish.",
+      "detail": [],
+      "status": "ok",
+      "evidence": "finished, exit 0"
+    },
+    {
+      "id": "doctor/unmapped-line",
+      "area": "doctor",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Map the new prefix in docs/doctor-checks.json and handle it in the bootstrap-diagnostics skill.",
+      "status": "ok",
+      "evidence": "every bootstrap line is mapped"
+    },
+    {
+      "id": "tools/missing",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Ask the captain, then run bin/fm-bootstrap.sh install <tool> (the line names the install command).",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "tools/missing-manual",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Give the captain the printed instructions URL; never pass the tool to bin/fm-bootstrap.sh install.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "tools/presentation",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Work in plain text; install or upgrade lavish-axi with captain consent before using Lavish.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "tools/provenance",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Restore the pinned build named in config/tool-provenance (a plain reinstall replaced it), or drop the pin once the upstream release carries the change.",
+      "status": "warn",
+      "evidence": "TOOL_PROVENANCE: jq resolves to /usr/bin/jq, not the pinned /unavailable/pinned-build/; a reinstall may have replaced the pinned build - restore it, or remove the pin once the upstream release carr...",
+      "detail": [
+        "TOOL_PROVENANCE: jq resolves to /usr/bin/jq, not the pinned /unavailable/pinned-build/; a reinstall may have replaced the pinned build - restore it, or remove the pin once the upstream release carries what it needs"
+      ]
+    },
+    {
+      "id": "backend/invalid",
+      "area": "backend",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Correct config/backend or FM_BACKEND to one of the listed backends before dispatching.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "backend/herdr-launcher",
+      "area": "backend",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Find the live pane with herdr pane list --workspace <workspace> and pass corrected HERDR_PANE_ID, HERDR_WORKSPACE_ID, and HERDR_TAB_ID on the spawn command line, or relaunch the primary inside herdr.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "config/crew-dispatch",
+      "area": "config",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Fix the named problem in config/crew-dispatch.json; do not dispatch by profile until it validates.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "config/startup-memory-budget",
+      "area": "config",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Correct config/startup-memory-budget; the memory/budget check reads it on demand.",
+      "status": "skip",
+      "evidence": "printed only by the locked session-start sweep; read the session-start digest"
+    },
+    {
+      "id": "config/relay",
+      "area": "config",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "No action; restart the watcher only when a cadence change must apply immediately.",
+      "status": "skip",
+      "evidence": "printed only by the locked session-start sweep; read the session-start digest"
+    },
+    {
+      "id": "permissions/claude-fm-scripts",
+      "area": "permissions",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Give the captain the exact allow rule the line names for the home's .claude/settings.local.json; a present rule does not prove auto mode honors it.",
+      "status": "warn",
+      "evidence": "CLAUDE_PERMISSIONS: Claude auto mode is on (~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/.claude/settings.json) but no Bash(...bin/fm-*...) allow rule...",
+      "detail": [
+        "CLAUDE_PERMISSIONS: Claude auto mode is on (~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/.claude/settings.json) but no Bash(...bin/fm-*...) allow rule is in any Claude settings layer, so the auto-mode classifier may refuse firstmate's own scripts - add Bash(~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/bin/fm-*:*) to ~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/.claude/settings.local.json (a present rule does not prove the classifier honors it)"
+      ]
+    },
+    {
+      "id": "no-mistakes/agents",
+      "area": "no-mistakes",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Install the named agent or remove it from the agent: list (ask the captain before editing their no-mistakes config); confirm with no-mistakes doctor.",
+      "status": "warn",
+      "evidence": "NO_MISTAKES_AGENTS: ~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/nm/config.yaml agent: lists definitely-absent-doctor-agent, but definitely-absent-doc...",
+      "detail": [
+        "NO_MISTAKES_AGENTS: ~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/nm/config.yaml agent: lists definitely-absent-doctor-agent, but definitely-absent-doctor-agent is not installed; no-mistakes silently skips a missing fallback agent - install it or drop it from the list (no-mistakes doctor is the authoritative view)"
+      ]
+    },
+    {
+      "id": "auth/github",
+      "area": "auth",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Confirm the network is reachable, then ask the captain to run: ! gh auth login",
+      "status": "fail",
+      "evidence": "NEEDS_GH_AUTH",
+      "detail": [
+        "NEEDS_GH_AUTH"
+      ]
+    },
+    {
+      "id": "fleet/tangle",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "The session holding the fleet lock restores the primary to its default branch as the line says.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "fleet/backlog-reconcile",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Follow the bootstrap-diagnostics skill for the named variant; never delete backlog-close records by hand.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "fleet/home-summary",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Reproduce with bin/fm-home-summary-refresh.sh (no --best-effort) and fix the reported failure.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "fleet/secondmate-handoff",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Keep the outbox; rerun bin/fm-backlog-handoff.sh --resume-pending once the route is fixed.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "fleet/info",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "No action unless the fact says an interrupted cleanup may have left an endpoint or local copy.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "fleet/sync",
+      "area": "fleet",
+      "owner": "bin/fm-fleet-sync.sh",
+      "fix": "A STUCK clone needs hands-on attention; a skip is one-off unless it names the registry entry.",
+      "status": "warn",
+      "evidence": "FLEET_SYNC: alpha: STUCK: needs attention",
+      "detail": [
+        "FLEET_SYNC: alpha: STUCK: needs attention"
+      ]
+    },
+    {
+      "id": "fleet/secondmate-sync",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Inspect the reason; the second mate's instructions or inherited settings may be stale.",
+      "status": "skip",
+      "evidence": "no finished network report covers this check: completed off the startup path in 5s: GitHub authentication, dead-secondmate relaunch, secondmate convergence, pending handoff delivery, project clone refresh with its drift reporting, and inactive..."
+    },
+    {
+      "id": "fleet/secondmate-liveness",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Investigate the reason; the second mate is not guaranteed to be running.",
+      "status": "skip",
+      "evidence": "no finished network report covers this check: completed off the startup path in 5s: GitHub authentication, dead-secondmate relaunch, secondmate convergence, pending handoff delivery, project clone refresh with its drift reporting, and inactive..."
+    },
+    {
+      "id": "fleet/secondmate-nudge",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Keep the pending marker; fix the endpoint and rerun session start to retry the re-read nudge.",
+      "status": "skip",
+      "evidence": "no finished network report covers this check: completed off the startup path in 5s: GitHub authentication, dead-secondmate relaunch, secondmate convergence, pending handoff delivery, project clone refresh with its drift reporting, and inactive..."
+    },
+    {
+      "id": "fleet/config-reread",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Keep the retry records; fix the named problem and rerun session start to resend the re-read instruction.",
+      "status": "skip",
+      "evidence": "no finished network report covers this check: completed off the startup path in 5s: GitHub authentication, dead-secondmate relaunch, secondmate convergence, pending handoff delivery, project clone refresh with its drift reporting, and inactive..."
+    },
+    {
+      "id": "supervision/network-checks",
+      "area": "supervision",
+      "owner": "bin/fm-startup-network.sh",
+      "fix": "Rerun the command the line prints; the named checks are unknown, not failed.",
+      "status": "warn",
+      "evidence": "NETWORK_CHECKS: the deferred checks may be incomplete",
+      "detail": [
+        "NETWORK_CHECKS: the deferred checks may be incomplete"
+      ]
+    },
+    {
+      "id": "supervision/ready",
+      "area": "supervision",
+      "owner": "bin/fm-inbox.sh",
+      "fix": "Start or resume a firstmate session for this home and keep its supervision cycle live.",
+      "status": "warn",
+      "evidence": "can_receive=false lock.state=free wake_consumer.state=unknown",
+      "detail": [
+        "{\"schema\":\"fm-primary-ready.v1\",\"home\":\".doctor-live/home\",\"observed_at\":\"2026-10-18T07:53:25Z\",\"lock\":{\"state\":\"free\",\"pid\":null,\"live_harness\":false},\"wake_consumer\":{\"state\":\"unknown\",\"reason\":\"supervision-model-unknown-for-home\",\"beacon_age_seconds\":null},\"posture\":{\"state\":\"present\"},\"can_receive\":false}"
+      ]
+    },
+    {
+      "id": "supervision/startup-network",
+      "area": "supervision",
+      "owner": "bin/fm-startup-network.sh",
+      "fix": "Read bin/fm-startup-network.sh report and rerun the command it names.",
+      "status": "warn",
+      "evidence": "completed off the startup path in 5s: GitHub authentication, dead-secondmate relaunch, secondmate convergence, pending handoff delivery, project clone refresh with its drift reporting, and inactive...",
+      "detail": [
+        "completed off the startup path in 5s: GitHub authentication, dead-secondmate relaunch, secondmate convergence, pending handoff delivery, project clone refresh with its drift reporting, and inactive terminal-outcome reconciliation.",
+        "The stage itself did not finish cleanly (timeout) - the NETWORK_CHECKS line below names what to rerun.",
+        "FLEET_SYNC: alpha: STUCK: needs attention",
+        "NETWORK_CHECKS: the deferred checks may be incomplete",
+        "These ran AFTER the sections above were composed, so re-read any record a line here names."
+      ]
+    },
+    {
+      "id": "config/role",
+      "area": "config",
+      "owner": "bin/fm-role.sh",
+      "fix": "Correct config/firstmate-role as docs/configuration.md \"Firstmate role\" describes.",
+      "status": "ok",
+      "evidence": "fm-role: user (default)",
+      "detail": [
+        "fm-role: user (default)"
+      ]
+    },
+    {
+      "id": "config/harness",
+      "area": "config",
+      "owner": "bin/fm-harness.sh",
+      "fix": "Run the doctor from inside the firstmate session's own agent so its harness can be detected.",
+      "status": "ok",
+      "evidence": "claude",
+      "detail": [
+        "claude"
+      ]
+    },
+    {
+      "id": "config/crew-harness",
+      "area": "config",
+      "owner": "bin/fm-harness.sh",
+      "fix": "Set config/crew-harness to a verified adapter, or leave it absent to use this session's harness.",
+      "status": "warn",
+      "evidence": "bogus",
+      "detail": [
+        "bogus"
+      ]
+    },
+    {
+      "id": "memory/budget",
+      "area": "memory",
+      "owner": "bin/fm-startup-memory-budget.sh",
+      "fix": "An absent budget is written at the next locked session start; correct a malformed config/startup-memory-budget by hand.",
+      "status": "warn",
+      "evidence": "estimator=ceil(UTF-8 bytes / 3) conservative-local-estimate",
+      "detail": [
+        "estimator=ceil(UTF-8 bytes / 3) conservative-local-estimate",
+        "role=primary",
+        "effective_budget_tokens=1",
+        "file=data/captain.md bytes=0 estimated_tokens=0 status=absent",
+        "file=data/captain-shared.md bytes=31 estimated_tokens=11 status=present",
+        "file=data/learnings.md bytes=0 estimated_tokens=0 status=absent",
+        "total_estimated_tokens=11",
+        "budget_status=over-budget"
+      ]
+    }
+  ]
+}
+
+Home unchanged: yes
+
+
+=== network-failed ===
+$ bin/fm-doctor.sh --json --network
+exit=1
+{
+  "schema": "fm-doctor.v1",
+  "home": "~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home",
+  "area": null,
+  "verdict": "fail",
+  "counts": {
+    "ok": 19,
+    "warn": 9,
+    "fail": 1,
+    "info": 0,
+    "skip": 6
+  },
+  "checks": [
+    {
+      "id": "doctor/jq",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "jq on PATH",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Install jq; the doctor needs it to read its inventory."
+    },
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "29 checks valid",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json."
+    },
+    {
+      "id": "doctor/bootstrap-network",
+      "area": "doctor",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Rerun bin/fm-bootstrap.sh by hand to see why it did not finish.",
+      "detail": [],
+      "status": "ok",
+      "evidence": "finished, exit 0"
+    },
+    {
+      "id": "doctor/bootstrap",
+      "area": "doctor",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Rerun bin/fm-bootstrap.sh by hand to see why it did not finish.",
+      "detail": [],
+      "status": "ok",
+      "evidence": "finished, exit 0"
+    },
+    {
+      "id": "doctor/startup-network-report",
+      "area": "doctor",
+      "owner": "bin/fm-startup-network.sh",
+      "fix": "Rerun bin/fm-startup-network.sh by hand to see why it did not finish.",
+      "detail": [],
+      "status": "ok",
+      "evidence": "finished, exit 0"
+    },
+    {
+      "id": "doctor/unmapped-line",
+      "area": "doctor",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Map the new prefix in docs/doctor-checks.json and handle it in the bootstrap-diagnostics skill.",
+      "status": "ok",
+      "evidence": "every bootstrap line is mapped"
+    },
+    {
+      "id": "tools/missing",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Ask the captain, then run bin/fm-bootstrap.sh install <tool> (the line names the install command).",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "tools/missing-manual",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Give the captain the printed instructions URL; never pass the tool to bin/fm-bootstrap.sh install.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "tools/presentation",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Work in plain text; install or upgrade lavish-axi with captain consent before using Lavish.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "tools/provenance",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Restore the pinned build named in config/tool-provenance (a plain reinstall replaced it), or drop the pin once the upstream release carries the change.",
+      "status": "warn",
+      "evidence": "TOOL_PROVENANCE: jq resolves to /usr/bin/jq, not the pinned /unavailable/pinned-build/; a reinstall may have replaced the pinned build - restore it, or remove the pin once the upstream release carr...",
+      "detail": [
+        "TOOL_PROVENANCE: jq resolves to /usr/bin/jq, not the pinned /unavailable/pinned-build/; a reinstall may have replaced the pinned build - restore it, or remove the pin once the upstream release carries what it needs"
+      ]
+    },
+    {
+      "id": "backend/invalid",
+      "area": "backend",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Correct config/backend or FM_BACKEND to one of the listed backends before dispatching.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "backend/herdr-launcher",
+      "area": "backend",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Find the live pane with herdr pane list --workspace <workspace> and pass corrected HERDR_PANE_ID, HERDR_WORKSPACE_ID, and HERDR_TAB_ID on the spawn command line, or relaunch the primary inside herdr.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "config/crew-dispatch",
+      "area": "config",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Fix the named problem in config/crew-dispatch.json; do not dispatch by profile until it validates.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "config/startup-memory-budget",
+      "area": "config",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Correct config/startup-memory-budget; the memory/budget check reads it on demand.",
+      "status": "skip",
+      "evidence": "printed only by the locked session-start sweep; read the session-start digest"
+    },
+    {
+      "id": "config/relay",
+      "area": "config",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "No action; restart the watcher only when a cadence change must apply immediately.",
+      "status": "skip",
+      "evidence": "printed only by the locked session-start sweep; read the session-start digest"
+    },
+    {
+      "id": "permissions/claude-fm-scripts",
+      "area": "permissions",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Give the captain the exact allow rule the line names for the home's .claude/settings.local.json; a present rule does not prove auto mode honors it.",
+      "status": "warn",
+      "evidence": "CLAUDE_PERMISSIONS: Claude auto mode is on (~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/.claude/settings.json) but no Bash(...bin/fm-*...) allow rule...",
+      "detail": [
+        "CLAUDE_PERMISSIONS: Claude auto mode is on (~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/.claude/settings.json) but no Bash(...bin/fm-*...) allow rule is in any Claude settings layer, so the auto-mode classifier may refuse firstmate's own scripts - add Bash(~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/bin/fm-*:*) to ~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/.claude/settings.local.json (a present rule does not prove the classifier honors it)"
+      ]
+    },
+    {
+      "id": "no-mistakes/agents",
+      "area": "no-mistakes",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Install the named agent or remove it from the agent: list (ask the captain before editing their no-mistakes config); confirm with no-mistakes doctor.",
+      "status": "warn",
+      "evidence": "NO_MISTAKES_AGENTS: ~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/nm/config.yaml agent: lists definitely-absent-doctor-agent, but definitely-absent-doc...",
+      "detail": [
+        "NO_MISTAKES_AGENTS: ~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home/nm/config.yaml agent: lists definitely-absent-doctor-agent, but definitely-absent-doctor-agent is not installed; no-mistakes silently skips a missing fallback agent - install it or drop it from the list (no-mistakes doctor is the authoritative view)"
+      ]
+    },
+    {
+      "id": "auth/github",
+      "area": "auth",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Confirm the network is reachable, then ask the captain to run: ! gh auth login",
+      "status": "fail",
+      "evidence": "NEEDS_GH_AUTH",
+      "detail": [
+        "NEEDS_GH_AUTH"
+      ]
+    },
+    {
+      "id": "fleet/tangle",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "The session holding the fleet lock restores the primary to its default branch as the line says.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "fleet/backlog-reconcile",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Follow the bootstrap-diagnostics skill for the named variant; never delete backlog-close records by hand.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "fleet/home-summary",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Reproduce with bin/fm-home-summary-refresh.sh (no --best-effort) and fix the reported failure.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "fleet/secondmate-handoff",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Keep the outbox; rerun bin/fm-backlog-handoff.sh --resume-pending once the route is fixed.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "fleet/info",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "No action unless the fact says an interrupted cleanup may have left an endpoint or local copy.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "fleet/sync",
+      "area": "fleet",
+      "owner": "bin/fm-fleet-sync.sh",
+      "fix": "A STUCK clone needs hands-on attention; a skip is one-off unless it names the registry entry.",
+      "status": "warn",
+      "evidence": "FLEET_SYNC: alpha: STUCK: needs attention",
+      "detail": [
+        "FLEET_SYNC: alpha: STUCK: needs attention"
+      ]
+    },
+    {
+      "id": "fleet/secondmate-sync",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Inspect the reason; the second mate's instructions or inherited settings may be stale.",
+      "status": "skip",
+      "evidence": "no finished network report covers this check: completed off the startup path in 5s: GitHub authentication, dead-secondmate relaunch, secondmate convergence, pending handoff delivery, project clone refresh with its drift reporting, and inactive..."
+    },
+    {
+      "id": "fleet/secondmate-liveness",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Investigate the reason; the second mate is not guaranteed to be running.",
+      "status": "skip",
+      "evidence": "no finished network report covers this check: completed off the startup path in 5s: GitHub authentication, dead-secondmate relaunch, secondmate convergence, pending handoff delivery, project clone refresh with its drift reporting, and inactive..."
+    },
+    {
+      "id": "fleet/secondmate-nudge",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Keep the pending marker; fix the endpoint and rerun session start to retry the re-read nudge.",
+      "status": "skip",
+      "evidence": "no finished network report covers this check: completed off the startup path in 5s: GitHub authentication, dead-secondmate relaunch, secondmate convergence, pending handoff delivery, project clone refresh with its drift reporting, and inactive..."
+    },
+    {
+      "id": "fleet/config-reread",
+      "area": "fleet",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Keep the retry records; fix the named problem and rerun session start to resend the re-read instruction.",
+      "status": "skip",
+      "evidence": "no finished network report covers this check: completed off the startup path in 5s: GitHub authentication, dead-secondmate relaunch, secondmate convergence, pending handoff delivery, project clone refresh with its drift reporting, and inactive..."
+    },
+    {
+      "id": "supervision/network-checks",
+      "area": "supervision",
+      "owner": "bin/fm-startup-network.sh",
+      "fix": "Rerun the command the line prints; the named checks are unknown, not failed.",
+      "status": "warn",
+      "evidence": "NETWORK_CHECKS: the deferred checks may be incomplete",
+      "detail": [
+        "NETWORK_CHECKS: the deferred checks may be incomplete"
+      ]
+    },
+    {
+      "id": "supervision/ready",
+      "area": "supervision",
+      "owner": "bin/fm-inbox.sh",
+      "fix": "Start or resume a firstmate session for this home and keep its supervision cycle live.",
+      "status": "warn",
+      "evidence": "can_receive=false lock.state=free wake_consumer.state=unknown",
+      "detail": [
+        "{\"schema\":\"fm-primary-ready.v1\",\"home\":\".doctor-live/home\",\"observed_at\":\"2026-10-18T07:53:26Z\",\"lock\":{\"state\":\"free\",\"pid\":null,\"live_harness\":false},\"wake_consumer\":{\"state\":\"unknown\",\"reason\":\"supervision-model-unknown-for-home\",\"beacon_age_seconds\":null},\"posture\":{\"state\":\"present\"},\"can_receive\":false}"
+      ]
+    },
+    {
+      "id": "supervision/startup-network",
+      "area": "supervision",
+      "owner": "bin/fm-startup-network.sh",
+      "fix": "Read bin/fm-startup-network.sh report and rerun the command it names.",
+      "status": "warn",
+      "evidence": "completed off the startup path in 5s: GitHub authentication, dead-secondmate relaunch, secondmate convergence, pending handoff delivery, project clone refresh with its drift reporting, and inactive...",
+      "detail": [
+        "completed off the startup path in 5s: GitHub authentication, dead-secondmate relaunch, secondmate convergence, pending handoff delivery, project clone refresh with its drift reporting, and inactive terminal-outcome reconciliation.",
+        "The stage itself did not finish cleanly (failed) - the NETWORK_CHECKS line below names what to rerun.",
+        "FLEET_SYNC: alpha: STUCK: needs attention",
+        "NETWORK_CHECKS: the deferred checks may be incomplete",
+        "These ran AFTER the sections above were composed, so re-read any record a line here names."
+      ]
+    },
+    {
+      "id": "config/role",
+      "area": "config",
+      "owner": "bin/fm-role.sh",
+      "fix": "Correct config/firstmate-role as docs/configuration.md \"Firstmate role\" describes.",
+      "status": "ok",
+      "evidence": "fm-role: user (default)",
+      "detail": [
+        "fm-role: user (default)"
+      ]
+    },
+    {
+      "id": "config/harness",
+      "area": "config",
+      "owner": "bin/fm-harness.sh",
+      "fix": "Run the doctor from inside the firstmate session's own agent so its harness can be detected.",
+      "status": "ok",
+      "evidence": "claude",
+      "detail": [
+        "claude"
+      ]
+    },
+    {
+      "id": "config/crew-harness",
+      "area": "config",
+      "owner": "bin/fm-harness.sh",
+      "fix": "Set config/crew-harness to a verified adapter, or leave it absent to use this session's harness.",
+      "status": "warn",
+      "evidence": "bogus",
+      "detail": [
+        "bogus"
+      ]
+    },
+    {
+      "id": "memory/budget",
+      "area": "memory",
+      "owner": "bin/fm-startup-memory-budget.sh",
+      "fix": "An absent budget is written at the next locked session start; correct a malformed config/startup-memory-budget by hand.",
+      "status": "warn",
+      "evidence": "estimator=ceil(UTF-8 bytes / 3) conservative-local-estimate",
+      "detail": [
+        "estimator=ceil(UTF-8 bytes / 3) conservative-local-estimate",
+        "role=primary",
+        "effective_budget_tokens=1",
+        "file=data/captain.md bytes=0 estimated_tokens=0 status=absent",
+        "file=data/captain-shared.md bytes=31 estimated_tokens=11 status=present",
+        "file=data/learnings.md bytes=0 estimated_tokens=0 status=absent",
+        "total_estimated_tokens=11",
+        "budget_status=over-budget"
+      ]
+    }
+  ]
+}
+
+Home unchanged: yes
+
+
+=== invalid-inventory ===
+exit=1
+{
+  "schema": "fm-doctor.v1",
+  "home": "~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/guard-home",
+  "area": null,
+  "verdict": "fail",
+  "counts": {
+    "ok": 1,
+    "warn": 0,
+    "fail": 1,
+    "info": 0,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "doctor/jq",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "jq on PATH",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Install jq; the doctor needs it to read its inventory."
+    },
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "fail",
+      "evidence": "duplicate check id tools/missing (+1 more)",
+      "detail": [
+        "duplicate check id tools/missing",
+        "prefix MISSING is mapped by more than one check"
+      ],
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json; every other check is unknown until it validates."
+    }
+  ]
+}
+
+
+=== herdr-doctor-valid ===
+exit=0
+{
+  "schema": "fm-doctor.v1",
+  "home": "~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/herdr-home",
+  "area": "backend",
+  "verdict": "ok",
+  "counts": {
+    "ok": 3,
+    "warn": 0,
+    "fail": 0,
+    "info": 0,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "29 checks valid",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json."
+    },
+    {
+      "id": "backend/invalid",
+      "area": "backend",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Correct config/backend or FM_BACKEND to one of the listed backends before dispatching.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "backend/herdr-launcher",
+      "area": "backend",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Find the live pane with herdr pane list --workspace <workspace> and pass corrected HERDR_PANE_ID, HERDR_WORKSPACE_ID, and HERDR_TAB_ID on the spawn command line, or relaunch the primary inside herdr.",
+      "status": "ok",
+      "evidence": "none reported"
+    }
+  ]
+}
+
+
+=== herdr-doctor-stale ===
+exit=1
+{
+  "schema": "fm-doctor.v1",
+  "home": "~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/herdr-home",
+  "area": "backend",
+  "verdict": "fail",
+  "counts": {
+    "ok": 2,
+    "warn": 0,
+    "fail": 1,
+    "info": 0,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "29 checks valid",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json."
+    },
+    {
+      "id": "backend/invalid",
+      "area": "backend",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Correct config/backend or FM_BACKEND to one of the listed backends before dispatching.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "backend/herdr-launcher",
+      "area": "backend",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Find the live pane with herdr pane list --workspace <workspace> and pass corrected HERDR_PANE_ID, HERDR_WORKSPACE_ID, and HERDR_TAB_ID on the spawn command line, or relaunch the primary inside herdr.",
+      "status": "fail",
+      "evidence": "HERDR_LAUNCHER: herdr launcher pane 'w1:p99999' could not be read in session 'fm-lab-doctor-final' - every spawn from this session will refuse; find the live pane with herdr pane list --workspace <...",
+      "detail": [
+        "HERDR_LAUNCHER: herdr launcher pane 'w1:p99999' could not be read in session 'fm-lab-doctor-final' - every spawn from this session will refuse; find the live pane with herdr pane list --workspace <workspace> and pass corrected HERDR_PANE_ID, HERDR_WORKSPACE_ID, and HERDR_TAB_ID on the spawn command line, or relaunch the primary inside herdr"
+      ]
+    }
+  ]
+}

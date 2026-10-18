@@ -1,0 +1,84 @@
+$ bin/fm-doctor.sh --json --area config
+exit=0
+{
+  "schema": "fm-doctor.v1",
+  "home": "~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/home",
+  "area": "config",
+  "verdict": "warn",
+  "counts": {
+    "ok": 4,
+    "warn": 1,
+    "fail": 0,
+    "info": 0,
+    "skip": 2
+  },
+  "checks": [
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "29 checks valid",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json."
+    },
+    {
+      "id": "config/crew-dispatch",
+      "area": "config",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Fix the named problem in config/crew-dispatch.json; do not dispatch by profile until it validates.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "config/startup-memory-budget",
+      "area": "config",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Correct config/startup-memory-budget; the memory/budget check reads it on demand.",
+      "status": "skip",
+      "evidence": "printed only by the locked session-start sweep; read the session-start digest"
+    },
+    {
+      "id": "config/relay",
+      "area": "config",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "No action; restart the watcher only when a cadence change must apply immediately.",
+      "status": "skip",
+      "evidence": "printed only by the locked session-start sweep; read the session-start digest"
+    },
+    {
+      "id": "config/role",
+      "area": "config",
+      "owner": "bin/fm-role.sh",
+      "fix": "Correct config/firstmate-role as docs/configuration.md \"Firstmate role\" describes.",
+      "status": "ok",
+      "evidence": "fm-role: user (default)",
+      "detail": [
+        "fm-role: user (default)"
+      ]
+    },
+    {
+      "id": "config/harness",
+      "area": "config",
+      "owner": "bin/fm-harness.sh",
+      "fix": "Run the doctor from inside the firstmate session's own agent so its harness can be detected.",
+      "status": "ok",
+      "evidence": "claude",
+      "detail": [
+        "claude"
+      ]
+    },
+    {
+      "id": "config/crew-harness",
+      "area": "config",
+      "owner": "bin/fm-harness.sh",
+      "fix": "Set config/crew-harness to a verified adapter, or leave it absent to use this session's harness.",
+      "status": "warn",
+      "evidence": "bogus",
+      "detail": [
+        "bogus"
+      ]
+    }
+  ]
+}
+
+Home unchanged: yes

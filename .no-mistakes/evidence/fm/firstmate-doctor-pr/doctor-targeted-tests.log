@@ -1,0 +1,13 @@
+ok - a silent bootstrap renders every mapped check ok and exits 0
+ok - provoked bootstrap lines render under their inventory ids and severities
+ok - a tangled primary renders fleet/tangle as a failure
+ok - a bootstrap line the inventory does not map fails instead of passing silently
+ok - fixture inventories with duplicate ids, unknown areas, bad owners, or a mutating source fail validation
+ok - --network adds a fresh auth probe and reads the last finished network report
+ok - memory reports use the published budget status for both home roles
+ok - own and crew checks accept supported adapters and reject unsupported names
+ok - TOON and --json render the same checks and statuses
+ok - --area limits the run; usage errors exit 2
+ok - --help is short, stdout-only, and leaves the home untouched
+ok - a doctor run writes nothing to the home
+ok - without jq the doctor prints a plain doctor/jq failure

@@ -1,0 +1,47 @@
+[
+  {
+    "args": [
+      "provision",
+      "fm-lab-doctor-final"
+    ],
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "run",
+      "fm-lab-doctor-final",
+      "status",
+      "--json"
+    ],
+    "rc": 0,
+    "stdout": "{\"client\":{\"version\":\"0.9.5\",\"channel\":\"stable\",\"protocol\":22,\"endpoint_protocol_generation\":1,\"endpoint_capabilities\":[\"surface_interest\",\"presentation_effects_fence\",\"health_check\"],\"remote_host_bridge\":true,\"remote_bridge_idle_timeout\":true,\"binary\":\"/usr/bin/herdr\",\"session\":\"fm-lab-doctor-final\"},\"server\":{\"status\":\"running\",\"running\":true,\"version\":\"0.9.5\",\"protocol\":22,\"capabilities\":{\"live_handoff\":true,\"detached_server_daemon\":false,\"endpoint_protocol_generation\":1,\"surface_interest\":true,\"health_check\":true,\"ssh_agent_registration\":true},\"compatible\":true,\"endpoint_compatible\":true,\"socket\":\"~/.config/herdr/sessions/fm-lab-doctor-final/herdr.sock\",\"session\":\"fm-lab-doctor-final\",\"restart_needed\":false,\"server_binary_stale\":false},\"update\":{\"restart_needed\":false,\"server_binary_stale\":false}}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "run",
+      "fm-lab-doctor-final",
+      "workspace",
+      "create",
+      "--cwd",
+      "~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV",
+      "--label",
+      "doctor-test",
+      "--no-focus"
+    ],
+    "rc": 0,
+    "stdout": "{\"id\":\"cli:workspace:create\",\"result\":{\"root_pane\":{\"agent_status\":\"unknown\",\"cwd\":\"~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV\",\"focused\":true,\"foreground_cwd\":\"~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV\",\"pane_id\":\"w1:p1\",\"revision\":0,\"scroll\":{\"max_offset_from_bottom\":0,\"offset_from_bottom\":0,\"viewport_rows\":40},\"tab_id\":\"w1:t1\",\"terminal_id\":\"term_65e18b2e6ffb51\",\"workspace_id\":\"w1\"},\"tab\":{\"agent_status\":\"unknown\",\"focused\":true,\"label\":\"1\",\"number\":1,\"pane_count\":1,\"tab_id\":\"w1:t1\",\"workspace_id\":\"w1\"},\"type\":\"workspace_created\",\"workspace\":{\"active_tab_id\":\"w1:t1\",\"agent_status\":\"unknown\",\"focused\":true,\"label\":\"doctor-test\",\"number\":1,\"pane_count\":1,\"tab_count\":1,\"workspace_id\":\"w1\"}}}\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "teardown",
+      "fm-lab-doctor-final"
+    ],
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,43 @@
+exit=1
+{
+  "schema": "fm-doctor.v1",
+  "home": "~/.no-mistakes/worktrees/4e4f35680e79/01M56ZEY5J07KH5B4775RWDHWV/.doctor-live/herdr-home",
+  "area": "backend",
+  "verdict": "fail",
+  "counts": {
+    "ok": 2,
+    "warn": 0,
+    "fail": 1,
+    "info": 0,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "29 checks valid",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json."
+    },
+    {
+      "id": "backend/invalid",
+      "area": "backend",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Correct config/backend or FM_BACKEND to one of the listed backends before dispatching.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "backend/herdr-launcher",
+      "area": "backend",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Find the live pane with herdr pane list --workspace <workspace> and pass corrected HERDR_PANE_ID, HERDR_WORKSPACE_ID, and HERDR_TAB_ID on the spawn command line, or relaunch the primary inside herdr.",
+      "status": "fail",
+      "evidence": "HERDR_LAUNCHER: herdr launcher pane 'w1:p99999' could not be read in session 'fm-lab-doctor-final' - every spawn from this session will refuse; find the live pane with herdr pane list --workspace <...",
+      "detail": [
+        "HERDR_LAUNCHER: herdr launcher pane 'w1:p99999' could not be read in session 'fm-lab-doctor-final' - every spawn from this session will refuse; find the live pane with herdr pane list --workspace <workspace> and pass corrected HERDR_PANE_ID, HERDR_WORKSPACE_ID, and HERDR_TAB_ID on the spawn command line, or relaunch the primary inside herdr"
+      ]
+    }
+  ]
+}
