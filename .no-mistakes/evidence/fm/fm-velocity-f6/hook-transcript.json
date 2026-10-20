@@ -1,0 +1,183 @@
+[
+  {
+    "home": "recycled-worker",
+    "hook": "fm-turnend-guard.sh",
+    "task": "ship-f6",
+    "stop_hook_active": false,
+    "exit": 0,
+    "stdout": "",
+    "stderr": "",
+    "state_unchanged": true
+  },
+  {
+    "home": "recycled-worker",
+    "hook": "fm-claude-stop-autoarm.sh",
+    "task": "ship-f6",
+    "stop_hook_active": false,
+    "exit": 0,
+    "stdout": "",
+    "stderr": "",
+    "state_unchanged": true
+  },
+  {
+    "home": "recycled-worker",
+    "hook": "fm-turnend-guard.sh",
+    "task": "ship-f6",
+    "stop_hook_active": false,
+    "exit": 0,
+    "stdout": "",
+    "stderr": "",
+    "state_unchanged": true
+  },
+  {
+    "home": "recycled-worker",
+    "hook": "fm-claude-stop-autoarm.sh",
+    "task": "ship-f6",
+    "stop_hook_active": false,
+    "exit": 0,
+    "stdout": "",
+    "stderr": "",
+    "state_unchanged": true
+  },
+  {
+    "home": "recycled-worker",
+    "hook": "fm-turnend-guard.sh",
+    "task": "ship-f6",
+    "stop_hook_active": true,
+    "exit": 0,
+    "stdout": "",
+    "stderr": "",
+    "state_unchanged": true
+  },
+  {
+    "home": "recycled-worker",
+    "hook": "fm-claude-stop-autoarm.sh",
+    "task": "ship-f6",
+    "stop_hook_active": true,
+    "exit": 0,
+    "stdout": "",
+    "stderr": "",
+    "state_unchanged": true
+  },
+  {
+    "home": "recycled-worker",
+    "hook": "fm-subagent-pretool-check.sh",
+    "task": "ship-f6",
+    "stop_hook_active": false,
+    "exit": 0,
+    "stdout": "",
+    "stderr": "",
+    "state_unchanged": true
+  },
+  {
+    "home": "recycled-worker",
+    "hook": "fm-turnend-guard.sh",
+    "task": "scout-f6",
+    "stop_hook_active": false,
+    "exit": 0,
+    "stdout": "",
+    "stderr": "",
+    "state_unchanged": true
+  },
+  {
+    "home": "recycled-worker",
+    "hook": "fm-claude-stop-autoarm.sh",
+    "task": "scout-f6",
+    "stop_hook_active": false,
+    "exit": 0,
+    "stdout": "",
+    "stderr": "",
+    "state_unchanged": true
+  },
+  {
+    "home": "recycled-worker",
+    "hook": "fm-turnend-guard.sh",
+    "task": "scout-f6",
+    "stop_hook_active": true,
+    "exit": 0,
+    "stdout": "",
+    "stderr": "",
+    "state_unchanged": true
+  },
+  {
+    "home": "recycled-worker",
+    "hook": "fm-claude-stop-autoarm.sh",
+    "task": "scout-f6",
+    "stop_hook_active": true,
+    "exit": 0,
+    "stdout": "",
+    "stderr": "",
+    "state_unchanged": true
+  },
+  {
+    "home": "recycled-worker",
+    "hook": "fm-subagent-pretool-check.sh",
+    "task": "scout-f6",
+    "stop_hook_active": false,
+    "exit": 0,
+    "stdout": "",
+    "stderr": "",
+    "state_unchanged": true
+  },
+  {
+    "home": "recycled-worker",
+    "hook": "fm-turnend-guard.sh",
+    "task": null,
+    "stop_hook_active": false,
+    "exit": 2,
+    "stdout": "",
+    "stderr": "\u25cf\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n\u25cf  TURN WOULD END BLIND - SUPERVISION IS OFF\n\u25cf  1 task(s) in flight, but no live watcher holds this home lock (last beat: never).\n\u25cf  The Stop-owned auto-arm did not claim this home either, so recovery is NOT already under way.\n\u25cf  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.\n\u25cf\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n",
+    "state_unchanged": false
+  },
+  {
+    "home": "recycled-worker",
+    "hook": "fm-subagent-pretool-check.sh",
+    "task": null,
+    "stop_hook_active": false,
+    "exit": 2,
+    "stdout": "",
+    "stderr": "{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\"},\"systemMessage\":\"[subagent-dispatch] the firstmate primary dispatches through the fleet, not the harness's own delegation tools: work started that way has no durable fleet record, leaves every firstmate guard inert, and dies with this session. Instead, first classify the work under the AGENTS.md intake contract, then use bin/fm-brief.sh followed by bin/fm-spawn.sh for dispatched work (blocked tool: Agent, delegation-shaped on \\\"agent\\\"). Launch the session with FM_ALLOW_SUBAGENT=1 for a deliberate exception.\"}\n",
+    "state_unchanged": true
+  },
+  {
+    "home": "primary",
+    "hook": "fm-turnend-guard.sh",
+    "task": null,
+    "stop_hook_active": false,
+    "exit": 2,
+    "stdout": "",
+    "stderr": "\u25cf\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n\u25cf  TURN WOULD END BLIND - SUPERVISION IS OFF\n\u25cf  1 task(s) in flight, but no live watcher holds this home lock (last beat: never).\n\u25cf  The Stop-owned auto-arm did not claim this home either, so recovery is NOT already under way.\n\u25cf  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.\n\u25cf\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n",
+    "state_unchanged": false
+  },
+  {
+    "home": "primary",
+    "hook": "fm-subagent-pretool-check.sh",
+    "task": null,
+    "stop_hook_active": false,
+    "exit": 2,
+    "stdout": "",
+    "stderr": "{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\"},\"systemMessage\":\"[subagent-dispatch] the firstmate primary dispatches through the fleet, not the harness's own delegation tools: work started that way has no durable fleet record, leaves every firstmate guard inert, and dies with this session. Instead, first classify the work under the AGENTS.md intake contract, then use bin/fm-brief.sh followed by bin/fm-spawn.sh for dispatched work (blocked tool: Agent, delegation-shaped on \\\"agent\\\"). Launch the session with FM_ALLOW_SUBAGENT=1 for a deliberate exception.\"}\n",
+    "state_unchanged": true
+  },
+  {
+    "home": "recycled-worker",
+    "hook": "fm-turnend-guard.sh",
+    "task": "ship-f6",
+    "stop_hook_active": false,
+    "exit": 2,
+    "stdout": "",
+    "stderr": "\u25cf\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n\u25cf  TURN WOULD END BLIND - SUPERVISION IS OFF\n\u25cf  1 task(s) in flight, but no live watcher holds this home lock (last beat: never).\n\u25cf  The Stop-owned auto-arm did not claim this home either, so recovery is NOT already under way.\n\u25cf  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.\n\u25cf\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n",
+    "state_unchanged": false,
+    "baseline": true
+  },
+  {
+    "home": "recycled-worker",
+    "hook": "fm-turnend-guard.sh",
+    "task": "ship-f6",
+    "stop_hook_active": false,
+    "exit": 0,
+    "stdout": "",
+    "stderr": "",
+    "state_unchanged": true
+  }
+]
