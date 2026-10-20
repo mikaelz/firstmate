@@ -1,0 +1,15 @@
+{
+  "iid": 780,
+  "web_url": "https://gitlab.com/im3sk/erp/-/merge_requests/780",
+  "state": "merged",
+  "sha": "6c5f61e4388fb99c7ba0dbda8b1909267011daa0",
+  "diff_refs": {
+    "base_sha": "bc3db6175483d40e2c97b5f747cd511938e52781",
+    "head_sha": "6c5f61e4388fb99c7ba0dbda8b1909267011daa0",
+    "start_sha": "f1d9b9f57d31a0a8ad10803d0c05742636e53d13"
+  },
+  "target_branch": "main",
+  "target_project_id": 81209836,
+  "merge_commit_sha": "d5808c9991fc5a3a29109f324f2caa681049bc3b",
+  "squash_commit_sha": "96ddc06b821705201300d9bf1d810e38d80d0f22"
+}

@@ -1,0 +1,5 @@
+state=merged
+merged=true
+head=6c5f61e4388fb99c7ba0dbda8b1909267011daa0
+target=main
+url=https://gitlab.com/im3sk/erp/-/merge_requests/780

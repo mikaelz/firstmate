@@ -1,0 +1,4 @@
+orphan_ppid=638
+orphan_parent_comm=systemd
+expected_by_existing_fixture=1
+pid_namespace_attempt_exit=0

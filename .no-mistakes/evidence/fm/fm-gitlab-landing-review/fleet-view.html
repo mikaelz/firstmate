@@ -1,0 +1,22 @@
+<!doctype html><meta charset="utf-8"><title>Actual fleet-view CLI output</title><pre># Fleet View
+
+Schema: fm-fleet-snapshot.v1
+Home: ~/.no-mistakes/worktrees/cb3ff81633e8/01M5D2ERZK5D9ND4HZQD9PQ6FV/.fleet-view-check.TuzZPY
+
+## Under Way
+No live task metadata found.
+
+## Queued
+| ID | Title | Repo | Kind | Blocked By | Artifact |
+| --- | --- | --- | --- | --- | --- |
+| gitlab-link | GitLab review | sample | ship | - | https://gitlab.example.test/group/sub/project/-/merge_requests/7 |
+| github-link | GitHub review | sample | ship | - | https://github.com/example/repo/pull/8 |
+| forgejo-link | Forgejo review | sample | ship | - | https://forgejo.example.test/group/repo/pulls/9 |
+| invalid-link | Not review | sample | ship | - | - |
+
+## Done
+No done backlog records found.
+
+## Secondmates
+For kind=secondmate, bearings selects validated structured state from that registered home; parent events and bounded terminal evidence are fallback-only supplements and never current-state authority.
+</pre>

@@ -1,0 +1,1 @@
+unshare --user --map-current-user --pid --fork --mount-proc bin/fm-test-run.sh --jobs 1 --json ~/.no-mistakes/evidence/01M5D2ERZK5D9ND4HZQD9PQ6FV/ruby-final-regressions.json tests/fm-test-run.test.sh tests/fm-ci-workflow.test.sh
