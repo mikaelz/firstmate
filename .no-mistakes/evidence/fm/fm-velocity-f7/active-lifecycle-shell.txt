@@ -1,0 +1,17 @@
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5CYGW7277FJMT30780S7TBH/.lab
+stopped active harness=codex backend=tmux endpoint=primary:fm-active worktree=~/.no-mistakes/worktrees/4e4f35680e79/01M5CYGW7277FJMT30780S7TBH/.lab/work
+parked: active on https://github.com/kunchenguid/firstmate/pull/7577
+after park: command=bash dead=0
+~/.no-mistakes/worktrees/4e4f35680e79/01M5CYGW7277FJMT30780S7TBH/.lab/data/active/park-resume.md
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5CYGW7277FJMT30780S7TBH/.lab
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5CYGW7277FJMT30780S7TBH/.lab
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+~/.no-mistakes/worktrees/4e4f35680e79/01M5CYGW7277FJMT30780S7TBH/bin/fm-spawn.sh: line 3508: cd: lab: No such file or directory
+error: the replacement agent for active could not be launched on codex
+error: active's agent was stopped but the replacement did not launch; no agent is running, and its work plus the recorded progress note are preserved at ~/.no-mistakes/worktrees/4e4f35680e79/01M5CYGW7277FJMT30780S7TBH/.lab/work

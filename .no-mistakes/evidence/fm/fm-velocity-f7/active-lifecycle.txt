@@ -1,0 +1,3 @@
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5CYGW7277FJMT30780S7TBH/.lab
+error: exit-delivered active interrupt=not-needed exit-command=delivered agent-state=alive exit=unconfirmed; the agent did not stop within 30s
+error: fm-pr-park: cannot stop the worker for active; the park was rolled back and the worker keeps its session

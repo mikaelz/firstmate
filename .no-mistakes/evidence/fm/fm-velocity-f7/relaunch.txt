@@ -1,0 +1,4 @@
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5CYGW7277FJMT30780S7TBH/.lab
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5CYGW7277FJMT30780S7TBH/.lab
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+relaunched active harness=codex from=codex model=default effort=default backend=tmux endpoint=primary:fm-active worktree=~/.no-mistakes/worktrees/4e4f35680e79/01M5CYGW7277FJMT30780S7TBH/.lab/work

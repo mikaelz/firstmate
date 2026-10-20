@@ -1,0 +1,46 @@
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5CYGW7277FJMT30780S7TBH/.lab
+already-stopped live harness=claude backend=tmux endpoint=primary:fm-live worktree=~/.no-mistakes/worktrees/4e4f35680e79/01M5CYGW7277FJMT30780S7TBH/.lab/work
+parked: live on https://github.com/kunchenguid/firstmate/pull/7577
+fm-pr-park-v1
+https://github.com/kunchenguid/firstmate/pull/7577
+OPEN ccf20df09cf913f8f7449c3b86d1631bb49b18ca  0 0 Behavior portable parallel 1=pending,Behavior portable parallel 2=pending,Behavior portable serial 1=pending,Behavior portable serial 2=pending,Behavior portable serial 3=pending,Behavior portable serial 4=pending,Behavior portable serial 5=pending,Behavior portable serial 6=pending,Behavior portable serial 7=pending,Behavior portable serial 8=pending,Behavior portable serial 9=pending,Behavior tests (Herdr)=pending,Lint 1=pending,Lint 2=pending,PR must be raised via no-mistakes=success,Repo invariants=success,Stock macOS Bash snapshot compatibility=success,Test coverage guard=success
+SOURCE                       ADAPTER      OWNER      PENDING
+when-park-247610f4dedd4ab7247d07dbda19c81ca9817f85820742cad49d40 when         none       0
+exit=1 expected=1: bin/fm-pr-park.sh changed live
+error: fm-pr-park: live is already parked; unpark it first
+exit=1 expected=1: bin/fm-pr-park.sh park live https://github.com/kunchenguid/firstmate/pull/7577
+error: fm-pr-park: only GitHub pull requests can be parked: https://gitlab.com/acme/widget/-/merge_requests/3
+exit=1 expected=1: bin/fm-pr-park.sh park other https://gitlab.com/acme/widget/-/merge_requests/3
+error: fm-pr-park: only a ship or scout worker can be parked; mate is kind=secondmate
+exit=1 expected=1: bin/fm-pr-park.sh park mate https://github.com/kunchenguid/firstmate/pull/7577
+error: fm-pr-park: cannot read pull request https://github.com/kunchenguid/firstmate/pull/999999999
+exit=1 expected=1: bin/fm-pr-park.sh park other https://github.com/kunchenguid/firstmate/pull/999999999
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5CYGW7277FJMT30780S7TBH/.lab
+error: task other's endpoint primary:fm-other reads 'missing', but tmux absence cannot be proven from a task record: the record does not carry the endpoint's socket identity, and a server-wide window inventory only describes the tmux server this process addresses, so a window absent from it may still be alive on another; exit will not claim an agent stopped at an address it cannot trust, nor send lifecycle input to one
+error: fm-pr-park: cannot stop the worker for other; the park was rolled back and the worker keeps its session
+exit=1 expected=1: bin/fm-pr-park.sh park other https://github.com/kunchenguid/firstmate/pull/7577
+exit=0 expected=0: bin/fm-pr-park.sh changed live
+when: when-park-247610f4dedd4ab7247d07dbda19c81ca9817f85820742cad49d40
+status: fired
+detail: the condition held and the action exited 0
+condition_polls: 1
+action_exit: 0
+output:
+~/.no-mistakes/worktrees/4e4f35680e79/01M5CYGW7277FJMT30780S7TBH/.lab/data/live/park-resume.md
+Your session was parked while you waited on an external change to https://github.com/kunchenguid/firstmate/pull/7577.
+That pull request changed while you were parked.
+Before: OPEN 0000000000000000000000000000000000000000  0 0 Behavior portable parallel 1=pending,Behavior portable parallel 2=pending,Behavior portable serial 1=pending,Behavior portable serial 2=pending,Behavior portable serial 3=pending,Behavior portable serial 4=pending,Behavior portable serial 5=pending,Behavior portable serial 6=pending,Behavior portable serial 7=pending,Behavior portable serial 8=pending,Behavior portable serial 9=pending,Behavior tests (Herdr)=pending,Lint 1=pending,Lint 2=pending,PR must be raised via no-mistakes=success,Repo invariants=success,Stock macOS Bash snapshot compatibility=success,Test coverage guard=success
+Now: OPEN ccf20df09cf913f8f7449c3b86d1631bb49b18ca  0 0 Behavior portable parallel 1=pending,Behavior portable parallel 2=pending,Behavior portable serial 1=pending,Behavior portable serial 2=pending,Behavior portable serial 3=pending,Behavior portable serial 4=pending,Behavior portable serial 5=pending,Behavior portable serial 6=pending,Behavior portable serial 7=pending,Behavior portable serial 8=pending,Behavior portable serial 9=pending,Behavior tests (Herdr)=pending,Lint 1=pending,Lint 2=pending,PR must be raised via no-mistakes=success,Repo invariants=success,Stock macOS Bash snapshot compatibility=success,Test coverage guard=success
+Read the change, reattach to any active no-mistakes run with `no-mistakes axi run`, and continue the task under your brief.
+unparked: live
+unparked: live
+handled: when-park-247610f4dedd4ab7247d07dbda19c81ca9817f85820742cad49d40 1
+already-handled: when-park-247610f4dedd4ab7247d07dbda19c81ca9817f85820742cad49d40 1
+fm-live bash
+Endpoint and uncommitted sentinel preserved; watcher fired once and acknowledgement is idempotent.
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5CYGW7277FJMT30780S7TBH/.lab
+already-stopped 0000000000000000000000000000000000000000000000000000000000000000 harness=claude backend=tmux endpoint=primary:fm-0000000000000000000000000000000000000000000000000000000000000000 worktree=~/.no-mistakes/worktrees/4e4f35680e79/01M5CYGW7277FJMT30780S7TBH/.lab/work
+parked: 0000000000000000000000000000000000000000000000000000000000000000 on https://github.com/kunchenguid/firstmate/pull/7577
+SOURCE                       ADAPTER      OWNER      PENDING
+when-park-60e05bd1b195af2f94112fa7197a5c88289058840ce7c6df969375 when         none       0
+unparked: 0000000000000000000000000000000000000000000000000000000000000000

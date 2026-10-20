@@ -1,0 +1,11 @@
+armed: when-park-error-lab
+starts on the watcher's next cycle; or run: bin/fm-procevent.sh reconcile
+reminder: deterministic, safe, reversible actions only; judgment and destructive actions stay on the wake-and-decide path
+when: when-park-error-lab
+status: condition-error
+detail: the condition exited 2 on 3 consecutive polls; the action was not run
+condition_polls: 3
+output:
+No resume note was created on condition-error.
+retired: when-park-error-lab
+retired: when-park-error-lab

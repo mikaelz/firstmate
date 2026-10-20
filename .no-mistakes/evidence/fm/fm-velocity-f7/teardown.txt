@@ -1,0 +1,18 @@
+🌳 Setting up worktree...
+🌳 Leased worktree at ~/.no-mistakes/worktrees/4e4f35680e79/01M5CYGW7277FJMT30780S7TBH/.lab/pool/.treehouse/project-b87af4/1/project. Run 'treehouse return ~/.no-mistakes/worktrees/4e4f35680e79/01M5CYGW7277FJMT30780S7TBH/.lab/pool/.treehouse/project-b87af4/1/project' to release it.
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5CYGW7277FJMT30780S7TBH/.lab
+already-stopped clean harness=codex backend=tmux endpoint=primary:fm-clean worktree=~/.no-mistakes/worktrees/4e4f35680e79/01M5CYGW7277FJMT30780S7TBH/.lab/pool/.treehouse/project-b87af4/1/project
+parked: clean on https://github.com/kunchenguid/firstmate/pull/7577
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5CYGW7277FJMT30780S7TBH/.lab
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+fm-captain-hold: origin clean has no completed captain-call inventory
+REFUSED: scout task clean has not passed the captain-call completion gate.
+Inventory its report and any visual review through bin/fm-captain-hold.sh before teardown.
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5CYGW7277FJMT30780S7TBH/.lab
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+teardown: reaping leaked worktree process(es) for clean: 1960903
+teardown: force-killing leaked worktree process(es) for clean: 1960903
+🌳 Worktree returned to pool.
+teardown clean complete (window primary:fm-clean, worktree ~/.no-mistakes/worktrees/4e4f35680e79/01M5CYGW7277FJMT30780S7TBH/.lab/pool/.treehouse/project-b87af4/1/project)
+Backlog: clean just finished (config/backlog-backend selects manual editing). Update ~/.no-mistakes/worktrees/4e4f35680e79/01M5CYGW7277FJMT30780S7TBH/.lab/data/backlog.md - move clean to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+Verified clean metadata and park record removed, clean source absent, and active worker uncommitted sentinel preserved.
