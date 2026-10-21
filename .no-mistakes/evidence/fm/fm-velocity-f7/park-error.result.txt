@@ -1,0 +1,5 @@
+when: when-lab-error
+status: condition-error
+detail: the condition exited 2 on 3 consecutive polls; the action was not run
+condition_polls: 3
+output:

@@ -1,0 +1,69 @@
+$ tmux -L fm-lab capture-pane -p -t primary:fm-t2
+
+  Folder access
+  ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/task-copy
+
+  Note: You’re in a subdirectory of a Git project. Trusting will apply to the repository root:
+  ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/projects/disposable
+
+  Trust this folder? Codex can read, edit, and run files here, subject to your permission settings. Folder settings
+  can run code automatically, even without a model request. Continue only if you trust these files. Your trust
+  decision will be saved.
+
+› 1. Trust and continue
+  2. Quit
+
+  enter continue · esc quit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+exit=0
+Replacement process reached workspace trust; unfinished.txt survived. Trust not accepted.
+$ bin/fm-procevent-when.sh classify ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/state/procevent-inbox/when-lab-error.1.result
+condition-error
+exit=0
+$ bin/fm-procevent.sh handled when-lab-error 1
+handled: when-lab-error 1
+exit=0
+$ bin/fm-procevent-when.sh retire lab-error
+retired: when-lab-error
+retired: when-lab-error
+exit=0
+$ bin/fm-pr-park.sh unpark t2
+unparked: t2
+exit=0
+$ bin/fm-pr-park.sh unpark t2
+unparked: t2
+exit=0
+$ bin/fm-procevent.sh handled when-park-c44474038d459e40e4714afefa7bf8dae9f9834b22f5e8ec1dd434 1
+handled: when-park-c44474038d459e40e4714afefa7bf8dae9f9834b22f5e8ec1dd434 1
+exit=0
+$ bin/fm-procevent.sh handled when-park-c44474038d459e40e4714afefa7bf8dae9f9834b22f5e8ec1dd434 1
+already-handled: when-park-c44474038d459e40e4714afefa7bf8dae9f9834b22f5e8ec1dd434 1
+exit=0
+$ bin/fm-procevent.sh list
+no sources registered
+exit=0
+$ tmux -L fm-lab kill-server
+exit=0
+$ bin/fm-lab-home.sh teardown ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU
+exit=0
+Private terminal server stopped; all scenario child command statuses collected. Removing lab.
+Cleanup retry: made only the lab-generated protected hook directories writable; removed the disposable lab successfully. No lab processes remain.

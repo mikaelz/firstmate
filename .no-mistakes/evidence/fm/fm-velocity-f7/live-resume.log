@@ -1,0 +1,73 @@
+$ bin/fm-procevent-when.sh classify ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/state/procevent-inbox/when-park-c44474038d459e40e4714afefa7bf8dae9f9834b22f5e8ec1dd434.1.result
+fired
+exit=0
+$ bin/fm-control.sh t2 relaunch --note-file ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/data/t2/park-resume.md
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  4 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  After draining queued wakes, repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+error: ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/data/t2/brief.md must contain nonempty ## Captain's intent and ## Firstmate spec subsections (or a nonempty legacy # Task body) before spawn
+error: the replacement agent for t2 could not be launched on codex
+error: t2's agent was stopped but the replacement did not launch; no agent is running, and its work plus the recorded progress note are preserved at ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2
+exit=1
+Retry with a valid legacy # Task instruction body.
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+error: legacy mixed # Task brief has no provenance-marked captain words for no-mistakes --intent; add [captain] lines or migrate to ## Captain's intent and ## Firstmate spec
+error: the replacement agent for t2 could not be launched on codex
+error: t2's agent was stopped but the replacement did not launch; no agent is running, and its work plus the recorded progress note are preserved at ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2
+exit=1
+Retry with the required split intent/spec instruction format.
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+warning: ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/data/t2/launch-brief.md records no ship branch; defaulting to legacy branch fm/t2
+warning: ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/data/t2/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: spawn refused for t2: this home runs as firstmate user/operator and holds no publication authority for github.com/kunchenguid/firstmate
+error: to let this home publish to github.com/kunchenguid/firstmate, write 'maintainer github.com/kunchenguid/firstmate' into ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/config/firstmate-role (docs/configuration.md "Firstmate role"), or pass --upstream-consent github.com/kunchenguid/firstmate for this one task with the captain's explicit approval
+error: the replacement agent for t2 could not be launched on codex
+error: t2's agent was stopped but the replacement did not launch; no agent is running, and its work plus the recorded progress note are preserved at ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2
+exit=1
+Retry local-only: no publication authority is needed or granted.
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+warning: ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/data/t2/launch-brief.md records no ship branch; defaulting to legacy branch fm/t2
+warning: ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/data/t2/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode local-only - confirm its definition of done matches
+notice: t2 ships mode=local-only while the standing posture for 01M5EE7K8ZDRC81K22V46RYYB2 is no-mistakes - less rigor than the captain's standing posture; proceed only on a current explicit captain instruction or an intake judgment you can state
+error: relaunch did not yield an isolated worktree (resolved '~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2'; worktree root '~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2'; spawning project '~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2'); refusing to launch to avoid tangling the primary checkout. Inspect target primary:fm-t2
+error: the replacement agent for t2 could not be launched on codex
+error: t2's agent was stopped but the replacement did not launch; no agent is running, and its work plus the recorded progress note are preserved at ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2
+exit=1
+Retry in a disposable linked worktree, preserving its unfinished.txt.
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+warning: ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/data/t2/launch-brief.md records no ship branch; defaulting to legacy branch fm/t2
+warning: ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/data/t2/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode local-only - confirm its definition of done matches
+notice: t2 ships mode=local-only while the standing posture for disposable is no-mistakes - less rigor than the captain's standing posture; proceed only on a current explicit captain instruction or an intake judgment you can state
+error: task t2's endpoint is in '~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2', not its recorded worktree '~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/task-copy'; refusing to relaunch an agent outside the copy holding its work
+error: the replacement agent for t2 could not be launched on codex
+error: t2's agent was stopped but the replacement did not launch; no agent is running, and its work plus the recorded progress note are preserved at ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/task-copy
+exit=1
+Retry after binding the persistent shell cwd to the disposable task copy.
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+warning: ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/data/t2/launch-brief.md records no ship branch; defaulting to legacy branch fm/t2
+warning: ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/data/t2/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode local-only - confirm its definition of done matches
+notice: t2 ships mode=local-only while the standing posture for disposable is no-mistakes - less rigor than the captain's standing posture; proceed only on a current explicit captain instruction or an intake judgment you can state
+relaunched t2 harness=codex from=codex model=default effort=default backend=tmux endpoint=primary:fm-t2 worktree=~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/task-copy
+exit=0

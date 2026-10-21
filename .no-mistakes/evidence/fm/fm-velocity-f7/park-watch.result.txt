@@ -1,0 +1,7 @@
+when: when-park-c44474038d459e40e4714afefa7bf8dae9f9834b22f5e8ec1dd434
+status: fired
+detail: the condition held and the action exited 0
+condition_polls: 1
+action_exit: 0
+output:
+~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/data/t2/park-resume.md

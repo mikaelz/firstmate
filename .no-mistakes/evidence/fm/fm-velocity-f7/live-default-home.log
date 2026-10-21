@@ -1,0 +1,14 @@
+$ tmux -L fm-lab new-window -t primary -n fm-default -c ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/task-copy bash --noprofile --norc
+exit=0
+FM_HOME and all path overrides absent; unmodified executable code copied into the marked lab home.
+$ ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/bin/fm-pr-park.sh park default https://github.com/kunchenguid/firstmate/pull/7594
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU
+already-stopped default harness=codex backend=tmux endpoint=primary:fm-default worktree=~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/task-copy
+parked: default on https://github.com/kunchenguid/firstmate/pull/7594
+exit=0
+$ ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/bin/fm-pr-park.sh unpark default
+unparked: default
+exit=0
+$ ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/bin/fm-pr-park.sh unpark default
+unparked: default
+exit=0

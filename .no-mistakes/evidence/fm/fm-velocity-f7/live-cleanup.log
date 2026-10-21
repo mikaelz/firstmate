@@ -1,0 +1,24 @@
+$ git init -b main ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/projects/disposable
+Initialized empty Git repository in ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/projects/disposable/.git/
+exit=0
+$ git -C ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/projects/disposable -c user.name=Lab -c user.email=lab@example.invalid -c core.hooksPath=/dev/null commit --allow-empty -m Disposable lab base
+[main (root-commit) 4884757] Disposable lab base
+exit=0
+$ tmux -L fm-lab new-window -t primary -n fm-clean -c ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/projects/disposable bash --noprofile --norc
+exit=0
+$ bin/fm-pr-park.sh park clean https://github.com/kunchenguid/firstmate/pull/7594
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU
+already-stopped clean harness=codex backend=tmux endpoint=primary:fm-clean worktree=~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/gone-copy
+parked: clean on https://github.com/kunchenguid/firstmate/pull/7594
+exit=0
+$ bin/fm-teardown.sh clean --legacy-record
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU
+WARNING: watcher still down (same stale episode; last beat: never, grace 300s) - full banner already printed this episode.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+teardown clean complete (window primary:fm-clean, worktree ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/gone-copy)
+Backlog: clean just finished (config/backlog-backend selects manual editing). Update ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU/data/backlog.md - move clean to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+exit=0
+$ bin/fm-procevent.sh list
+no sources registered
+exit=0
+Real cleanup removed the task record, park record, and registered PR watch.

@@ -1,0 +1,33 @@
+$ bin/fm-pr-park.sh park unknown https://github.com/kunchenguid/firstmate/pull/7594
+error: fm-pr-park: no task record for unknown in this home
+exit=1
+$ bin/fm-pr-park.sh park mate https://github.com/kunchenguid/firstmate/pull/7594
+error: fm-pr-park: only a ship or scout worker can be parked; mate is kind=secondmate
+exit=1
+$ bin/fm-pr-park.sh park t1 https://gitlab.com/acme/widget/-/merge_requests/3
+error: fm-pr-park: only GitHub pull requests can be parked: https://gitlab.com/acme/widget/-/merge_requests/3
+exit=1
+$ bin/fm-pr-park.sh park t1 https://github.com/kunchenguid/firstmate/pull/999999999
+error: fm-pr-park: cannot read pull request https://github.com/kunchenguid/firstmate/pull/999999999
+exit=1
+$ bin/fm-pr-park.sh park t2 https://github.com/kunchenguid/firstmate/pull/7594
+error: fm-pr-park: t2 is already parked; unpark it first
+exit=1
+$ bin/fm-pr-park.sh changed missing
+exit=2
+$ bin/fm-pr-park.sh park xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx https://github.com/kunchenguid/firstmate/pull/7594
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU
+error: task xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx's endpoint primary:fm-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx reads 'missing', but tmux absence cannot be proven from a task record: the record does not carry the endpoint's socket identity, and a server-wide window inventory only describes the tmux server this process addresses, so a window absent from it may still be alive on another; exit will not claim an agent stopped at an address it cannot trust, nor send lifecycle input to one
+error: fm-pr-park: cannot stop the worker for xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx; the park was rolled back and the worker keeps its session
+exit=1
+$ bin/fm-procevent.sh list
+SOURCE                       ADAPTER      OWNER      PENDING
+when-park-c44474038d459e40e4714afefa7bf8dae9f9834b22f5e8ec1dd434 when         none       0
+exit=0
+64-character task accepted through real watch registration; failed-stop rollback left no record or registration.
+Disposable historical baseline head set to 0000000000000000000000000000000000000000; live PR unchanged.
+$ bin/fm-pr-park.sh changed t2
+exit=0
+$ bin/fm-procevent.sh reconcile
+reconciled: published=0 started=1 stopped=0 uncertain=0 failed=0
+exit=0

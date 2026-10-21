@@ -1,0 +1,35 @@
+$ tmux -L fm-lab list-panes -t primary -F size=#{pane_width}x#{pane_height} command=#{pane_current_command} dead=#{pane_dead}
+size=120x35 command=codex dead=0
+exit=0
+$ bin/fm-pr-park.sh park t1 https://github.com/kunchenguid/firstmate/pull/7594
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU
+error: task t1's endpoint primary:fm-t1 reads 'missing', but tmux absence cannot be proven from a task record: the record does not carry the endpoint's socket identity, and a server-wide window inventory only describes the tmux server this process addresses, so a window absent from it may still be alive on another; exit will not claim an agent stopped at an address it cannot trust, nor send lifecycle input to one
+error: fm-pr-park: cannot stop the worker for t1; the park was rolled back and the worker keeps its session
+exit=1
+Retry with the lab pane’s inherited TMUX identity.
+$ bin/fm-pr-park.sh park t1 https://github.com/kunchenguid/firstmate/pull/7594
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU
+error: exit-delivered t1 interrupt=not-needed exit-command=delivered agent-state=alive exit=unconfirmed; the agent did not stop within 30s
+error: fm-pr-park: cannot stop the worker for t1; the park was rolled back and the worker keeps its session
+exit=1
+Ordinary worker terminal: real Codex launched inside a persistent shell.
+$ bin/fm-pr-park.sh park t2 https://github.com/kunchenguid/firstmate/pull/7594
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2/.f7-lab.ZUCUIU
+stopped t2 harness=codex backend=tmux endpoint=primary:fm-t2 worktree=~/.no-mistakes/worktrees/4e4f35680e79/01M5EE7K8ZDRC81K22V46RYYB2
+parked: t2 on https://github.com/kunchenguid/firstmate/pull/7594
+exit=0
+Park record:
+fm-pr-park-v1
+https://github.com/kunchenguid/firstmate/pull/7594
+OPEN 288306ba319c9ca01b41bdc18857c92c57744c06  0 0 Behavior portable parallel 1=pending,Behavior portable parallel 2=pending,Behavior portable serial 1=pending,Behavior portable serial 2=pending,Behavior portable serial 3=pending,Behavior portable serial 4=pending,Behavior portable serial 5=pending,Behavior portable serial 6=pending,Behavior portable serial 7=pending,Behavior portable serial 8=pending,Behavior portable serial 9=pending,Behavior tests (Herdr)=pending,Lint 1=pending,Lint 2=pending,PR must be raised via no-mistakes=success,Repo invariants=success,Stock macOS Bash snapshot compatibility=pending,Test coverage guard=success
+
+$ tmux -L fm-lab list-panes -t primary:fm-t2 -F size=#{pane_width}x#{pane_height} command=#{pane_current_command} dead=#{pane_dead}
+size=120x35 command=bash dead=0
+exit=0
+$ bin/fm-pr-park.sh changed t2
+exit=1
+$ bin/fm-procevent.sh list
+SOURCE                       ADAPTER      OWNER      PENDING
+when-park-c44474038d459e40e4714afefa7bf8dae9f9834b22f5e8ec1dd434 when         none       0
+exit=0
+Preserved endpoint, metadata, brief, and unfinished file.
