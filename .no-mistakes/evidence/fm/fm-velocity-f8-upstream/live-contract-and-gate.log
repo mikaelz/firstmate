@@ -1,0 +1,14 @@
+scaffolded: ~/.no-mistakes/worktrees/4e4f35680e79/01M5CZ1860EBX8A6QARV9XGDDB/.f8-validation/lab/home/data/f8-none/brief.md (ship, mode=no-mistakes; replace {TASK} and {FIRSTMATE_SPEC})
+scaffolded: ~/.no-mistakes/worktrees/4e4f35680e79/01M5CZ1860EBX8A6QARV9XGDDB/.f8-validation/lab/home/data/f8-gerrit/brief.md (ship, mode=no-mistakes forge=gerrit shape=squash; replace {TASK} and {FIRSTMATE_SPEC})
+none: generated worker brief requires same-turn validation, omits handoff, retains PR {url} checks green
+gerrit: generated worker brief requires same-turn validation, omits handoff, retains PR {change url} published for review
+REPORT: done: implemented legacy task
+ACCEPTANCE: exit=0 
+REPORT: done: PR https://example.test/o/r/pull/1 checks green
+ACCEPTANCE: exit=1 named head c916d1510ec74847fb9031776de5b6452ce03fc4 is unreachable outside the worker copy
+REPORT: done: PR https://example.test/o/r/pull/1 published for review
+ACCEPTANCE: exit=1 the published-for-review report does not name a Gerrit change in the canonical https://<host>/c/<project>/+/<number> form
+REPORT: done: PR https://example.test/o/r/pull/1 checks green
+ACCEPTANCE: exit=0 
+REPORT: done: PR https://example.test/o/r/pull/1 checks green
+ACCEPTANCE: exit=1 named head 35b08391acf949d66a84f81532e53922ef7cebe7 is unreachable outside the worker copy
