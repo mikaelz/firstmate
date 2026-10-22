@@ -1,0 +1,5 @@
+url=https://gitlab.com/im3sk/erp/-/merge_requests/780
+state=merged
+head=6c5f61e4388fb99c7ba0dbda8b1909267011daa0
+target=main
+exact live MR source fetched=6c5f61e4388fb99c7ba0dbda8b1909267011daa0
