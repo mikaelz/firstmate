@@ -1,0 +1,33 @@
+[
+  {
+    "command": "bash bin/fm-brief.sh ship-no-mistakes disposable-project --mode no-mistakes",
+    "exit_code": 0,
+    "stdout": "scaffolded: ~/.no-mistakes/worktrees/4e4f35680e79/01M5M1YFZ521YZ53J9E1WTRWS4/.brief-live-rhwr0n51/data/ship-no-mistakes/brief.md (ship, mode=no-mistakes; replace {TASK} and {FIRSTMATE_SPEC})",
+    "emitted_rule": "8. Never start a shell command with `cd`, and never run a search whose path depends on the current directory.\n   Use absolute paths, `git -C <abs>`, or a `( cd <abs> && ... )` subshell.\n   Run a command the operator allow-listed - such as a read-only production wrapper, or `no-mistakes axi run` and `no-mistakes axi respond` - as one bare command, never inside that subshell or with a `;`, `&&`, pipe, redirect, `timeout`, or `VAR=` prefix around it.\n   Claude Code's auto mode applies an allow rule only to the bare form and sends a wrapped one to its classifier, which refuses production reads and gate responses; your shell already starts in this worktree, and `no-mistakes axi respond --run <id>` answers a run from anywhere.\n   Pass this rule to every sub-agent you launch."
+  },
+  {
+    "command": "bash bin/fm-brief.sh ship-direct-pr disposable-project --mode direct-PR",
+    "exit_code": 0,
+    "stdout": "scaffolded: ~/.no-mistakes/worktrees/4e4f35680e79/01M5M1YFZ521YZ53J9E1WTRWS4/.brief-live-rhwr0n51/data/ship-direct-pr/brief.md (ship, mode=direct-PR; replace {TASK} and {FIRSTMATE_SPEC})",
+    "emitted_rule": "8. Never start a shell command with `cd`, and never run a search whose path depends on the current directory.\n   Use absolute paths, `git -C <abs>`, or a `( cd <abs> && ... )` subshell.\n   Run a command the operator allow-listed - such as a read-only production wrapper, or `no-mistakes axi run` and `no-mistakes axi respond` - as one bare command, never inside that subshell or with a `;`, `&&`, pipe, redirect, `timeout`, or `VAR=` prefix around it.\n   Claude Code's auto mode applies an allow rule only to the bare form and sends a wrapped one to its classifier, which refuses production reads and gate responses; your shell already starts in this worktree, and `no-mistakes axi respond --run <id>` answers a run from anywhere.\n   Pass this rule to every sub-agent you launch."
+  },
+  {
+    "command": "bash bin/fm-brief.sh ship-local-only disposable-project --mode local-only",
+    "exit_code": 0,
+    "stdout": "scaffolded: ~/.no-mistakes/worktrees/4e4f35680e79/01M5M1YFZ521YZ53J9E1WTRWS4/.brief-live-rhwr0n51/data/ship-local-only/brief.md (ship, mode=local-only; replace {TASK} and {FIRSTMATE_SPEC})",
+    "emitted_rule": "8. Never start a shell command with `cd`, and never run a search whose path depends on the current directory.\n   Use absolute paths, `git -C <abs>`, or a `( cd <abs> && ... )` subshell.\n   Run a command the operator allow-listed - such as a read-only production wrapper, or `no-mistakes axi run` and `no-mistakes axi respond` - as one bare command, never inside that subshell or with a `;`, `&&`, pipe, redirect, `timeout`, or `VAR=` prefix around it.\n   Claude Code's auto mode applies an allow rule only to the bare form and sends a wrapped one to its classifier, which refuses production reads and gate responses; your shell already starts in this worktree, and `no-mistakes axi respond --run <id>` answers a run from anywhere.\n   Pass this rule to every sub-agent you launch."
+  },
+  {
+    "command": "bash bin/fm-brief.sh scout disposable-project --scout",
+    "exit_code": 0,
+    "stdout": "scaffolded: ~/.no-mistakes/worktrees/4e4f35680e79/01M5M1YFZ521YZ53J9E1WTRWS4/.brief-live-rhwr0n51/data/scout/brief.md (scout; replace {TASK} and {FIRSTMATE_SPEC})",
+    "emitted_rule": "8. Never start a shell command with `cd`, and never run a search whose path depends on the current directory.\n   Use absolute paths, `git -C <abs>`, or a `( cd <abs> && ... )` subshell.\n   Run a command the operator allow-listed - such as a read-only production wrapper, or `no-mistakes axi run` and `no-mistakes axi respond` - as one bare command, never inside that subshell or with a `;`, `&&`, pipe, redirect, `timeout`, or `VAR=` prefix around it.\n   Claude Code's auto mode applies an allow rule only to the bare form and sends a wrapped one to its classifier, which refuses production reads and gate responses; your shell already starts in this worktree, and `no-mistakes axi respond --run <id>` answers a run from anywhere.\n   Pass this rule to every sub-agent you launch."
+  },
+  {
+    "command": "bash bin/fm-brief.sh ship-no-mistakes disposable-project --mode direct-PR (existing task)",
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "error: ~/.no-mistakes/worktrees/4e4f35680e79/01M5M1YFZ521YZ53J9E1WTRWS4/.brief-live-rhwr0n51/data/ship-no-mistakes/brief.md already exists",
+    "existing_brief_unchanged": true
+  }
+]
