@@ -1,0 +1,31 @@
+$ bin/fm-lab-home.sh create ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.e
+exit=0
+~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.e
+$ tmux -L fm-lab new-session -d -s cleanup -n fm-cleanup -x 120 -y 40 -c ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF
+exit=0
+$ tmux -L fm-lab display-message -p #{socket_path}
+exit=0
+~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.e/t/tmux-1000/fm-lab
+$ bin/fm-procevent-when.sh arm park-611496f412cac947be720d17a0ee6d7463221d14731fbc18244756 --interval 300 --stable 1 --condition ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/bin/fm-pr-park.sh changed cleanup --action ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/bin/fm-pr-park.sh resume-note cleanup
+exit=0
+armed: when-park-611496f412cac947be720d17a0ee6d7463221d14731fbc18244756
+starts on the watcher's next cycle; or run: bin/fm-procevent.sh reconcile
+reminder: deterministic, safe, reversible actions only; judgment and destructive actions stay on the wake-and-decide path
+$ bin/fm-teardown.sh cleanup
+exit=0
+teardown cleanup complete (window cleanup:fm-cleanup, worktree ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.e/vanished-work)
+Backlog: cleanup just finished (this home keeps no markdown backlog at ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.e/data/backlog.md). Update ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.e/data/backlog.md - move cleanup to Done, keep Done to the 10 most recent, then re-scan Queued and dispatch only work whose blockers are gone and date is due.
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.e
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  repair missing watcher supervision with a foreground checkpoint: bin/fm-watch-checkpoint.sh --seconds 180.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+$ bin/fm-procevent.sh list
+exit=0
+no sources registered
+OBSERVED: task metadata, park record and registered wait all removed.
+private tmux kill-server exit=1
+CLEANUP: disposable home removed.

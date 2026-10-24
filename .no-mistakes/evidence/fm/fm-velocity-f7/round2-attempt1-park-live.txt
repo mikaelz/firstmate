@@ -1,0 +1,297 @@
+$ gh pr view https://github.com/acme/widget/pull/42 --json state,headRefOid,reviewDecision,statusCheckRollup,comments,reviews
+exit=0
+{"comments":[],"headRefOid":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","reviewDecision":"","reviews":[],"state":"OPEN","statusCheckRollup":[{"__typename":"CheckRun","completedAt":"0001-01-01T00:00:00Z","conclusion":"","detailsUrl":"","name":"test","startedAt":"0001-01-01T00:00:00Z","status":"QUEUED","workflowName":""}]}
+
+$ tmux -L fm-lab new-session -d -s lab -n fm-labpark -x 120 -y 40 -c ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF
+exit=0
+
+$ tmux -L fm-lab display-message -p #{socket_path}
+exit=0
+~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.l/t/tmux-1000/fm-lab
+
+$ tmux -L fm-lab set-environment PATH ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.live-park/bin:~/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path:~/.sentry/bin:~/.config/composer/vendor/bin:~/Jts:~/.opencode/bin:~/.local/bin:~/Dropbox/home/bin:./node_modules/.bin:/opt/bin:/usr/local/bin:/opt/phpstorm/bin:~/.krew/bin:~/.oh-my-zsh/custom/plugins/git-open:~/.codex/tmp/arg0/codex-arg0sQnjSI:~/.codex/packages/standalone/releases/0.162.1-x86_64-unknown-linux-musl/codex-path:~/.sentry/bin:~/.config/composer/vendor/bin:~/Jts:~/.opencode/bin:~/.local/bin:~/Dropbox/home/bin:./node_modules/.bin:/opt/bin:/usr/local/bin:/opt/phpstorm/bin:~/.krew/bin:~/.oh-my-zsh/custom/plugins/git-open:~/.local/bin:~/go/bin:~/.cargo/bin:~/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/cuda/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+exit=0
+
+$ tmux -L fm-lab send-keys -t lab:fm-labpark cd ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.l/work && env -u HTTPS_PROXY -u SSL_CERT_FILE ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.live-park/bin/codex -c features.hooks=false --sandbox workspace-write --ask-for-approval never 'Reply READY. Do not use tools.' Enter
+exit=0
+
+$ tmux -L fm-lab capture-pane -p -t lab:fm-labpark
+exit=0
+
+  Folder access
+  ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.l/work
+
+  Note: You’re in a subdirectory of a Git project. Trusting will apply to the repository root:
+  ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.l/proj
+
+  Trust this folder? Codex can read, edit, and run files here, subject to your permission settings. Folder settings
+  can run code automatically, even without a model request. Continue only if you trust these files. Your trust
+  decision will be saved.
+
+› 1. Trust and continue
+  2. Quit
+
+  enter continue · esc quit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$ bin/fm-pr-park.sh park labpark https://github.com/acme/widget/pull/42
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.l
+error: task labpark's composer state is 'unknown', not proven empty; refusing to type the /quit exit command because it could concatenate onto existing text. Clear the composer, then retry 'exit'
+error: fm-pr-park: cannot stop the worker for labpark; the park was rolled back and the worker keeps its session
+
+LIVE AGENT PARK BLOCKED; using a second, already-stopped endpoint for remaining park contracts.
+$ tmux -L fm-lab kill-server
+exit=0
+
+$ tmux -L fm-lab new-session -d -s lab -n fm-labpark -x 120 -y 40 -c ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF
+exit=0
+
+$ tmux -L fm-lab display-message -p #{socket_path}
+exit=0
+~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.l/t/tmux-1000/fm-lab
+
+$ bin/fm-pr-park.sh park labpark https://github.com/acme/widget/pull/42
+exit=0
+already-stopped labpark harness=codex backend=tmux endpoint=lab:fm-labpark worktree=~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.l/work
+parked: labpark on https://github.com/acme/widget/pull/42
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.l
+
+PARK RECORD:
+fm-pr-park-v1
+https://github.com/acme/widget/pull/42
+OPEN aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  0 0 test=pending
+
+$ tmux -L fm-lab list-windows -t lab
+exit=0
+0: fm-labpark* (1 panes) [120x40] [layout {"V":2,"L":{"t":"p","w":120,"h":40,"x":0,"y":0,"a":true,"i":0,"I":"%0"}}] @0 (active)
+
+$ bin/fm-procevent.sh list
+exit=0
+SOURCE                       ADAPTER      OWNER      PENDING
+when-park-e4b8a68a5fdbb78cef8be11861d6bb8bbf5abdc0da28e91ab73f28 when         none       0
+
+$ bin/fm-pr-park.sh park labpark https://github.com/acme/widget/pull/42
+exit=1
+error: fm-pr-park: labpark is already parked; unpark it first
+
+$ bin/fm-pr-park.sh changed labpark
+exit=1
+
+$ bin/fm-pr-park.sh changed labpark
+exit=1
+
+API mutation: state
+$ bin/fm-pr-park.sh changed labpark
+exit=0
+
+API mutation: headRefOid
+$ bin/fm-pr-park.sh changed labpark
+exit=0
+
+API mutation: reviewDecision
+$ bin/fm-pr-park.sh changed labpark
+exit=0
+
+API mutation: reviews
+$ bin/fm-pr-park.sh changed labpark
+exit=0
+
+API mutation: comments
+$ bin/fm-pr-park.sh changed labpark
+exit=0
+
+$ bin/fm-pr-park.sh changed labpark
+exit=0
+
+$ bin/fm-pr-park.sh changed labpark
+exit=2
+
+$ bin/fm-procevent.sh reconcile
+exit=0
+reconciled: published=0 started=1 stopped=0 uncertain=0 failed=0
+
+CAPTURED RESULT:
+when: when-park-e4b8a68a5fdbb78cef8be11861d6bb8bbf5abdc0da28e91ab73f28
+status: fired
+detail: the condition held and the action exited 0
+condition_polls: 1
+action_exit: 0
+output:
+~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.l/data/labpark/park-resume.md
+
+$ bin/fm-procevent-when.sh classify ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.l/state/procevent-inbox/when-park-e4b8a68a5fdbb78cef8be11861d6bb8bbf5abdc0da28e91ab73f28.1.result
+exit=0
+fired
+
+RESUME NOTE:
+Your session was parked while you waited on an external change to https://github.com/acme/widget/pull/42.
+That pull request changed while you were parked.
+Before: OPEN aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  0 0 test=pending
+Now: OPEN aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa  0 0 test=success
+Read the change, reattach to any active no-mistakes run with `no-mistakes axi run`, and continue the task under your brief.
+
+$ tmux -L fm-lab send-keys -t lab:fm-labpark cd ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.l/work Enter
+exit=0
+
+$ bin/fm-control.sh labpark relaunch --note-file ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.l/data/labpark/park-resume.md
+exit=0
+relaunched labpark harness=codex from=codex model=default effort=default backend=tmux endpoint=lab:fm-labpark worktree=~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.l/work
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.l
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.l
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+●  WATCHER DOWN - SUPERVISION IS OFF
+●  1 task(s) in flight, but no watcher has a fresh beacon (last beat: never, grace 300s).
+●  Trust the emitted supervision protocol for this harness; do not use shell & for watcher repair.
+●  This is a supervision warning only; the guarded operation WILL still run.
+●  After draining queued wakes, repair missing watcher supervision according to the session-start block for this harness; do not use shell &.
+●━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+
+RESUMED TASK FILE: MISSING
+$ tmux -L fm-lab capture-pane -p -t lab:fm-labpark
+exit=0
+
+  Folder access
+  ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.l/work
+
+  Note: You’re in a subdirectory of a Git project. Trusting will apply to the repository root:
+  ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.l/proj
+
+  Trust this folder? Codex can read, edit, and run files here, subject to your permission settings. Folder settings
+  can run code automatically, even without a model request. Continue only if you trust these files. Your trust
+  decision will be saved.
+
+› 1. Trust and continue
+  2. Quit
+
+  enter continue · esc quit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$ bin/fm-pr-park.sh unpark labpark
+exit=0
+unparked: labpark
+
+$ bin/fm-pr-park.sh unpark labpark
+exit=0
+unparked: labpark
+
+$ bin/fm-procevent.sh handled when-park-e4b8a68a5fdbb78cef8be11861d6bb8bbf5abdc0da28e91ab73f28 1
+exit=0
+handled: when-park-e4b8a68a5fdbb78cef8be11861d6bb8bbf5abdc0da28e91ab73f28 1
+
+$ bin/fm-procevent.sh handled when-park-e4b8a68a5fdbb78cef8be11861d6bb8bbf5abdc0da28e91ab73f28 1
+exit=0
+already-handled: when-park-e4b8a68a5fdbb78cef8be11861d6bb8bbf5abdc0da28e91ab73f28 1
+
+$ bin/fm-pr-park.sh park unknown https://github.com/acme/widget/pull/42
+exit=1
+error: fm-pr-park: no task record for unknown in this home
+
+$ bin/fm-pr-park.sh park labpark https://gitlab.com/acme/widget/-/merge_requests/42
+exit=1
+error: fm-pr-park: only GitHub pull requests can be parked: https://gitlab.com/acme/widget/-/merge_requests/42
+
+$ bin/fm-pr-park.sh park labpark https://github.com/acme/widget/pull/42
+exit=1
+error: fm-pr-park: only a ship or scout worker can be parked; labpark is kind=secondmate
+
+$ bin/fm-pr-park.sh park labpark https://github.com/acme/widget/pull/42
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.l
+REFUSED: tmux endpoint 'lab:fm-wrong' is malformed or does not belong to task labpark; preserving task state.
+error: fm-pr-park: cannot stop the worker for labpark; the park was rolled back and the worker keeps its session
+
+$ bin/fm-procevent.sh list
+exit=0
+no sources registered
+
+$ bin/fm-pr-park.sh park labpark https://github.com/acme/widget/pull/42
+exit=1
+error: fm-pr-park: cannot read pull request https://github.com/acme/widget/pull/42
+
+$ tmux -L fm-lab new-window -t lab -n fm-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -c ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.l/work
+exit=0
+
+$ bin/fm-pr-park.sh park xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx https://github.com/acme/widget/pull/42
+exit=0
+already-stopped xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx harness=codex backend=tmux endpoint=lab:fm-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx worktree=~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.l/work
+parked: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx on https://github.com/acme/widget/pull/42
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.l
+
+$ bin/fm-procevent.sh list
+exit=0
+SOURCE                       ADAPTER      OWNER      PENDING
+when-park-7ce100971f64e7001e8fe5a51973ecdfe1ced42befe7ee8d5fd621 when         none       0
+
+$ bin/fm-pr-park.sh unpark xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+exit=0
+unparked: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+$ bin/fm-procevent-when.sh arm park-e4b8a68a5fdbb78cef8be11861d6bb8bbf5abdc0da28e91ab73f28 --condition ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/bin/fm-pr-park.sh changed labpark --action ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/bin/fm-pr-park.sh resume-note labpark
+exit=0
+armed: when-park-e4b8a68a5fdbb78cef8be11861d6bb8bbf5abdc0da28e91ab73f28
+starts on the watcher's next cycle; or run: bin/fm-procevent.sh reconcile
+reminder: deterministic, safe, reversible actions only; judgment and destructive actions stay on the wake-and-decide path
+
+$ bin/fm-pr-park.sh park labpark https://github.com/acme/widget/pull/42
+exit=1
+error: watch already exists or left state behind: ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.l/state/when/when-park-e4b8a68a5fdbb78cef8be11861d6bb8bbf5abdc0da28e91ab73f28.spec (retire it first)
+error: fm-pr-park: cannot arm the park watch for labpark; the worker keeps its session
+
+$ bin/fm-procevent-when.sh retire park-e4b8a68a5fdbb78cef8be11861d6bb8bbf5abdc0da28e91ab73f28
+exit=0
+retired: when-park-e4b8a68a5fdbb78cef8be11861d6bb8bbf5abdc0da28e91ab73f28
+retired: when-park-e4b8a68a5fdbb78cef8be11861d6bb8bbf5abdc0da28e91ab73f28
+
+ALL DRIVEN CONTRACT ASSERTIONS PASSED
+RESUME_PROOF=False
+CLEANUP: private tmux server stopped; disposable home removed

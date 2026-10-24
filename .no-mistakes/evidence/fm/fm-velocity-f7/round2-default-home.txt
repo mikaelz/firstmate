@@ -1,0 +1,15 @@
+$ tmux -L fm-lab new-session -d -s defaultproof -n fm-defaultproof -x 120 -y 40 -c ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF
+exit=0
+$ tmux -L fm-lab display-message -p #{socket_path}
+exit=0
+~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.f/t/tmux-1000/fm-lab
+$ ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.f/bin/fm-pr-park.sh park defaultproof https://github.com/acme/widget/pull/42
+exit=0
+already-stopped defaultproof harness=codex backend=tmux endpoint=defaultproof:fm-defaultproof worktree=~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.f/work
+parked: defaultproof on https://github.com/acme/widget/pull/42
+fm-gate-refuse: gate agent lifecycle permitted only against lab home ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.f
+$ ~/.no-mistakes/worktrees/4e4f35680e79/01M5NE3CGFXBCW16A0FAHJWVYF/.f/bin/fm-pr-park.sh unpark defaultproof
+exit=0
+unparked: defaultproof
+OBSERVED: FM_HOME unset; real control accepted the resolved default marked lab home.
+CLEANUP: endpoint and disposable home removed.
