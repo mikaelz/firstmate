@@ -1,0 +1,17 @@
+ok - bootstrap reports treehouse lease + tasks-axi/quota-axi bootstrap contracts
+ok - bootstrap: an absent-tool case hides the tool in the fallback base path
+ok - config/tool-provenance pins report a replaced, missing, or malformed pinned build
+ok - no-mistakes agent: entries that this host cannot run are reported
+ok - Claude auto mode with no bin/fm-* allow rule is reported only for a Claude primary home
+ok - a herdr home reports a stale, foreign, or unanswerable launcher pane at session start
+ok - bootstrap separates an absent no-mistakes from one below its version floor
+ok - bootstrap separates an absent gh-axi from one below its version floor
+ok - bootstrap preserves legacy Lavish boards while recommending synchronous reply support
+ok - bootstrap separates an absent tasks-axi from one below its floor or feature probe
+ok - bootstrap separates an absent quota-axi from one below its version floor
+ok - bootstrap requires git with an install instruction
+ok - bootstrap: backend=orca gates the Orca CLI without requiring it on the default backend
+ok - bootstrap: session-provider backends require their own CLI + jq + treehouse, never tmux
+not ok - backend=herdr must fail closed on its own missing session CLI (missing: 'MISSING_MANUAL: herdr (instructions: https://herdr.dev)')
+--- output ---
+

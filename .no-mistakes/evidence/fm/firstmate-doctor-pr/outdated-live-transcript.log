@@ -1,0 +1,69 @@
+Real npm release gh-axi@0.1.28 on PATH
+$ bin/fm-doctor.sh --json --area tools
+exit=1
+{
+  "schema": "fm-doctor.v1",
+  "home": "~/.no-mistakes/worktrees/4e4f35680e79/01M5RYSKZFZY93GH9N3WG9ZXCT/.validation-doctor/live/home",
+  "area": "tools",
+  "verdict": "fail",
+  "counts": {
+    "ok": 5,
+    "warn": 0,
+    "fail": 1,
+    "info": 0,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "30 checks valid",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json."
+    },
+    {
+      "id": "tools/missing",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Ask the captain, then run bin/fm-bootstrap.sh install <tool> (the line names the install command).",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "tools/outdated",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Ask the captain, then run the upgrade command the line names.",
+      "status": "fail",
+      "evidence": "OUTDATED: gh-axi (installed: 0.1.28; requires 0.1.29; upgrade: gh-axi update)",
+      "detail": [
+        "OUTDATED: gh-axi (installed: 0.1.28; requires 0.1.29; upgrade: gh-axi update)"
+      ]
+    },
+    {
+      "id": "tools/missing-manual",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Give the captain the printed instructions URL; never pass the tool to bin/fm-bootstrap.sh install.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "tools/presentation",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Work in plain text; install or upgrade lavish-axi with captain consent before using Lavish.",
+      "status": "ok",
+      "evidence": "none reported"
+    },
+    {
+      "id": "tools/provenance",
+      "area": "tools",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Restore the pinned build named in config/tool-provenance (a plain reinstall replaced it), or drop the pin once the upstream release carries the change.",
+      "status": "ok",
+      "evidence": "none reported"
+    }
+  ]
+}

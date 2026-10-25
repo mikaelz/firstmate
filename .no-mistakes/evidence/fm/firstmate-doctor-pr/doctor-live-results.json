@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Run default TOON, JSON and area selection; usage errors exit 2",
+    "result": "pass"
+  },
+  {
+    "name": "Accept cortex, warn for unsupported harness and fail an invalid backend",
+    "result": "pass"
+  },
+  {
+    "name": "Warn on Claude auto mode without this home script-family coverage; leave settings intact",
+    "result": "pass"
+  },
+  {
+    "name": "Detect unavailable agents in global and repository commented unindented YAML lists",
+    "result": "pass"
+  },
+  {
+    "name": "Report a real jq executable outside its pinned build prefix",
+    "result": "pass"
+  },
+  {
+    "name": "Expose exceeded memory budget despite successful owner report",
+    "result": "pass"
+  },
+  {
+    "name": "Refuse an inventory that removes detect-only safety before running checks",
+    "result": "pass"
+  },
+  {
+    "name": "Network opt-in reports absent disposable credentials and does not clear incomplete fleet results",
+    "result": "pass"
+  },
+  {
+    "name": "Inspect a provisioned home without changing its files or permissions",
+    "result": "pass"
+  },
+  {
+    "name": "Report stale launcher against a real disposable Herdr session",
+    "result": "untested",
+    "reason": "Isolated HOME lab prepare exit 1: fm-herdr-lab: fleet-state tripwire requires exactly one running default session"
+  },
+  {
+    "name": "Report an actual below-floor gh-axi release as outdated, not missing",
+    "result": "pass"
+  },
+  {
+    "name": "Render bearings with the shared TOON renderer and JSON output",
+    "result": "pass"
+  }
+]

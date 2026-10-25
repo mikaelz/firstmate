@@ -1,0 +1,16 @@
+{
+  "fm-doctor.test.sh": 0,
+  "fm-toon-lib.test.sh": 0,
+  "fm-bootstrap.test.sh initial": {
+    "exit": 1,
+    "cause": "host /usr/bin/herdr visible to missing-CLI test"
+  },
+  "fm-bootstrap.test.sh isolated fallback PATH": 0,
+  "manual doctor scenarios": 0,
+  "manual bearings": 0,
+  "real outdated tool": 0,
+  "Herdr prepare": {
+    "exit": 1,
+    "cause": "required running default-session tripwire unavailable under isolated HOME; provisioning not attempted"
+  }
+}

@@ -1,0 +1,4 @@
+ok - scalars and nested objects render as indented key lines
+ok - empty, scalar, and object arrays use their TOON forms
+ok - ambiguous strings are quoted and escaped
+ok - input jq cannot parse exits nonzero
