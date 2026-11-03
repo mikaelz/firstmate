@@ -1,0 +1,16 @@
+ok - .codex/hooks.json: Stop hook uses hook process root when payload cwd is outside
+ok - .codex/hooks.json: Stop hook ignores nested git root guard scripts
+{"case": "idle", "exit": 0, "stdout": "{}\n", "stderr": ""}
+{"case": "supervision-down", "exit": 2, "stdout": "", "stderr": "\u25cf\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n\u25cf  TURN WOULD END BLIND - SUPERVISION IS OFF\n\u25cf  1 task(s) in flight, but no live watcher holds this home lock (last beat: never).\n\u25cf  repair a missing or failed watcher cycle with the Pi tool fm_watch_arm_pi, or restart Pi with -e /tmp/fm-turnend-guard.V2d4iL/codex-output-primary/.pi/extensions/fm-primary-turnend-guard.ts -e /tmp/fm-turnend-guard.V2d4iL/codex-output-primary/.pi/extensions/fm-primary-pi-watch.ts if the extensions are not loaded.\n\u25cf\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n"}
+{"case": "already-active", "exit": 0, "stdout": "{}\n", "stderr": ""}
+{"case": "empty-input", "exit": 0, "stdout": "{}\n", "stderr": ""}
+{"case": "non-firstmate", "exit": 0, "stdout": "{}\n", "stderr": ""}
+{"case": "child-worktree", "exit": 0, "stdout": "{}\n", "stderr": ""}
+{"case": "malformed-registration", "exit": 0, "stdout": "{}\n", "stderr": ""}
+{"case": "nonexecutable-guard", "exit": 0, "stdout": "{}\n", "stderr": ""}
+{"case": "missing-jq", "exit": 0, "stdout": "{}\n", "stderr": ""}
+{"case": "runtime-error", "exit": 7, "stdout": "", "stderr": "fixture guard failed\n"}
+{"case": "inherited-path", "exit": 0, "stdout": "{}\n", "stderr": "inherited PATH used\n"}
+{"case": "park-guard-allow", "exit": 0, "stdout": "{}\n", "stderr": "fixture park guard\n"}
+{"case": "park-guard-block", "exit": 2, "stdout": "", "stderr": "fixture park guard\n"}
+ok - .codex Stop wrapper: clean success JSON, inherited PATH, unchanged errors and continuation without logout output

@@ -1,4 +1,4 @@
-FM_TEST_BEGIN 2026-10-14T02:24:21Z tests/fm-turnend-guard.test.sh family=watcher-wake-lock expected_gate_skip=none
+FM_TEST_BEGIN 2026-11-03T15:57:27Z tests/fm-turnend-guard.test.sh family=watcher-wake-lock expected_gate_skip=none
 ok - fm_supervision_unhealthy: false with no state/*.meta at all
 ok - fm_supervision_unhealthy: true with in-flight task and no beacon ever
 ok - fm_supervision_unhealthy: true with in-flight task and a beacon far outside the grace window
@@ -50,19 +50,59 @@ ok - .codex/hooks.json: Stop hook uses hook process root when payload cwd is out
 ok - .codex/hooks.json: Stop hook ignores nested git root guard scripts
 ok - .codex Stop wrapper: clean success JSON, inherited PATH, unchanged errors and continuation without logout output
 ok - .opencode primary plugin: guard path is anchored to worktree, not directory
-not ok - Pi logical-run guard test printed output: (node:2430465) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/mike/.no-mistakes/worktrees/cb3ff81633e8/01M4V3E96PT48DP9YZTKTDSFW7/.test-tmp/fm-turnend-guard.T59HVt/pi-logical-run-root/.pi/extensions/fm-primary-turnend-guard.ts is not specified and it doesn't parse as CommonJS.
-Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
-To eliminate this warning, add "type": "module" to /home/mike/package.json.
-(Use `node --trace-warnings ...` to show where the warning was created)
-FM_TEST_END 2026-10-14T02:24:27Z tests/fm-turnend-guard.test.sh exit=1 duration_ms=5786 gate_skip=false
-FM_TEST_BEGIN 2026-10-14T02:24:27Z tests/fm-codex-hook-layer-live-e2e.test.sh family=live-harness-optin expected_gate_skip=live-capability
+ok - .pi primary extension: no-tool and multi-tool runs each inject exactly one guard follow-up
+ok - .pi primary extension: delivery failure resets the logical-run latch
+ok - .pi primary extension: a nested load keeps the live session's turn-end marker
+ok - .pi primary extension: the turn-end guard reads a Windows-tagged session lock only on Windows
+ok - fm-turnend-guard --claude: re-blocks a loop-guarded stop while unhealthy and unclaimed (incident regression)
+ok - fm-turnend-guard --claude: X-mode-only homes re-block when auto-arm recovery is absent
+ok - fm-turnend-guard --claude: a live arming epoch advances once and repeated observation is idempotent
+ok - fm-turnend-guard --claude: repeated failed-to-arming races make bounded monotonic progress
+ok - fm-turnend-guard --claude: terminal owner boundary excludes a concurrent start without deadlock
+ok - fm-turnend-guard --claude: fresh rewake epoch prevents a duplicate continuation for the same event
+ok - fm-turnend-guard --claude: an abandoned auto-arm claim no longer allows a blind stop (incident regression)
+ok - fm-turnend-guard --claude: a claim whose pid was reused stops counting as recovery even while its entry reads arming
+ok - fm-turnend-guard --claude: a hung owner frozen at arming with no watcher beat no longer allows a blind stop
+ok - fm-turnend-guard --claude: a live open generation claim owns recovery with no lock held
+ok - fm-turnend-guard --claude: a stuck generation claim no longer allows a blind stop
+ok - fm-turnend-guard --claude: the terminal path clears an abandoned claim instead of stepping aside silently
+ok - fm-turnend-guard --claude: fresh failed epochs preserve and advance monotonic fail-open progression
+ok - fm-turnend-guard --claude: integrated fresh failures reach one bounded fail-open, stop continuation, and reset on recovery
+ok - fm-turnend-guard --claude: an inert auto-arm's frozen epoch reaches one bounded fail-open and resets on recovery
+ok - fm-turnend-guard --claude: a frozen unverified epoch spends the budget yet still blocks
+ok - fm-turnend-guard --claude: reset contention preserves all episode state until retry
+ok - fm-turnend-guard --claude: concurrent auto-arm and guard resets are idempotent and deadlock-free
+ok - fm-turnend-guard --claude: the exhausted auto-arm commits the attended alarm once, then stays suppressed until recovery
+ok - fm-turnend-guard --claude: a repeatedly lost host hand-back on a pending or announced handling marker reaches the attended alarm
+ok - fm-turnend-guard --claude: interruption reaches the attended alarm and preserves its final rewake after commit
+ok - fm-turnend-guard --claude: stale rewake epoch does not allow a blind stop
+ok - fm-turnend-guard --claude: budget exhaustion alone cannot permit a blind stop
+ok - fm-turnend-guard --claude: verified fail-open is loud, bounded, attended, and non-repeating
+ok - fm-turnend-guard --claude: fail-open requires both exhausted retries and consumed notice
+ok - fm-turnend-guard --claude: away ownership excludes the Stop-autoarm fail-open
+ok - fm-turnend-guard --claude: positive watcher recovery resets failure episode state
+ok - fm-turnend-guard --claude: bounded claim wait avoids a token-consuming forced continuation
+ok - fm-turnend-guard --claude: secondmate home re-blocks unclaimed and allows auto-arm-claimed stops
+ok - fm-turnend-guard: a live away-mode daemon satisfies supervision with no watcher holding the lock
+ok - fm-turnend-guard: away-mode daemon ownership survives a leftover dead watcher lock
+ok - fm-turnend-guard: away mode with no daemon and no watcher still blocks
+ok - fm-turnend-guard: away mode blocks on a dead away-mode daemon
+ok - fm-turnend-guard: away mode blocks on a pid-reused away-mode daemon lock
+ok - fm-turnend-guard: away-mode daemon ownership never substitutes for a fresh beacon
+ok - fm-turnend-guard: a daemon lock proves nothing while away mode is off
+ok - fm-turnend-guard: away-mode beacon freshness uses the poll-derived grace, not the flat default
+ok - fm-turnend-guard: a dead away-mode daemon still blocks under the poll-derived grace
+ok - fm-turnend-guard: the poll-derived grace is bounded, not unlimited
+ok - fm-turnend-guard: with away mode off, the poll-derived grace never applies
+FM_TEST_END 2026-11-03T15:58:42Z tests/fm-turnend-guard.test.sh exit=0 duration_ms=75036 gate_skip=false
+FM_TEST_BEGIN 2026-11-03T15:58:42Z tests/fm-codex-hook-layer-live-e2e.test.sh family=live-harness-optin expected_gate_skip=live-capability
 ok - codex codex-cli 0.162.1 still publishes the hook feature flag firstmate disables
-ok - codex codex-cli 0.162.1 runs a firstmate crewmate launch with its hook layer disabled
+ok - codex codex-cli 0.162.1 accepts the requested hook disablement for a firstmate crewmate launch
 ok - codex codex-cli 0.162.1: Stop parser checked 12 isolated cases with clean wrapper JSON and bounded continuation
 # all fm-codex-hook-layer-live-e2e tests passed
-FM_TEST_END 2026-10-14T02:24:34Z tests/fm-codex-hook-layer-live-e2e.test.sh exit=0 duration_ms=6808 gate_skip=false
-FM_TEST_SUMMARY total=2 failed=1 skipped_gate=0 duration_ms=12675
-FM_TEST_SUMMARY_FAMILY family=live-harness-optin count=1 duration_ms=6808 failed=0
-FM_TEST_SUMMARY_FAMILY family=watcher-wake-lock count=1 duration_ms=5786 failed=1
-FM_TEST_SLOWEST rank=1 script=tests/fm-codex-hook-layer-live-e2e.test.sh duration_ms=6808
-FM_TEST_SLOWEST rank=2 script=tests/fm-turnend-guard.test.sh duration_ms=5786
+FM_TEST_END 2026-11-03T15:58:48Z tests/fm-codex-hook-layer-live-e2e.test.sh exit=0 duration_ms=6192 gate_skip=false
+FM_TEST_SUMMARY total=2 failed=0 skipped_gate=0 duration_ms=81315
+FM_TEST_SUMMARY_FAMILY family=live-harness-optin count=1 duration_ms=6192 failed=0
+FM_TEST_SUMMARY_FAMILY family=watcher-wake-lock count=1 duration_ms=75036 failed=0
+FM_TEST_SLOWEST rank=1 script=tests/fm-turnend-guard.test.sh duration_ms=75036
+FM_TEST_SLOWEST rank=2 script=tests/fm-codex-hook-layer-live-e2e.test.sh duration_ms=6192
