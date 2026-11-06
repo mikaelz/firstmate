@@ -23,6 +23,11 @@ ok - auto-arm: X-mode poll need arms the cycle even with no tasks in flight
 ok - auto-arm: a registered custom check arms the cycle even with no tasks in flight
 ok - auto-arm: concurrent firings admit one owner and one rewake translation
 ok - auto-arm: TERM mid-arm commits a durable failure and exits 2 for rewake
+ok - auto-arm: HUP, TERM and INT episodes do not consume the replacement session's notice
+ok - auto-arm: a new session id retires an interrupted episode despite process identity reuse
+ok - auto-arm: verified same-session lock moves preserve the interrupted episode
+ok - auto-arm: HUP, TERM and INT after lock loss close silently as session-ended
+ok - auto-arm: all interruption signals preserve verified re-anchors and reject replacement session ids
 ok - auto-arm: an abandoned owner claim is reclaimed so a lapsed cycle re-arms
 ok - auto-arm: an abandoned-claim reclaim reaps a dead steal mutex without nesting
 ok - auto-arm: a legacy owner still arming is never reclaimed while its watcher keeps beating

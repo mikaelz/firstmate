@@ -1,63 +1,61 @@
-import os, pathlib, tempfile, subprocess, shutil, json, hashlib
-ROOT=pathlib.Path.cwd()
-E=pathlib.Path('~/.no-mistakes/evidence/01M5CYCB67YA6HX73JXW4GQKV1')
-lab=pathlib.Path(tempfile.mkdtemp(prefix='.f6-hook-lab-',dir=ROOT))
+import os, pathlib, subprocess, tempfile, shutil, json, hashlib
+root=pathlib.Path.cwd()
+evidence=pathlib.Path('~/Dropbox/no-mistakes-evidence/01M6R3S6B9R70NPF9R370M87DV')
+lab=pathlib.Path(tempfile.mkdtemp(prefix='.f6-hook-lab-',dir=root))
 records=[]
-def run(args, **kw):
-    return subprocess.run(args, text=True,capture_output=True,timeout=20,**kw)
+env=os.environ.copy()
+for key in list(env):
+    if key.startswith('FM_') or key in ('GROK_AGENT','GROK_HOOK_EVENT','CLAUDE_PROJECT_DIR'):
+        env.pop(key)
+env.update(GIT_CONFIG_GLOBAL='/dev/null',GIT_CONFIG_SYSTEM='/dev/null',GIT_AUTHOR_NAME='Fixture',GIT_AUTHOR_EMAIL='fixture@example.invalid',GIT_COMMITTER_NAME='Fixture',GIT_COMMITTER_EMAIL='fixture@example.invalid')
 def git(*args):
-    p=run(['git',*map(str,args)], env={**os.environ,'GIT_CONFIG_NOSYSTEM':'1','GIT_CONFIG_GLOBAL':'/dev/null'})
-    assert p.returncode==0,p.stderr
-    return p.stdout
-
+    subprocess.run(['git',*map(str,args)],check=True,env=env,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
 def state(home):
-    return {str(p.relative_to(home/'state')):hashlib.sha256(p.read_bytes()).hexdigest() for p in (home/'state').rglob('*') if p.is_file()}
-def hook(home,script,task=None,active=False,expected=0):
-    env={k:v for k,v in os.environ.items() if not k.startswith('FM_') and k not in ('GROK_AGENT','GROK_HOOK_EVENT','CLAUDE_PROJECT_DIR')}
-    env.update(FM_HOME=str(home), CLAUDE_PROJECT_DIR=str(home),FM_CLAUDE_AUTOARM_SYNC_WAIT_MS='10')
-    if task is not None: env['FM_TASK_ID']=task
-    command=next(h['command'] for group in json.loads((home/'.claude/settings.json').read_text())['hooks']['Stop'] for h in group['hooks'] if script in h['command']) if script!='fm-subagent-pretool-check.sh' else 'exec "$CLAUDE_PROJECT_DIR"/bin/fm-subagent-pretool-check.sh --claude'
+    return {str(p.relative_to(home)): hashlib.sha256(p.read_bytes()).hexdigest() for p in (home/'state').rglob('*') if p.is_file()}
+def run(home, name, argv, payload, task=None, code=0, silent=True):
+    e=env.copy(); e.update(FM_ROOT_OVERRIDE=str(home), FM_HOME=str(home),FM_STATE_OVERRIDE=str(home/'state'), FM_CONFIG_OVERRIDE=str(home/'config'),CLAUDE_PROJECT_DIR=str(home),FM_CLAUDE_AUTOARM_SYNC_WAIT_MS='0')
+    if task: e['FM_TASK_ID']=task
     before=state(home)
-    p=run(['bash','-c',command],cwd=home,env=env,input=json.dumps({'session_id':'f6-live-hook','stop_hook_active':active,'tool_name':'Agent'}))
-    same=state(home)==before
-    records.append(dict(home=home.name,hook=script,task=task,stop_hook_active=active,exit=p.returncode,stdout=p.stdout,stderr=p.stderr,state_unchanged=same))
-    assert p.returncode==expected, records[-1]
-    if expected==0: assert not p.stdout and not p.stderr,records[-1]
-    if task and expected==0: assert same,records[-1]
+    p=subprocess.run(argv,input=json.dumps(payload),text=True,capture_output=True,env=e,cwd=home,timeout=20)
+    after=state(home)
+    rec=dict(name=name,task=task,command=argv,payload=payload,exit=p.returncode,stdout=p.stdout,stderr=p.stderr,state_unchanged=before==after)
+    records.append(rec)
+    print(json.dumps(rec),flush=True)
+    assert p.returncode==code,(name,p.returncode,code)
+    if silent: assert not p.stdout and not p.stderr and before==after,name
 try:
-    base=lab/'primary'; base.mkdir()
-    git('init','-q',base)
-    git('-C',base,'-c','user.name=F6 lab','-c','user.email=f6@example.invalid','commit','-q','--allow-empty','-m','fixture')
-    wt=lab/'recycled-worker'
-    git('-C',base,'worktree','add','-q','-b','f6-lab',wt)
-    for h in [base,wt]:
-        shutil.copytree(ROOT/'bin',h/'bin')
-        shutil.copy2(ROOT/'AGENTS.md',h/'AGENTS.md')
-        (h/'.claude').mkdir(); shutil.copy2(ROOT/'.claude/settings.json',h/'.claude/settings.json')
-        (h/'state').mkdir(); (h/'state/task.meta').touch()
-    # Ordinary linked worker: both Stop commands remain silent.
-    for script in ['fm-turnend-guard.sh','fm-claude-stop-autoarm.sh']:
-        hook(wt,script,task='ship-f6')
-    # Adversarial stale valid marker, repeated Stop events for ship and scout.
-    (wt/'.fm-secondmate-home').write_text('sm-former-owner\n')
-    for task in ['ship-f6','scout-f6']:
-        for active in [False,True]:
-            for script in ['fm-turnend-guard.sh','fm-claude-stop-autoarm.sh']:
-                hook(wt,script,task=task,active=active)
-        hook(wt,'fm-subagent-pretool-check.sh',task=task)
-    # Unmarked genuine linked secondmate and plain primary stay guarded.
-    for h in [wt,base]:
-        hook(h,'fm-turnend-guard.sh',expected=2)
-        hook(h,'fm-subagent-pretool-check.sh',expected=2)
-    # Demonstrate the regression on the same disposable worker with base library.
-    lib=wt/'bin/fm-primary-scope-lib.sh'; fixed=lib.read_bytes()
-    lib.write_text(git('show','3eabd356abc99bdb0c1d2cefc5a1dec4a9fe39c1:bin/fm-primary-scope-lib.sh'))
-    hook(wt,'fm-turnend-guard.sh',task='ship-f6',expected=2)
-    records[-1]['baseline']=True
-    lib.write_bytes(fixed)
-    hook(wt,'fm-turnend-guard.sh',task='ship-f6')
-    print('All real hook invocations matched expected output, exit status, and worker state preservation.')
+    primary=lab/'primary'; git('init','-q',primary)
+    # Use the existing tracked agent contract in a disposable repository.
+    shutil.copyfile(root/'AGENTS.md', primary/'AGENTS.md')
+    git('-C',primary,'add','AGENTS.md');git('-C',primary,'commit','-qm','Fixture')
+    recycled=lab/'recycled';git('-C',primary,'worktree','add','-qb','recycled',recycled)
+    clean=lab/'clean';git('-C',primary,'worktree','add','-qb','clean',clean)
+    for home in (primary,recycled,clean):
+        (home/'bin').symlink_to(root/'bin',target_is_directory=True)
+        (home/'state').mkdir();(home/'config').mkdir()
+        (home/'state'/'task.meta').write_text('kind=ship\n')
+        # A pending notification and absent watcher make supervisor guard non-vacuous.
+        (home/'state'/'.wake-queue').write_text('synthetic pending notification\n')
+    (recycled/'.fm-secondmate-home').write_text('sm-recycled-1\n')
+    # Positive controls: same pending work blocks a real supervisor in both shapes.
+    for home in (primary,recycled):
+        run(home,home.name+' supervisor Stop blocks', ['bash',str(root/'bin/fm-turnend-guard.sh'),'--claude'],{'stop_hook_active':False,'session_id':'f6-control'},code=2,silent=False)
+        run(home,home.name+' supervisor delegation denies', ['bash',str(root/'bin/fm-subagent-pretool-check.sh'),'--claude'],{'tool_name':'Agent'},code=2,silent=False)
+    settings=json.loads((root/'.claude/settings.json').read_text())
+    stops=[h['command'] for group in settings['hooks']['Stop'] for h in group['hooks']]
+    for task in ('ship-recycled','scout-recycled'):
+        for active in (False,True):
+            for index,cmd in enumerate(stops):
+                run(recycled,f'{task} registered Stop {index}, retry={active}', ['bash','-c',cmd],{'stop_hook_active':active,'session_id':'f6-worker'},task)
+        run(recycled,task+' delegation allowed',['bash',str(root/'bin/fm-subagent-pretool-check.sh'),'--claude'],{'tool_name':'Agent'},task)
+    # Existing linked-worker exemption must survive without relying on FM_TASK_ID.
+    for index,cmd in enumerate(stops):
+        run(clean,f'clean linked worker registered Stop {index}',['bash','-c',cmd],{'stop_hook_active':False,'session_id':'f6-clean'})
+    run(clean,'clean linked worker delegation allowed',['bash',str(root/'bin/fm-subagent-pretool-check.sh'),'--claude'],{'tool_name':'Agent'})
+    # Guard must also honor the explicit worker identity before plain-checkout eligibility.
+    run(primary,'explicit worker identity overrides plain checkout',['bash',str(root/'bin/fm-turnend-guard.sh'),'--claude'],{'stop_hook_active':False},'ship-explicit')
+    print('All direct product-hook scenarios passed.')
 finally:
-    (E/'hook-transcript.json').write_text(json.dumps(records,indent=2)+'\n')
+    (evidence/'hook-results.json').write_text(json.dumps(records,indent=2)+'\n')
     shutil.rmtree(lab)
-    print('Disposable repositories and homes removed.')
+    print('Disposable repositories and state removed.')
