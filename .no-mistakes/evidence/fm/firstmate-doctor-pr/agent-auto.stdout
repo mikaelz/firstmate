@@ -1,0 +1,31 @@
+{
+  "schema": "fm-doctor.v1",
+  "home": "{run-worktree}/.doctor-live/home",
+  "area": "no-mistakes",
+  "verdict": "ok",
+  "counts": {
+    "ok": 2,
+    "warn": 0,
+    "fail": 0,
+    "info": 0,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "30 checks valid",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json."
+    },
+    {
+      "id": "no-mistakes/agents",
+      "area": "no-mistakes",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Install the named agent or remove it from the agent: list (ask the captain before editing their no-mistakes config); confirm with no-mistakes doctor.",
+      "status": "ok",
+      "evidence": "none reported"
+    }
+  ]
+}

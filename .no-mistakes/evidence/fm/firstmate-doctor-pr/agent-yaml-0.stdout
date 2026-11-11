@@ -1,0 +1,34 @@
+{
+  "schema": "fm-doctor.v1",
+  "home": "{run-worktree}/.doctor-live/home",
+  "area": "no-mistakes",
+  "verdict": "warn",
+  "counts": {
+    "ok": 1,
+    "warn": 1,
+    "fail": 0,
+    "info": 0,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "30 checks valid",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json."
+    },
+    {
+      "id": "no-mistakes/agents",
+      "area": "no-mistakes",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Install the named agent or remove it from the agent: list (ask the captain before editing their no-mistakes config); confirm with no-mistakes doctor.",
+      "status": "warn",
+      "evidence": "NO_MISTAKES_AGENTS: {run-worktree}/.doctor-live/nm/config.yaml agent: lists missing-live-doctor-agent, but missing-live-doctor-agent is no...",
+      "detail": [
+        "NO_MISTAKES_AGENTS: {run-worktree}/.doctor-live/nm/config.yaml agent: lists missing-live-doctor-agent, but missing-live-doctor-agent is not installed; no-mistakes silently skips a missing fallback agent - install it or drop it from the list (no-mistakes doctor is the authoritative view)"
+      ]
+    }
+  ]
+}

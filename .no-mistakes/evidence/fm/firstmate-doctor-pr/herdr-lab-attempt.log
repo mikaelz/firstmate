@@ -1,0 +1,1 @@
+fm-herdr-lab: session 'fm-lab-doctor' would bind a 139-byte socket path, over the 103-byte sun_path limit: {run-worktree}/.herdr-live/config/herdr/sessions/fm-lab-doctor/herdr-client.sock

@@ -1,0 +1,34 @@
+{
+  "schema": "fm-doctor.v1",
+  "home": "{run-worktree}/.doctor-live/home",
+  "area": "permissions",
+  "verdict": "warn",
+  "counts": {
+    "ok": 1,
+    "warn": 1,
+    "fail": 0,
+    "info": 0,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "30 checks valid",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json."
+    },
+    {
+      "id": "permissions/claude-fm-scripts",
+      "area": "permissions",
+      "owner": "bin/fm-bootstrap.sh",
+      "fix": "Give the captain the exact allow rule the line names for the home's .claude/settings.local.json; a present rule does not prove auto mode honors it.",
+      "status": "warn",
+      "evidence": "CLAUDE_PERMISSIONS: Claude auto mode is on ({run-worktree}/.doctor-live/settings.json) but no Bash(...bin/fm-*...) allow rule is in any Cl...",
+      "detail": [
+        "CLAUDE_PERMISSIONS: Claude auto mode is on ({run-worktree}/.doctor-live/settings.json) but no Bash(...bin/fm-*...) allow rule is in any Claude settings layer, so the auto-mode classifier may refuse firstmate's own scripts - add Bash({run-worktree}/.doctor-live/home/bin/fm-*:*) to {run-worktree}/.doctor-live/home/.claude/settings.local.json (a present rule does not prove the classifier honors it)"
+      ]
+    }
+  ]
+}

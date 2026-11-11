@@ -1,0 +1,34 @@
+{
+  "schema": "fm-doctor.v1",
+  "home": "{run-worktree}/.doctor-live/home",
+  "area": "memory",
+  "verdict": "warn",
+  "counts": {
+    "ok": 1,
+    "warn": 1,
+    "fail": 0,
+    "info": 0,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "30 checks valid",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json."
+    },
+    {
+      "id": "memory/budget",
+      "area": "memory",
+      "owner": "bin/fm-startup-memory-budget.sh",
+      "fix": "An absent budget is written at the next locked session start; correct a malformed config/startup-memory-budget by hand.",
+      "status": "warn",
+      "evidence": "startup-memory-budget: invalid config/startup-memory-budget - value must be one positive decimal integer",
+      "detail": [
+        "stderr: startup-memory-budget: invalid config/startup-memory-budget - value must be one positive decimal integer"
+      ]
+    }
+  ]
+}

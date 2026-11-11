@@ -1,0 +1,8 @@
+Output, area filtering, usage errors, skipped checks, and existing-home read-only: PASS
+Supported crew adapters (including cortex, kiro, hermes), unsupported adapter, invalid backend and dispatch: PASS
+Detect missing fallback executables from scalar, flow, indented and commented unindented YAML lists: PASS
+Claude auto-mode settings warning and family allow-rule boundary using synthetic settings: PASS
+Real jq provenance mismatch and matching installation: PASS
+Missing, malformed, exact-boundary and exceeded memory budgets: PASS
+Opt-in real gh auth probe in credential-free disposable home reports failure: PASS
+Real doctor classifies synthetic below-floor external gh-axi as tools/outdated: PASS
