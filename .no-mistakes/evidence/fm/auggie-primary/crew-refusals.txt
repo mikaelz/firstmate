@@ -1,0 +1,54 @@
+
+$ bin/fm-spawn.sh reject-secondmate-config secondmate (config)
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.auggie-validation/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; config/secondmate-harness (falling back to config/crew-harness) must name a verified worker harness
+exit=1
+task_metadata_created=no
+
+$ bin/fm-spawn.sh reject-secondmate-explicit secondmate (explicit)
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.auggie-validation/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the explicit harness argument must name a verified worker harness
+exit=1
+task_metadata_created=no
+
+$ bin/fm-spawn.sh reject-secondmate-raw secondmate (raw)
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.auggie-validation/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+exit=1
+task_metadata_created=no
+
+$ bin/fm-spawn.sh reject-ship-config ship (config)
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.auggie-validation/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; config/crew-harness must name a verified worker harness
+exit=1
+task_metadata_created=no
+
+$ bin/fm-spawn.sh reject-ship-explicit ship (explicit)
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.auggie-validation/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the explicit harness argument must name a verified worker harness
+exit=1
+task_metadata_created=no
+
+$ bin/fm-spawn.sh reject-ship-raw ship (raw)
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.auggie-validation/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+exit=1
+task_metadata_created=no
+
+$ bin/fm-spawn.sh reject-scout-config scout (config)
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.auggie-validation/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; config/crew-harness must name a verified worker harness
+exit=1
+task_metadata_created=no
+
+$ bin/fm-spawn.sh reject-scout-explicit scout (explicit)
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.auggie-validation/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the explicit harness argument must name a verified worker harness
+exit=1
+task_metadata_created=no
+
+$ bin/fm-spawn.sh reject-scout-raw scout (raw)
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.auggie-validation/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+exit=1
+task_metadata_created=no

@@ -1,0 +1,54 @@
+REAL AUGGIE THROUGH A SYMLINK WITH SPACES
+$ ['{run-worktree}/bin/fm-harness.sh', 'ancestry-descent', '3318485']
+comm auggie
+exit=0, expected=0
+
+$ ['ps', '-o', 'pid=,comm=,args=', '-p', '3318485']
+3318485 node-MainThread node {run-worktree}/.auggie-validation/home/Agent Tools/auggie --augment-cache-dir {run-worktree}/.auggie-validation/home/spaced-cache --augment-session-json ~/.augment/session.json --no-session --no-cloud --log-file {run-worktree}/.auggie-validation/home/spaced.log
+exit=0, expected=0
+
+$ ['bash', '-c', '. "$1"; fm_harness_pid_alive "$2"', 'probe', '{run-worktree}/bin/fm-session-lock-lib.sh', '3318485']
+exit=0, expected=0
+
+$ ['bash', '-c', '. "$1"; fm_session_lock_pid_blocks_reclaim "$2"', 'probe', '{run-worktree}/bin/fm-session-lock-lib.sh', '3318485']
+exit=0, expected=0
+
+$ ['{run-worktree}/bin/fm-lock.sh', 'status']
+lock: held by live harness pid 3318485
+exit=0, expected=0
+
+$ ['{run-worktree}/bin/fm-lock.sh']
+error: another live firstmate session holds the lock (pid 3318485); operate read-only until resolved
+exit=1, expected=1
+
+UNRELATED LIVE NODE INPUT: language-server.mjs
+$ ['ps', '-o', 'pid=,comm=,args=', '-p', '3324904']
+3324904 node            node {run-worktree}/.auggie-validation/home/language-server.mjs
+exit=0, expected=0
+
+$ ['bash', '-c', '. "$1"; fm_harness_pid_alive "$2"', 'probe', '{run-worktree}/bin/fm-session-lock-lib.sh', '3324904']
+exit=1, expected=1
+
+$ ['bash', '-c', '. "$1"; fm_session_lock_pid_blocks_reclaim "$2"', 'probe', '{run-worktree}/bin/fm-session-lock-lib.sh', '3324904']
+exit=1, expected=1
+
+$ ['{run-worktree}/bin/fm-lock.sh', 'status']
+lock: stale (pid 3324904 dead or not a harness)
+exit=0, expected=0
+
+UNRELATED LIVE NODE INPUT: auggie-mcp.mjs
+$ ['ps', '-o', 'pid=,comm=,args=', '-p', '3325023']
+3325023 node            node {run-worktree}/.auggie-validation/home/auggie-mcp.mjs
+exit=0, expected=0
+
+$ ['bash', '-c', '. "$1"; fm_harness_pid_alive "$2"', 'probe', '{run-worktree}/bin/fm-session-lock-lib.sh', '3325023']
+exit=1, expected=1
+
+$ ['bash', '-c', '. "$1"; fm_session_lock_pid_blocks_reclaim "$2"', 'probe', '{run-worktree}/bin/fm-session-lock-lib.sh', '3325023']
+exit=1, expected=1
+
+$ ['{run-worktree}/bin/fm-lock.sh', 'status']
+lock: stale (pid 3325023 dead or not a harness)
+exit=0, expected=0
+
+All spawned unrelated Node processes terminated and waited.

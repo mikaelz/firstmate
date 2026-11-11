@@ -1,0 +1,4 @@
+auggie
+comm auggie
+lock acquired: harness pid 3318485
+lock: held by live harness pid 3318485

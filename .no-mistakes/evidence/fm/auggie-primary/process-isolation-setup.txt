@@ -1,0 +1,15 @@
+host
+adopted_orphan_parent=8154
+exit=0
+private PID namespace
+adopted_orphan_parent=1
+exit=0
+Initial direct ancestry test: exit 1, orphan-parent fixture assumed PID 1; host adoption probe above proves a non-init reaper.
+First PID namespace retry: exit 1, namespace-root DAC override invalidated read-only-lock fixture.
+Final command: unshare --user --map-root-user --pid --fork --mount-proc setpriv --bounding-set=-dac_override,-dac_read_search bash tests/fm-session-lock-ancestry.test.sh
+Final exit: 0. Entire targeted ancestry test file passed without source changes.
+fm-harness-precedence.test.sh exit: 0.
+fm-supervision-instructions.test.sh exit: 0.
+Live crew refusal matrix exit: 0.
+Live process-boundary probes exit: 0.
+Both real Auggie lab processes stopped through their private tmux socket. Startup-network child state=done, rc=0.

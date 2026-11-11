@@ -1,0 +1,6 @@
+auggie
+comm auggie
+lock acquired: harness pid 3202752
+lock: held by live harness pid 3202752
+
+Exit codes: fm-harness=0, fm-harness ancestry=0, fm-lock=0, fm-lock status=0

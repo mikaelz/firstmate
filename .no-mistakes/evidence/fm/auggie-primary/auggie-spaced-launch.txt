@@ -1,0 +1,58 @@
+
+ v1.2.0
+  ▇▇▇▇▇╗ ▇▇╗   ▇▇╗ ▇▇▇▇▇▇╗  ▇▇▇▇▇▇╗ ▇▇╗▇▇▇▇▇▇▇╗
+ ▇▇╔══▇▇╗▇▇║   ▇▇║▇▇╔════╝ ▇▇╔════╝ ▇▇║▇▇╔════╝
+ ▇▇▇▇▇▇▇║▇▇║   ▇▇║▇▇║  ▇▇▇╗▇▇║  ▇▇▇╗▇▇║▇▇▇▇▇╗
+ ▇▇╔══▇▇║▇▇║   ▇▇║▇▇║   ▇▇║▇▇║   ▇▇║▇▇║▇▇╔══╝
+ ▇▇║  ▇▇║╚▇▇▇▇▇▇╔╝╚▇▇▇▇▇▇╔╝╚▇▇▇▇▇▇╔╝▇▇║▇▇▇▇▇▇▇╗
+ ╚═╝  ╚═╝ ╚═════╝  ╚═════╝  ╚═════╝ ╚═╝╚══════╝
+                                    by HARNESS
+ send us feedback — use /feedback. You might just see it happen next release
+
+
+ Indexing disabled for current workspace "{run-worktree}".
+[Skill conflicts]
+  "no-mistakes" collision:
+    ✓ auto (user) ~/.claude/skills/no-mistakes/SKILL.md
+    ✗ ~/.agents/skills/no-mistakes/SKILL.md (skipped)
+  "sentry-axi" collision:
+    ✓ auto (user) ~/.claude/skills/sentry-axi/SKILL.md
+    ✗ ~/.agents/skills/sentry-axi/SKILL.md (skipped)
+  "writing-for-agents" collision:
+    ✓ auto (user) ~/.claude/skills/writing-for-agents/SKILL.md
+    ✗ ~/.agents/skills/writing-for-agents/SKILL.md (skipped)
+
+[Hook issues] deprecated tool names
+  ~/.no-mistakes/worktrees/a598f809e305/01M74XCCMR8JPCFH22JF2VPJ64/.augment/settings.json
+    PreToolUse: launch-process → bash
+  ~/.no-mistakes/worktrees/a598f809e305/01M74XCCMR8JPCFH22JF2VPJ64/.augment/settings.json
+    PreToolUse: launch-process → bash
+
+
+
+ This is a bounded process identity test, not a supervisor assignment. Do not load session start, spawn, publish,
+ install, edit source or memory, read credentials, or access any operator home. Only run one bash call: export
+ FM_HOME="$PWD/.auggie-validation/spaced-home"; { bin/fm-harness.sh; bin/fm-harness.sh ancestry; bin/fm-lock.sh;
+ bin/fm-lock.sh status; } > "$FM_HOME/result.txt" 2>&1. This directory is a fresh marked disposable lab home. Then
+ report the result and stop; ongoing supervision is not needed. Keep any writes inside that lab.
+
+
+ Warning: tmux extended-keys is off. Modified Enter keys may not work. Add `set -g extended-keys on` to ~/.tmux.conf
+ and restart tmux.
+
+
+ $ export FM_HOME="$PWD/.auggie-validation/spaced-home"; { bin/fm-harness.sh; bin/fm-harness.sh ancestry;
+ bin/fm-lock.sh; bin/fm-lock.sh status; } > "$FM_HOME/result.txt" 2>&1
+
+
+ Captain, the four commands ran in the marked lab, and their output was captured at
+ .auggie-validation/spaced-home/result.txt. The shell call returned exit code 0; individual command results were
+ redirected to the file, so I can't report them here without another call. I stopped as requested.
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+›
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+~/.no-mistakes/worktrees/a598f809e305/01M74XCCMR8JPCFH22JF2VPJ64 (detached) • Process Identity Test
+↓272 $0.005 9.1%/305k (auto)                                                                                 Prism (GPT)
+
+
