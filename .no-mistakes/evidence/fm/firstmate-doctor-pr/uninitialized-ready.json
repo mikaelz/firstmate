@@ -1,0 +1,1 @@
+{"schema":"fm-primary-ready.v1","home":"l.VjVUrL/empty","observed_at":"2026-11-11T09:38:22Z","lock":{"state":"free","pid":null,"live_harness":false},"wake_consumer":{"state":"unknown","reason":"supervision-model-unknown-for-home","beacon_age_seconds":null},"posture":{"state":"present"},"can_receive":false}

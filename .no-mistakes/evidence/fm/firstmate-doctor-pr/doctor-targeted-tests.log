@@ -1,13 +1,21 @@
+FM_TEST_BEGIN 2026-11-11T09:36:49Z tests/fm-doctor.test.sh family=unclassified expected_gate_skip=none
 ok - a silent bootstrap renders every mapped check ok and exits 0
 ok - provoked bootstrap lines render under their inventory ids and severities
 ok - a tangled primary renders fleet/tangle as a failure
 ok - a bootstrap line the inventory does not map fails instead of passing silently
 ok - fixture inventories with duplicate ids, unknown areas, bad owners, or a mutating source fail validation
 ok - --network adds a fresh auth probe and reads the last finished network report
+ok - real readiness owner reports a dead primary as a doctor warning
+ok - readiness warns for unavailable, stale, failed, or unreadable reports and accepts healthy reports
 ok - memory reports use the published budget status for both home roles
 ok - own and crew checks accept supported adapters and reject unsupported names
 ok - TOON and --json render the same checks and statuses
 ok - --area limits the run; usage errors exit 2
 ok - --help is short, stdout-only, and leaves the home untouched
 ok - a doctor run writes nothing to the home
+ok - readiness and doctor leave an absent state directory absent
 ok - without jq the doctor prints a plain doctor/jq failure
+FM_TEST_END 2026-11-11T09:37:18Z tests/fm-doctor.test.sh exit=0 duration_ms=29468 gate_skip=false
+FM_TEST_SUMMARY total=1 failed=0 skipped_gate=0 duration_ms=29526
+FM_TEST_SUMMARY_FAMILY family=unclassified count=1 duration_ms=29468 failed=0
+FM_TEST_SLOWEST rank=1 script=tests/fm-doctor.test.sh duration_ms=29468

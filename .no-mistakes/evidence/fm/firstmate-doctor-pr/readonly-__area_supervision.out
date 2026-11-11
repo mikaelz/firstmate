@@ -1,0 +1,11 @@
+home: {run-worktree}/l.VjVUrL/empty
+verdict: warn
+summary: "0 fail, 1 warn, 1 ok, 1 info, 1 skip"
+checks[4]{id,status,evidence}:
+  doctor/inventory,ok,30 checks valid
+  supervision/network-checks,skip,network check; run fm-doctor.sh --network
+  supervision/ready,warn,can_receive=false lock.state=free wake_consumer.state=unknown
+  supervision/startup-network,info,not started - no deferred network checks have run for this home yet.
+findings[1]{id,fix}:
+  supervision/ready,Start or resume a firstmate session for this home and keep its supervision cycle live.
+help[3]: Apply each fix through its owner command; never edit captain-owned files to clear a finding,Run fm-doctor.sh --network to add the GitHub auth probe and the last network report,Run fm-doctor.sh --json for every evidence line

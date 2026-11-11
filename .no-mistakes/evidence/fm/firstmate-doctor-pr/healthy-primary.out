@@ -1,0 +1,53 @@
+{
+  "schema": "fm-doctor.v1",
+  "home": "{run-worktree}/l.VjVUrL/primary-home",
+  "area": "supervision",
+  "verdict": "ok",
+  "counts": {
+    "ok": 2,
+    "warn": 0,
+    "fail": 0,
+    "info": 1,
+    "skip": 1
+  },
+  "checks": [
+    {
+      "id": "doctor/inventory",
+      "area": "doctor",
+      "status": "ok",
+      "evidence": "30 checks valid",
+      "owner": "bin/fm-doctor.sh",
+      "fix": "Correct docs/doctor-checks.json."
+    },
+    {
+      "id": "supervision/network-checks",
+      "area": "supervision",
+      "owner": "bin/fm-startup-network.sh",
+      "fix": "Rerun the command the line prints; the named checks are unknown, not failed.",
+      "status": "skip",
+      "evidence": "network check; run fm-doctor.sh --network"
+    },
+    {
+      "id": "supervision/ready",
+      "area": "supervision",
+      "owner": "bin/fm-inbox.sh",
+      "fix": "Start or resume a firstmate session for this home and keep its supervision cycle live.",
+      "status": "ok",
+      "evidence": "can_receive=true lock.state=held wake_consumer.state=healthy",
+      "detail": [
+        "{\"schema\":\"fm-primary-ready.v1\",\"home\":\"l.VjVUrL/primary-home\",\"observed_at\":\"2026-11-11T09:38:32Z\",\"lock\":{\"state\":\"held\",\"pid\":1366667,\"live_harness\":true},\"wake_consumer\":{\"state\":\"healthy\",\"reason\":\"supervised\",\"beacon_age_seconds\":0},\"posture\":{\"state\":\"present\"},\"can_receive\":true}"
+      ]
+    },
+    {
+      "id": "supervision/startup-network",
+      "area": "supervision",
+      "owner": "bin/fm-startup-network.sh",
+      "fix": "Read bin/fm-startup-network.sh report and rerun the command it names.",
+      "status": "info",
+      "evidence": "not started - no deferred network checks have run for this home yet.",
+      "detail": [
+        "not started - no deferred network checks have run for this home yet."
+      ]
+    }
+  ]
+}
