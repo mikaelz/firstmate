@@ -1,0 +1,5 @@
+Live product evidence: public fm-spawn.sh on marked disposable FM_HOME and real private tmux server.
+42 explicit/configured/raw refusal observations passed across ships, scouts, and secondmates; no task metadata or command-substitution side effects.
+Six non-target raw commands reached the independent secondmate-home safety rejection rather than the Auggie-only refusal. This proves guard traversal, not successful worker startup.
+Installed Auggie 1.2.0 launched in 120x40 private tmux pane, identified as comm auggie; fm_harness_pid_alive returned 0. No prompt or indexing permission submitted.
+Both private tmux servers stopped; Auggie PID gone; lab directories removed.

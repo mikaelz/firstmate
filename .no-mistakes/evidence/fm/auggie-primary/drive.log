@@ -1,0 +1,119 @@
+ship-explicit PASS  gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the explicit harness argument must name a verified worker harness
+
+ship-raw PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+ship-env PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+ship-nested PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+ship-quoted PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+ship-assignment PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+ship-redirect PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+ship-split PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+ship-search-path PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+ship-compound PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+ship-pipeline PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+ship-group PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+ship-no-evaluation PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+scout-explicit PASS  gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the explicit harness argument must name a verified worker harness
+
+scout-raw PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+scout-env PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+scout-nested PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+scout-quoted PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+scout-assignment PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+scout-redirect PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+scout-split PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+scout-search-path PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+scout-compound PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+scout-pipeline PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+scout-group PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+scout-no-evaluation PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+secondmate-explicit PASS  gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the explicit harness argument must name a verified worker harness
+
+secondmate-raw PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+secondmate-env PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+secondmate-nested PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+secondmate-quoted PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+secondmate-assignment PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+secondmate-redirect PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+secondmate-split PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+secondmate-search-path PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+secondmate-compound PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+secondmate-pipeline PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+secondmate-group PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+secondmate-no-evaluation PASS refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+cleanup kill-server 0 
+RESULTS 43 FAILED 0

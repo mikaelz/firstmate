@@ -1,0 +1,38 @@
+[
+  {
+    "command": "env true auggie --model x",
+    "rc": 1,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab\nerror: secondmate home cannot be inside the firstmate repo: {run-worktree}/.lab-target\n",
+    "passed": true
+  },
+  {
+    "command": "env -u 'auggie' BAR='two words' 'true' auggie --model x",
+    "rc": 1,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab\nerror: secondmate home cannot be inside the firstmate repo: {run-worktree}/.lab-target\n",
+    "passed": true
+  },
+  {
+    "command": "env 2>{run-worktree}/.lab/auggie true auggie --model x",
+    "rc": 1,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab\nerror: secondmate home cannot be inside the firstmate repo: {run-worktree}/.lab-target\n",
+    "passed": true
+  },
+  {
+    "command": "env -S 'true auggie --model x'",
+    "rc": 1,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab\nerror: secondmate home cannot be inside the firstmate repo: {run-worktree}/.lab-target\n",
+    "passed": true
+  },
+  {
+    "command": "cd {run-worktree}/.lab && env true auggie --model x",
+    "rc": 1,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab\nerror: secondmate home cannot be inside the firstmate repo: {run-worktree}/.lab-target\n",
+    "passed": true
+  },
+  {
+    "command": "env -P /opt/auggie true auggie --model x",
+    "rc": 1,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab\nerror: secondmate home cannot be inside the firstmate repo: {run-worktree}/.lab-target\n",
+    "passed": true
+  }
+]

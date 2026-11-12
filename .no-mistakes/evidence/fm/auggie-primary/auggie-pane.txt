@@ -1,0 +1,40 @@
+
+ v1.2.0
+  ▇▇▇▇▇╗ ▇▇╗   ▇▇╗ ▇▇▇▇▇▇╗  ▇▇▇▇▇▇╗ ▇▇╗▇▇▇▇▇▇▇╗
+ ▇▇╔══▇▇╗▇▇║   ▇▇║▇▇╔════╝ ▇▇╔════╝ ▇▇║▇▇╔════╝
+ ▇▇▇▇▇▇▇║▇▇║   ▇▇║▇▇║  ▇▇▇╗▇▇║  ▇▇▇╗▇▇║▇▇▇▇▇╗
+ ▇▇╔══▇▇║▇▇║   ▇▇║▇▇║   ▇▇║▇▇║   ▇▇║▇▇║▇▇╔══╝
+ ▇▇║  ▇▇║╚▇▇▇▇▇▇╔╝╚▇▇▇▇▇▇╔╝╚▇▇▇▇▇▇╔╝▇▇║▇▇▇▇▇▇▇╗
+ ╚═╝  ╚═╝ ╚═════╝  ╚═════╝  ╚═════╝ ╚═╝╚══════╝
+                                    by HARNESS
+ send us feedback — use /feedback. You might just see it happen next release
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+ Workspace Indexing Permission
+
+ → [1] Always index this workspace - Unlock full workspace understanding
+   [2] Never index this workspace - Use basic assistance only
+   [3] Index this workspace for this session
+   [4] Skip indexing for this session
+
+ ↑↓ navigate  enter select  1-4 select  escape/ctrl+c cancel
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+~/.no-mistakes/worktrees/a598f809e305/01M789TVH3AK2BWP0NSPF5WCER (detached)
+10.2%/305k (estimated) (auto)                                                                         GPT-6.1 Sol • high
+
+
+
+
+
+
+
+
+
+
+
+
+
+

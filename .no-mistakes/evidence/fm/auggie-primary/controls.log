@@ -1,0 +1,20 @@
+argument 1 fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: secondmate home cannot be inside the firstmate repo: {run-worktree}/.lab-target
+
+unset-variable 1 fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: secondmate home cannot be inside the firstmate repo: {run-worktree}/.lab-target
+
+redirect-target 1 fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: secondmate home cannot be inside the firstmate repo: {run-worktree}/.lab-target
+
+split-other 1 fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: secondmate home cannot be inside the firstmate repo: {run-worktree}/.lab-target
+
+compound-other 1 fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: secondmate home cannot be inside the firstmate repo: {run-worktree}/.lab-target
+
+search-other 1 fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.lab
+error: secondmate home cannot be inside the firstmate repo: {run-worktree}/.lab-target
+
+kill-server rc 0
+FAILED 0
