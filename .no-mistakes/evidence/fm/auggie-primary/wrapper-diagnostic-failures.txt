@@ -1,0 +1,32 @@
+Expected per intent: primary-only diagnostic for an Auggie worker. All attempts refused; these returned the generic invalid-command diagnostic instead.
+
+ship env-end-dash
+bin/fm-spawn.sh probe {run-worktree}/.l env -- - /opt/tools/bin/auggie --model x --mode local-only --yolo off
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l
+error: invalid raw launch command: wrapper options could not be resolved
+
+ship sudo-interspersed
+bin/fm-spawn.sh probe {run-worktree}/.l sudo FOO=1 -n auggie --model x --mode local-only --yolo off
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l
+error: invalid raw launch command: wrapper options could not be resolved
+
+scout env-end-dash
+bin/fm-spawn.sh probe {run-worktree}/.l env -- - /opt/tools/bin/auggie --model x --scout
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l
+error: invalid raw launch command: wrapper options could not be resolved
+
+scout sudo-interspersed
+bin/fm-spawn.sh probe {run-worktree}/.l sudo FOO=1 -n auggie --model x --scout
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l
+error: invalid raw launch command: wrapper options could not be resolved
+
+secondmate env-end-dash
+bin/fm-spawn.sh probe {run-worktree}/.l env -- - /opt/tools/bin/auggie --model x --secondmate
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l
+error: invalid raw launch command: wrapper options could not be resolved
+
+secondmate sudo-interspersed
+bin/fm-spawn.sh probe {run-worktree}/.l sudo FOO=1 -n auggie --model x --secondmate
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l
+error: invalid raw launch command: wrapper options could not be resolved
+

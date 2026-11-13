@@ -1,0 +1,5 @@
+Captain, `bin/fm-harness.sh` output: `auggie`
+
+`bin/fm-lock.sh` output: `lock acquired: harness pid 1185713`
+
+Request ID: 805adfcd-3c91-48a2-882f-571a2721408f

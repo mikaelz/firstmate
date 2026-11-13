@@ -1,0 +1,38 @@
+
+ v1.2.0
+  ▇▇▇▇▇╗ ▇▇╗   ▇▇╗ ▇▇▇▇▇▇╗  ▇▇▇▇▇▇╗ ▇▇╗▇▇▇▇▇▇▇╗
+ ▇▇╔══▇▇╗▇▇║   ▇▇║▇▇╔════╝ ▇▇╔════╝ ▇▇║▇▇╔════╝
+ ▇▇▇▇▇▇▇║▇▇║   ▇▇║▇▇║  ▇▇▇╗▇▇║  ▇▇▇╗▇▇║▇▇▇▇▇╗
+ ▇▇╔══▇▇║▇▇║   ▇▇║▇▇║   ▇▇║▇▇║   ▇▇║▇▇║▇▇╔══╝
+ ▇▇║  ▇▇║╚▇▇▇▇▇▇╔╝╚▇▇▇▇▇▇╔╝╚▇▇▇▇▇▇╔╝▇▇║▇▇▇▇▇▇▇╗
+ ╚═╝  ╚═╝ ╚═════╝  ╚═════╝  ╚═════╝ ╚═╝╚══════╝
+                                    by HARNESS
+
+[Skill conflicts]
+  "no-mistakes" collision:
+    ✓ auto (user) ~/.claude/skills/no-mistakes/SKILL.md
+    ✗ ~/.agents/skills/no-mistakes/SKILL.md (skipped)
+  "sentry-axi" collision:
+    ✓ auto (user) ~/.claude/skills/sentry-axi/SKILL.md
+    ✗ ~/.agents/skills/sentry-axi/SKILL.md (skipped)
+  "writing-for-agents" collision:
+    ✓ auto (user) ~/.claude/skills/writing-for-agents/SKILL.md
+    ✗ ~/.agents/skills/writing-for-agents/SKILL.md (skipped)
+
+
+ Auggie couldn't load an available model. Restart Auggie to try again. If the problem continues, contact support.
+
+ Warning: tmux extended-keys is off. Modified Enter keys may not work. Add `set -g extended-keys on` to ~/.tmux.conf
+ and restart tmux.
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+›
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+~/.no-mistakes/worktrees/a598f809e305/01M79SA6GQASK9PG3N9YGAX7TW (detached)
+0.0%/0 (auto)                                                                                                    unknown
+
+
+
+
+
+

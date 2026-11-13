@@ -1,0 +1,3 @@
+ok - session-lock: an auggie node bundle is identified from its package script, and only from it
+ok - session-lock: spaced live argv retains auggie ancestry, liveness, reclaim protection, and inspection
+ok - session-lock: Node option operands and eval launches cannot replace the main script

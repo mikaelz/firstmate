@@ -1,0 +1,408 @@
++ set -u
+++ dirname tests/.gate-diagnose.sh
++ . tests/lib.sh
+++ '[' -n '' ']'
+++ FM_TEST_LIB_SOURCED=1
+++ umask 022
++++ dirname tests/lib.sh
+++ . tests/git-config-helpers.sh
++++ export GIT_CONFIG_GLOBAL=/dev/null GIT_CONFIG_NOSYSTEM=1
++++ GIT_CONFIG_GLOBAL=/dev/null
++++ GIT_CONFIG_NOSYSTEM=1
++++ unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE GIT_COMMON_DIR
+++ export FM_GATE_REFUSE_BYPASS=1
+++ FM_GATE_REFUSE_BYPASS=1
+++ export FM_TEST_SEAM=1
+++ FM_TEST_SEAM=1
+++ unset FM_TASK_ID
+++ unset HERDR_ENV HERDR_PANE_ID HERDR_TAB_ID HERDR_WORKSPACE_ID HERDR_SOCKET_PATH HERDR_SESSION HERDR_BIN_PATH TERM_PROGRAM FM_BACKEND FM_HOME FM_ROOT FM_ROOT_OVERRIDE FM_STATE_OVERRIDE FM_DATA_OVERRIDE FM_CONFIG_OVERRIDE FM_PROJECTS_OVERRIDE
+++ unset TASKS_AXI_FILE TASKS_AXI_BACKEND
+++ unset REX_SESSION REX_BLOCK
+++++ dirname tests/lib.sh
++++ cd tests/..
++++ pwd
+++ ROOT={run-worktree}
++++ fm_test_tmpdir
++++ local base={run-worktree}/.live-test physical
++++ base={run-worktree}/.live-test
++++ '[' -n {run-worktree}/.live-test ']'
++++ case "$base" in
+++++ CDPATH=
+++++ cd -- {run-worktree}/.live-test
+++++ pwd -P
++++ physical={run-worktree}/.live-test
++++ base={run-worktree}/.live-test
++++ '[' -e {run-worktree}/.live-test/.git ']'
++++ printf '%s\n' {run-worktree}/.live-test
+++ FM_TEST_TMPDIR={run-worktree}/.live-test
+++ FM_TEST_CLEANUP_DIRS=()
++++ mktemp {run-worktree}/.live-test/.fm-test-cleanup.1185302.XXXXXX
+++ FM_TEST_CLEANUP_REGISTRY={run-worktree}/.live-test/.fm-test-cleanup.1185302.Vi8JW3
++++ fm_test_pid_identity 1185302
++++ local pid=1185302
++++ FM_STATE_OVERRIDE={run-worktree}/.live-test
++++ bash -c '. "$1"; fm_pid_identity "$2"' _ {run-worktree}/bin/fm-wake-lib.sh 1185302
+++ FM_TEST_OWNER_IDENTITY='linux-starttime=20410323 cmdline-hex=62617368002d780074657374732f2e676174652d646961676e6f73652e736800'
++++ mktemp {run-worktree}/.live-test/.fm-test-procevent.1185302.XXXXXX
+++ FM_TEST_PROCEVENT_REGISTRY={run-worktree}/.live-test/.fm-test-procevent.1185302.cqggR4
++++ mktemp {run-worktree}/.live-test/.fm-test-watcher.1185302.XXXXXX
+++ FM_TEST_WATCHER_REGISTRY={run-worktree}/.live-test/.fm-test-watcher.1185302.CRG3zO
+++ FM_TEST_STUB_MAX_BLOCK_SECONDS=120
+++ export FM_TEST_STUB_MAX_BLOCK_SECONDS
+++ FM_TEST_SUITE_PID=1185302
+++ export FM_TEST_SUITE_PID
+++ trap fm_test_cleanup EXIT
+++ trap 'fm_test_cleanup; exit 130' INT
+++ trap 'fm_test_cleanup; exit 143' TERM
+++ trap 'fm_test_cleanup; exit 129' HUP
+++ trap 'fm_test_cleanup; exit 131' QUIT
++++ fm_test_tmproot fm-treehouse-pool
++++ local prefix=fm-treehouse-pool root tmp_base
+++++ fm_test_tmpdir
+++++ local base={run-worktree}/.live-test physical
+++++ base={run-worktree}/.live-test
+++++ '[' -n {run-worktree}/.live-test ']'
+++++ case "$base" in
++++++ CDPATH=
++++++ cd -- {run-worktree}/.live-test
++++++ pwd -P
+++++ physical={run-worktree}/.live-test
+++++ base={run-worktree}/.live-test
+++++ '[' -e {run-worktree}/.live-test/.git ']'
+++++ printf '%s\n' {run-worktree}/.live-test
++++ tmp_base={run-worktree}/.live-test
++++ tmp_base={run-worktree}/.live-test
+++++ mktemp -d {run-worktree}/.live-test/fm-treehouse-pool.XXXXXX
++++ root={run-worktree}/.live-test/fm-treehouse-pool.eR7o0U
+++++ cd -P -- {run-worktree}/.live-test/fm-treehouse-pool.eR7o0U
+++++ pwd -P
++++ root={run-worktree}/.live-test/fm-treehouse-pool.eR7o0U
++++ printf '%s\n%s\n' 1185302 'linux-starttime=20410323 cmdline-hex=62617368002d780074657374732f2e676174652d646961676e6f73652e736800'
++++ printf '%s\n' {run-worktree}/.live-test/fm-treehouse-pool.eR7o0U
++++ printf '%s\n' {run-worktree}/.live-test/fm-treehouse-pool.eR7o0U
+++ TREEHOUSE_ROOT={run-worktree}/.live-test/fm-treehouse-pool.eR7o0U
+++ export TREEHOUSE_ROOT
+++ FM_TEST_ORPHAN_MAX_AGE_SECONDS=3600
+++ '[' 0 '!=' 1 ']'
+++ fm_test_reap_orphans
+++ local marker dir mtime now owner_pid owner_identity current_identity
++++ date +%s
+++ now=1794581414
+++ for marker in "$FM_TEST_TMPDIR"/fm-*/.fm-test-fixture
+++ '[' -e {run-worktree}/.live-test/fm-session-lock-ancestry.44wUzI/.fm-test-fixture ']'
++++ sed -n 1p {run-worktree}/.live-test/fm-session-lock-ancestry.44wUzI/.fm-test-fixture
+++ owner_pid=1111744
++++ sed -n '2,$p' {run-worktree}/.live-test/fm-session-lock-ancestry.44wUzI/.fm-test-fixture
+++ owner_identity='linux-starttime=20404293 cmdline-hex=626173680074657374732f666d2d73657373696f6e2d6c6f636b2d616e6365737472792e746573742e736800'
+++ case "$owner_pid" in
++++ fm_test_pid_identity 1111744
+++ current_identity='linux-starttime=20404293 cmdline-hex=626173680074657374732f666d2d73657373696f6e2d6c6f636b2d616e6365737472792e746573742e736800'
+++ '[' -n 'linux-starttime=20404293 cmdline-hex=626173680074657374732f666d2d73657373696f6e2d6c6f636b2d616e6365737472792e746573742e736800' ']'
+++ '[' 'linux-starttime=20404293 cmdline-hex=626173680074657374732f666d2d73657373696f6e2d6c6f636b2d616e6365737472792e746573742e736800' = 'linux-starttime=20404293 cmdline-hex=626173680074657374732f666d2d73657373696f6e2d6c6f636b2d616e6365737472792e746573742e736800' ']'
+++ continue
+++ for marker in "$FM_TEST_TMPDIR"/fm-*/.fm-test-fixture
+++ '[' -e {run-worktree}/.live-test/fm-treehouse-pool.FtFZVM/.fm-test-fixture ']'
++++ sed -n 1p {run-worktree}/.live-test/fm-treehouse-pool.FtFZVM/.fm-test-fixture
+++ owner_pid=1111744
++++ sed -n '2,$p' {run-worktree}/.live-test/fm-treehouse-pool.FtFZVM/.fm-test-fixture
+++ owner_identity='linux-starttime=20404293 cmdline-hex=626173680074657374732f666d2d73657373696f6e2d6c6f636b2d616e6365737472792e746573742e736800'
+++ case "$owner_pid" in
++++ fm_test_pid_identity 1111744
+++ current_identity='linux-starttime=20404293 cmdline-hex=626173680074657374732f666d2d73657373696f6e2d6c6f636b2d616e6365737472792e746573742e736800'
+++ '[' -n 'linux-starttime=20404293 cmdline-hex=626173680074657374732f666d2d73657373696f6e2d6c6f636b2d616e6365737472792e746573742e736800' ']'
+++ '[' 'linux-starttime=20404293 cmdline-hex=626173680074657374732f666d2d73657373696f6e2d6c6f636b2d616e6365737472792e746573742e736800' = 'linux-starttime=20404293 cmdline-hex=626173680074657374732f666d2d73657373696f6e2d6c6f636b2d616e6365737472792e746573742e736800' ']'
+++ continue
+++ for marker in "$FM_TEST_TMPDIR"/fm-*/.fm-test-fixture
+++ '[' -e {run-worktree}/.live-test/fm-treehouse-pool.eR7o0U/.fm-test-fixture ']'
++++ sed -n 1p {run-worktree}/.live-test/fm-treehouse-pool.eR7o0U/.fm-test-fixture
+++ owner_pid=1185302
++++ sed -n '2,$p' {run-worktree}/.live-test/fm-treehouse-pool.eR7o0U/.fm-test-fixture
+++ owner_identity='linux-starttime=20410323 cmdline-hex=62617368002d780074657374732f2e676174652d646961676e6f73652e736800'
+++ case "$owner_pid" in
++++ fm_test_pid_identity 1185302
+++ current_identity='linux-starttime=20410323 cmdline-hex=62617368002d780074657374732f2e676174652d646961676e6f73652e736800'
+++ '[' -n 'linux-starttime=20410323 cmdline-hex=62617368002d780074657374732f2e676174652d646961676e6f73652e736800' ']'
+++ '[' 'linux-starttime=20410323 cmdline-hex=62617368002d780074657374732f2e676174652d646961676e6f73652e736800' = 'linux-starttime=20410323 cmdline-hex=62617368002d780074657374732f2e676174652d646961676e6f73652e736800' ']'
+++ continue
++ . {run-worktree}/bin/fm-ff-lib.sh
+++ SUB_HOME_MARKER=.fm-secondmate-home
+++++ dirname {run-worktree}/bin/fm-ff-lib.sh
++++ cd {run-worktree}/bin
++++ pwd
+++ . {run-worktree}/bin/fm-secondmate-registry-lib.sh
++++ SECONDMATE_REGISTRY_ID=
++++ SECONDMATE_REGISTRY_SUMMARY=
++++ SECONDMATE_REGISTRY_HOST=
++++ SECONDMATE_REGISTRY_ROOT=
++++ SECONDMATE_REGISTRY_HOME=
++++ SECONDMATE_REGISTRY_SCOPE=
++++ SECONDMATE_REGISTRY_PROJECTS=
++++ SECONDMATE_REGISTRY_ADDED=
++++ SECONDMATE_REGISTRY_REMOTE=0
++++ SECONDMATE_REGISTRY_LINE=
++++ SECONDMATE_REGISTRY_MATCH_HOST=
++++ SECONDMATE_REGISTRY_MATCH_ROOT=
++++ SECONDMATE_REGISTRY_MATCH_HOME=
++++ SECONDMATE_REGISTRY_MATCH_HOME_KEY=
++++ SECONDMATE_REGISTRY_MATCH_PROJECTS=
++++ SECONDMATE_REGISTRY_MATCH_REMOTE=0
++++ SECONDMATE_REGISTRY_ERROR=
+++ VALIDATED_HOME=
+++ VALIDATION_ERROR=
+++ FETCHED=
+++ REMOTE_SYNC_UNSUPPORTED_STATUS=2
+++ FF_STATUS=
+++ FF_INSTR=
+++ FF_IMPORT_FROM=
+++ FF_NUDGE_WINDOWS=
+++ FF_SEEN_HOMES=
++ . {run-worktree}/bin/fm-config-inherit-lib.sh
+++++ dirname {run-worktree}/bin/fm-config-inherit-lib.sh
++++ cd {run-worktree}/bin
++++ pwd
+++ . {run-worktree}/bin/fm-startup-memory-budget-lib.sh
++++ FM_STARTUP_MEMORY_BUDGET_FILE=startup-memory-budget
++++ FM_STARTUP_MEMORY_BUDGET_DEFAULT=7500
++++ FM_STARTUP_MEMORY_BUDGET_ERROR=
++++ FM_STARTUP_MEMORY_BUDGET_VALUE=
++++ FM_STARTUP_MEMORY_MEASURE_BYTES=
++++ FM_STARTUP_MEMORY_MEASURE_TOKENS=
++++ FM_STARTUP_MEMORY_MEASURE_PRESENCE=
+++++ dirname {run-worktree}/bin/fm-config-inherit-lib.sh
++++ cd {run-worktree}/bin
++++ pwd
+++ . {run-worktree}/bin/fm-role-lib.sh
+++ FM_SHARED_CAPTAIN_FILE=captain-shared.md
+++ FM_SHARED_CAPTAIN_REL=data/captain-shared.md
+++ FM_SHARED_CAPTAIN_MODE=444
+++ FM_INHERITABLE_CONFIG='crew-dispatch.json dispatch-never-send crew-harness backlog-backend backend herdr-presentation-spaces herdr-project-groups startup-memory-budget trace-context launch-env-allowlist claude-permission-mode codex-approval-mode lavish-axi-host t3code-instances keep-ai-trailers supervision-host-off firstmate-role'
+++ FM_SESSION_SCOPED_INHERITABLE_CONFIG=trace-context
+++ FM_CONFIG_REREAD_INSTRUCTION_PREFIX_REL=state/.fm-inherited-config-reread
+++ FM_CONFIG_REREAD_MAX_SENT=16
+++ FM_CONFIG_REREAD_RETRY_ROOT_REL=state/.fm-inherited-config-reread-retry
+++ FM_CONFIG_REREAD_MAX_PENDING=16
+++ FM_CONFIG_REREAD_MAX_QUARANTINE=16
+++ FM_CONFIG_INHERIT_LOCK_REL=state/.fm-inherited-config.lock
+++ FM_CONFIG_REREAD_FRAMING='These inherited config files changed. Re-read and apply their exact contents at every future intake. They are defaults/rules and do not remove your judgment to choose differently when warranted.'
++ unset CLAUDECODE PI_CODING_AGENT FM_PI_HARNESS GROK_AGENT CURSOR_AGENT CURSOR_INVOKED_AS
++ BASE_PATH=/usr/bin:/bin:/usr/sbin:/sbin
++ fm_git_identity fmtest fmtest@example.com
++ export GIT_AUTHOR_NAME=fmtest GIT_AUTHOR_EMAIL=fmtest@example.com
++ GIT_AUTHOR_NAME=fmtest
++ GIT_AUTHOR_EMAIL=fmtest@example.com
++ export GIT_COMMITTER_NAME=fmtest GIT_COMMITTER_EMAIL=fmtest@example.com
++ GIT_COMMITTER_NAME=fmtest
++ GIT_COMMITTER_EMAIL=fmtest@example.com
+++ fm_test_tmproot fm-secondmate-harness
+++ local prefix=fm-secondmate-harness root tmp_base
++++ fm_test_tmpdir
++++ local base={run-worktree}/.live-test physical
++++ base={run-worktree}/.live-test
++++ '[' -n {run-worktree}/.live-test ']'
++++ case "$base" in
+++++ CDPATH=
+++++ cd -- {run-worktree}/.live-test
+++++ pwd -P
++++ physical={run-worktree}/.live-test
++++ base={run-worktree}/.live-test
++++ '[' -e {run-worktree}/.live-test/.git ']'
++++ printf '%s\n' {run-worktree}/.live-test
+++ tmp_base={run-worktree}/.live-test
+++ tmp_base={run-worktree}/.live-test
++++ mktemp -d {run-worktree}/.live-test/fm-secondmate-harness.XXXXXX
+++ root={run-worktree}/.live-test/fm-secondmate-harness.C68U5A
++++ cd -P -- {run-worktree}/.live-test/fm-secondmate-harness.C68U5A
++++ pwd -P
+++ root={run-worktree}/.live-test/fm-secondmate-harness.C68U5A
+++ printf '%s\n%s\n' 1185302 'linux-starttime=20410323 cmdline-hex=62617368002d780074657374732f2e676174652d646961676e6f73652e736800'
+++ printf '%s\n' {run-worktree}/.live-test/fm-secondmate-harness.C68U5A
+++ printf '%s\n' {run-worktree}/.live-test/fm-secondmate-harness.C68U5A
++ TMP_ROOT={run-worktree}/.live-test/fm-secondmate-harness.C68U5A
++ export FM_BACKEND=tmux
++ FM_BACKEND=tmux
+++ fm_fakebin {run-worktree}/.live-test/fm-secondmate-harness.C68U5A/blind-ancestry
+++ local dir={run-worktree}/.live-test/fm-secondmate-harness.C68U5A/blind-ancestry fakebin={run-worktree}/.live-test/fm-secondmate-harness.C68U5A/blind-ancestry/fakebin
+++ mkdir -p {run-worktree}/.live-test/fm-secondmate-harness.C68U5A/blind-ancestry/fakebin
+++ printf '%s\n' {run-worktree}/.live-test/fm-secondmate-harness.C68U5A/blind-ancestry/fakebin
++ BLIND_BIN={run-worktree}/.live-test/fm-secondmate-harness.C68U5A/blind-ancestry/fakebin
++ fm_fake_blind_ancestry {run-worktree}/.live-test/fm-secondmate-harness.C68U5A/blind-ancestry/fakebin
++ local fakebin={run-worktree}/.live-test/fm-secondmate-harness.C68U5A/blind-ancestry/fakebin real_ps
+++ command -v ps
++ real_ps=/usr/bin/ps
++ cat
++ chmod +x {run-worktree}/.live-test/fm-secondmate-harness.C68U5A/blind-ancestry/fakebin/ps
++ test_spawn_split_and_inherit
++ local w sm meta
++ w={run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split
++ sm={run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/sm
++ mkdir -p {run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/home/config
++ printf '{"default":{"harness":"claude","model":"haiku","effort":"low"}}\n'
++ printf 'claude\n'
++ printf 'codex\n'
++ printf 'manual\n'
++ printf 'zellij\n'
++ :
++ make_seeded_home {run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/sm sm
++ local home={run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/sm id=sm
++ mkdir -p {run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/sm/bin {run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/sm/data
++ printf '# Firstmate\n'
++ printf '%s\n' sm
++ printf 'charter\n'
++ printf '%s\n' projects/ state/ data/ config/ .no-mistakes/
++ git -C {run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/sm init -q -b main
++ spawn_secondmate {run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split sm {run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/sm
++ local world={run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split id=sm home={run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/sm harness= fakebin
++ mkdir -p {run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/home/state {run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/home/data
+++ make_noop_tmux {run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/tmux-sm
+++ local dir={run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/tmux-sm fakebin={run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/tmux-sm/fakebin
+++ mkdir -p {run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/tmux-sm/fakebin
+++ cat
+++ chmod +x {run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/tmux-sm/fakebin/tmux
++++ command -v node
+++ ln -sf /usr/bin/node {run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/tmux-sm/fakebin/node
+++ printf '%s\n' {run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/tmux-sm/fakebin
++ fakebin={run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/tmux-sm/fakebin
++ spawn_args=('sm' '{run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/sm')
++ local spawn_args
++ '[' -n '' ']'
++ spawn_args+=(--secondmate)
++ PATH={run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/tmux-sm/fakebin:{run-worktree}/.live-test/fm-secondmate-harness.C68U5A/blind-ancestry/fakebin:/usr/bin:/bin:/usr/sbin:/sbin
++ TMUX=
++ CLAUDECODE=1
++ FM_ROOT_OVERRIDE={run-worktree}
++ FM_HOME={run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/home
++ HOME={run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/home/user-home
++ CLAUDE_CONFIG_DIR=
++ FM_STATE_OVERRIDE={run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/home/state
++ FM_DATA_OVERRIDE={run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/home/data
++ FM_PROJECTS_OVERRIDE={run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/home/projects
++ FM_CONFIG_OVERRIDE={run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/home/config
++ FM_SPAWN_NO_GUARD=1
++ {run-worktree}/bin/fm-spawn.sh sm {run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/sm --secondmate
++ true
++ meta={run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/home/state/sm.meta
++ '[' -f {run-worktree}/.live-test/fm-secondmate-harness.C68U5A/spawn-split/home/state/sm.meta ']'
++ fail 'split: no meta written'
++ printf 'not ok - %s\n' 'split: no meta written'
+not ok - split: no meta written
++ exit 1
++ fm_test_cleanup
++ local d
++ fm_test_reap_watchers
++ local state lock_home $'seen=\n'
++ '[' -f {run-worktree}/.live-test/.fm-test-watcher.1185302.CRG3zO ']'
++ IFS=
++ read -r state
++ rm -f {run-worktree}/.live-test/.fm-test-watcher.1185302.CRG3zO
++ fm_test_reap_procevent_homes
++ local home claim_root $'seen=\n'
++ '[' -f {run-worktree}/.live-test/.fm-test-procevent.1185302.cqggR4 ']'
++ IFS=$'\t'
++ read -r home claim_root
++ rm -f {run-worktree}/.live-test/.fm-test-procevent.1185302.cqggR4
++ for d in "${FM_TEST_CLEANUP_DIRS[@]:-}"
++ '[' -n '' ']'
++ '[' -f {run-worktree}/.live-test/.fm-test-cleanup.1185302.Vi8JW3 ']'
++ IFS=
++ read -r d
++ '[' -n {run-worktree}/.live-test/fm-treehouse-pool.eR7o0U ']'
++ fm_test_reap_root_processes {run-worktree}/.live-test/fm-treehouse-pool.eR7o0U
++ local root={run-worktree}/.live-test/fm-treehouse-pool.eR7o0U chain pid pids signal i
++ '[' -n {run-worktree}/.live-test/fm-treehouse-pool.eR7o0U ']'
++ '[' {run-worktree}/.live-test/fm-treehouse-pool.eR7o0U '!=' / ']'
++ chain=' '
++ pid=1185302
++ '[' -n 1185302 ']'
++ '[' 1185302 -gt 1 ']'
++ chain=' 1185302 '
+++ ps -o ppid= -p 1185302
+++ tr -d '[:space:]'
++ pid=1089149
++ '[' -n 1089149 ']'
++ '[' 1089149 -gt 1 ']'
++ chain=' 1185302 1089149 '
+++ ps -o ppid= -p 1089149
+++ tr -d '[:space:]'
++ pid=8169
++ '[' -n 8169 ']'
++ '[' 8169 -gt 1 ']'
++ chain=' 1185302 1089149 8169 '
+++ ps -o ppid= -p 8169
+++ tr -d '[:space:]'
++ pid=8154
++ '[' -n 8154 ']'
++ '[' 8154 -gt 1 ']'
++ chain=' 1185302 1089149 8169 8154 '
+++ ps -o ppid= -p 8154
+++ tr -d '[:space:]'
++ pid=1
++ '[' -n 1 ']'
++ '[' 1 -gt 1 ']'
++ for signal in TERM KILL
++ i=0
++ '[' 0 -lt 20 ']'
+++ ps -ww -eo pid=,args=
+++ FM_TEST_REAP_ROOT={run-worktree}/.live-test/fm-treehouse-pool.eR7o0U/
+++ awk -v 'chain= 1185302 1089149 8169 8154 ' 'index($0, ENVIRON["FM_TEST_REAP_ROOT"]) && index(chain, " " $1 " ") == 0 { print $1 }'
++ pids=
++ '[' -n '' ']'
++ return 0
++ fm_test_remove_tree {run-worktree}/.live-test/fm-treehouse-pool.eR7o0U
++ local dir={run-worktree}/.live-test/fm-treehouse-pool.eR7o0U
++ '[' -d {run-worktree}/.live-test/fm-treehouse-pool.eR7o0U ']'
++ '[' '!' -L {run-worktree}/.live-test/fm-treehouse-pool.eR7o0U ']'
++ find {run-worktree}/.live-test/fm-treehouse-pool.eR7o0U -type d -exec chmod u+rwx '{}' +
++ rm -rf {run-worktree}/.live-test/fm-treehouse-pool.eR7o0U
++ IFS=
++ read -r d
++ '[' -n {run-worktree}/.live-test/fm-secondmate-harness.C68U5A ']'
++ fm_test_reap_root_processes {run-worktree}/.live-test/fm-secondmate-harness.C68U5A
++ local root={run-worktree}/.live-test/fm-secondmate-harness.C68U5A chain pid pids signal i
++ '[' -n {run-worktree}/.live-test/fm-secondmate-harness.C68U5A ']'
++ '[' {run-worktree}/.live-test/fm-secondmate-harness.C68U5A '!=' / ']'
++ chain=' '
++ pid=1185302
++ '[' -n 1185302 ']'
++ '[' 1185302 -gt 1 ']'
++ chain=' 1185302 '
+++ ps -o ppid= -p 1185302
+++ tr -d '[:space:]'
++ pid=1089149
++ '[' -n 1089149 ']'
++ '[' 1089149 -gt 1 ']'
++ chain=' 1185302 1089149 '
+++ ps -o ppid= -p 1089149
+++ tr -d '[:space:]'
++ pid=8169
++ '[' -n 8169 ']'
++ '[' 8169 -gt 1 ']'
++ chain=' 1185302 1089149 8169 '
+++ ps -o ppid= -p 8169
+++ tr -d '[:space:]'
++ pid=8154
++ '[' -n 8154 ']'
++ '[' 8154 -gt 1 ']'
++ chain=' 1185302 1089149 8169 8154 '
+++ ps -o ppid= -p 8154
+++ tr -d '[:space:]'
++ pid=1
++ '[' -n 1 ']'
++ '[' 1 -gt 1 ']'
++ for signal in TERM KILL
++ i=0
++ '[' 0 -lt 20 ']'
+++ ps -ww -eo pid=,args=
+++ FM_TEST_REAP_ROOT={run-worktree}/.live-test/fm-secondmate-harness.C68U5A/
+++ awk -v 'chain= 1185302 1089149 8169 8154 ' 'index($0, ENVIRON["FM_TEST_REAP_ROOT"]) && index(chain, " " $1 " ") == 0 { print $1 }'
++ pids=
++ '[' -n '' ']'
++ return 0
++ fm_test_remove_tree {run-worktree}/.live-test/fm-secondmate-harness.C68U5A
++ local dir={run-worktree}/.live-test/fm-secondmate-harness.C68U5A
++ '[' -d {run-worktree}/.live-test/fm-secondmate-harness.C68U5A ']'
++ '[' '!' -L {run-worktree}/.live-test/fm-secondmate-harness.C68U5A ']'
++ find {run-worktree}/.live-test/fm-secondmate-harness.C68U5A -type d -exec chmod u+rwx '{}' +
++ rm -rf {run-worktree}/.live-test/fm-secondmate-harness.C68U5A
++ IFS=
++ read -r d
++ rm -f {run-worktree}/.live-test/.fm-test-cleanup.1185302.Vi8JW3

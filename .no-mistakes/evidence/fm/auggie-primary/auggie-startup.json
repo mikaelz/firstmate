@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "diagnostics": {
+    "runtime": [],
+    "skills": [],
+    "prompts": [],
+    "themes": [],
+    "rules": [],
+    "extensions": [],
+    "plugins": [],
+    "agents": []
+  }
+}

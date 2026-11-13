@@ -1,0 +1,41 @@
+Normalized hook registration: only bash, with 2 command hooks.
+
+Registered hook command: bash -c 'root=${AUGMENT_PROJECT_DIR:-$(pwd -P)}; [ -x "$root/bin/fm-arm-pretool-check.sh" ] && [ -f "$root/AGENTS.md" ] || { cat >/dev/null 2>&1; exit 0; }; exec "$root/bin/fm-arm-pretool-check.sh"'
+Tool input: printf hello
+Exit=0
+stdout=
+stderr=
+
+Registered hook command: bash -c 'root=${AUGMENT_PROJECT_DIR:-$(pwd -P)}; [ -x "$root/bin/fm-arm-pretool-check.sh" ] && [ -f "$root/AGENTS.md" ] || { cat >/dev/null 2>&1; exit 0; }; exec "$root/bin/fm-arm-pretool-check.sh"'
+Tool input: bin/fm-watch-arm.sh &
+Exit=2
+stdout={"decision":"deny","reason":"[watcher-background] a protected watcher command cannot run in an asynchronous shell list or through nohup/disown"}
+
+stderr={"hookSpecificOutput":{"hookEventName":"PreToolUse","permissionDecision":"deny"},"systemMessage":"[watcher-background] a protected watcher command cannot run in an asynchronous shell list or through nohup/disown"}
+
+
+Registered hook command: bash -c 'root=${AUGMENT_PROJECT_DIR:-$(pwd -P)}; [ -x "$root/bin/fm-arm-pretool-check.sh" ] && [ -f "$root/AGENTS.md" ] || { cat >/dev/null 2>&1; exit 0; }; exec "$root/bin/fm-arm-pretool-check.sh"'
+Tool input: exec bin/fm-watch-arm.sh
+Exit=0
+stdout=
+stderr=
+
+Registered hook command: bash -c 'root=${AUGMENT_PROJECT_DIR:-$(pwd -P)}; [ -x "$root/bin/fm-cd-pretool-check.sh" ] && [ -f "$root/AGENTS.md" ] || { cat >/dev/null 2>&1; exit 0; }; exec "$root/bin/fm-cd-pretool-check.sh"'
+Tool input: printf hello
+Exit=0
+stdout=
+stderr=
+
+Registered hook command: bash -c 'root=${AUGMENT_PROJECT_DIR:-$(pwd -P)}; [ -x "$root/bin/fm-cd-pretool-check.sh" ] && [ -f "$root/AGENTS.md" ] || { cat >/dev/null 2>&1; exit 0; }; exec "$root/bin/fm-cd-pretool-check.sh"'
+Tool input: bin/fm-watch-arm.sh &
+Exit=0
+stdout=
+stderr=
+
+Registered hook command: bash -c 'root=${AUGMENT_PROJECT_DIR:-$(pwd -P)}; [ -x "$root/bin/fm-cd-pretool-check.sh" ] && [ -f "$root/AGENTS.md" ] || { cat >/dev/null 2>&1; exit 0; }; exec "$root/bin/fm-cd-pretool-check.sh"'
+Tool input: exec bin/fm-watch-arm.sh
+Exit=0
+stdout=
+stderr=
+
+The registered bash hooks allow safe commands and refuse backgrounded arming.

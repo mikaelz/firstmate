@@ -1,0 +1,9 @@
+Real primary: tmux -S .live-auggie/socket new-session -d -x 120 -y 35 -s primary -c "$PWD" -e FM_HOME="$PWD/.live-auggie/home" 'auggie --no-session --no-extensions --no-skills --no-rules --no-cloud --offline'
+The primary ran bash .live-auggie/primary-check.sh through its real bash tool: bin/fm-harness.sh; bin/fm-harness.sh ancestry; bin/fm-lock.sh twice; bin/fm-lock.sh status; ps of persisted lock PID.
+The primary attempted bin/fm-watch-arm.sh --help & through its real bash tool; registered PreToolUse hook refused it.
+python3 .live-auggie/worker-check.py: real bin/fm-spawn.sh against a marked disposable FM_HOME; config, explicit, and raw commands for ship, scout, and secondmate. No external-command or backend mocks.
+python3 .live-auggie/node-check.py: four real Auggie processes with Node options, local symlink path containing spaces, real /proc and ps arguments, public ancestry and holder liveness; two ordinary Node programs outside the package rejected.
+python3 .live-auggie/hook-check.py: normalized tracked JSON registration and executed its registered commands with safe, backgrounded, and exec synthetic bash inputs.
+auggie --no-session --no-extensions --no-skills --no-rules --no-cloud --offline --check-startup --log-file "$PWD/.live-auggie/startup.log"
+bin/fm-spawn.sh --help; reviewed emitted raw-launch limitations and documentation.
+Cleanup: tmux -S .live-auggie/socket kill-server; disposable files removed after checks.

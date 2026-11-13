@@ -1,0 +1,1394 @@
+[
+  {
+    "kind": "ship",
+    "case": "explicit",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "auggie",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the explicit harness argument must name a verified worker harness\n"
+  },
+  {
+    "kind": "ship",
+    "case": "config",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; config/crew-harness must name a verified worker harness\n"
+  },
+  {
+    "kind": "ship",
+    "case": "direct",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "auggie --model x",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "ship",
+    "case": "env",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env auggie --model x",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "ship",
+    "case": "env-options",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env -i -u CLAUDECODE --chdir /tmp PATH=/usr/bin /opt/tools/bin/auggie --model x",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "ship",
+    "case": "env-default",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env --default-signal auggie --model x",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "ship",
+    "case": "env-block",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env --block-signal auggie --model x",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "ship",
+    "case": "env-ignore",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env --ignore-signal auggie --model x",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "ship",
+    "case": "env-equals",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env --default-signal=INT auggie --model x",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "ship",
+    "case": "env-dash",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env - /opt/tools/bin/auggie --model x",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "ship",
+    "case": "env-end-dash",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env -- - /opt/tools/bin/auggie --model x",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": false,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: invalid raw launch command: wrapper options could not be resolved\n"
+  },
+  {
+    "kind": "ship",
+    "case": "env-nested-dash",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env - sudo auggie --model x",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "ship",
+    "case": "command",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "command -p auggie --model x",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "ship",
+    "case": "exec",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "exec -a worker auggie --model x",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "ship",
+    "case": "nohup",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "nohup auggie --model x",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "ship",
+    "case": "sudo",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "sudo -n -u worker auggie --model x",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "ship",
+    "case": "timeout",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "timeout -s TERM 1h env auggie --model x",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "ship",
+    "case": "assignments",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "FOO='two words' env BAR='two words' auggie --model x",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "ship",
+    "case": "sudo-assignments",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "sudo -n FOO=1 BAR=2 auggie --model x",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "ship",
+    "case": "sudo-interspersed",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "sudo FOO=1 -n auggie --model x",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": false,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: invalid raw launch command: wrapper options could not be resolved\n"
+  },
+  {
+    "kind": "ship",
+    "case": "sudo-auth",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "sudo -a passwd auggie --model x",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "ship",
+    "case": "sudo-login-class",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "sudo --login-class staff auggie --model x",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "ship",
+    "case": "sudo-no-update",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "sudo --no-update auggie --model x",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "ship",
+    "case": "quoted",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env '/opt/Agent Tools/bin/auggie' --model x",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "ship",
+    "case": "double-quoted",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env \"/opt/Agent Tools/bin/auggie\" --model x",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "ship",
+    "case": "redirection",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env 2>worker.log auggie --model x",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "ship",
+    "case": "leading-redirection",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "2>worker.log env auggie --model x",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "ship",
+    "case": "nested",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "FOO=1 nohup command -p exec -a worker env BAR=2 auggie --model x",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "ship",
+    "case": "env-split",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env -S 'auggie --model x'",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "ship",
+    "case": "env-search",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env -P /usr/bin auggie --model x",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "ship",
+    "case": "no-evaluation",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "FOO=$(touch '.l/evaluated') env auggie --model x",
+      "--mode",
+      "local-only",
+      "--yolo",
+      "off"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "explicit",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "auggie",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the explicit harness argument must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "config",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; config/crew-harness must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "direct",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "auggie --model x",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "env",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env auggie --model x",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "env-options",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env -i -u CLAUDECODE --chdir /tmp PATH=/usr/bin /opt/tools/bin/auggie --model x",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "env-default",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env --default-signal auggie --model x",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "env-block",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env --block-signal auggie --model x",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "env-ignore",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env --ignore-signal auggie --model x",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "env-equals",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env --default-signal=INT auggie --model x",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "env-dash",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env - /opt/tools/bin/auggie --model x",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "env-end-dash",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env -- - /opt/tools/bin/auggie --model x",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": false,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: invalid raw launch command: wrapper options could not be resolved\n"
+  },
+  {
+    "kind": "scout",
+    "case": "env-nested-dash",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env - sudo auggie --model x",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "command",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "command -p auggie --model x",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "exec",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "exec -a worker auggie --model x",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "nohup",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "nohup auggie --model x",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "sudo",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "sudo -n -u worker auggie --model x",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "timeout",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "timeout -s TERM 1h env auggie --model x",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "assignments",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "FOO='two words' env BAR='two words' auggie --model x",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "sudo-assignments",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "sudo -n FOO=1 BAR=2 auggie --model x",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "sudo-interspersed",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "sudo FOO=1 -n auggie --model x",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": false,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: invalid raw launch command: wrapper options could not be resolved\n"
+  },
+  {
+    "kind": "scout",
+    "case": "sudo-auth",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "sudo -a passwd auggie --model x",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "sudo-login-class",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "sudo --login-class staff auggie --model x",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "sudo-no-update",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "sudo --no-update auggie --model x",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "quoted",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env '/opt/Agent Tools/bin/auggie' --model x",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "double-quoted",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env \"/opt/Agent Tools/bin/auggie\" --model x",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "redirection",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env 2>worker.log auggie --model x",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "leading-redirection",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "2>worker.log env auggie --model x",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "nested",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "FOO=1 nohup command -p exec -a worker env BAR=2 auggie --model x",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "env-split",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env -S 'auggie --model x'",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "env-search",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env -P /usr/bin auggie --model x",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "scout",
+    "case": "no-evaluation",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "FOO=$(touch '.l/evaluated') env auggie --model x",
+      "--scout"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "explicit",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "auggie",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the explicit harness argument must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "config",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; config/secondmate-harness (falling back to config/crew-harness) must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "direct",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "auggie --model x",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "env",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env auggie --model x",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "env-options",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env -i -u CLAUDECODE --chdir /tmp PATH=/usr/bin /opt/tools/bin/auggie --model x",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "env-default",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env --default-signal auggie --model x",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "env-block",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env --block-signal auggie --model x",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "env-ignore",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env --ignore-signal auggie --model x",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "env-equals",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env --default-signal=INT auggie --model x",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "env-dash",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env - /opt/tools/bin/auggie --model x",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "env-end-dash",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env -- - /opt/tools/bin/auggie --model x",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": false,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: invalid raw launch command: wrapper options could not be resolved\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "env-nested-dash",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env - sudo auggie --model x",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "command",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "command -p auggie --model x",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "exec",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "exec -a worker auggie --model x",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "nohup",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "nohup auggie --model x",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "sudo",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "sudo -n -u worker auggie --model x",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "timeout",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "timeout -s TERM 1h env auggie --model x",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "assignments",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "FOO='two words' env BAR='two words' auggie --model x",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "sudo-assignments",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "sudo -n FOO=1 BAR=2 auggie --model x",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "sudo-interspersed",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "sudo FOO=1 -n auggie --model x",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": false,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: invalid raw launch command: wrapper options could not be resolved\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "sudo-auth",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "sudo -a passwd auggie --model x",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "sudo-login-class",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "sudo --login-class staff auggie --model x",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "sudo-no-update",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "sudo --no-update auggie --model x",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "quoted",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env '/opt/Agent Tools/bin/auggie' --model x",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "double-quoted",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env \"/opt/Agent Tools/bin/auggie\" --model x",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "redirection",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env 2>worker.log auggie --model x",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "leading-redirection",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "2>worker.log env auggie --model x",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "nested",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "FOO=1 nohup command -p exec -a worker env BAR=2 auggie --model x",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "env-split",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env -S 'auggie --model x'",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "env-search",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "env -P /usr/bin auggie --model x",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  },
+  {
+    "kind": "secondmate",
+    "case": "no-evaluation",
+    "command": [
+      "bin/fm-spawn.sh",
+      "probe",
+      "{run-worktree}/.l",
+      "FOO=$(touch '.l/evaluated') env auggie --model x",
+      "--secondmate"
+    ],
+    "exit": 1,
+    "primary_only": true,
+    "output": "fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.l\nerror: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness\n"
+  }
+]

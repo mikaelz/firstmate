@@ -1,0 +1,597 @@
+
+$ ship config: config=auggie
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; config/crew-harness must name a verified worker harness
+
+
+$ ship explicit: auggie
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the explicit harness argument must name a verified worker harness
+
+
+$ ship raw: auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: env auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: command -p auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: exec -a worker auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: nohup auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: sudo -n -u worker auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: timeout -s TERM 1h auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: FOO=1 env BAR=2 auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: env '/opt/Agent Tools/bin/auggie' --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: env /opt/Agent\ Tools/bin/auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: env 2>worker.log auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: 2>worker.log env auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: env --default-signal auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: env --default-signal=INT auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: env --block-signal auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: env --ignore-signal auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: env - /opt/tools/bin/auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: env -- - /opt/tools/bin/auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: env - sudo auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: sudo FOO=1 -n auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: sudo FOO=1 -n BAR=2 --no-update auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: sudo -a passwd auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: sudo -c staff auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: env -C '/opt/Agent Tools' auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: env -i -u CLAUDECODE PATH=/usr/bin auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: env -S 'auggie --model x'
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: env --split-string='auggie --model x'
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: FOO=1 nohup command -p exec -a worker env BAR=2 auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: cd /tmp && env auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: (env auggie --model x)
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ ship raw: FOO=$(touch .live-auggie/EVALUATED) env auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout config: config=auggie
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; config/crew-harness must name a verified worker harness
+
+
+$ scout explicit: auggie
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the explicit harness argument must name a verified worker harness
+
+
+$ scout raw: auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: env auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: command -p auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: exec -a worker auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: nohup auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: sudo -n -u worker auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: timeout -s TERM 1h auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: FOO=1 env BAR=2 auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: env '/opt/Agent Tools/bin/auggie' --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: env /opt/Agent\ Tools/bin/auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: env 2>worker.log auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: 2>worker.log env auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: env --default-signal auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: env --default-signal=INT auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: env --block-signal auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: env --ignore-signal auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: env - /opt/tools/bin/auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: env -- - /opt/tools/bin/auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: env - sudo auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: sudo FOO=1 -n auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: sudo FOO=1 -n BAR=2 --no-update auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: sudo -a passwd auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: sudo -c staff auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: env -C '/opt/Agent Tools' auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: env -i -u CLAUDECODE PATH=/usr/bin auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: env -S 'auggie --model x'
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: env --split-string='auggie --model x'
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: FOO=1 nohup command -p exec -a worker env BAR=2 auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: cd /tmp && env auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: (env auggie --model x)
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ scout raw: FOO=$(touch .live-auggie/EVALUATED) env auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate config: config=auggie
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; config/secondmate-harness (falling back to config/crew-harness) must name a verified worker harness
+
+
+$ secondmate explicit: auggie
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the explicit harness argument must name a verified worker harness
+
+
+$ secondmate raw: auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: env auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: command -p auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: exec -a worker auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: nohup auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: sudo -n -u worker auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: timeout -s TERM 1h auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: FOO=1 env BAR=2 auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: env '/opt/Agent Tools/bin/auggie' --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: env /opt/Agent\ Tools/bin/auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: env 2>worker.log auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: 2>worker.log env auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: env --default-signal auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: env --default-signal=INT auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: env --block-signal auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: env --ignore-signal auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: env - /opt/tools/bin/auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: env -- - /opt/tools/bin/auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: env - sudo auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: sudo FOO=1 -n auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: sudo FOO=1 -n BAR=2 --no-update auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: sudo -a passwd auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: sudo -c staff auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: env -C '/opt/Agent Tools' auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: env -i -u CLAUDECODE PATH=/usr/bin auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: env -S 'auggie --model x'
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: env --split-string='auggie --model x'
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: FOO=1 nohup command -p exec -a worker env BAR=2 auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: cd /tmp && env auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: (env auggie --model x)
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+$ secondmate raw: FOO=$(touch .live-auggie/EVALUATED) env auggie --model x
+exit=1
+fm-gate-refuse: gate agent lifecycle permitted only against lab home {run-worktree}/.live-auggie/home
+error: auggie is verified as a primary harness only and cannot run a crewmate, scout, or secondmate; the raw launch command must name a verified worker harness
+
+
+No worker metadata or substitution side effects created.
+Failures: []

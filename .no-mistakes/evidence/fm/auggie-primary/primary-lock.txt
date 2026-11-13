@@ -1,0 +1,9 @@
+auggie
+comm auggie
+lock acquired: harness pid 1226275
+lock: held by live harness pid 1226275
+recorded_holder=1226275
+1226275 node-MainThread node --require {run-worktree}/.l/Pre load.cjs --unhandled_rejections warn {run-worktree}/.l/Agent Tools/auggie --no-session --augment-cache-dir {run-worktree}/.l/cache --augment-session-json ~/.augment/session.json --log-file {run-worktree}/.l/spaced.log --mode json --print Use the bash tool once to run: bash .l/probe.sh > .l/probe-output.txt 2>&1; sleep 20. Run only this command, do not run session startup or anything else. Then report completion.
+holder_is_live_harness=true
+lock_owned_by_self=true
+inspect=held live=true

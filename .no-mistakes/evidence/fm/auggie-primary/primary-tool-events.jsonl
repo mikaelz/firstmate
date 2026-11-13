@@ -1,0 +1,2 @@
+{"type": "tool_execution_start", "toolCallId": "call_c7aM0nPczFiKVqlQisXJEsqU", "toolName": "bash", "args": {"command": "bash .l/probe.sh > .l/probe-output.txt 2>&1; sleep 20", "timeout": 60}}
+{"type": "tool_execution_end", "toolCallId": "call_c7aM0nPczFiKVqlQisXJEsqU", "toolName": "bash", "result": {"content": [{"type": "text", "text": "(no output)"}]}, "isError": false}

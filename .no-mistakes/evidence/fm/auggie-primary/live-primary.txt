@@ -1,0 +1,62 @@
+
+ v1.2.0
+  ▇▇▇▇▇╗ ▇▇╗   ▇▇╗ ▇▇▇▇▇▇╗  ▇▇▇▇▇▇╗ ▇▇╗▇▇▇▇▇▇▇╗
+ ▇▇╔══▇▇╗▇▇║   ▇▇║▇▇╔════╝ ▇▇╔════╝ ▇▇║▇▇╔════╝
+ ▇▇▇▇▇▇▇║▇▇║   ▇▇║▇▇║  ▇▇▇╗▇▇║  ▇▇▇╗▇▇║▇▇▇▇▇╗
+ ▇▇╔══▇▇║▇▇║   ▇▇║▇▇║   ▇▇║▇▇║   ▇▇║▇▇║▇▇╔══╝
+ ▇▇║  ▇▇║╚▇▇▇▇▇▇╔╝╚▇▇▇▇▇▇╔╝╚▇▇▇▇▇▇╔╝▇▇║▇▇▇▇▇▇▇╗
+ ╚═╝  ╚═╝ ╚═════╝  ╚═════╝  ╚═════╝ ╚═╝╚══════╝
+                                    by HARNESS
+ send us feedback — use /feedback. You might just see it happen next release
+
+
+ Indexing disabled for current workspace "{run-worktree}".
+
+ Warning: tmux extended-keys is off. Modified Enter keys may not work. Add `set -g extended-keys on` to ~/.tmux.conf
+ and restart tmux.
+
+
+ Run exactly this bash command and report its output: bash .live-auggie/primary-check.sh. This is an isolated product
+ verification; do not run session startup, create files, or perform any other actions.
+
+
+
+ $ bash .live-auggie/primary-check.sh
+
+
+ Captain, output:
+
+ ```text mode=EXCERPT
+   Detected harness: auggie
+   Ancestry: comm auggie
+   lock acquired: harness pid 1478618
+   lock acquired: harness pid 1478618
+   lock: held by live harness pid 1478618
+   Lock owner identity: 1478618 node-MainThread node ~/.local/bin/auggie --no-session --no-extensions
+ --no-skills --no-rules --no-cloud --offline
+   Primary check complete
+ ```
+
+
+ For this hook verification, attempt exactly this bash tool command: bin/fm-watch-arm.sh --help & . Do not execute any
+ other command or rewrite it. Report whether the PreToolUse hook blocks it.
+
+
+
+ $ bin/fm-watch-arm.sh --help &
+
+ [watcher-background] a protected watcher command cannot run in an asynchronous shell list or through nohup/disown
+
+ Took 0.1s
+
+
+ Captain, the PreToolUse hook blocked it: [watcher-background] a protected watcher command cannot run in an
+ asynchronous shell list or through nohup/disown.
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+›
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+~/.no-mistakes/worktrees/a598f809e305/01M79SA6GQASK9PG3N9YGAX7TW (detached) • Auggie Primary Product Verification
+↓216 $0.068 5.9%/305k (auto)                                                                           GPT-6.1 Sol • low
+
+

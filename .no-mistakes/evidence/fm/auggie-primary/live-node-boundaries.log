@@ -1,0 +1,38 @@
+
+Actual Auggie launch: node --require {run-worktree}/.live-auggie/preload.cjs '{run-worktree}/.live-auggie/Agent Tools/auggie' --no-session --no-extensions --no-skills --no-rules --no-cloud --offline
+pid=1634063 comm=node-MainThread
+args=node --require {run-worktree}/.live-auggie/preload.cjs {run-worktree}/.live-auggie/Agent Tools/auggie --no-session --no-extensions --no-skills --no-rules --no-cloud --offline
+Public ancestry: comm auggie
+proc: identity exit=0
+flattened: identity exit=0
+live lock holder recognized
+
+Actual Auggie launch: node --require={run-worktree}/.live-auggie/preload.cjs '{run-worktree}/.live-auggie/Agent Tools/auggie' --no-session --no-extensions --no-skills --no-rules --no-cloud --offline
+pid=1638007 comm=node-MainThread
+args=node --require={run-worktree}/.live-auggie/preload.cjs {run-worktree}/.live-auggie/Agent Tools/auggie --no-session --no-extensions --no-skills --no-rules --no-cloud --offline
+Public ancestry: comm auggie
+proc: identity exit=0
+flattened: identity exit=0
+live lock holder recognized
+
+Actual Auggie launch: node --unhandled_rejections warn '{run-worktree}/.live-auggie/Agent Tools/auggie' --no-session --no-extensions --no-skills --no-rules --no-cloud --offline
+pid=1639984 comm=node-MainThread
+args=node --unhandled_rejections warn {run-worktree}/.live-auggie/Agent Tools/auggie --no-session --no-extensions --no-skills --no-rules --no-cloud --offline
+Public ancestry: comm auggie
+proc: identity exit=0
+flattened: identity exit=0
+live lock holder recognized
+
+Actual Auggie launch: node --unhandled-rejections=warn '{run-worktree}/.live-auggie/Agent Tools/auggie' --no-session --no-extensions --no-skills --no-rules --no-cloud --offline
+pid=1642099 comm=node-MainThread
+args=node --unhandled-rejections=warn {run-worktree}/.live-auggie/Agent Tools/auggie --no-session --no-extensions --no-skills --no-rules --no-cloud --offline
+Public ancestry: comm auggie
+proc: identity exit=0
+flattened: identity exit=0
+live lock holder recognized
+
+Non-package Node program auggie: public ancestry='comm codex'; Auggie identity exit=1
+
+Non-package Node program ordinary.mjs: public ancestry='comm codex'; Auggie identity exit=1
+
+All real Node option and non-package boundaries behaved as required.

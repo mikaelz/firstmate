@@ -1,0 +1,2 @@
+{"type": "tool_execution_start", "toolCallId": "call_5mKVchTyGdjyXNXcOmQCUzo5", "toolName": "bash", "args": {"command": "bin/fm-watch-arm.sh &", "timeout": 5}}
+{"type": "tool_execution_end", "toolCallId": "call_5mKVchTyGdjyXNXcOmQCUzo5", "toolName": "bash", "result": {"content": [{"type": "text", "text": "[watcher-background] a protected watcher command cannot run in an asynchronous shell list or through nohup/disown"}], "details": {}}, "isError": true}

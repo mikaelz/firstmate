@@ -1,0 +1,11 @@
+All four live product scenarios passed.
+Real Auggie primary: detection, acquisition/reconfirmation, persisted live lock holder, and actual PreToolUse denial observed through its bash tool.
+Real installed Auggie with Node operands and spaced symlink paths was recognized through both /proc and flattened ps. Ordinary non-package Node programs were rejected.
+Worker refusal: configured, explicit, and supported raw forms refused ships, scouts, and secondmates with the primary-only error, including sudo interspersed assignments and env -- -. No worker metadata or evaluated substitution was created.
+Published help limits reviewed, normalized bash-only hooks executed, and Auggie --check-startup returned ok=true.
+Baseline command results:
+bash tests/fm-harness-precedence.test.sh: exit 0.
+bash tests/fm-secondmate-harness.test.sh: exit 0.
+bash tests/fm-arm-pretool-check.test.sh: exit 0 (the existing suite also invokes its embedded lint case).
+bash tests/fm-session-lock-ancestry.test.sh: initially exit 1 because orphan adoption was required to be PID 1. A host diagnostic confirmed adoption by the user systemd subreaper, PID 8154. Corrected the test to require actual reparenting while retaining subsequent ancestry and ownership checks. Rerun exit 0.
+All direct live drivers and Auggie --check-startup exited 0. All launched commands finished; the private tmux server stopped and disposable lab was removed. Only the test portability repair remains. History unchanged.

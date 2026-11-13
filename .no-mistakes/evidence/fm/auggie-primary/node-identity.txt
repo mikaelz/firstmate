@@ -1,0 +1,38 @@
+package-main
+identity_1289172=auggie
+identity_=auggie
+comm auggie
+
+preload-separate
+identity_1289309=auggie
+identity_=auggie
+comm auggie
+
+preload-equals
+identity_1289460=auggie
+identity_=auggie
+comm auggie
+
+underscore-option
+identity_1289613=auggie
+identity_=auggie
+comm auggie
+
+underscore-equals
+identity_1289776=auggie
+identity_=auggie
+comm auggie
+
+outside-named-auggie
+identity_1289927=rejected
+identity_=rejected
+comm codex
+
+vendored-dependency
+identity_1290148=rejected
+identity_=rejected
+comm codex
+
+exact-command-name
+comm auggie
+

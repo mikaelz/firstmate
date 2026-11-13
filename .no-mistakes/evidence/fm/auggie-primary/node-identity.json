@@ -1,0 +1,81 @@
+[
+  {
+    "case": "package-main",
+    "command": [
+      "node",
+      "{run-worktree}/.l/Identity Cases/node_modules/@augmentcode/auggie/main.cjs"
+    ],
+    "exit": 0,
+    "output": "identity_1289172=auggie\nidentity_=auggie\ncomm auggie\n"
+  },
+  {
+    "case": "preload-separate",
+    "command": [
+      "node",
+      "--require",
+      "{run-worktree}/.l/Identity Cases/Pre load.cjs",
+      "{run-worktree}/.l/Identity Cases/node_modules/@augmentcode/auggie/main.cjs"
+    ],
+    "exit": 0,
+    "output": "identity_1289309=auggie\nidentity_=auggie\ncomm auggie\n"
+  },
+  {
+    "case": "preload-equals",
+    "command": [
+      "node",
+      "--require={run-worktree}/.l/Identity Cases/Pre load.cjs",
+      "{run-worktree}/.l/Identity Cases/node_modules/@augmentcode/auggie/main.cjs"
+    ],
+    "exit": 0,
+    "output": "identity_1289460=auggie\nidentity_=auggie\ncomm auggie\n"
+  },
+  {
+    "case": "underscore-option",
+    "command": [
+      "node",
+      "--unhandled_rejections",
+      "warn",
+      "{run-worktree}/.l/Identity Cases/node_modules/@augmentcode/auggie/main.cjs"
+    ],
+    "exit": 0,
+    "output": "identity_1289613=auggie\nidentity_=auggie\ncomm auggie\n"
+  },
+  {
+    "case": "underscore-equals",
+    "command": [
+      "node",
+      "--unhandled_rejections=warn",
+      "{run-worktree}/.l/Identity Cases/node_modules/@augmentcode/auggie/main.cjs"
+    ],
+    "exit": 0,
+    "output": "identity_1289776=auggie\nidentity_=auggie\ncomm auggie\n"
+  },
+  {
+    "case": "outside-named-auggie",
+    "command": [
+      "node",
+      "{run-worktree}/.l/Identity Cases/outside/auggie"
+    ],
+    "exit": 0,
+    "output": "identity_1289927=rejected\nidentity_=rejected\ncomm codex\n"
+  },
+  {
+    "case": "vendored-dependency",
+    "command": [
+      "node",
+      "{run-worktree}/.l/Identity Cases/node_modules/@augmentcode/auggie/node_modules/dep/cli.cjs"
+    ],
+    "exit": 0,
+    "output": "identity_1290148=rejected\nidentity_=rejected\ncomm codex\n"
+  },
+  {
+    "case": "exact-command-name",
+    "command": [
+      "bin/fm-harness.sh",
+      "ancestry",
+      "1290388"
+    ],
+    "exit": 0,
+    "output": "comm auggie\n"
+  }
+]
