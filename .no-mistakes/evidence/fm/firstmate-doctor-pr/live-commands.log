@@ -1,0 +1,64 @@
+readonly-json: FM_HOME={run-worktree}/.doctor-live/readonly FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/readonly FM_BACKEND=tmux bin/fm-doctor.sh --json
+exit=1
+readonly-toon: FM_HOME={run-worktree}/.doctor-live/readonly FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/readonly FM_BACKEND=tmux bin/fm-doctor.sh
+exit=1
+readonly-area: FM_HOME={run-worktree}/.doctor-live/readonly FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/readonly FM_BACKEND=tmux bin/fm-doctor.sh --json --area supervision
+exit=0
+readonly-usage: FM_HOME={run-worktree}/.doctor-live/readonly FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/readonly FM_BACKEND=tmux bin/fm-doctor.sh --json --area nowhere
+exit=2
+readonly-help: FM_HOME={run-worktree}/.doctor-live/readonly FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/readonly FM_BACKEND=tmux bin/fm-doctor.sh --help
+exit=0
+provenance-mismatch: FM_HOME={run-worktree}/.doctor-live/provenance FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/provenance FM_BACKEND=tmux bin/fm-doctor.sh --json --area tools
+exit=1
+provenance-match: FM_HOME={run-worktree}/.doctor-live/provenance FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/provenance FM_BACKEND=tmux bin/fm-doctor.sh --json --area tools
+exit=1
+configuration-malformed: FM_HOME={run-worktree}/.doctor-live/configuration FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/configuration FM_BACKEND=tmux bin/fm-doctor.sh --json --area config
+exit=1
+configuration-cortex: FM_HOME={run-worktree}/.doctor-live/configuration FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/configuration FM_BACKEND=tmux bin/fm-doctor.sh --json --area config
+exit=0
+configuration-hermes: FM_HOME={run-worktree}/.doctor-live/configuration FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/configuration FM_BACKEND=tmux bin/fm-doctor.sh --json --area config
+exit=0
+configuration-kiro: FM_HOME={run-worktree}/.doctor-live/configuration FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/configuration FM_BACKEND=tmux bin/fm-doctor.sh --json --area config
+exit=0
+configuration-not-supported: FM_HOME={run-worktree}/.doctor-live/configuration FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/configuration FM_BACKEND=tmux bin/fm-doctor.sh --json --area config
+exit=0
+configuration-backend: FM_HOME={run-worktree}/.doctor-live/configuration FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/configuration FM_BACKEND=not-supported bin/fm-doctor.sh --json --area backend
+exit=1
+permissions-absent: FM_HOME={run-worktree}/.doctor-live/permissions FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/permissions FM_BACKEND=tmux bin/fm-doctor.sh --json --area permissions
+exit=0
+permissions-one: FM_HOME={run-worktree}/.doctor-live/permissions FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/permissions FM_BACKEND=tmux bin/fm-doctor.sh --json --area permissions
+exit=0
+permissions-family: FM_HOME={run-worktree}/.doctor-live/permissions FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/permissions FM_BACKEND=tmux bin/fm-doctor.sh --json --area permissions
+exit=0
+permissions-other-root: FM_HOME={run-worktree}/.doctor-live/permissions FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/permissions FM_BACKEND=tmux bin/fm-doctor.sh --json --area permissions
+exit=0
+permissions-local-precedence: FM_HOME={run-worktree}/.doctor-live/permissions FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/permissions FM_BACKEND=tmux bin/fm-doctor.sh --json --area permissions
+exit=0
+agents-scalar: FM_HOME={run-worktree}/.doctor-live/agents FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/agents FM_BACKEND=tmux bin/fm-doctor.sh --json --area no-mistakes
+exit=0
+agents-flow: FM_HOME={run-worktree}/.doctor-live/agents FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/agents FM_BACKEND=tmux bin/fm-doctor.sh --json --area no-mistakes
+exit=0
+agents-unindented: FM_HOME={run-worktree}/.doctor-live/agents FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/agents FM_BACKEND=tmux bin/fm-doctor.sh --json --area no-mistakes
+exit=0
+agents-commented: FM_HOME={run-worktree}/.doctor-live/agents FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/agents FM_BACKEND=tmux bin/fm-doctor.sh --json --area no-mistakes
+exit=0
+agents-indented: FM_HOME={run-worktree}/.doctor-live/agents FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/agents FM_BACKEND=tmux bin/fm-doctor.sh --json --area no-mistakes
+exit=0
+agents-installed: FM_HOME={run-worktree}/.doctor-live/agents FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/agents FM_BACKEND=tmux bin/fm-doctor.sh --json --area no-mistakes
+exit=0
+memory-absent: FM_HOME={run-worktree}/.doctor-live/memory FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/memory FM_BACKEND=tmux bin/fm-doctor.sh --json --area memory
+exit=0
+memory-invalid: FM_HOME={run-worktree}/.doctor-live/memory FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/memory FM_BACKEND=tmux bin/fm-doctor.sh --json --area memory
+exit=0
+memory-at-budget: FM_HOME={run-worktree}/.doctor-live/memory FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/memory FM_BACKEND=tmux bin/fm-doctor.sh --json --area memory
+exit=0
+memory-over-budget: FM_HOME={run-worktree}/.doctor-live/memory FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/memory FM_BACKEND=tmux bin/fm-doctor.sh --json --area memory
+exit=0
+readiness-dead: FM_HOME={run-worktree}/.doctor-live/readiness FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/readiness FM_BACKEND=tmux bin/fm-doctor.sh --json --area supervision
+exit=0
+network-opt-out: FM_HOME={run-worktree}/.doctor-live/network FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/network FM_BACKEND=tmux bin/fm-doctor.sh --json
+exit=1
+network-opt-in: FM_HOME={run-worktree}/.doctor-live/network FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/network FM_BACKEND=tmux bin/fm-doctor.sh --json --network
+exit=1
+network-incomplete: FM_HOME={run-worktree}/.doctor-live/network FM_ROOT_OVERRIDE={run-worktree}/.doctor-live/network FM_BACKEND=tmux bin/fm-doctor.sh --json --network
+exit=1

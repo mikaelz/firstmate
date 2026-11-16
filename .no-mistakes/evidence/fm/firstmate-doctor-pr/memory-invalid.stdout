@@ -1,6 +1,6 @@
 {
   "schema": "fm-doctor.v1",
-  "home": "{run-worktree}/.doctor-live/home",
+  "home": "{run-worktree}/.doctor-live/memory",
   "area": "memory",
   "verdict": "warn",
   "counts": {
@@ -15,7 +15,7 @@
       "id": "doctor/inventory",
       "area": "doctor",
       "status": "ok",
-      "evidence": "30 checks valid",
+      "evidence": "32 checks valid",
       "owner": "bin/fm-doctor.sh",
       "fix": "Correct docs/doctor-checks.json."
     },

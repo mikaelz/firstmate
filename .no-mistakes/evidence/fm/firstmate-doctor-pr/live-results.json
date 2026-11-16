@@ -1,107 +1,65 @@
 [
   {
-    "scenario": "auto-no-rule",
-    "exit": 0,
-    "home_unchanged": true
+    "name": "Read a fresh home in JSON and TOON, filter checks, reject bad usage, and leave state absent",
+    "result": "pass",
+    "live": true,
+    "reason": "Real CLI and owner commands executed with disposable local homes and synthetic configuration.",
+    "evidence": "readonly-json.stdout; readonly-toon.stdout; readonly-area.stdout; readonly-usage.stderr; readonly-help.stdout"
   },
   {
-    "scenario": "auto-single-script",
-    "exit": 0,
-    "home_unchanged": true
+    "name": "Detect and clear a provenance mismatch for the actual bash executable",
+    "result": "pass",
+    "live": true,
+    "reason": "Real CLI and owner commands executed with disposable local homes and synthetic configuration.",
+    "evidence": "provenance-mismatch.stdout; provenance-match.stdout"
   },
   {
-    "scenario": "auto-other-home",
-    "exit": 0,
-    "home_unchanged": true
+    "name": "Report invalid dispatch and backend settings while accepting cortex, kiro, and hermes crew settings",
+    "result": "pass",
+    "live": true,
+    "reason": "Real CLI and owner commands executed with disposable local homes and synthetic configuration.",
+    "evidence": "configuration-malformed.stdout; configuration-cortex.stdout; configuration-kiro.stdout; configuration-hermes.stdout; configuration-not-supported.stdout; configuration-backend.stdout"
   },
   {
-    "scenario": "auto-relative-family",
-    "exit": 0,
-    "home_unchanged": true
+    "name": "Diagnose Claude auto-mode allow rules and respect local settings precedence without launching Claude",
+    "result": "pass",
+    "live": true,
+    "reason": "Real CLI and owner commands executed with disposable local homes and synthetic configuration.",
+    "evidence": "permissions-absent.stdout; permissions-one.stdout; permissions-family.stdout; permissions-other-root.stdout; permissions-local-precedence.stdout"
   },
   {
-    "scenario": "auto-absolute-family",
-    "exit": 0,
-    "home_unchanged": true
+    "name": "Find an absent fallback executable in scalar, flow, and commented or unindented YAML lists",
+    "result": "pass",
+    "live": true,
+    "reason": "Real CLI and owner commands executed with disposable local homes and synthetic configuration.",
+    "evidence": "agents-scalar.stdout; agents-flow.stdout; agents-unindented.stdout; agents-commented.stdout; agents-indented.stdout; agents-installed.stdout"
   },
   {
-    "scenario": "non-auto",
-    "exit": 0,
-    "home_unchanged": true
+    "name": "Report absent, malformed, at-limit, and over-limit startup memory budgets",
+    "result": "pass",
+    "live": true,
+    "reason": "Real CLI and owner commands executed with disposable local homes and synthetic configuration.",
+    "evidence": "memory-absent.stdout; memory-invalid.stdout; memory-at-budget.stdout; memory-over-budget.stdout"
   },
   {
-    "scenario": "malformed-settings",
-    "exit": 0,
-    "home_unchanged": true
+    "name": "Warn when a real reaped primary PID leaves a stale lock and cannot receive work",
+    "result": "pass",
+    "live": true,
+    "reason": "Real CLI and owner commands executed with disposable local homes and synthetic configuration.",
+    "evidence": "readiness-dead.stdout"
   },
   {
-    "scenario": "unavailable-agent",
-    "exit": 0,
-    "home_unchanged": true
+    "name": "Opt into real unauthenticated GitHub probing and read synthetic completed or incomplete network reports",
+    "result": "pass",
+    "live": true,
+    "reason": "Real CLI and owner commands executed with disposable local homes and synthetic configuration.",
+    "evidence": "network-opt-out.stdout; network-opt-in.stdout; network-incomplete.stdout"
   },
   {
-    "scenario": "replaced-tool",
-    "exit": 0,
-    "home_unchanged": true
-  },
-  {
-    "scenario": "over-budget",
-    "exit": 0,
-    "home_unchanged": true
-  },
-  {
-    "scenario": "unsupported-harness",
-    "exit": 0,
-    "home_unchanged": true
-  },
-  {
-    "scenario": "invalid-backend",
-    "exit": 1,
-    "home_unchanged": true
-  },
-  {
-    "scenario": "help",
-    "exit": 0,
-    "home_unchanged": true
-  },
-  {
-    "scenario": "unknown-option",
-    "exit": 2,
-    "home_unchanged": true
-  },
-  {
-    "scenario": "unknown-area",
-    "exit": 2,
-    "home_unchanged": true
-  },
-  {
-    "scenario": "missing-area",
-    "exit": 2,
-    "home_unchanged": true
-  },
-  {
-    "scenario": "default-toon",
-    "exit": 0,
-    "home_unchanged": true
-  },
-  {
-    "scenario": "default-json",
-    "exit": 0,
-    "home_unchanged": true
-  },
-  {
-    "scenario": "network-done",
-    "exit": 1,
-    "home_unchanged": true
-  },
-  {
-    "scenario": "network-timeout",
-    "exit": 1,
-    "home_unchanged": true
-  },
-  {
-    "scenario": "network-failed",
-    "exit": 1,
-    "home_unchanged": true
+    "name": "Report a stale launcher pane against a real disposable Herdr session",
+    "result": "untested",
+    "live": false,
+    "evidence": "herdr-prepare.log",
+    "reason": "Ran bin/fm-herdr-lab.sh prepare fm-lab-doctor-live with workspace-local XDG_CONFIG_HOME and lab state. The helper refused because its required running default fleet tripwire is absent. Provisioning before prepare or creating a default session would violate the trusted lab contract; using the operator configuration for provisioning would write outside the permitted workspace. Provide a pre-existing reference fleet and permission for named lab session files in its Herdr configuration root to run this check. No lab server was started."
   }
 ]
